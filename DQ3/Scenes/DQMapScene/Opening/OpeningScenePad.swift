@@ -17,7 +17,7 @@ extension OpeningScene {
     func padOverlayVirtualStickInteractionDidEnd(_ padNode: PadOverlay) {
     }
     
-    func willPress(_ button: ButtonOverlay) {
+    override func willPress(_ button: ButtonOverlay) {
         if self.sceneFlag == .message_1 {
             let text = "＊「おきなさい。\n　おきなさい　わたしの　かわいい\n　えにくすや……。"
             

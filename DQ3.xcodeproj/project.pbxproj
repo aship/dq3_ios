@@ -111,6 +111,8 @@
 		AAB07B8825B6FDAC00BE0037 /* BaseMapSceneTransitionFromBattle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB07B8125B6FDAC00BE0037 /* BaseMapSceneTransitionFromBattle.swift */; };
 		AAB07B9625B70F5600BE0037 /* BattleSceneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB07B9525B70F5600BE0037 /* BattleSceneButton.swift */; };
 		AAB07BA125B7101100BE0037 /* BaseMapSceneTransitionToMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB07BA025B7101100BE0037 /* BaseMapSceneTransitionToMap.swift */; };
+		AAB07BB625B7125300BE0037 /* BaseSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB07BB425B7125300BE0037 /* BaseSceneController.swift */; };
+		AAB07BB725B7125300BE0037 /* BaseSceneNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB07BB525B7125300BE0037 /* BaseSceneNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -241,6 +243,8 @@
 		AAB07B8125B6FDAC00BE0037 /* BaseMapSceneTransitionFromBattle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapSceneTransitionFromBattle.swift; sourceTree = "<group>"; };
 		AAB07B9525B70F5600BE0037 /* BattleSceneButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleSceneButton.swift; sourceTree = "<group>"; };
 		AAB07BA025B7101100BE0037 /* BaseMapSceneTransitionToMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapSceneTransitionToMap.swift; sourceTree = "<group>"; };
+		AAB07BB425B7125300BE0037 /* BaseSceneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneController.swift; sourceTree = "<group>"; };
+		AAB07BB525B7125300BE0037 /* BaseSceneNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneNotification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -389,6 +393,8 @@
 				AA14A7F425B67E13009076DB /* BaseSceneSoundEffect.swift */,
 				AA14A7F525B67E13009076DB /* BaseSceneVirtualPad.swift */,
 				AA14A87D25B68787009076DB /* BaseSceneTriangle.swift */,
+				AAB07BB425B7125300BE0037 /* BaseSceneController.swift */,
+				AAB07BB525B7125300BE0037 /* BaseSceneNotification.swift */,
 				AA14A7FD25B67E18009076DB /* BaseMap */,
 			);
 			path = Base;
@@ -783,6 +789,7 @@
 				AA14A87E25B68787009076DB /* BaseSceneTriangle.swift in Sources */,
 				AA14A79525B67BDF009076DB /* UIColor.swift in Sources */,
 				AA14A79C25B67D72009076DB /* PadOverlay.swift in Sources */,
+				AAB07BB625B7125300BE0037 /* BaseSceneController.swift in Sources */,
 				AA14A78625B67BC7009076DB /* DQVocation.swift in Sources */,
 				AA14A79B25B67D72009076DB /* ButtonOverlay.swift in Sources */,
 				AAB07B1525B6F41700BE0037 /* CharacterNodeMove.swift in Sources */,
@@ -804,6 +811,7 @@
 				AA14A7CD25B67DFF009076DB /* AliahanTownSceneCheckPosition.swift in Sources */,
 				AA14A81E25B67E36009076DB /* BattleSceneCommand.swift in Sources */,
 				AA14A81D25B67E36009076DB /* BattleSceneTarget.swift in Sources */,
+				AAB07BB725B7125300BE0037 /* BaseSceneNotification.swift in Sources */,
 				AA14A7F825B67E13009076DB /* BaseSceneVirtualPad.swift in Sources */,
 				AAB07B8825B6FDAC00BE0037 /* BaseMapSceneTransitionFromBattle.swift in Sources */,
 				AA14A7EA25B67E0A009076DB /* AliahanTownHouseSceneEvent.swift in Sources */,
@@ -1026,7 +1034,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4;
+				MARKETING_VERSION = 0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1048,7 +1056,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4;
+				MARKETING_VERSION = 0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
