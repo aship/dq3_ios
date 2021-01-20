@@ -1,0 +1,31 @@
+
+Ruby から ImageMagick を扱うためのライブラリ
+RMagick を使用します。
+
+RMagick のインストール
+
+macOS の場合
+% brew install imagemagick
+% brew install pkg-config
+% sudo gem install rmagick
+
+ubuntu の場合
+$ sudo apt -y install ruby ruby-dev
+$ sudo apt -y install imagemagick
+$ sudo apt -y install pkg-config
+$ sudo apt -y install libmagickwand-dev
+$ sudo apt -y install make
+% sudo gem install rmagick
+
+実行方法
+
+分割したいファイルを指定して以下のように
+実行します。
+
+% cd script
+% ruby divide_into_tile.rb hoge.jpg
+
+成功すると
+output/*.png
+tilemap.csv
+が生成されます。
