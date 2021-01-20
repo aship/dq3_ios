@@ -9,7 +9,7 @@ import SpriteKit
 
 class CharacterNode: SKSpriteNode {
     var dqCharacter: DQCharacter = .none
-    var direction: Direction = .neutral
+    var direction: Direction = .down
     
     var positionX: Int = 0
     var positionY: Int = 0

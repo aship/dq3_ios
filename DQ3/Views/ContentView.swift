@@ -10,22 +10,26 @@ import SpriteKit
 
 struct ContentView: View {
     var body: some View {
-        // let scene = TitleScene()
-        let scene = AdventureLogScene()
+        let scene = BaseScene()
         
-        // let scene = BaseMapScene()
-        // if DataManager.dqSceneType == .aliahan_town {
-        //     for node in DataManager.characterNodes {
-        //         node.positionX = AliahanTownEntrancePositionX
-        //         node.positionY = AliahanTownEntrancePositionY
-        //     }
-        // }
-        // else if DataManager.dqSceneType == .field {
-        //     for node in DataManager.characterNodes {
-        //         node.positionX = FieldAliahanPositionX
-        //         node.positionY = FieldAliahanPositionY
-        //     }
-        // }
+        if DebugWithParty {
+            DataManager.characterNodes.append(CharacterNode(dqCharacter: .warrior_female))
+            DataManager.characterNodes.append(CharacterNode(dqCharacter: .priest_female))
+            DataManager.characterNodes.append(CharacterNode(dqCharacter: .mage_female))
+        }
+        
+        if DataManager.dqSceneType == .field {
+            for node in DataManager.characterNodes {
+                node.positionX = FieldAliahanPositionX
+                node.positionY = FieldAliahanPositionY
+            }
+        }
+        else if DataManager.dqSceneType == .aliahan_town {
+            for node in DataManager.characterNodes {
+                node.positionX = AliahanTownEntrancePositionX
+                node.positionY = AliahanTownEntrancePositionY
+            }
+        }
         
         return Group {
             SpriteView(scene: scene)

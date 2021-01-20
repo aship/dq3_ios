@@ -8,6 +8,8 @@
 import Foundation
 
 enum DQSceneType: String {
+    case title
+    case adventure_log
     case opening
     case battle
     case field
