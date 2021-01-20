@@ -37,10 +37,10 @@ extension CharacterNode {
                 scale: scale)
     }
     
-    private func moveCharacter(direction: Direction,
-                               tileMapNode: SKTileMapNode,
-                               scale: CGFloat,
-                               completion: @escaping () -> Void) {
+    func moveCharacter(direction: Direction,
+                       tileMapNode: SKTileMapNode,
+                       scale: CGFloat,
+                       completion: @escaping () -> Void) {
         let lengthStep = 16
         
         let diffs = getDiffXY(direction: direction)

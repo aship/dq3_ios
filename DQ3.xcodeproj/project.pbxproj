@@ -116,6 +116,8 @@
 		AAB07BF625B7166100BE0037 /* BaseSceneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB07BF325B7166100BE0037 /* BaseSceneButton.swift */; };
 		AAB07BF725B7166100BE0037 /* BaseSceneSetupDQScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB07BF425B7166100BE0037 /* BaseSceneSetupDQScene.swift */; };
 		AAB07BF825B7166100BE0037 /* BaseSceneGetDQScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB07BF525B7166100BE0037 /* BaseSceneGetDQScene.swift */; };
+		AAB07C1825B718CE00BE0037 /* AliahanTownHouseSceneNpcMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB07C1725B718CE00BE0037 /* AliahanTownHouseSceneNpcMove.swift */; };
+		AAB07C1D25B718DD00BE0037 /* AliahanTownSceneNpcMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB07C1C25B718DD00BE0037 /* AliahanTownSceneNpcMove.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -251,6 +253,8 @@
 		AAB07BF325B7166100BE0037 /* BaseSceneButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneButton.swift; sourceTree = "<group>"; };
 		AAB07BF425B7166100BE0037 /* BaseSceneSetupDQScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneSetupDQScene.swift; sourceTree = "<group>"; };
 		AAB07BF525B7166100BE0037 /* BaseSceneGetDQScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneGetDQScene.swift; sourceTree = "<group>"; };
+		AAB07C1725B718CE00BE0037 /* AliahanTownHouseSceneNpcMove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliahanTownHouseSceneNpcMove.swift; sourceTree = "<group>"; };
+		AAB07C1C25B718DD00BE0037 /* AliahanTownSceneNpcMove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliahanTownSceneNpcMove.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -435,6 +439,7 @@
 				AA14A7C025B67DFF009076DB /* AliahanTownSceneEvent.swift */,
 				AA14A7B825B67DFF009076DB /* AliahanTownSceneNpcCharacters.swift */,
 				AA14A7C525B67DFF009076DB /* AliahanTownScenePartyCharacters.swift */,
+				AAB07C1C25B718DD00BE0037 /* AliahanTownSceneNpcMove.swift */,
 				AA14A7C325B67DFF009076DB /* aliahan_town_inside.csv */,
 				AA14A7BD25B67DFF009076DB /* aliahan_town.csv */,
 			);
@@ -452,6 +457,7 @@
 				AA14A7DD25B67E09009076DB /* AliahanTownHouseSceneEvent.swift */,
 				AA14A7E325B67E0A009076DB /* AliahanTownHouseSceneNpcCharacters.swift */,
 				AA14A7DA25B67E09009076DB /* AliahanTownHouseScenePartyCharacters.swift */,
+				AAB07C1725B718CE00BE0037 /* AliahanTownHouseSceneNpcMove.swift */,
 				AA14A7DB25B67E09009076DB /* aliahan_town_house.csv */,
 			);
 			path = AliahanTownHouse;
@@ -815,6 +821,7 @@
 				AA14A89725B69FBB009076DB /* OpeningSceneButton.swift in Sources */,
 				AAAE1CF125B7C30100BF57B1 /* Window.swift in Sources */,
 				AA80D37D259AA9A30001304E /* ContentView.swift in Sources */,
+				AAB07C1825B718CE00BE0037 /* AliahanTownHouseSceneNpcMove.swift in Sources */,
 				AA14A7EE25B67E0A009076DB /* DQMapSceneButtonA.swift in Sources */,
 				AA80D37B259AA9A30001304E /* DQ3App.swift in Sources */,
 				AAB07B3F25B6F80E00BE0037 /* DQMapSceneCommand.swift in Sources */,
@@ -834,6 +841,7 @@
 				AA14A83025B67E3D009076DB /* FieldSceneButton.swift in Sources */,
 				AAB07B1325B6F41700BE0037 /* CharacterNode.swift in Sources */,
 				AA14A7E725B67E0A009076DB /* AliahanTownHouseScenePartyCharacters.swift in Sources */,
+				AAB07C1D25B718DD00BE0037 /* AliahanTownSceneNpcMove.swift in Sources */,
 				AAB07BCF25B7144700BE0037 /* DQMapSceneTileMap.swift in Sources */,
 				AA14A78E25B67BD4009076DB /* AliahanTownHouse.swift in Sources */,
 				AA14A82C25B67E3D009076DB /* FieldScenePartyCharacters.swift in Sources */,
@@ -1050,7 +1058,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.8;
+				MARKETING_VERSION = 0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1072,7 +1080,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.8;
+				MARKETING_VERSION = 0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
