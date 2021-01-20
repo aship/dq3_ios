@@ -25,4 +25,19 @@ extension CharacterNode {
         
         initDirection(direction: direction)
     }
+    
+    func setTexture(direction: Direction) {
+        let dqVocation = DQVocation(rawValue: dqCharacter.rawValue)
+        
+        var type = "vocation"
+        
+        if dqVocation == nil {
+           type = "npc"
+        }
+        
+        let imagePath = "character/\(type)/\(dqCharacter.rawValue)"
+        let imageName = "\(imagePath)/\(direction.rawValue)1.png"
+ 
+        self.texture = SKTexture(imageNamed: imageName)
+    }
 }

@@ -16,7 +16,8 @@ extension AliahanTownScene {
                                       openingStateFlag: &self.openingStateFlag)
             }
             else {
-                processButtonA(commandWindowNode: &self.commandWindowNode,
+                processButtonA(processTalk: processTalk,
+                               commandWindowNode: &self.commandWindowNode,
                                messageWindowNode: &self.messageWindowNode,
                                triangleNode: self.scene.triangleNode,
                                isCommandWindowOpen: &self.isCommandWindowOpen,

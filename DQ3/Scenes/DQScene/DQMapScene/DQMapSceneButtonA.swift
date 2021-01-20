@@ -8,7 +8,8 @@
 import SpriteKit
 
 extension DQMapScene {
-    func processButtonA(commandWindowNode: inout SKTileMapNode,
+    func processButtonA(processTalk: ProcessTalk,
+                        commandWindowNode: inout SKTileMapNode,
                         messageWindowNode: inout SKTileMapNode,
                         triangleNode: SKSpriteNode,
                         isCommandWindowOpen: inout Bool,
@@ -49,7 +50,7 @@ extension DQMapScene {
             }
             
             addCommandWindow(commandWindowNode: &commandWindowNode,
-                             isCommandWindowOpen: &self.isCommandWindowOpen,
+                             isCommandWindowOpen: &isCommandWindowOpen,
                              scale: scale)
         }
         else {
@@ -58,12 +59,16 @@ extension DQMapScene {
             
             self.scene.pauseTriangleAnimation(triangleNode: triangleNode)
             
-            let text1 = "そのほうこうには　だれも　いない。"
+            let values = processTalk(headNode)
+            let withSe = values.0
+            let text1 = values.1
+            let text2 = values.2
+            let text3 = values.3
             
             showMessages(text1: text1,
-                         text2: nil,
-                         text3: nil,
-                         withSe: false,
+                         text2: text2,
+                         text3: text3,
+                         withSe: withSe,
                          withNextMark: false,
                          messageWindowNode: &messageWindowNode,
                          isMessageWindowOpen: &isMessageWindowOpen,

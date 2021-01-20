@@ -10,7 +10,8 @@ import SpriteKit
 extension FieldScene {
     func willPress(_ button: ButtonOverlay) {
         if button == self.scene.buttonA {
-            processButtonA(commandWindowNode: &self.commandWindowNode,
+            processButtonA(processTalk: processTalk,
+                           commandWindowNode: &self.commandWindowNode,
                            messageWindowNode: &self.messageWindowNode,
                            triangleNode: self.scene.triangleNode,
                            isCommandWindowOpen: &self.isCommandWindowOpen,
@@ -23,5 +24,12 @@ extension FieldScene {
                            isCommandWindowOpen: &self.isCommandWindowOpen,
                            isMessageWindowOpen: &self.isMessageWindowOpen)
         }
+    }
+    
+    func processTalk(headNode: CharacterNode) -> (Bool, String, String?, String?) {
+        let withSe = false
+        let text1 = "そのほうこうには　だれも　いない。"
+        
+        return (withSe, text1, nil, nil)
     }
 }

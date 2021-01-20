@@ -9,10 +9,10 @@
 // debug で必要なら true にする
 
 // BGM止める
-let DebugStopBgm = false
+let DebugStopBgm = true
 
 // NPCを動かなくする
-let DebugStopNpc = false
+let DebugStopNpc = true
 
 // 戦闘エンカウントなし
 let DebugNoBattle = false
