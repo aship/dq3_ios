@@ -25,7 +25,7 @@ class AliahanTownHouseScene: BaseMapScene,
     
     var openingStateFlag: OpeningStateFlag = .none
     
-    let motherNode = SKSpriteNode(imageNamed: "\(ImagePathLady)/down1.png")
+    let motherNode = SKSpriteNode(texture: nil, size: CGSize(width: 16, height: 16))
     
     override init() {
         super.init()

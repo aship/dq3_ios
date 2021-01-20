@@ -20,10 +20,15 @@ extension AliahanTownHouseScene {
                      tileMapNode: tileMapNode,
                      isTown: true)
         
-        if dqStory != .opening {
-            let texture = getCharacterTexture(direction: .up,
-                                              dqCharacter: .lady)
-            self.motherNode.texture = texture
+        if dqStory == .opening {
+            let actionMother = getCharacterAnimationAction(direction: .down,
+                                                           dqCharacter: .lady)
+            self.motherNode.run(actionMother)
+        }
+        else {
+            let actionMother = getCharacterAnimationAction(direction: .up,
+                                                           dqCharacter: .lady)
+            self.motherNode.run(actionMother)
         }
         
         setCharacterNpcPosition(positionX: AliahanTownHouseMotherPositionX,

@@ -73,6 +73,9 @@ extension AliahanTownHouseScene {
                 // 閉じる時
                 setMovePermitted()
                 
+                self.heroNode.isPaused = false
+                self.motherNode.isPaused = false
+                
                 closeCommandWindow(commandWindowNode: self.commandWindowNode,
                                    isCommandWindowOpen: &self.isCommandWindowOpen)
                 closeMessageWindow(messageWindowNode: self.messageWindowNode,
@@ -82,6 +85,9 @@ extension AliahanTownHouseScene {
                 // コマンドウィンドウ表示
                 playSoundEffect(.command)
                 setMoveProhibited()
+                
+                self.heroNode.isPaused = true
+                self.motherNode.isPaused = true
                 
                 addCommandWindow(commandWindowNode: &self.commandWindowNode,
                                  isCommandWindowOpen: &self.isCommandWindowOpen,
