@@ -18,9 +18,6 @@ class BaseScene: SKScene {
     
     var triangleNode = SKSpriteNode()
     
-    var queueFollowDirections: [Direction] = []
-    var characterNpcNodes: [CharacterNode] = []
-    
     override func sceneDidLoad() {
         self.scaleMode = .resizeFill
         self.anchorPoint = CGPoint(x: 0.5,

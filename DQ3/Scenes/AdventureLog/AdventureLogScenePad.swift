@@ -28,7 +28,7 @@ extension AdventureLogScene {
                 playSoundEffect(.command)
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                    let scene = OpeningScene()
+                    let scene = BaseMapScene()
                     
                     let transition = SKTransition.crossFade(withDuration: 0.5)
                     self.view?.presentScene(scene,

@@ -19,7 +19,7 @@ extension BattleScene {
         node.setScale(scale)
         node.position = CGPoint(x: pointX, y: pointY)
         
-        self.addChild(node)
+        self.scene.addChild(node)
     }
     
     func addEnemy2(node: SKSpriteNode,
@@ -33,6 +33,6 @@ extension BattleScene {
         
         node.position = CGPoint(x: pointX, y: pointY)
         
-        self.addChild(node)
+        self.scene.addChild(node)
     }
 }

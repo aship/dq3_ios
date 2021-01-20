@@ -12,18 +12,18 @@ struct ContentView: View {
     var body: some View {
         let scene = TitleScene()
         
-        // let scene = AliahanTownScene()
-        // for node in DataManager.characterNodes {
-        //     node.positionX = AliahanTownEntrancePositionX
-        //     node.positionY = AliahanTownEntrancePositionY
+        // let scene = BaseMapScene()
+        // if DataManager.dqSceneType == .aliahan_town {
+        //     for node in DataManager.characterNodes {
+        //         node.positionX = AliahanTownEntrancePositionX
+        //         node.positionY = AliahanTownEntrancePositionY
+        //     }
         // }
-        
-        // let scene = AliahanTownHouseScene()
-        
-        // let scene = FieldScene()
-        // for node in DataManager.characterNodes {
-        //     node.positionX = FieldAliahanPositionX
-        //     node.positionY = FieldAliahanPositionY
+        // else if DataManager.dqSceneType == .field {
+        //     for node in DataManager.characterNodes {
+        //         node.positionX = FieldAliahanPositionX
+        //         node.positionY = FieldAliahanPositionY
+        //     }
         // }
         
         return Group {

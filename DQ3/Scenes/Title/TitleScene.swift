@@ -26,13 +26,13 @@ class TitleScene: SKScene {
         
         self.addChild(nodeTitle)
         
-        let action1 = SKAction.fadeIn(withDuration: 1.0)
-        let action2 = SKAction.wait(forDuration: 1.0)
-        let action3 = SKAction.fadeOut(withDuration: 1.0)
+        let actionFadeIn = SKAction.fadeIn(withDuration: 1.0)
+        let actionWait = SKAction.wait(forDuration: 1.0)
+        let actionFadeOut = SKAction.fadeOut(withDuration: 1.0)
         
-        let actions = SKAction.sequence([action1,
-                                         action2,
-                                         action3])
+        let actions = SKAction.sequence([actionFadeIn,
+                                         actionWait,
+                                         actionFadeOut])
         self.nodeTitle.run(actions)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {

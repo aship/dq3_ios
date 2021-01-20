@@ -20,6 +20,6 @@ extension BattleScene {
         
         node.position = CGPoint(x: pointX, y: pointY)
         
-        self.addChild(node)
+        self.scene.addChild(node)
     }
 }
