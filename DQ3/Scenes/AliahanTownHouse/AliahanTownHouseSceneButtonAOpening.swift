@@ -64,17 +64,25 @@ extension AliahanTownHouseScene {
             motherMove(completion: {
                 self.openingStateFlag = .mother_moved
                 
-                self.setMovePermitted()
+                let headNode = DataManager.characterNodes.first!
+                headNode.setMovePermitted()
             })
         }
         else if openingStateFlag == .mother_moved {
+            let headNode = DataManager.characterNodes.first!
+            
             if self.isCommandWindowOpen &&
                 self.isMessageWindowOpen {
                 // 閉じる時
-                setMovePermitted()
+                headNode.setMovePermitted()
                 
-                self.heroNode.isPaused = false
-                self.motherNode.isPaused = false
+                for node in DataManager.characterNodes {
+                    node.isPaused = false
+                }
+                
+                for node in self.characterNpcNodes {
+                    node.isPaused = false
+                }
                 
                 closeCommandWindow(commandWindowNode: self.commandWindowNode,
                                    isCommandWindowOpen: &self.isCommandWindowOpen)
@@ -84,10 +92,15 @@ extension AliahanTownHouseScene {
             else if !self.isCommandWindowOpen {
                 // コマンドウィンドウ表示
                 playSoundEffect(.command)
-                setMoveProhibited()
+                headNode.setMoveProhibited()
                 
-                self.heroNode.isPaused = true
-                self.motherNode.isPaused = true
+                for node in DataManager.characterNodes {
+                    node.isPaused = true
+                }
+                
+                for node in self.characterNpcNodes {
+                    node.isPaused = true
+                }
                 
                 addCommandWindow(commandWindowNode: &self.commandWindowNode,
                                  isCommandWindowOpen: &self.isCommandWindowOpen,

@@ -66,11 +66,7 @@
 		AA14A80625B67E27009076DB /* BaseMapScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A7FE25B67E27009076DB /* BaseMapScene.swift */; };
 		AA14A80725B67E27009076DB /* BaeeMapSceneMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A7FF25B67E27009076DB /* BaeeMapSceneMessage.swift */; };
 		AA14A80825B67E27009076DB /* BaseMapSceneCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A80025B67E27009076DB /* BaseMapSceneCommand.swift */; };
-		AA14A80925B67E27009076DB /* BaseMapSceneCharacterHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A80125B67E27009076DB /* BaseMapSceneCharacterHero.swift */; };
-		AA14A80A25B67E27009076DB /* BaseMapSceneCharacterNpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A80225B67E27009076DB /* BaseMapSceneCharacterNpc.swift */; };
-		AA14A80B25B67E27009076DB /* BaseMapSceneCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A80325B67E27009076DB /* BaseMapSceneCharacter.swift */; };
 		AA14A80C25B67E27009076DB /* BaseMapSceneTileMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A80425B67E27009076DB /* BaseMapSceneTileMap.swift */; };
-		AA14A80D25B67E27009076DB /* BaseMapSceneCharacterHeroMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A80525B67E27009076DB /* BaseMapSceneCharacterHeroMove.swift */; };
 		AA14A81825B67E36009076DB /* BattleSceneEnemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A81125B67E36009076DB /* BattleSceneEnemy.swift */; };
 		AA14A81925B67E36009076DB /* BattleSceneMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A81225B67E36009076DB /* BattleSceneMessage.swift */; };
 		AA14A81A25B67E36009076DB /* BattleSceneStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A81325B67E36009076DB /* BattleSceneStatus.swift */; };
@@ -105,6 +101,12 @@
 		AA80D398259AA9A40001304E /* DQ3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80D397259AA9A40001304E /* DQ3UITests.swift */; };
 		AAAE1CF125B7C30100BF57B1 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAE1CF025B7C30100BF57B1 /* Window.swift */; };
 		AAAE1D0825B7C58B00BF57B1 /* CharacterAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAE1D0725B7C58B00BF57B1 /* CharacterAnimation.swift */; };
+		AAB07B1325B6F41700BE0037 /* CharacterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB07B0F25B6F41700BE0037 /* CharacterNode.swift */; };
+		AAB07B1425B6F41700BE0037 /* CharacterNodeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB07B1025B6F41700BE0037 /* CharacterNodeDirection.swift */; };
+		AAB07B1525B6F41700BE0037 /* CharacterNodeMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB07B1125B6F41700BE0037 /* CharacterNodeMove.swift */; };
+		AAB07B1625B6F41700BE0037 /* CharacterNodePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB07B1225B6F41700BE0037 /* CharacterNodePosition.swift */; };
+		AAB07B1B25B6F42D00BE0037 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB07B1A25B6F42D00BE0037 /* DataManager.swift */; };
+		AAB07B2625B6F68600BE0037 /* BaseMapSceneUpdateProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB07B2525B6F68600BE0037 /* BaseMapSceneUpdateProcess.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,11 +186,7 @@
 		AA14A7FE25B67E27009076DB /* BaseMapScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapScene.swift; sourceTree = "<group>"; };
 		AA14A7FF25B67E27009076DB /* BaeeMapSceneMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaeeMapSceneMessage.swift; sourceTree = "<group>"; };
 		AA14A80025B67E27009076DB /* BaseMapSceneCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapSceneCommand.swift; sourceTree = "<group>"; };
-		AA14A80125B67E27009076DB /* BaseMapSceneCharacterHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapSceneCharacterHero.swift; sourceTree = "<group>"; };
-		AA14A80225B67E27009076DB /* BaseMapSceneCharacterNpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapSceneCharacterNpc.swift; sourceTree = "<group>"; };
-		AA14A80325B67E27009076DB /* BaseMapSceneCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapSceneCharacter.swift; sourceTree = "<group>"; };
 		AA14A80425B67E27009076DB /* BaseMapSceneTileMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapSceneTileMap.swift; sourceTree = "<group>"; };
-		AA14A80525B67E27009076DB /* BaseMapSceneCharacterHeroMove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapSceneCharacterHeroMove.swift; sourceTree = "<group>"; };
 		AA14A81125B67E36009076DB /* BattleSceneEnemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleSceneEnemy.swift; sourceTree = "<group>"; };
 		AA14A81225B67E36009076DB /* BattleSceneMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleSceneMessage.swift; sourceTree = "<group>"; };
 		AA14A81325B67E36009076DB /* BattleSceneStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleSceneStatus.swift; sourceTree = "<group>"; };
@@ -229,6 +227,12 @@
 		AA80D399259AA9A40001304E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAAE1CF025B7C30100BF57B1 /* Window.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		AAAE1D0725B7C58B00BF57B1 /* CharacterAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterAnimation.swift; sourceTree = "<group>"; };
+		AAB07B0F25B6F41700BE0037 /* CharacterNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterNode.swift; sourceTree = "<group>"; };
+		AAB07B1025B6F41700BE0037 /* CharacterNodeDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterNodeDirection.swift; sourceTree = "<group>"; };
+		AAB07B1125B6F41700BE0037 /* CharacterNodeMove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterNodeMove.swift; sourceTree = "<group>"; };
+		AAB07B1225B6F41700BE0037 /* CharacterNodePosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterNodePosition.swift; sourceTree = "<group>"; };
+		AAB07B1A25B6F42D00BE0037 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		AAB07B2525B6F68600BE0037 /* BaseMapSceneUpdateProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapSceneUpdateProcess.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +311,7 @@
 		AA14A76F25B67A5C009076DB /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				AAB07B1A25B6F42D00BE0037 /* DataManager.swift */,
 				AA14A77425B67BB7009076DB /* AudioManager.swift */,
 			);
 			path = Managers;
@@ -481,16 +486,13 @@
 			isa = PBXGroup;
 			children = (
 				AA14A7FE25B67E27009076DB /* BaseMapScene.swift */,
-				AA14A80325B67E27009076DB /* BaseMapSceneCharacter.swift */,
-				AA14A80125B67E27009076DB /* BaseMapSceneCharacterHero.swift */,
-				AA14A80525B67E27009076DB /* BaseMapSceneCharacterHeroMove.swift */,
-				AA14A80225B67E27009076DB /* BaseMapSceneCharacterNpc.swift */,
 				AA14A80025B67E27009076DB /* BaseMapSceneCommand.swift */,
 				AA14A7FF25B67E27009076DB /* BaeeMapSceneMessage.swift */,
 				AA14A88E25B688E8009076DB /* BaeeMapSceneMessages.swift */,
 				AA14A80425B67E27009076DB /* BaseMapSceneTileMap.swift */,
 				AA14A7E125B67E0A009076DB /* BaseMapSceneButtonA.swift */,
 				AA14A7E025B67E0A009076DB /* BaseMapSceneButtonB.swift */,
+				AAB07B2525B6F68600BE0037 /* BaseMapSceneUpdateProcess.swift */,
 			);
 			path = BaseMap;
 			sourceTree = "<group>";
@@ -546,6 +548,7 @@
 				AA14A84925B67EE5009076DB /* Classes */,
 				AAAE1CEF25B7C2F300BF57B1 /* Functions */,
 				AA14A77225B67A77009076DB /* Extensions */,
+				AAB07B0D25B6F3F800BE0037 /* SpriteNodes */,
 				AA14A77325B67A7E009076DB /* Nodes */,
 				AA14A73425B67713009076DB /* mp3 */,
 				AA80D37E259AA9A40001304E /* Assets.xcassets */,
@@ -588,6 +591,25 @@
 				AAAE1D0725B7C58B00BF57B1 /* CharacterAnimation.swift */,
 			);
 			path = Functions;
+			sourceTree = "<group>";
+		};
+		AAB07B0D25B6F3F800BE0037 /* SpriteNodes */ = {
+			isa = PBXGroup;
+			children = (
+				AAB07B0E25B6F40E00BE0037 /* CharacterNode */,
+			);
+			path = SpriteNodes;
+			sourceTree = "<group>";
+		};
+		AAB07B0E25B6F40E00BE0037 /* CharacterNode */ = {
+			isa = PBXGroup;
+			children = (
+				AAB07B0F25B6F41700BE0037 /* CharacterNode.swift */,
+				AAB07B1025B6F41700BE0037 /* CharacterNodeDirection.swift */,
+				AAB07B1125B6F41700BE0037 /* CharacterNodeMove.swift */,
+				AAB07B1225B6F41700BE0037 /* CharacterNodePosition.swift */,
+			);
+			path = CharacterNode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -739,12 +761,11 @@
 				AA14A85925B67F51009076DB /* DQFont.swift in Sources */,
 				AA14A7B225B67DF4009076DB /* AdventureLogSceneProcessing.swift in Sources */,
 				AA14A87E25B68787009076DB /* BaseSceneTriangle.swift in Sources */,
-				AA14A80B25B67E27009076DB /* BaseMapSceneCharacter.swift in Sources */,
 				AA14A79525B67BDF009076DB /* UIColor.swift in Sources */,
 				AA14A79C25B67D72009076DB /* PadOverlay.swift in Sources */,
 				AA14A78625B67BC7009076DB /* DQVocation.swift in Sources */,
 				AA14A79B25B67D72009076DB /* ButtonOverlay.swift in Sources */,
-				AA14A80925B67E27009076DB /* BaseMapSceneCharacterHero.swift in Sources */,
+				AAB07B1525B6F41700BE0037 /* CharacterNodeMove.swift in Sources */,
 				AA14A83225B67E3D009076DB /* FieldSceneCheckPosition.swift in Sources */,
 				AA14A7EF25B67E0A009076DB /* AliahanTownHouseSceneButton.swift in Sources */,
 				AA14A7C825B67DFF009076DB /* AliahanTownSceneButtonAOpening.swift in Sources */,
@@ -766,6 +787,7 @@
 				AA14A7F925B67E13009076DB /* BaseScene.swift in Sources */,
 				AAAE1D0825B7C58B00BF57B1 /* CharacterAnimation.swift in Sources */,
 				AA14A83025B67E3D009076DB /* FieldSceneButton.swift in Sources */,
+				AAB07B1325B6F41700BE0037 /* CharacterNode.swift in Sources */,
 				AA14A7E725B67E0A009076DB /* AliahanTownHouseScenePartyCharacters.swift in Sources */,
 				AA14A78E25B67BD4009076DB /* AliahanTownHouse.swift in Sources */,
 				AA14A83B25B67E4A009076DB /* OpeningSceneStick.swift in Sources */,
@@ -788,6 +810,7 @@
 				AA14A80C25B67E27009076DB /* BaseMapSceneTileMap.swift in Sources */,
 				AA14A83525B67E3D009076DB /* FieldSceneUpdate.swift in Sources */,
 				AA14A7E525B67E0A009076DB /* AliahanTownHouseSceneCheckPosition.swift in Sources */,
+				AAB07B1625B6F41700BE0037 /* CharacterNodePosition.swift in Sources */,
 				AA14A78025B67BC7009076DB /* DQAudio.swift in Sources */,
 				AA14A81C25B67E36009076DB /* BattleScenePad.swift in Sources */,
 				AA14A7C925B67DFF009076DB /* AliahanTownSceneUpdate.swift in Sources */,
@@ -795,14 +818,16 @@
 				AA14A85F25B67F5C009076DB /* ZPosition.swift in Sources */,
 				AA14A7EC25B67E0A009076DB /* AliahanTownHouseSceneUpdate.swift in Sources */,
 				AA14A81B25B67E36009076DB /* BattleScene.swift in Sources */,
-				AA14A80A25B67E27009076DB /* BaseMapSceneCharacterNpc.swift in Sources */,
 				AA14A7E625B67E0A009076DB /* AliahanTownHouseSceneStick.swift in Sources */,
 				AA14A78325B67BC7009076DB /* DQCharacter.swift in Sources */,
 				AA14A7F025B67E0A009076DB /* AliahanTownHouseSceneNpcCharacters.swift in Sources */,
+				AAB07B2625B6F68600BE0037 /* BaseMapSceneUpdateProcess.swift in Sources */,
 				AA14A7D025B67DFF009076DB /* AliahanTownScene.swift in Sources */,
+				AAB07B1425B6F41700BE0037 /* CharacterNodeDirection.swift in Sources */,
 				AA14A82E25B67E3D009076DB /* FieldScene.swift in Sources */,
 				AA14A83C25B67E4A009076DB /* OpeningScene.swift in Sources */,
 				AA14A85725B67F51009076DB /* DQFontCircle.swift in Sources */,
+				AAB07B1B25B6F42D00BE0037 /* DataManager.swift in Sources */,
 				AA14A80725B67E27009076DB /* BaeeMapSceneMessage.swift in Sources */,
 				AA14A7A925B67DE9009076DB /* TitleScene.swift in Sources */,
 				AA14A7C625B67DFF009076DB /* AliahanTownSceneNpcCharacters.swift in Sources */,
@@ -812,7 +837,6 @@
 				AA14A7E925B67E0A009076DB /* AliahanTownHouseSceneButtonAOpening.swift in Sources */,
 				AA14A78225B67BC7009076DB /* Constant.swift in Sources */,
 				AA14A7F725B67E13009076DB /* BaseSceneSoundEffect.swift in Sources */,
-				AA14A80D25B67E27009076DB /* BaseMapSceneCharacterHeroMove.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -978,7 +1002,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2;
+				MARKETING_VERSION = 0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1000,7 +1024,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2;
+				MARKETING_VERSION = 0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

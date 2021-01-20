@@ -10,7 +10,7 @@ import SpriteKit
 extension AliahanTownHouseScene {
     func willPress(_ button: ButtonOverlay) {
         if button == self.buttonA {
-            if dqStory == .opening {
+            if DataManager.dqStory == .opening {
                 processButtonAOpening(commandWindowNode: self.commandWindowNode,
                                       messageWindowNode: self.messageWindowNode,
                                       openingStateFlag: &self.openingStateFlag)

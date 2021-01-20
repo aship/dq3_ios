@@ -26,7 +26,8 @@ extension AliahanTownHouseScene {
         let actionMove3 = SKAction.moveBy(x: 16 * 7,
                                           y: 0,
                                           duration: 1 / 4 * 7)
-        let motherNode = self.motherNode
+        
+        let motherNode = self.characterNpcNodes.first!
         
         motherNode.run(actionMotherAnimationLeft)
         motherNode.run(actionMove1,
@@ -47,7 +48,8 @@ extension AliahanTownHouseScene {
         let actionMother = SKAction.moveBy(x: 16 * 1,
                                            y: 0,
                                            duration: 1 / 4 * 1)
-        let motherNode = self.motherNode
+        
+        let motherNode = self.characterNpcNodes.first!
         
         motherNode.run(actionMother,
                        completion: {})
@@ -55,7 +57,8 @@ extension AliahanTownHouseScene {
         let actionHero = SKAction.moveBy(x: 16 * 2,
                                          y: 0,
                                          duration: 1 / 4 * 2)
-        let heroNode = self.heroNode
+        
+        let heroNode = DataManager.characterNodes.first!
         
         heroNode.run(actionHero,
                      completion: {
@@ -72,7 +75,8 @@ extension AliahanTownHouseScene {
         let actionMother = SKAction.moveBy(x: 16 * 1,
                                            y: 0,
                                            duration: 1 / 4 * 1)
-        let motherNode = self.motherNode
+        
+        let motherNode = self.characterNpcNodes.first!
         
         motherNode.run(actionMother,
                        completion: {})
@@ -84,7 +88,8 @@ extension AliahanTownHouseScene {
         let actionHero2 = SKAction.moveBy(x: 16 * 2,
                                           y: 0,
                                           duration: 1 / 4 * 2)
-        let heroNode = self.heroNode
+        
+        let heroNode = DataManager.characterNodes.first!
         
         heroNode.run(actionHeroAnimationUp)
         heroNode.run(actionHero1,

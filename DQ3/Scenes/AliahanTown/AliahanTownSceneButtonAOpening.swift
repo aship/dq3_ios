@@ -38,13 +38,15 @@ extension AliahanTownScene {
                          })
         }
         else if openingStateFlag == .message_two_end {
-            setMovePermitted()
+            let headNode = DataManager.characterNodes.first!
+            
+            headNode.setMovePermitted()
             
             closeMessageWindow(messageWindowNode: self.messageWindowNode,
                                isMessageWindowOpen: &self.isMessageWindowOpen)
             
             openingStateFlag = .finished
-            dqStory = .mother_waiting
+            DataManager.dqStory = .mother_waiting
         }
     }
 }

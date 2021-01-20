@@ -45,7 +45,8 @@ extension AliahanTownScene {
         let actionMother6 = SKAction.moveBy(x: 0,
                                             y: 16 * 7,
                                             duration: 1 / 4 * 7)
-        let motherNode = self.motherNode
+        
+        let motherNode = self.characterNpcNodes.first!
         
         motherNode.run(actionWait, completion: {
             motherNode.run(actionMotherAnimationRight)
@@ -116,7 +117,8 @@ extension AliahanTownScene {
         let sequence = SKAction.sequence([actionHero2,
                                           actionShowMainTileMap,
                                           actionHero3])
-        let heroNode = self.heroNode
+        
+        let heroNode = DataManager.characterNodes.first!
         
         heroNode.run(actionsHero,
                      completion: {
@@ -134,7 +136,6 @@ extension AliahanTownScene {
                                                                                         heroNode.run(actionHeroAnimationRight)
                                                                                         heroNode.run(actionHero6,
                                                                                                      completion: {
-                                                                                                        
                                                                                                         heroNode.run(actionHeroAnimationUp)
                                                                                                         heroNode.run(actionHero7,
                                                                                                                      completion: {

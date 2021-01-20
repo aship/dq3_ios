@@ -14,10 +14,12 @@ extension BaseMapScene {
                         isCommandWindowOpen: inout Bool,
                         isMessageWindowOpen: inout Bool,
                         scale: CGFloat) {
+        let headNode = DataManager.characterNodes.first!
+        
         if isCommandWindowOpen &&
             isMessageWindowOpen {
             // 閉じる時
-            setMovePermitted()
+            headNode.setMovePermitted()
             
             closeCommandWindow(commandWindowNode: commandWindowNode,
                                isCommandWindowOpen: &isCommandWindowOpen)
@@ -27,7 +29,8 @@ extension BaseMapScene {
         else if !isCommandWindowOpen {
             // コマンドウィンドウ表示
             playSoundEffect(.command)
-            setMoveProhibited()
+            
+            headNode.setMoveProhibited()
             
             addCommandWindow(commandWindowNode: &commandWindowNode,
                              isCommandWindowOpen: &isCommandWindowOpen,

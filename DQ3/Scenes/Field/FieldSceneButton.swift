@@ -17,8 +17,7 @@ extension FieldScene {
                            isMessageWindowOpen: &self.isMessageWindowOpen,
                            scale: self.scale)
         }
-        
-        if button == self.buttonB {
+        else if button == self.buttonB {
             processButtonB(commandWindowNode: self.commandWindowNode,
                            messageWindowNode: self.messageWindowNode,
                            isCommandWindowOpen: &self.isCommandWindowOpen,

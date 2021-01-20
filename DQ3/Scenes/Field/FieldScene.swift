@@ -14,9 +14,6 @@ class FieldScene: BaseMapScene,
     
     override init() {
         super.init()
-        
-        self.heroPositionX = FieldAliahanPositionX
-        self.heroPositionY = FieldAliahanPositionY
     }
     
     override init(size: CGSize) {
@@ -37,6 +34,17 @@ class FieldScene: BaseMapScene,
     
     override func didMove(to view: SKView) {
         self.backgroundColor = .black
+        
+        if DataManager.characterNodes.count == 1 {
+            DataManager.characterNodes.append(CharacterNode(dqCharacter: .warrior_female))
+            DataManager.characterNodes.append(CharacterNode(dqCharacter: .priest_female))
+            DataManager.characterNodes.append(CharacterNode(dqCharacter: .mage_female))
+            
+            for node in DataManager.characterNodes {
+                node.positionX = FieldAliahanPositionX
+                node.positionY = FieldAliahanPositionY
+            }
+        }
         
         addMainTileMap(name: "field",
                        tileMapNode: &self.mainTileMapNode,

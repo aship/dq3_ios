@@ -14,7 +14,9 @@ extension BaseMapScene {
                         isMessageWindowOpen: inout Bool) {
         if isCommandWindowOpen {
             // 閉じる時
-            setMovePermitted()
+            let headNode = DataManager.characterNodes.first!
+            
+            headNode.setMovePermitted()
             
             closeCommandWindow(commandWindowNode: commandWindowNode,
                                isCommandWindowOpen: &isCommandWindowOpen)
