@@ -18,54 +18,29 @@ extension BaseScene {
             return
         }
         
-        let checkCanMove = getCheckCanMove(dqSceneType: dqSceneType)
-        let checkPosition = getCheckPosition(dqSceneType: dqSceneType)
-        let dqMapScene = getDQMapScene(dqSceneType: dqSceneType)
+        let dqMapScene = self.getDQMapScene(dqSceneType: dqSceneType)
         
-        processUpdate(padDirection: self.padDirection,
-                      tileMapNode: dqMapScene.mainTileMapNode,
-                      characterNodes: DataManager.characterNodes,
-                      queueFollowDirections: &DataManager.queueFollowDirections,
-                      dqSceneType: DataManager.dqSceneType,
-                      scale: self.scale,
-                      checkCanMove: checkCanMove,
-                      completion: { newPositionX, newPositionY in
-                        print("x: \(newPositionX), y: \(newPositionY)")
-                        
-                        checkPosition(newPositionX,
-                                      newPositionY)
-                      })
-    }
-    
-    func getCheckCanMove(dqSceneType: DQSceneType) -> CheckCanMove {
-        var checkCanMove: CheckCanMove!
-        
-        switch dqSceneType {
-        case .title: break
-        case .adventure_log: break
-        case .opening: break
-        case .battle: break
-        case .field: checkCanMove = self.fieldScene.checkCanMove
-        case .aliahan_town: checkCanMove = self.aliahanTownScene.checkCanMove
-        case .aliahan_town_house: checkCanMove = self.aliahanTownHouseScene.checkCanMove
+        if dqMapScene.mapCommandWindowNode.isOpen {
+            dqMapScene.mapCommandWindowNode.moveTriangle(direction: self.padDirection)
         }
-        
-        return checkCanMove
-    }
-    
-    func getCheckPosition(dqSceneType: DQSceneType) -> CheckPosition {
-        var checkPosition: CheckPosition!
-        
-        switch dqSceneType {
-        case .title: break
-        case .adventure_log: break
-        case .opening: break
-        case .battle: break
-        case .field: checkPosition = self.fieldScene.checkPosition
-        case .aliahan_town: checkPosition = self.aliahanTownScene.checkPosition
-        case .aliahan_town_house: checkPosition = self.aliahanTownHouseScene.checkPosition
+        else {
+            let checkCanMove = getCheckCanMove(dqSceneType: dqSceneType)
+            let checkPosition = getCheckPosition(dqSceneType: dqSceneType)
+            let dqMapScene = getDQMapScene(dqSceneType: dqSceneType)
+            
+            processUpdate(padDirection: self.padDirection,
+                          tileMapNode: dqMapScene.mainTileMapNode,
+                          characterNodes: DataManager.characterNodes,
+                          queueFollowDirections: &DataManager.queueFollowDirections,
+                          dqSceneType: DataManager.dqSceneType,
+                          scale: self.scale,
+                          checkCanMove: checkCanMove,
+                          completion: { newPositionX, newPositionY in
+                            print("x: \(newPositionX), y: \(newPositionY)")
+                            
+                            checkPosition(newPositionX,
+                                          newPositionY)
+                          })
         }
-        
-        return checkPosition
     }
 }

@@ -7,10 +7,10 @@
 
 import SpriteKit
 
-extension AliahanTownScene {
-    func processTalk(headNode: CharacterNode) -> (Bool, String, String?, String?) {
+extension TalkMessageWindowAliahanTown {
+    func processTalk(headNode: CharacterNode) -> (Bool, Bool, Bool, String, String?, String?) {
         // 「はなす」でAボタンを押した
-        self.scene.playSoundEffect(.command)
+        SoundEffectManager.play(.command)
         
         // このときに、direction + 1 のところにNPC がいるか判定
         // いるなら、そのNPC の会話を始める
@@ -21,6 +21,8 @@ extension AliahanTownScene {
         let name = values.1
         
         var withSe = false
+        var withNextMark = false
+        var closeWindow = true
         var text1 = "そのほうこうには　だれも　いない。"
         var text2: String!
         var text3: String!
@@ -48,11 +50,20 @@ extension AliahanTownScene {
                 text2 = "　　おうさまに　あっていらっしゃい。"
             }
             else if name == "lady1" {
-                text1 = "＊「ここは　アリアハンの"
-                text2 = "　　じょうかまち。"
-                
-                //                    text = "＊「きたにいくと　レーベのむらが\n　ありますわ。"
-                //                    numberOfLine = 2
+                if self.lady1MessageFlag == .none {
+                    self.lady1MessageFlag = .message1
+                    
+                    text1 = "＊「ここは　アリアハンの"
+                    text2 = "　　じょうかまち。"
+                    withNextMark = true
+                    closeWindow = false
+                }
+                else if self.lady1MessageFlag == .message1 {
+                    self.lady1MessageFlag = .message2
+                    
+                    text1 = "＊「きたにいくと　レーベのむら"
+                    text2 = "　　ありますわ。"
+                }
             }
             else if name == "lady2" {
                 text1 = "＊「まちのなかにいると"
@@ -70,20 +81,40 @@ extension AliahanTownScene {
                 text3 = "　　なります。"
             }
             else if name == "old_man1" {
-                text1 = "＊「かつて　アリアハンは"
-                text2 = "　　すべてのせかいを　おさめていた"
-                text3 = "　　のじゃ。"
-                
-                //                    text = "＊「しかし　せんそうがおこって\n　おおくの　ひとびとが　しんだ。"
-                //                    numberOfLine = 2
-                //
-                //                    text = "＊「そして　うみのむこうにつうじる\n　たびのとびらを\n　ふうじこめたのじゃ。"
-                //                    numberOfLine = 3
+                if self.oldMan1MessageFlag == .none {
+                    self.oldMan1MessageFlag = .message1
+                    
+                    text1 = "＊「かつて　アリアハンは"
+                    text2 = "　　すべてのせかいを　おさめていた"
+                    text3 = "　　のじゃ。"
+                    
+                    withNextMark = true
+                    closeWindow = false
+                }
+                else if self.oldMan1MessageFlag == .message1 {
+                    self.oldMan1MessageFlag = .message2
+                    
+                    text1 = "＊「しかし　せんそうがおこって"
+                    text2 = "　　おおくの　ひとびとが　しんだ。"
+                }
+                else if self.oldMan1MessageFlag == .message2 {
+                    self.oldMan1MessageFlag = .message3
+                    
+                    text1 = "＊「そして　うみのむこうにつうじる"
+                    text2 = "　　たびのとびらを"
+                    text3 = "　　ふうじこめたのじゃ。"
+                }
             }
             else if name == "old_man2" {
-                text1 = "＊「このしろの　にしに\n　\n　"
-                text2 = "　　うかぶ　しまを"
-                text3 = "　　もう　みなさったか？"
+                if self.oldMan2MessageFlag == .none {
+                    self.oldMan2MessageFlag = .message1
+                    text1 = "＊「このしろの　にしに"
+                    text2 = "　　うかぶ　しまを"
+                    text3 = "　　もう　みなさったか？"
+                }
+                
+                
+                
             }
             else if name == "warrior1" {
                 text1 = "＊「つれてゆくなら"
@@ -121,11 +152,11 @@ extension AliahanTownScene {
                 //                    numberOfLine = 2
             }
             else if name == "weapon_shop_talk" {
-                text1 = "＊「ここは　ぶきと　ぼうぐのみせだ。\n　うってるものを　みるかね？"
-                text2 = "　　"
+                text1 = "＊「ここは　ぶきと　ぼうぐのみせだ。"
+                text2 = "　　うってるものを　みるかね？"
             }
             else if name == "priest" {
-                text1 = "＊「たのもしき　カミの　しもべよ\n　\n　"
+                text1 = "＊「たのもしき　カミの　しもべよ"
                 text2 = "　　わが　きょうかいに　どんな"
                 text3 = "　　ごようじゃな？"
             }
@@ -138,6 +169,6 @@ extension AliahanTownScene {
             }
         }
         
-        return (withSe, text1, text2, text3)
+        return (withSe, withNextMark, closeWindow, text1, text2, text3)
     }
 }

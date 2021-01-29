@@ -7,7 +7,7 @@
 
 import SpriteKit
 
-extension AliahanTownHouseScene {
+extension TalkMessageWindowAliahanTownHouse {
     func checkCanTalk(positionX: Int,
                       positionY: Int,
                       direction: Direction) -> (Bool, String) {

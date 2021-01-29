@@ -13,7 +13,7 @@ extension BattleScene {
             if self.battleStatus == .start {
                 self.messageWindowNode.isHidden = true
                 
-                self.commandWindowNode.isHidden = false
+                self.mapCommandWindowNode.isHidden = false
                 self.statusWindowNode.isHidden = false
                 self.targetWindowNode.isHidden = false
                 
@@ -22,7 +22,7 @@ extension BattleScene {
             else if self.battleStatus == .command {
                 self.scene.playSoundEffect(.command)
                 
-                self.commandWindowNode.isHidden = true
+                self.mapCommandWindowNode.isHidden = true
                 self.targetWindowNode.isHidden = true
                 
                 self.messageWindowNode.isHidden = false
@@ -51,8 +51,14 @@ extension BattleScene {
             else if self.battleStatus == .end {
                 self.battleStatus = .moveToField
                 
-                self.scene.transitionFromBattle(dqSceneType: .field,
-                                                dqAudio: .field)
+                if DataManager.dqSceneTypeFromBattle == .field {
+                    self.scene.transitionFromBattle(dqSceneType: .field,
+                                                    dqAudio: .field)
+                }
+                else if DataManager.dqSceneTypeFromBattle == .alefgard {
+                    self.scene.transitionFromBattle(dqSceneType: .alefgard,
+                                                    dqAudio: .alefgard)
+                }
             }
         }
     }

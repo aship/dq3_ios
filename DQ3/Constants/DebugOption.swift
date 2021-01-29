@@ -9,7 +9,7 @@
 // debug で必要なら true にする
 
 // BGM止める
-let DebugStopBgm = true
+let DebugStopBgm = false
 
 // NPCを動かなくする
 let DebugStopNpc = true

@@ -9,8 +9,12 @@ import SpriteKit
 
 extension BaseScene {
     func playSoundEffect(_ soundEffect: DQSoundEffect) {
-        let action = SKAction.playSoundFileNamed("\(soundEffect.rawValue).mp3",
-                                                 waitForCompletion: true)
+        let filename = "\(soundEffect.rawValue).mp3"
+        
+        let action = SKAction.playSoundFileNamed(
+            filename,
+            waitForCompletion: true)
+        
         self.run(action)
     }
 }

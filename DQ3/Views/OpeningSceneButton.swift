@@ -22,23 +22,28 @@ extension OpeningScene {
                 let text2 = "　　おきなさい　わたしの　かわいい"
                 let text3 = "　　えにくすや……。"
                 
-                showMessages(text1: text1,
-                             text2: text2,
-                             text3: text3,
-                             withSe: true,
-                             withNextMark: false,
-                             messageWindowNode: &self.messageWindowNode,
-                             isMessageWindowOpen: &self.isMessageWindowOpen,
-                             scale: self.scene.scale,
-                             completion: {
-                                self.sceneFlag = .message_2_end
-                             })
+                let pointX = -128 + 48
+                let pointY = 112 - 136
+                
+                self.mapMessageWindowNode = MapMessageWindowNode()
+                self.mapMessageWindowNode.showMessages(
+                    scene: self.scene,
+                    text1: text1,
+                    text2: text2,
+                    text3: text3,
+                    withSe: true,
+                    withNextMark: false,
+                    pointX: pointX,
+                    pointY: pointY,
+                    scale: self.scene.scale,
+                    completion: {
+                        self.sceneFlag = .message_2_end
+                    })
             }
             else if self.sceneFlag == .message_2_end {
                 self.sceneFlag = .transition
                 
-                closeMessageWindow(messageWindowNode: self.messageWindowNode,
-                                   isMessageWindowOpen: &self.isMessageWindowOpen)
+                self.mapMessageWindowNode.close()
                 
                 self.scene.transitionToMap(
                     dqSceneType: .aliahan_town_house,

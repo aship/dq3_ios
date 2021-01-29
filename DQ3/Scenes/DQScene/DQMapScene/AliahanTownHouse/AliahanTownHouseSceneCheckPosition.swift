@@ -57,19 +57,21 @@ extension AliahanTownHouseScene {
             let text1 = "＊「さあ　かあさんに"
             let text2 = "　　ついて　いらっしゃい。"
             
-            showMessages(text1: text1,
-                         text2: text2,
-                         text3: nil,
-                         withSe: true,
-                         withNextMark: false,
-                         messageWindowNode: &self.messageWindowNode,
-                         isMessageWindowOpen: &self.isMessageWindowOpen,
-                         scale: self.scene.scale,
-                         completion: {})
+            self.mapMessageWindowNode = MapMessageWindowNode()
+            self.mapMessageWindowNode.showMessages(
+                scene: self.scene,
+                text1: text1,
+                text2: text2,
+                text3: nil,
+                withSe: true,
+                withNextMark: false,
+                pointX: MapMessageWindowChildOfScenePointX,
+                pointY: MapMessageWindowChildOfScenePointY,
+                scale: self.scene.scale,
+                completion: {})
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                self.closeMessageWindow(messageWindowNode: self.messageWindowNode,
-                                        isMessageWindowOpen: &self.isMessageWindowOpen)
+                self.mapMessageWindowNode.close()
                 
                 if newPositionY == 2 {
                     self.motherAndHeroMoveCatchUp2(completion: {

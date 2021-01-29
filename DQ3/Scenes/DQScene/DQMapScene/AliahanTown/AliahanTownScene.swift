@@ -78,17 +78,20 @@ class AliahanTownScene: DQMapScene {
                 let text1 = "＊「ここから　まっすぐいくと"
                 let text2 = "　　おしろ　です。"
                 
-                self.showMessages(text1: text1,
-                                  text2: text2,
-                                  text3: nil,
-                                  withSe: true,
-                                  withNextMark: true,
-                                  messageWindowNode: &self.messageWindowNode,
-                                  isMessageWindowOpen: &self.isMessageWindowOpen,
-                                  scale: self.scene.scale,
-                                  completion: {
-                                    self.openingStateFlag = .message_one_end
-                                  })
+                self.mapMessageWindowNode = MapMessageWindowNode()
+                self.mapMessageWindowNode.showMessages(
+                    scene: self.scene,
+                    text1: text1,
+                    text2: text2,
+                    text3: nil,
+                    withSe: true,
+                    withNextMark: true,
+                    pointX: MapMessageWindowChildOfScenePointX,
+                    pointY: MapMessageWindowChildOfScenePointY,
+                    scale: self.scene.scale,
+                    completion: {
+                        self.openingStateFlag = .message_one_end
+                    })
             })
         }
     }

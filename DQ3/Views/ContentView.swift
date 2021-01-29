@@ -10,7 +10,7 @@ import SpriteKit
 
 struct ContentView: View {
     var body: some View {
-        let scene = BaseScene()
+        let scene = DataManager.scene
         
         if DebugWithParty {
             DataManager.characterNodes.append(CharacterNode(dqCharacter: .warrior_female))

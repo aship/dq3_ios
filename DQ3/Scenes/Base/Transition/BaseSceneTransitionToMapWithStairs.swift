@@ -1,15 +1,15 @@
 //
-//  BaseSceneTransitionToScene.swift
+//  BaseSceneTransitionToMapWithStairs.swift
 //  DQ3
 //
-//  Created by aship on 2021/01/04.
+//  Created by aship on 2020/12/31.
 //
 
 import SpriteKit
 
 extension BaseScene {
-    func transitionToScene(dqSceneType: DQSceneType,
-                           dqAudio: DQAudio) {        
+    func transitionToMapWithStairs(dqSceneType: DQSceneType,
+                                   dqAudio: DQAudio) {        
         var shouldStopAudio = false
         var shouldPlayAudio = false
         
@@ -29,18 +29,32 @@ extension BaseScene {
         
         let actionFadeOut = SKAction.fadeAlpha(to: 1.0,
                                                duration: 0.5)
+        let actionAudioSe = SKAction.run({
+            self.playSoundEffect(.stairs)
+        })
         
         let actionFadeIn = SKAction.fadeAlpha(to: 0.0,
-                                              duration: 0.25)
+                                              duration: 0.5)
         
         let sequence1 = SKAction.sequence([actionWait05,
                                            actionAudioStop])
         
+        let sequence2 = SKAction.sequence([actionAudioSe,
+                                           actionWait05,
+                                           actionFadeIn])
         self.run(sequence1, completion: {
             self.blackScreenNode.run(actionFadeOut, completion: {
+                for node in DataManager.characterNodes {
+                    node.removeFromParent()
+                }
+                
+                let dqMapScene = self.getDQMapScene(dqSceneType: DataManager.dqSceneType)
+                dqMapScene.mainTileMapNode.removeFromParent()
+                dqMapScene.insideTileMapNode?.removeFromParent()
+                
                 self.setupDQScene(dqSceneType: dqSceneType)
                 
-                self.blackScreenNode.run(actionFadeIn, completion: {
+                self.blackScreenNode.run(sequence2, completion: {
                     if shouldPlayAudio {
                         AudioManager.play(dqAudio: dqAudio)
                     }

@@ -9,6 +9,9 @@ import SpriteKit
 
 extension BaseScene {
     func transitionToBattle() {
+        // バトルから戻る時の Scene を記録
+        DataManager.dqSceneTypeFromBattle = DataManager.dqSceneType
+        
         let actionFadeOut = SKAction.fadeAlpha(to: 1.0,
                                                duration: 0.5)
         

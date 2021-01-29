@@ -20,9 +20,11 @@ extension DQFont {
         case "…": path = "symbol/three_dots"
         case "▼": path = "symbol/triangle_down"
         case "▶︎": path = "symbol/triangle_right"
+        case "→": path = "symbol/arrow"
         case "？": path = "symbol/question"
         case "！": path = "symbol/exclamation"
         case "度": path = "katakana/do"
+        case "怒": path = "hiragana/do"
         case "０": path = "number/0"
         case "１": path = "number/1"
         case "２": path = "number/2"
@@ -142,5 +144,4 @@ extension DQFont {
         
         return node
     }
-    
 }

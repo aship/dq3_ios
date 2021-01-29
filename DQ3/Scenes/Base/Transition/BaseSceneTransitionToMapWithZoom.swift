@@ -1,39 +1,26 @@
 //
-//  BaseSceneTransitionToMapWithStairs.swift
+//  BaseSceneTransitionToMapWithZoom.swift
 //  DQ3
 //
-//  Created by aship on 2020/12/31.
+//  Created by aship on 2021/01/18.
 //
 
 import SpriteKit
 
 extension BaseScene {
-    func transitionToMapWithStairs(dqSceneType: DQSceneType,
-                                   dqAudio: DQAudio) {
-        let dqMapScene = getDQMapScene(dqSceneType: DataManager.dqSceneType)
-        dqMapScene.characterNpcNodes = []
-        
-        var shouldStopAudio = false
-        var shouldPlayAudio = false
-        
-        if AudioManager.getDqAudio() != dqAudio {
-            // 違う曲
-            shouldStopAudio = true
-            shouldPlayAudio = true
-        }
-        
+    // Zoom (ルーラ) で移動
+    func transitionToMapWithZoom(dqSceneType: DQSceneType,
+                                 dqAudio: DQAudio) {        
         let actionWait05 = SKAction.wait(forDuration: 0.5)
         
         let actionAudioStop = SKAction.run({
-            if shouldStopAudio {
-                AudioManager.stop()
-            }
+            AudioManager.stop()
         })
         
         let actionFadeOut = SKAction.fadeAlpha(to: 1.0,
                                                duration: 0.5)
         let actionAudioSe = SKAction.run({
-            self.playSoundEffect(.stairs)
+            self.playSoundEffect(.spell)
         })
         
         let actionFadeIn = SKAction.fadeAlpha(to: 0.0,
@@ -49,17 +36,23 @@ extension BaseScene {
             self.blackScreenNode.run(actionFadeOut, completion: {
                 for node in DataManager.characterNodes {
                     node.removeFromParent()
+                    node.isPaused = false
                 }
                 
                 let dqMapScene = self.getDQMapScene(dqSceneType: DataManager.dqSceneType)
                 dqMapScene.mainTileMapNode.removeFromParent()
                 dqMapScene.insideTileMapNode?.removeFromParent()
                 
+                dqMapScene.mapCommandWindowNode.close()
+                dqMapScene.mapMessageWindowNode.close()
+                
                 self.setupDQScene(dqSceneType: dqSceneType)
                 
                 self.blackScreenNode.run(sequence2, completion: {
-                    if shouldPlayAudio {
-                        AudioManager.play(dqAudio: dqAudio)
+                    AudioManager.play(dqAudio: dqAudio)
+                    
+                    for node in DataManager.characterNodes {
+                        node.setMovePermitted()
                     }
                 })
             })

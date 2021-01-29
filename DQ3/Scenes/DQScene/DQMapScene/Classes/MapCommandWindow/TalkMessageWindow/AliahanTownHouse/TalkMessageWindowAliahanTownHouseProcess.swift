@@ -7,10 +7,10 @@
 
 import SpriteKit
 
-extension AliahanTownHouseScene {
-    func processTalk(headNode: CharacterNode) -> (Bool, String, String?, String?) {
+extension TalkMessageWindowAliahanTownHouse {
+    func processTalk(headNode: CharacterNode) -> (Bool, Bool, Bool, String, String?, String?) {
         // 「はなす」でAボタンを押した
-        self.scene.playSoundEffect(.command)
+        SoundEffectManager.play(.command)
         
         // このときに、direction + 1 のところにNPC がいるか判定
         // いるなら、そのNPC の会話を始める
@@ -21,6 +21,8 @@ extension AliahanTownHouseScene {
         let name = values.1
         
         var withSe = false
+        var withNextMark = false
+        var closeWindow = true
         var text1 = "そのほうこうには　だれも　いない。"
         var text2: String!
         var text3: String!
@@ -44,10 +46,22 @@ extension AliahanTownHouseScene {
             }
             
             if name == "mother" {
-                self.motherMessageFlag = .message_one
-                
-                text1 = "＊「おかえりなさい"
-                text2 = "　　わたしのかわいい　えにくすや。"
+                if self.motherMessageFlag == .none {
+                    self.motherMessageFlag = .message1
+                    
+                    text1 = "＊「おかえりなさい"
+                    text2 = "　　わたしのかわいい　えにくすや。"
+                    withNextMark = true
+                    closeWindow = false
+                }
+                else if self.motherMessageFlag == .message1 {
+                    self.motherMessageFlag = .message2
+                    
+                    text1 = "＊「さぞや　つかれたでしょう。"
+                    text2 = "　　さあ　もう　おやすみ。"
+                    withNextMark = false
+                    closeWindow = false
+                }
             }
             else if name == "grandfather" {
                 text1 = "＊「おまえの　ちちオルテガは"
@@ -56,6 +70,6 @@ extension AliahanTownHouseScene {
             }
         }
         
-        return (withSe, text1, text2, text3)
+        return (withSe, withNextMark, closeWindow, text1, text2, text3)
     }
 }

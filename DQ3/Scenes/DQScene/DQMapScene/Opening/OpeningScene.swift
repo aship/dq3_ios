@@ -24,16 +24,19 @@ class OpeningScene: DQMapScene {
         let text1 = "それは　えにくすが　１６さいになる"
         let text2 = "たんじょうびの　ことであった"
         
-        showMessages(text1: text1,
-                     text2: text2,
-                     text3: nil,
-                     withSe: false,
-                     withNextMark: false,
-                     messageWindowNode: &self.messageWindowNode,
-                     isMessageWindowOpen: &self.isMessageWindowOpen,
-                     scale: self.scene.scale,
-                     completion: {
-                        self.sceneFlag = .message_1_end
-                     })
+        self.mapMessageWindowNode = MapMessageWindowNode()
+        self.mapMessageWindowNode.showMessages(
+            scene: self.scene,
+            text1: text1,
+            text2: text2,
+            text3: nil,
+            withSe: false,
+            withNextMark: false,
+            pointX: MapMessageWindowChildOfScenePointX,
+            pointY: MapMessageWindowChildOfScenePointY,
+            scale: self.scene.scale,
+            completion: {
+                self.sceneFlag = .message_1_end
+            })
     }
 }

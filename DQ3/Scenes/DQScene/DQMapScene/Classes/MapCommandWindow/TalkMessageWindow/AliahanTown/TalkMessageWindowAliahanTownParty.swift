@@ -7,7 +7,7 @@
 
 import SpriteKit
 
-extension AliahanTownScene {
+extension TalkMessageWindowAliahanTown {
     func addParties() {
         if DataManager.characterNodes.count == 4 {
             return
@@ -39,14 +39,14 @@ extension AliahanTownScene {
                 node.positionY = 32
             }
             
-            node.addToMap(tileMapNode: self.mainTileMapNode,
-                          isTown: true)
-            
-            node.initDirection(direction: .left)
-            node.setPosition(tileMapNode: self.mainTileMapNode,
-                             isHead: false,
-                             scale: self.scene.scale)
-            
+//            node.addToMap(tileMapNode: self.mainTileMapNode,
+//                          isTown: true)
+//            
+//            node.initDirection(direction: .left)
+//            node.setPosition(tileMapNode: self.mainTileMapNode,
+//                             isHead: false,
+//                             scale: self.scene.scale)
+//            
             node.zPosition = ZPositionPartyHead - CGFloat(index)
         }
     }

@@ -30,6 +30,10 @@ extension BaseScene {
             self.fieldScene = FieldScene(scene: self,
                                          dqSceneType: .field)
             self.fieldScene.setup()
+        case .alefgard:
+            self.alefgardScene = AlefgardScene(scene: self,
+                                               dqSceneType: .alefgard)
+            self.alefgardScene.setup()
         case .aliahan_town:
             self.aliahanTownScene = AliahanTownScene(scene: self,
                                                      dqSceneType: .aliahan_town)

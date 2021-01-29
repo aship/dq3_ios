@@ -18,14 +18,13 @@ class BaseScene: SKScene,
     
     var padDirection: Direction = .neutral
     
-    var triangleNode = SKSpriteNode()
-    
     let blackScreenNode = SKSpriteNode()
     
     var titleScene: TitleScene!
     var adventureLogScene: AdventureLogScene!
     var openingScene: OpeningScene!
     var fieldScene: FieldScene!
+    var alefgardScene: AlefgardScene!
     var aliahanTownScene: AliahanTownScene!
     var aliahanTownHouseScene: AliahanTownHouseScene!
     var battleScene: BattleScene!
@@ -49,7 +48,7 @@ class BaseScene: SKScene,
                                            height: ScreenHeight)
         self.blackScreenNode.color = .black
         self.blackScreenNode.alpha = 0.0
-        self.blackScreenNode.zPosition = 9
+        self.blackScreenNode.zPosition = ZPositionBlackScreen
         self.addChild(blackScreenNode)
     }
     

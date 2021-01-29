@@ -8,8 +8,8 @@
 import SpriteKit
 
 extension AliahanTownHouseScene {
-    func processButtonAOpening(commandWindowNode: SKTileMapNode,
-                               messageWindowNode: SKTileMapNode,
+    func processButtonAOpening(mapCommandWindowNode: MapCommandWindowNode,
+                               mapMessageWindowNode: MapMessageWindowNode,
                                openingStateFlag: inout OpeningStateFlag) {
         if openingStateFlag == .message_one_start ||
             openingStateFlag == .mother_moving ||
@@ -24,17 +24,20 @@ extension AliahanTownHouseScene {
             let text2 = "　　えにくすが　はじめて　おしろに"
             let text3 = "　　いくひ　だったでしょ。"
             
-            showMessages(text1: text1,
-                         text2: text2,
-                         text3: text3,
-                         withSe: true,
-                         withNextMark: true,
-                         messageWindowNode: &self.messageWindowNode,
-                         isMessageWindowOpen: &self.isMessageWindowOpen,
-                         scale: self.scene.scale,
-                         completion: {
-                            self.openingStateFlag = .message_two_end
-                         })
+            self.mapMessageWindowNode = MapMessageWindowNode()
+            self.mapMessageWindowNode.showMessages(
+                scene: self.scene,
+                text1: text1,
+                text2: text2,
+                text3: text3,
+                withSe: true,
+                withNextMark: true,
+                pointX: MapMessageWindowChildOfScenePointX,
+                pointY: MapMessageWindowChildOfScenePointY,
+                scale: self.scene.scale,
+                completion: {
+                    self.openingStateFlag = .message_two_end
+                })
         }
         else if openingStateFlag == .message_two_end {
             openingStateFlag = .message_three_start
@@ -43,23 +46,25 @@ extension AliahanTownHouseScene {
             let text2 = "　　ゆうかんな　おとこのこ　として"
             let text3 = "　　そだてたつもりです。"
             
-            showMessages(text1: text1,
-                         text2: text2,
-                         text3: text3,
-                         withSe: true,
-                         withNextMark: false,
-                         messageWindowNode: &self.messageWindowNode,
-                         isMessageWindowOpen: &self.isMessageWindowOpen,
-                         scale: self.scene.scale,
-                         completion: {
-                            self.openingStateFlag = .message_three_end
-                         })
+            self.mapMessageWindowNode = MapMessageWindowNode()
+            self.mapMessageWindowNode.showMessages(
+                scene: self.scene,
+                text1: text1,
+                text2: text2,
+                text3: text3,
+                withSe: true,
+                withNextMark: false,
+                pointX: MapMessageWindowChildOfScenePointX,
+                pointY: MapMessageWindowChildOfScenePointY,
+                scale: self.scene.scale,
+                completion: {
+                    self.openingStateFlag = .message_three_end
+                })
         }
         else if openingStateFlag == .message_three_end {
             openingStateFlag = .mother_moving
             
-            closeMessageWindow(messageWindowNode: self.messageWindowNode,
-                               isMessageWindowOpen: &self.isMessageWindowOpen)
+            self.mapMessageWindowNode.close()
             
             motherMove(completion: {
                 self.openingStateFlag = .mother_moved
@@ -71,8 +76,8 @@ extension AliahanTownHouseScene {
         else if openingStateFlag == .mother_moved {
             let headNode = DataManager.characterNodes.first!
             
-            if self.isCommandWindowOpen &&
-                self.isMessageWindowOpen {
+            if self.mapCommandWindowNode.isOpen &&
+                self.mapMessageWindowNode.isOpen {
                 // 閉じる時
                 headNode.setMovePermitted()
                 
@@ -84,12 +89,10 @@ extension AliahanTownHouseScene {
                     node.isPaused = false
                 }
                 
-                closeCommandWindow(commandWindowNode: self.commandWindowNode,
-                                   isCommandWindowOpen: &self.isCommandWindowOpen)
-                closeMessageWindow(messageWindowNode: self.messageWindowNode,
-                                   isMessageWindowOpen: &self.isMessageWindowOpen)
+                self.mapCommandWindowNode.close()
+                self.mapMessageWindowNode.close()
             }
-            else if !self.isCommandWindowOpen {
+            else if !self.mapCommandWindowNode.isOpen {
                 // コマンドウィンドウ表示
                 self.scene.playSoundEffect(.command)
                 headNode.setMoveProhibited()
@@ -102,27 +105,30 @@ extension AliahanTownHouseScene {
                     node.isPaused = true
                 }
                 
-                addCommandWindow(commandWindowNode: &self.commandWindowNode,
-                                 isCommandWindowOpen: &self.isCommandWindowOpen,
-                                 scale: self.scene.scale)
+                self.mapCommandWindowNode = MapCommandWindowNode(characterNpcNodes: self.characterNpcNodes)
+                self.mapCommandWindowNode.addToScene(scene: self.scene,
+                                                     scale: self.scene.scale)
             }
             else {
                 // 「はなす」でAボタンを押した
                 self.scene.playSoundEffect(.command)
                 
-                self.scene.pauseTriangleAnimation(triangleNode: self.scene.triangleNode)
+                //        pauseTriangleAnimation(triangleNode: self.triangleNode)
                 
                 let text1 = "そのほうこうには　だれも　いない。"
                 
-                showMessages(text1: text1,
-                             text2: nil,
-                             text3: nil,
-                             withSe: false,
-                             withNextMark: false,
-                             messageWindowNode: &self.messageWindowNode,
-                             isMessageWindowOpen: &self.isMessageWindowOpen,
-                             scale: self.scene.scale,
-                             completion: {})
+                self.mapMessageWindowNode = MapMessageWindowNode()
+                self.mapMessageWindowNode.showMessages(
+                    scene: self.scene,
+                    text1: text1,
+                    text2: nil,
+                    text3: nil,
+                    withSe: false,
+                    withNextMark: false,
+                    pointX: MapMessageWindowChildOfScenePointX,
+                    pointY: MapMessageWindowChildOfScenePointY,
+                    scale: self.scene.scale,
+                    completion: {})
             }
         }
     }

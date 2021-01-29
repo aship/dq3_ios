@@ -11,25 +11,19 @@ extension AliahanTownScene {
     func willPress(_ button: ButtonOverlay) {
         if button == self.scene.buttonA {
             if DataManager.dqStory == .opening {
-                processButtonAOpening(commandWindowNode: self.commandWindowNode,
-                                      messageWindowNode: self.messageWindowNode,
+                processButtonAOpening(mapCommandWindowNode: self.mapCommandWindowNode,
+                                      mapMessageWindowNode: self.mapMessageWindowNode,
                                       openingStateFlag: &self.openingStateFlag)
             }
             else {
-                processButtonA(processTalk: processTalk,
-                               commandWindowNode: &self.commandWindowNode,
-                               messageWindowNode: &self.messageWindowNode,
-                               triangleNode: self.scene.triangleNode,
-                               isCommandWindowOpen: &self.isCommandWindowOpen,
-                               isMessageWindowOpen: &self.isMessageWindowOpen,
+                processButtonA(mapCommandWindowNode: &self.mapCommandWindowNode,
+                               mapMessageWindowNode: &self.mapMessageWindowNode,
                                scale: self.scene.scale)
             }
         }
         else if button == self.scene.buttonB {
-            processButtonB(commandWindowNode: self.commandWindowNode,
-                           messageWindowNode: self.messageWindowNode,
-                           isCommandWindowOpen: &self.isCommandWindowOpen,
-                           isMessageWindowOpen: &self.isMessageWindowOpen)
+            processButtonB(mapCommandWindowNode: self.mapCommandWindowNode,
+                           mapMessageWindowNode: self.mapMessageWindowNode)
         }
     }
 }

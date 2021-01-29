@@ -7,7 +7,7 @@
 
 import AVFoundation
 
-class AudioManager: NSObject {
+class AudioManager {
     static private var audioPlayer: AVAudioPlayer!
     static private var dqAudio: DQAudio = .none
     

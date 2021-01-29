@@ -17,6 +17,7 @@ extension BaseScene {
         case .battle: dqScene = self.battleScene
         case .opening: break
         case .field: break
+        case .alefgard: break
         case .aliahan_town: break
         case .aliahan_town_house: break
         }
@@ -33,6 +34,7 @@ extension BaseScene {
         case .battle: break
         case .opening: dqMapScene = self.openingScene
         case .field: dqMapScene = self.fieldScene
+        case .alefgard: dqMapScene = self.alefgardScene
         case .aliahan_town: dqMapScene = self.aliahanTownScene
         case .aliahan_town_house: dqMapScene = self.aliahanTownHouseScene
         }

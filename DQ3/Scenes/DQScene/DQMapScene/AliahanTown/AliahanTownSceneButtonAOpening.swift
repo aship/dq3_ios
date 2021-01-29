@@ -8,8 +8,8 @@
 import SpriteKit
 
 extension AliahanTownScene {
-    func processButtonAOpening(commandWindowNode: SKTileMapNode,
-                               messageWindowNode: SKTileMapNode,
+    func processButtonAOpening(mapCommandWindowNode: MapCommandWindowNode,
+                               mapMessageWindowNode: MapMessageWindowNode,
                                openingStateFlag: inout OpeningStateFlag) {
         if openingStateFlag == .mother_moving ||
             openingStateFlag == .message_one_start ||
@@ -25,25 +25,27 @@ extension AliahanTownScene {
             let text2 = "　　あいさつ　するのですよ。"
             let text3 = "　　さあ　いってらっしゃい。"
             
-            showMessages(text1: text1,
-                         text2: text2,
-                         text3: text3,
-                         withSe: true,
-                         withNextMark: false,
-                         messageWindowNode: &self.messageWindowNode,
-                         isMessageWindowOpen: &self.isMessageWindowOpen,
-                         scale: self.scene.scale,
-                         completion: {
-                            self.openingStateFlag = .message_two_end
-                         })
+            self.mapMessageWindowNode = MapMessageWindowNode()
+            self.mapMessageWindowNode.showMessages(
+                scene: self.scene,
+                text1: text1,
+                text2: text2,
+                text3: text3,
+                withSe: true,
+                withNextMark: false,
+                pointX: MapMessageWindowChildOfScenePointX,
+                pointY: MapMessageWindowChildOfScenePointY,
+                scale: self.scene.scale,
+                completion: {
+                    self.openingStateFlag = .message_two_end
+                })
         }
         else if openingStateFlag == .message_two_end {
             let headNode = DataManager.characterNodes.first!
             
             headNode.setMovePermitted()
             
-            closeMessageWindow(messageWindowNode: self.messageWindowNode,
-                               isMessageWindowOpen: &self.isMessageWindowOpen)
+            self.mapMessageWindowNode.close()
             
             openingStateFlag = .finished
             DataManager.dqStory = .mother_waiting

@@ -8,7 +8,7 @@
 import SpriteKit
 
 extension BaseScene {
-    @objc func willPress(_ button: ButtonOverlay) {
+    func willPress(_ button: ButtonOverlay) {
         let willPress = getWillPress(dqSceneType: DataManager.dqSceneType)
         
         willPress(button)
@@ -26,6 +26,7 @@ extension BaseScene {
         case .opening: willPress = self.openingScene.willPress
         case .battle: willPress = self.battleScene.willPress
         case .field: willPress = self.fieldScene.willPress
+        case .alefgard: willPress = self.alefgardScene.willPress
         case .aliahan_town: willPress = self.aliahanTownScene.willPress
         case .aliahan_town_house: willPress = self.aliahanTownHouseScene.willPress
         }

@@ -34,8 +34,7 @@ class TitleScene: DQScene {
         self.nodeTitle.run(actions)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-            self.scene.transitionToScene(dqSceneType: .adventure_log,
-                                         dqAudio: .none)
+            self.scene.transitionToScene(dqSceneType: .adventure_log)
         }
     }
 }

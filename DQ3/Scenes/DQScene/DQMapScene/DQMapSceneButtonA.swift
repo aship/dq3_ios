@@ -8,34 +8,12 @@
 import SpriteKit
 
 extension DQMapScene {
-    func processButtonA(processTalk: ProcessTalk,
-                        commandWindowNode: inout SKTileMapNode,
-                        messageWindowNode: inout SKTileMapNode,
-                        triangleNode: SKSpriteNode,
-                        isCommandWindowOpen: inout Bool,
-                        isMessageWindowOpen: inout Bool,
+    func processButtonA(mapCommandWindowNode: inout MapCommandWindowNode,
+                        mapMessageWindowNode: inout MapMessageWindowNode,
                         scale: CGFloat) {
         let headNode = DataManager.characterNodes.first!
         
-        if isCommandWindowOpen &&
-            isMessageWindowOpen {
-            // 閉じる時
-            headNode.setMovePermitted()
-            
-            for node in DataManager.characterNodes {
-                node.isPaused = false
-            }
-            
-            for node in self.characterNpcNodes {
-                node.isPaused = false
-            }
-            
-            closeCommandWindow(commandWindowNode: commandWindowNode,
-                               isCommandWindowOpen: &isCommandWindowOpen)
-            closeMessageWindow(messageWindowNode: messageWindowNode,
-                               isMessageWindowOpen: &isMessageWindowOpen)
-        }
-        else if !isCommandWindowOpen {
+        if !mapCommandWindowNode.isOpen {
             // コマンドウィンドウ表示
             self.scene.playSoundEffect(.command)
             
@@ -49,31 +27,25 @@ extension DQMapScene {
                 node.isPaused = true
             }
             
-            addCommandWindow(commandWindowNode: &commandWindowNode,
-                             isCommandWindowOpen: &isCommandWindowOpen,
-                             scale: scale)
+            mapCommandWindowNode = MapCommandWindowNode(characterNpcNodes: self.characterNpcNodes)
+            mapCommandWindowNode.addToScene(scene: self.scene,
+                                            scale: self.scene.scale)
         }
-        else {
-            // 「はなす」でAボタンを押した
-            self.scene.playSoundEffect(.command)
+        else if mapCommandWindowNode.isOpen {
+            // コマンド処理中
+            let shouldClose = mapCommandWindowNode.processButtonA(headNode: headNode)
             
-            self.scene.pauseTriangleAnimation(triangleNode: triangleNode)
-            
-            let values = processTalk(headNode)
-            let withSe = values.0
-            let text1 = values.1
-            let text2 = values.2
-            let text3 = values.3
-            
-            showMessages(text1: text1,
-                         text2: text2,
-                         text3: text3,
-                         withSe: withSe,
-                         withNextMark: false,
-                         messageWindowNode: &messageWindowNode,
-                         isMessageWindowOpen: &isMessageWindowOpen,
-                         scale: scale,
-                         completion: {})
+            if shouldClose {
+                headNode.setMovePermitted()
+                
+                for node in DataManager.characterNodes {
+                    node.isPaused = false
+                }
+                
+                for node in self.characterNpcNodes {
+                    node.isPaused = false
+                }
+            }
         }
     }
 }

@@ -8,11 +8,9 @@
 import SpriteKit
 
 extension DQMapScene {
-    func processButtonB(commandWindowNode: SKTileMapNode,
-                        messageWindowNode: SKTileMapNode,
-                        isCommandWindowOpen: inout Bool,
-                        isMessageWindowOpen: inout Bool) {
-        if isCommandWindowOpen {
+    func processButtonB(mapCommandWindowNode: MapCommandWindowNode,
+                        mapMessageWindowNode: MapMessageWindowNode) {
+        if mapCommandWindowNode.isOpen {
             // 閉じる時
             let headNode = DataManager.characterNodes.first!
             headNode.setMovePermitted()
@@ -25,10 +23,8 @@ extension DQMapScene {
                 node.isPaused = false
             }
             
-            closeCommandWindow(commandWindowNode: commandWindowNode,
-                               isCommandWindowOpen: &isCommandWindowOpen)
-            closeMessageWindow(messageWindowNode: messageWindowNode,
-                               isMessageWindowOpen: &isMessageWindowOpen)
+            mapCommandWindowNode.close()
+            mapMessageWindowNode.close()
         }
     }
 }

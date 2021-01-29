@@ -1,0 +1,27 @@
+//
+//  SoundEffectManager.swift
+//  DQ3
+//
+//  Created by aship on 2021/01/21.
+//
+
+import AVFoundation
+
+class SoundEffectManager {
+    static private var audioPlayer: AVAudioPlayer!
+
+    class func play(_ soundEffect: DQSoundEffect) {
+        let filename = soundEffect.rawValue
+        
+        let audioPath = Bundle.main.path(forResource: filename, ofType:"mp3")!
+        let audioUrl = URL(fileURLWithPath: audioPath)
+        
+        do {
+            self.audioPlayer = try AVAudioPlayer(contentsOf: audioUrl)
+        } catch {}
+        
+        self.audioPlayer.numberOfLoops = 1
+        self.audioPlayer.prepareToPlay()
+        self.audioPlayer.play()
+    }
+}

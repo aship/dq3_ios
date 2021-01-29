@@ -9,7 +9,7 @@ import SpriteKit
 
 class DQScene {
     var scene: BaseScene!
-    
+        
     init(scene: BaseScene,
          dqSceneType: DQSceneType) {
         self.scene = scene
