@@ -8,16 +8,16 @@
 import Foundation
 
 class DataManager {
-    //static var dqSceneType: DQSceneType = .title
+    static var dqSceneType: DQSceneType = .title
     // static var dqSceneType: DQSceneType = .adventure_log
     // static var dqSceneType: DQSceneType = .opening
     // static var dqSceneType: DQSceneType = .aliahan_town_house
-     static var dqSceneType: DQSceneType = .aliahan_town
+    // static var dqSceneType: DQSceneType = .aliahan_town
     // static var dqSceneType: DQSceneType = .field
     
-    //static var dqStory: DQStory = .opening
+    static var dqStory: DQStory = .opening
     // static var dqStory: DQStory = .mother_waiting
-     static var dqStory: DQStory = .go_adventure
+    // static var dqStory: DQStory = .go_adventure
     
     // 戦闘から戻るときに使う type
     static var dqSceneTypeFromBattle: DQSceneType = .field
