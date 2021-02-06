@@ -11,8 +11,8 @@ class DataManager {
     //static var dqSceneType: DQSceneType = .title
     // static var dqSceneType: DQSceneType = .adventure_log
     // static var dqSceneType: DQSceneType = .opening
-     static var dqSceneType: DQSceneType = .aliahan_town_house
-    // static var dqSceneType: DQSceneType = .aliahan_town
+    // static var dqSceneType: DQSceneType = .aliahan_town_house
+     static var dqSceneType: DQSceneType = .aliahan_town
     // static var dqSceneType: DQSceneType = .field
     
     //static var dqStory: DQStory = .opening
@@ -26,6 +26,7 @@ class DataManager {
     static var queueFollowDirections: [Direction] = []
     static var showInsideMap = false
     static var scene = BaseScene()
+    static var aliahanTownScene: AliahanTownScene!
     
     private init() {
     }

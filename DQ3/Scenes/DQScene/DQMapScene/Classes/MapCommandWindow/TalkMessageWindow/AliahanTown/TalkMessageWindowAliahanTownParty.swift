@@ -39,14 +39,17 @@ extension TalkMessageWindowAliahanTown {
                 node.positionY = 32
             }
             
-//            node.addToMap(tileMapNode: self.mainTileMapNode,
-//                          isTown: true)
-//            
-//            node.initDirection(direction: .left)
-//            node.setPosition(tileMapNode: self.mainTileMapNode,
-//                             isHead: false,
-//                             scale: self.scene.scale)
-//            
+            let mainTileMapNode = DataManager.aliahanTownScene.mainTileMapNode!
+            let scale = DataManager.scene.scale
+            
+            node.addToMap(tileMapNode: mainTileMapNode,
+                          isTown: true)
+            
+            node.initDirection(direction: .left)
+            node.setPosition(tileMapNode: mainTileMapNode,
+                             isHead: false,
+                             scale: scale)
+            
             node.zPosition = ZPositionPartyHead - CGFloat(index)
         }
     }

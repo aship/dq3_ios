@@ -25,30 +25,40 @@ extension AliahanTownScene {
             let text2 = "　　あいさつ　するのですよ。"
             let text3 = "　　さあ　いってらっしゃい。"
             
-            self.mapMessageWindowNode = MapMessageWindowNode()
-            self.mapMessageWindowNode.showMessages(
-                scene: self.scene,
-                text1: text1,
-                text2: text2,
-                text3: text3,
+            self.mapMessageWindowNode.nextMark.removeFromParent()
+            
+            self.mapMessageWindowNode.showMessage(
+                string: text1,
+                line: 2,
                 withSe: true,
-                withNextMark: false,
-                pointX: MapMessageWindowChildOfScenePointX,
-                pointY: MapMessageWindowChildOfScenePointY,
-                scale: self.scene.scale,
                 completion: {
-                    self.openingStateFlag = .message_two_end
+                    self.mapMessageWindowNode.showMessage(
+                        string: text2,
+                        line: 3,
+                        withSe: true,
+                        completion: {
+                            self.mapMessageWindowNode.moveLine()
+                            
+                            self.mapMessageWindowNode.showMessage(
+                                string: text3,
+                                line: 3,
+                                withSe: true,
+                                completion: {
+                                    self.mapMessageWindowNode.moveLine()
+                                    
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                                        let headNode = DataManager.characterNodes.first!
+                                        
+                                        headNode.setMovePermitted()
+                                        
+                                        self.mapMessageWindowNode.close()
+                                        
+                                        self.openingStateFlag = .finished
+                                        DataManager.dqStory = .mother_waiting
+                                    }
+                                })
+                        })
                 })
-        }
-        else if openingStateFlag == .message_two_end {
-            let headNode = DataManager.characterNodes.first!
-            
-            headNode.setMovePermitted()
-            
-            self.mapMessageWindowNode.close()
-            
-            openingStateFlag = .finished
-            DataManager.dqStory = .mother_waiting
         }
     }
 }

@@ -15,8 +15,8 @@ class AliahanTownHouseScene: DQMapScene {
         case message_two_start
         case message_two_end
         case message_three_start
-        case message_three_end
-        case mother_moving
+     //   case message_three_end
+   //     case mother_moving
         case mother_moved
         case mother_start_escorting
     }

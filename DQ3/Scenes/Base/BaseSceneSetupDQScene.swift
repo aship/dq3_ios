@@ -38,6 +38,7 @@ extension BaseScene {
             self.aliahanTownScene = AliahanTownScene(scene: self,
                                                      dqSceneType: .aliahan_town)
             self.aliahanTownScene.setup()
+            DataManager.aliahanTownScene = self.aliahanTownScene
         case .aliahan_town_house:
             self.aliahanTownHouseScene = AliahanTownHouseScene(scene: self,
                                                                dqSceneType: .aliahan_town_house)

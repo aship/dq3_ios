@@ -79,7 +79,7 @@
 		AA14A85A25B67F51009076DB /* DQFontDashes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A85525B67F51009076DB /* DQFontDashes.swift */; };
 		AA14A85F25B67F5C009076DB /* ZPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A85E25B67F5C009076DB /* ZPosition.swift */; };
 		AA14A88F25B688E8009076DB /* MapMessageWindowNodeShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A88E25B688E8009076DB /* MapMessageWindowNodeShow.swift */; };
-		AA14A89725B69FBB009076DB /* OpeningSceneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A89625B69FBB009076DB /* OpeningSceneButton.swift */; };
+		AA15B48225CE5E3300337A0E /* MapMessageWindowNodeLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA15B48125CE5E3300337A0E /* MapMessageWindowNodeLine.swift */; };
 		AA1B27EA25B7EEE8000B66A3 /* alefgard.csv in Resources */ = {isa = PBXBuildFile; fileRef = AA1B27E925B7EEE8000B66A3 /* alefgard.csv */; };
 		AA1B27F325B7EF5C000B66A3 /* AlefgardSceneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1B27EE25B7EF5B000B66A3 /* AlefgardSceneButton.swift */; };
 		AA1B27F425B7EF5C000B66A3 /* AlefgardSceneCheckPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1B27EF25B7EF5B000B66A3 /* AlefgardSceneCheckPosition.swift */; };
@@ -252,7 +252,7 @@
 		AA14A85525B67F51009076DB /* DQFontDashes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQFontDashes.swift; sourceTree = "<group>"; };
 		AA14A85E25B67F5C009076DB /* ZPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPosition.swift; sourceTree = "<group>"; };
 		AA14A88E25B688E8009076DB /* MapMessageWindowNodeShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapMessageWindowNodeShow.swift; sourceTree = "<group>"; };
-		AA14A89625B69FBB009076DB /* OpeningSceneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OpeningSceneButton.swift; path = DQ3/Views/OpeningSceneButton.swift; sourceTree = SOURCE_ROOT; };
+		AA15B48125CE5E3300337A0E /* MapMessageWindowNodeLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMessageWindowNodeLine.swift; sourceTree = "<group>"; };
 		AA1B27E925B7EEE8000B66A3 /* alefgard.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = alefgard.csv; sourceTree = "<group>"; };
 		AA1B27EE25B7EF5B000B66A3 /* AlefgardSceneButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlefgardSceneButton.swift; sourceTree = "<group>"; };
 		AA1B27EF25B7EF5B000B66A3 /* AlefgardSceneCheckPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlefgardSceneCheckPosition.swift; sourceTree = "<group>"; };
@@ -578,7 +578,6 @@
 			isa = PBXGroup;
 			children = (
 				AA14A83A25B67E4A009076DB /* OpeningScene.swift */,
-				AA14A89625B69FBB009076DB /* OpeningSceneButton.swift */,
 			);
 			path = Opening;
 			sourceTree = "<group>";
@@ -793,6 +792,7 @@
 				AAB07B3B25B6F80E00BE0037 /* MapMessageWindowNode.swift */,
 				AA2ACBAD25B90473005F44B9 /* MapMessageWindowNodeShowAll.swift */,
 				AA14A88E25B688E8009076DB /* MapMessageWindowNodeShow.swift */,
+				AA15B48125CE5E3300337A0E /* MapMessageWindowNodeLine.swift */,
 			);
 			path = MapMessageWindow;
 			sourceTree = "<group>";
@@ -1050,7 +1050,6 @@
 				AAB07BC925B7140A00BE0037 /* DQScene.swift in Sources */,
 				AA8664D125C437840042DE47 /* TalkMessageWindowAliahanTownButtonA.swift in Sources */,
 				AA14A78525B67BC7009076DB /* DQStory.swift in Sources */,
-				AA14A89725B69FBB009076DB /* OpeningSceneButton.swift in Sources */,
 				AAAE1CF125B7C30100BF57B1 /* Window.swift in Sources */,
 				AA80D37D259AA9A30001304E /* ContentView.swift in Sources */,
 				AAB07C1825B718CE00BE0037 /* AliahanTownHouseSceneNpcMove.swift in Sources */,
@@ -1141,6 +1140,7 @@
 				AAB07BD025B7144700BE0037 /* DQMapSceneNpc.swift in Sources */,
 				AAB07B1B25B6F42D00BE0037 /* DataManager.swift in Sources */,
 				AAB07C6125B71CC800BE0037 /* TalkMessageWindowAliahanTownHouseCheckCanTalk.swift in Sources */,
+				AA15B48225CE5E3300337A0E /* MapMessageWindowNodeLine.swift in Sources */,
 				AABD987325C152170061DD87 /* TalkMessageWindowAliahanTownHouse.swift in Sources */,
 				AA14A7A925B67DE9009076DB /* TitleScene.swift in Sources */,
 				AA14A7C625B67DFF009076DB /* AliahanTownSceneNpcCharacters.swift in Sources */,

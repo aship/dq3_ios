@@ -10,6 +10,10 @@ import SpriteKit
 class MapMessageWindowNode: SKTileMapNode {
     var isOpen = false
     
+    var arrLines: [[SKSpriteNode]] = []
+    
+    var nextMark: SKSpriteNode!
+    
     func close() {
         self.removeFromParent()        
         self.isOpen = false

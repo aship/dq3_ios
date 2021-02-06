@@ -9,6 +9,10 @@ import SpriteKit
 
 extension BaseScene {
     func willPress(_ button: ButtonOverlay) {
+        if DataManager.dqSceneType == .opening {
+            return
+        }
+        
         let willPress = getWillPress(dqSceneType: DataManager.dqSceneType)
         
         willPress(button)
@@ -23,7 +27,7 @@ extension BaseScene {
         switch dqSceneType {
         case .title: break
         case .adventure_log: willPress = self.adventureLogScene.willPress
-        case .opening: willPress = self.openingScene.willPress
+        case .opening: break
         case .battle: willPress = self.battleScene.willPress
         case .field: willPress = self.fieldScene.willPress
         case .alefgard: willPress = self.alefgardScene.willPress

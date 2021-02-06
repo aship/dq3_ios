@@ -29,14 +29,9 @@ extension MapMessageWindowNode {
                     completion: {
                         if text2 == nil {
                             if withNextMark {
-                                self.showNextMark(line: 1,
-                                                  completion: {
-                                                    completion()
-                                                  })
+                                self.showNextMark(line: 1)
                             }
-                            else {
-                                completion()
-                            }
+                            completion()
                         }
                         else {
                             self.showMessage(string: text2!,
@@ -45,14 +40,10 @@ extension MapMessageWindowNode {
                                              completion: {
                                                 if text3 == nil {
                                                     if withNextMark {
-                                                        self.showNextMark(line: 2,
-                                                                          completion: {
-                                                                            completion()
-                                                                          })
+                                                        self.showNextMark(line: 2)
                                                     }
-                                                    else {
-                                                        completion()
-                                                    }
+                                                    
+                                                    completion()
                                                 }
                                                 else {
                                                     self.showMessage(string: text3!,
@@ -60,14 +51,10 @@ extension MapMessageWindowNode {
                                                                      withSe: withSe,
                                                                      completion: {
                                                                         if withNextMark {
-                                                                            self.showNextMark(line: 3,
-                                                                                              completion: {
-                                                                                                completion()
-                                                                                              })
+                                                                            self.showNextMark(line: 3)
                                                                         }
-                                                                        else {
-                                                                            completion()
-                                                                        }
+                                                                        
+                                                                        completion()
                                                                      })
                                                 }
                                              })

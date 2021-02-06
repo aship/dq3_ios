@@ -15,7 +15,6 @@ class AliahanTownScene: DQMapScene {
         case message_one_start
         case message_one_end
         case message_two_start
-        case message_two_end
         case finished
     }
     
