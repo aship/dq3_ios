@@ -14,5 +14,10 @@ enum DQCharacter: String {
     case priest_female
     case mage_female
     case lady
+    case old_man
+    case boy
+    case npc_marchant
+    case npc_priest
+    case npc_warrior
     case minister
 }
