@@ -1,0 +1,33 @@
+
+Ruby から ImageMagick を扱うためのライブラリ
+RMagick を使用します。
+
+RMagick のインストール
+
+macOS の場合
+% brew install imagemagick
+% brew install pkg-config
+% sudo gem install rmagick
+
+ubuntu の場合
+$ sudo apt -y install ruby ruby-dev
+$ sudo apt -y install imagemagick
+$ sudo apt -y install pkg-config
+$ sudo apt -y install libmagickwand-dev
+$ sudo apt -y install make
+% sudo gem install rmagick
+
+実行方法
+
+script/tilemap.csv
+
+script/output/0.png
+script/output/1.png
+等がある前提で
+
+% cd script
+% ruby combine_tile.rb
+
+成功すると
+output_combined/combined.png
+が生成されます。
