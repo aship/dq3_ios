@@ -7,12 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA091EC6261C17FE00D97AD4 /* ramia.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA091EC4261C17FE00D97AD4 /* ramia.mp3 */; };
+		AA091EC7261C17FE00D97AD4 /* ship.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA091EC5261C17FE00D97AD4 /* ship.mp3 */; };
+		AA091ECC261C185B00D97AD4 /* alefgard.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA091ECB261C185B00D97AD4 /* alefgard.mp3 */; };
+		AA091ED1261C189400D97AD4 /* field.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA091ED0261C189400D97AD4 /* field.mp3 */; };
+		AA14A73925B67742009076DB /* battle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA14A73725B67742009076DB /* battle.mp3 */; };
+		AA14A73F25B67747009076DB /* town.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA14A73E25B67747009076DB /* town.mp3 */; };
+		AA14A74B25B67773009076DB /* stairs.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA14A74625B67773009076DB /* stairs.mp3 */; };
+		AA14A74C25B67773009076DB /* command.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA14A74725B67773009076DB /* command.mp3 */; };
+		AA14A74D25B67773009076DB /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA14A74825B67773009076DB /* win.mp3 */; };
+		AA14A74E25B67773009076DB /* rest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA14A74925B67773009076DB /* rest.mp3 */; };
+		AA14A74F25B67773009076DB /* spell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA14A74A25B67773009076DB /* spell.mp3 */; };
+		AA14A75A25B677A4009076DB /* message.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA14A75925B677A4009076DB /* message.mp3 */; };
 		AA80D37B259AA9A30001304E /* DQ3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80D37A259AA9A30001304E /* DQ3App.swift */; };
 		AA80D37D259AA9A30001304E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80D37C259AA9A30001304E /* ContentView.swift */; };
 		AA80D37F259AA9A40001304E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA80D37E259AA9A40001304E /* Assets.xcassets */; };
 		AA80D382259AA9A40001304E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA80D381259AA9A40001304E /* Preview Assets.xcassets */; };
 		AA80D38D259AA9A40001304E /* DQ3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80D38C259AA9A40001304E /* DQ3Tests.swift */; };
 		AA80D398259AA9A40001304E /* DQ3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80D397259AA9A40001304E /* DQ3UITests.swift */; };
+		AAB52E6F264CC0CF0006B4E0 /* castle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AAB52E6E264CC0CF0006B4E0 /* castle.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +46,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA091EC4261C17FE00D97AD4 /* ramia.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ramia.mp3; sourceTree = "<group>"; };
+		AA091EC5261C17FE00D97AD4 /* ship.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ship.mp3; sourceTree = "<group>"; };
+		AA091ECB261C185B00D97AD4 /* alefgard.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alefgard.mp3; sourceTree = "<group>"; };
+		AA091ED0261C189400D97AD4 /* field.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = field.mp3; sourceTree = "<group>"; };
+		AA14A73725B67742009076DB /* battle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = battle.mp3; sourceTree = "<group>"; };
+		AA14A73E25B67747009076DB /* town.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = town.mp3; sourceTree = "<group>"; };
+		AA14A74625B67773009076DB /* stairs.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stairs.mp3; sourceTree = "<group>"; };
+		AA14A74725B67773009076DB /* command.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = command.mp3; sourceTree = "<group>"; };
+		AA14A74825B67773009076DB /* win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = win.mp3; sourceTree = "<group>"; };
+		AA14A74925B67773009076DB /* rest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rest.mp3; sourceTree = "<group>"; };
+		AA14A74A25B67773009076DB /* spell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = spell.mp3; sourceTree = "<group>"; };
+		AA14A75925B677A4009076DB /* message.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = message.mp3; sourceTree = "<group>"; };
 		AA80D377259AA9A30001304E /* DQ3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DQ3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA80D37A259AA9A30001304E /* DQ3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DQ3App.swift; sourceTree = "<group>"; };
 		AA80D37C259AA9A30001304E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +70,7 @@
 		AA80D393259AA9A40001304E /* DQ3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DQ3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA80D397259AA9A40001304E /* DQ3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DQ3UITests.swift; sourceTree = "<group>"; };
 		AA80D399259AA9A40001304E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAB52E6E264CC0CF0006B4E0 /* castle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = castle.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +98,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA14A73425B67713009076DB /* mp3 */ = {
+			isa = PBXGroup;
+			children = (
+				AA14A73525B67727009076DB /* bgm */,
+				AA14A73625B67731009076DB /* se */,
+			);
+			path = mp3;
+			sourceTree = "<group>";
+		};
+		AA14A73525B67727009076DB /* bgm */ = {
+			isa = PBXGroup;
+			children = (
+				AA14A73E25B67747009076DB /* town.mp3 */,
+				AA14A73725B67742009076DB /* battle.mp3 */,
+				AA091EC4261C17FE00D97AD4 /* ramia.mp3 */,
+				AA091EC5261C17FE00D97AD4 /* ship.mp3 */,
+				AAB52E6E264CC0CF0006B4E0 /* castle.mp3 */,
+				AA091ECB261C185B00D97AD4 /* alefgard.mp3 */,
+				AA091ED0261C189400D97AD4 /* field.mp3 */,
+			);
+			path = bgm;
+			sourceTree = "<group>";
+		};
+		AA14A73625B67731009076DB /* se */ = {
+			isa = PBXGroup;
+			children = (
+				AA14A75925B677A4009076DB /* message.mp3 */,
+				AA14A74725B67773009076DB /* command.mp3 */,
+				AA14A74925B67773009076DB /* rest.mp3 */,
+				AA14A74A25B67773009076DB /* spell.mp3 */,
+				AA14A74625B67773009076DB /* stairs.mp3 */,
+				AA14A74825B67773009076DB /* win.mp3 */,
+			);
+			path = se;
+			sourceTree = "<group>";
+		};
 		AA80D36E259AA9A30001304E = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +159,7 @@
 			children = (
 				AA80D37A259AA9A30001304E /* DQ3App.swift */,
 				AA80D37C259AA9A30001304E /* ContentView.swift */,
+				AA14A73425B67713009076DB /* mp3 */,
 				AA80D37E259AA9A40001304E /* Assets.xcassets */,
 				AA80D383259AA9A40001304E /* Info.plist */,
 				AA80D380259AA9A40001304E /* Preview Content */,
@@ -234,6 +297,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA80D382259AA9A40001304E /* Preview Assets.xcassets in Resources */,
+				AA14A75A25B677A4009076DB /* message.mp3 in Resources */,
+				AA091EC7261C17FE00D97AD4 /* ship.mp3 in Resources */,
+				AA091ED1261C189400D97AD4 /* field.mp3 in Resources */,
+				AA14A73F25B67747009076DB /* town.mp3 in Resources */,
+				AA14A74E25B67773009076DB /* rest.mp3 in Resources */,
+				AA091EC6261C17FE00D97AD4 /* ramia.mp3 in Resources */,
+				AA091ECC261C185B00D97AD4 /* alefgard.mp3 in Resources */,
+				AAB52E6F264CC0CF0006B4E0 /* castle.mp3 in Resources */,
+				AA14A74F25B67773009076DB /* spell.mp3 in Resources */,
+				AA14A74B25B67773009076DB /* stairs.mp3 in Resources */,
+				AA14A74D25B67773009076DB /* win.mp3 in Resources */,
+				AA14A73925B67742009076DB /* battle.mp3 in Resources */,
+				AA14A74C25B67773009076DB /* command.mp3 in Resources */,
 				AA80D37F259AA9A40001304E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
