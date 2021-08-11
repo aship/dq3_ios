@@ -9,18 +9,47 @@ import SpriteKit
 
 extension AdventureLogTopWindowNode {
     func processButtonA() {
-        self.parentScene?.setProcessing()
-        
         pauseTriangleAnimation(triangleNode: self.triangleNode)
+        
+        if dqAdventureLogTop == .go ||
+            dqAdventureLogTop == .change_message_speed ||
+            dqAdventureLogTop == .copy ||
+            dqAdventureLogTop == .delete {
+            if let adventureLogSelectLogWindowNode = self.adventureLogSelectLogWindowNode {
+                adventureLogSelectLogWindowNode.processButtonA()
+                
+                return
+            }
+        }
+        
+        if dqAdventureLogTop == .create  {
+            if let adventureLogSelectEmptyLogWindowNode = self.adventureLogSelectEmptyLogWindowNode {
+                adventureLogSelectEmptyLogWindowNode.processButtonA()
+                
+                return
+            }
+        }
         
         SoundEffectManager.play(.command)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            let scene = OpeningScene()
-            
-            let transition = SKTransition.crossFade(withDuration: 0.5)
-            self.parentScene?.view?.presentScene(scene,
-                                                 transition: transition)
+        let dqAdventureLogTop = self.dqAdventureLogTop!
+        
+        if dqAdventureLogTop != .change_message_speed &&
+            dqAdventureLogTop != .create {
+            pauseTriangleAnimation(triangleNode: self.triangleNode)
+        }
+        
+        if dqAdventureLogTop == .go ||
+            dqAdventureLogTop == .change_message_speed ||
+            dqAdventureLogTop == .copy ||
+            dqAdventureLogTop == .delete {
+            self.adventureLogSelectLogWindowNode = AdventureLogSelectLogWindowNode(dqAdventureLogTop: dqAdventureLogTop)
+            self.adventureLogSelectLogWindowNode?.addToWindow(windowNode: self)
+        }
+        else if dqAdventureLogTop == .create {
+            self.adventureLogSelectEmptyLogWindowNode = AdventureLogSelectEmptyLogWindowNode(dqAdventureLogTop: dqAdventureLogTop,
+                                                                                             adventureLogNumber: nil)
+            self.adventureLogSelectEmptyLogWindowNode?.addToWindow(windowNode: self)
         }
     }
 }

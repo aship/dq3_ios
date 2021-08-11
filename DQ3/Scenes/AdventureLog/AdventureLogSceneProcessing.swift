@@ -15,4 +15,8 @@ extension AdventureLogScene {
     func setProcessingFinished() {
         self.isProcessing = false
     }
+    
+    override func update(_ currentTime: TimeInterval) {
+        self.adventureLogTopWindowNode?.moveTriangle(direction: self.padDirection)
+    }
 }

@@ -23,17 +23,12 @@ class AliahanTownScene: BaseMapScene,
     
     var openingStateFlag: OpeningStateFlag = .none
     
-    let motherNode = SKSpriteNode(texture: nil, size: CGSize(width: 16, height: 16))
-    
     let greenBGColor = UIColor.rgba(red: 166,
                                     green: 226,
                                     blue: 70,
                                     alpha: 1)
     override init() {
         super.init()
-        
-        self.heroPositionX = AliahanTownEntrancePositionX
-        self.heroPositionY = AliahanTownEntrancePositionY
     }
     
     override init(size: CGSize) {
@@ -65,16 +60,18 @@ class AliahanTownScene: BaseMapScene,
                          insideTileMapNode: &self.insideTileMapNode,
                          numberOfImages: 66)
         
-        if self.showInsideMap {
+        if DataManager.showInsideMap {
             showInsideTileMap()
             
-            self.showInsideMap = false
+            DataManager.showInsideMap = false
         }
         
         addPartyCharacters(tileMapNode: self.mainTileMapNode,
                            scale: self.scale)
         
+        
         addNpcCharacters(tileMapNode: self.mainTileMapNode,
+                         dqStory: DataManager.dqStory,
                          scale: self.scale)
         
         setupVirtualPad(leftPad: self.leftPad,
@@ -85,16 +82,18 @@ class AliahanTownScene: BaseMapScene,
             AudioManager.play(dqAudio: .town)
         }
         
-        if dqStory == .opening {
+        if DataManager.dqStory == .opening {
             self.openingStateFlag = .mother_moving
             
-            setMoveProhibited()
+            let headNode = DataManager.adventureLog.partyCharacterNodes.first!
+            headNode.setMoveProhibited()
             
             motherAndHeroMove(completion: {
                 self.openingStateFlag = .message_one_start
                 
-                self.heroPositionX = AliahanTownMotherWaitingPositionX - 1
-                self.heroPositionY = AliahanTownMotherWaitingPositionY
+                let headNode = DataManager.adventureLog.partyCharacterNodes.first!
+                headNode.positionX = AliahanTownMotherWaitingPositionX - 1
+                headNode.positionY = AliahanTownMotherWaitingPositionY
                 
                 let text1 = "＊「ここから　まっすぐいくと"
                 let text2 = "　　おしろ　です。"

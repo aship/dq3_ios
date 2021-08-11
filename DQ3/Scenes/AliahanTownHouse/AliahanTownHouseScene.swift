@@ -23,14 +23,8 @@ class AliahanTownHouseScene: BaseMapScene,
     
     var openingStateFlag: OpeningStateFlag = .none
     
-    let motherNode = SKSpriteNode(texture: nil,
-                                  size: CGSize(width: 16, height: 16))
-    
     override init() {
         super.init()
-        
-        self.heroPositionX = AliahanTownHouseMotherPositionX
-        self.heroPositionY = AliahanTownHouseMotherPositionY - 1
     }
     
     override init(size: CGSize) {
@@ -61,9 +55,11 @@ class AliahanTownHouseScene: BaseMapScene,
                        scale: self.scale)
         
         addPartyCharacters(tileMapNode: self.mainTileMapNode,
+                           dqStory: DataManager.dqStory,
                            scale: self.scale)
         
         addNpcCharacters(tileMapNode: self.mainTileMapNode,
+                         dqStory: DataManager.dqStory,
                          scale: self.scale)
         
         setupVirtualPad(leftPad: self.leftPad,
@@ -72,8 +68,9 @@ class AliahanTownHouseScene: BaseMapScene,
         
         AudioManager.play(dqAudio: .town)
         
-        if dqStory == .opening {
-            setMoveProhibited()
+        if DataManager.dqStory == .opening {
+            let headNode = DataManager.adventureLog.partyCharacterNodes.first!
+            headNode.setMoveProhibited()
             
             let text1 = "＊「おはよう　えにくす。"
             let text2 = "　　もう　あさですよ。"

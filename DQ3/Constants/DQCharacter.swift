@@ -8,6 +8,7 @@
 // キャラクター種別
 // (へんげのつえで利用するため職業も含める)
 enum DQCharacter: String {
+    case none
     case hero
     case warrior_female
     case priest_female

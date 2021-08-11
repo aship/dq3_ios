@@ -46,12 +46,13 @@ extension AliahanTownScene {
                                     self.mapMessageWindowNode.moveLine()
                                     
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                                        self.setMovePermitted()
+                                        let headNode = DataManager.adventureLog.partyCharacterNodes.first!
+                                        headNode.setMovePermitted()
                                         
                                         self.mapMessageWindowNode.close()
                                         
                                         self.openingStateFlag = .finished
-                                        dqStory = .mother_waiting
+                                        DataManager.dqStory = .mother_waiting
                                     }
                                 })
                         })

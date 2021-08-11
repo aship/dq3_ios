@@ -17,6 +17,24 @@ let MapMessageWindowChildOfScenePointY = 112 - 136
 let MapMessageWindowChildOfCommandWindowPointX = 0
 let MapMessageWindowChildOfCommandWindowPointY = -128
 
+enum DQAdventureLogTop {
+    case go // ぼうけんをする
+    case change_message_speed // ひょうじそくどをかえる
+    case create // ぼうけんのしょをつくる
+    case copy // ぼうけんのしょをうつす
+    case delete // ぼうけんのしょをけす
+}
+
+enum DQYesNo {
+    case yes
+    case no
+}
+
+enum DQGender: String {
+    case male
+    case female
+}
+
 enum BattleStatus {
     case start
     case command

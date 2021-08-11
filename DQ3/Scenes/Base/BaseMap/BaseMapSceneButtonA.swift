@@ -11,12 +11,14 @@ extension BaseMapScene {
     func processButtonA(mapCommandWindowNode: inout MapCommandWindowNode,
                         mapMessageWindowNode: inout MapMessageWindowNode,
                         scale: CGFloat) {
+        let headNode = DataManager.adventureLog.partyCharacterNodes.first!
+        
         if mapCommandWindowNode.isOpen {
             // コマンド処理中
             let shouldClose = mapCommandWindowNode.processButtonA()
             
             if shouldClose {
-                setMovePermitted()
+                headNode.setMovePermitted()
             }
             
             return
@@ -25,7 +27,7 @@ extension BaseMapScene {
         // コマンドウィンドウ表示
         SoundEffectManager.play(.command)
         
-        setMoveProhibited()
+        headNode.setMoveProhibited()
         
         mapCommandWindowNode = MapCommandWindowNode()
         mapCommandWindowNode.addToScene(scene: self,

@@ -24,6 +24,8 @@ class AdventureLogScene: BaseScene,
     override func didMove(to view: SKView) {
         self.backgroundColor = .black
         
+        DataManager.adventureLogScene = self
+        
         setup()
         
         setupVirtualPad(leftPad: self.leftPad,

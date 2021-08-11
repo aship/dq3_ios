@@ -10,15 +10,17 @@ import SpriteKit
 extension BaseMapScene {
     func processButtonB(mapCommandWindowNode: MapCommandWindowNode,
                         mapMessageWindowNode: MapMessageWindowNode) {
+        let headNode = DataManager.adventureLog.partyCharacterNodes.first!
+        
         if mapCommandWindowNode.isOpen {
-            setMovePermitted()
+            headNode.setMovePermitted()
             mapCommandWindowNode.close()
             
             return
         }
         
         if mapMessageWindowNode.isOpen {
-            setMovePermitted()
+            headNode.setMovePermitted()
             mapMessageWindowNode.close()
         }
     }

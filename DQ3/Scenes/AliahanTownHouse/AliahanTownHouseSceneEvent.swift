@@ -26,7 +26,8 @@ extension AliahanTownHouseScene {
         let actionMove3 = SKAction.moveBy(x: 16 * 7,
                                           y: 0,
                                           duration: 1 / 4 * 7)
-        let motherNode = self.motherNode
+        
+        let motherNode = self.characterNpcNodes.first!
         
         motherNode.run(actionMotherAnimationLeft)
         
@@ -47,14 +48,16 @@ extension AliahanTownHouseScene {
         let actionMother = SKAction.moveBy(x: 16 * 1,
                                            y: 0,
                                            duration: 1 / 4 * 1)
-        let motherNode = self.motherNode
+        
+        let motherNode = self.characterNpcNodes.first!
         
         motherNode.run(actionMother)
         
         let actionHero = SKAction.moveBy(x: 16 * 2,
                                          y: 0,
                                          duration: 1 / 4 * 2)
-        let heroNode = self.heroNode
+        
+        let heroNode = DataManager.adventureLog.partyCharacterNodes.first!
         
         Task {
             await heroNode.run(actionHero)
@@ -71,7 +74,8 @@ extension AliahanTownHouseScene {
         let actionMother = SKAction.moveBy(x: 16 * 1,
                                            y: 0,
                                            duration: 1 / 4 * 1)
-        let motherNode = self.motherNode
+        
+        let motherNode = self.characterNpcNodes.first!
         
         motherNode.run(actionMother,
                        completion: {})
@@ -83,7 +87,8 @@ extension AliahanTownHouseScene {
         let actionHero2 = SKAction.moveBy(x: 16 * 2,
                                           y: 0,
                                           duration: 1 / 4 * 2)
-        let heroNode = self.heroNode
+        
+        let heroNode = DataManager.adventureLog.partyCharacterNodes.first!
         
         heroNode.run(actionHeroAnimationUp)
         

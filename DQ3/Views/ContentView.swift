@@ -11,9 +11,20 @@ import SpriteKit
 struct ContentView: View {
     var body: some View {
         let scene = TitleScene()
+        
         // let scene = AliahanTownScene()
+        // for node in DataManager.adventureLog.partyCharacterNodes {
+        //     node.positionX = AliahanTownEntrancePositionX
+        //     node.positionY = AliahanTownEntrancePositionY
+        // }
+        
         // let scene = AliahanTownHouseScene()
+        
         // let scene = FieldScene()
+        // for node in DataManager.adventureLog.partyCharacterNodes {
+        //     node.positionX = FieldAliahanPositionX
+        //     node.positionY = FieldAliahanPositionY
+        // }
         
         return Group {
             SpriteView(scene: scene)

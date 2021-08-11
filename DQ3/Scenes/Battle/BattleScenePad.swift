@@ -62,10 +62,7 @@ extension BattleScene {
                 SoundEffectManager.play(.win)
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                    let scene = FieldScene()
-                    scene.heroPositionX = self.heroMapPositionX
-                    scene.heroPositionY = self.heroMapPositionY
-                    
+                    let scene = FieldScene()                    
                     let transition = SKTransition.crossFade(withDuration: 1.0)
                     
                     self.view?.presentScene(scene,

@@ -50,11 +50,20 @@ extension FieldScene {
     }
     
     private func processEnterAliahan() {
-        setMoveProhibited()
+        let headNode = DataManager.adventureLog.partyCharacterNodes.first!
+        
+        headNode.setMoveProhibited()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             AudioManager.stop()
             SoundEffectManager.play(.stairs)
+            
+            for node in DataManager.adventureLog.partyCharacterNodes {
+                node.removeFromParent()
+            }
+            
+            headNode.positionX = AliahanTownEntrancePositionX
+            headNode.positionY = AliahanTownEntrancePositionY
             
             let scene = AliahanTownScene()
             let transition = SKTransition.crossFade(withDuration: 1.0)
@@ -69,15 +78,18 @@ extension FieldScene {
             return
         }
         
-        setMoveProhibited()
+        let headNode = DataManager.adventureLog.partyCharacterNodes.first!
+        
+        headNode.setMoveProhibited()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             AudioManager.stop()
             
-            let scene = BattleScene()
-            scene.heroMapPositionX = self.heroPositionX
-            scene.heroMapPositionY = self.heroPositionY
+            for node in DataManager.adventureLog.partyCharacterNodes {
+                node.removeFromParent()
+            }
             
+            let scene = BattleScene()
             let transition = SKTransition.crossFade(withDuration: 1.0)
             
             self.view?.presentScene(scene,

@@ -10,72 +10,38 @@ import SpriteKit
 extension FieldScene {
     func addPartyCharacters(tileMapNode: SKTileMapNode,
                             scale: CGFloat) {
-        addCharacter(node: self.heroNode,
-                     tileMapNode: tileMapNode,
-                     isTown: false)
+        var isHead: Bool!
         
-        let action = getCharacterAnimationAction(direction: .down,
-                                                 dqCharacter: .hero)
-        self.heroNode.run(action)
-        
-        setCharacterHeroPosition(positionX: self.heroPositionX,
-                                 positionY: self.heroPositionY,
-                                 node: self.heroNode,
-                                 tileMapNode: tileMapNode,
-                                 scale: scale)
-        
-        setMapPosition(positionX: self.heroPositionX,
-                       positionY: self.heroPositionY,
-                       tileMapNode: tileMapNode,
-                       scale: scale)
-        
-        addCharacter(node: self.warriorNode,
-                     tileMapNode: tileMapNode,
-                     isTown: false)
-        
-        let action2 = getCharacterAnimationAction(direction: .down,
-                                                  dqCharacter: .warrior_female)
-        self.warriorNode.run(action2)
-        
-        setCharacterNpcPosition(positionX: self.heroPositionX,
-                                positionY: self.heroPositionY,
-                                node: self.warriorNode,
-                                tileMapNode: tileMapNode,
-                                scale: scale)
-        
-        addCharacter(node: self.priestNode,
-                     tileMapNode: tileMapNode,
-                     isTown: false)
-        
-        let action3 = getCharacterAnimationAction(direction: .down,
-                                                  dqCharacter: .priest_female)
-        
-        self.priestNode.run(action3)
-        
-        setCharacterNpcPosition(positionX: self.heroPositionX,
-                                positionY: self.heroPositionY,
-                                node: self.priestNode,
-                                tileMapNode: tileMapNode,
-                                scale: scale)
-        
-        addCharacter(node: self.mageNode,
-                     tileMapNode: tileMapNode,
-                     isTown: false)
-        
-        let action4 = getCharacterAnimationAction(direction: .down,
-                                                  dqCharacter: .mage_female)
-        
-        self.mageNode.run(action4)
-        
-        setCharacterNpcPosition(positionX: self.heroPositionX,
-                                positionY: self.heroPositionY,
-                                node: self.mageNode,
-                                tileMapNode: tileMapNode,
-                                scale: scale)
-        
-        self.heroNode.zPosition = 4
-        self.warriorNode.zPosition = 3
-        self.priestNode.zPosition = 2
-        self.mageNode.zPosition = 1
+        for (index, node) in DataManager.adventureLog.partyCharacterNodes.enumerated() {            
+            node.addToMap(tileMapNode: tileMapNode,
+                          isTown: false)
+            
+            node.initDirection(direction: .down)
+            
+            if index == 0 {
+                isHead = true
+                
+                // 前 Scene でキー入れっぱなしの時に
+                // 前 Scene の update -> setMove 処理が残ってて
+                // Scene 切り替え直後に1歩動いてしまうため必要
+                // 一度 setMoveProhibitted してるのに
+                // なぜか isMovePermitted = true になる解
+                // scene 切り替わってるのに前 Scene の update が走るのが原因か
+                // 起きたり起きなかったり条件不明、iOSのバグっぽい、直ってたら外す
+                // 後 Scene の setMovePermitted　が早すぎるのが問題っぽいので遅らせる暫定対応
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    node.setMovePermitted()
+                }
+            }
+            else {
+                isHead = false
+            }
+            
+            node.setPosition(tileMapNode: tileMapNode,
+                             withMoveMap: isHead,
+                             scale: self.scale)
+            
+            node.zPosition = CGFloat(4 - index)
+        }
     }
 }

@@ -65,16 +65,25 @@ extension AliahanTownScene {
             enterHouse = true
         }
         
+        let headNode = DataManager.adventureLog.partyCharacterNodes.first!
+        
         if enterField {
-            setMoveProhibited()
+            headNode.setMoveProhibited()
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 AudioManager.stop()
                 SoundEffectManager.play(.stairs)
                 
-                let scene = FieldScene()
+                for node in DataManager.adventureLog.partyCharacterNodes {
+                    node.removeFromParent()
+                    
+                    node.positionX = FieldAliahanPositionX
+                    node.positionY = FieldAliahanPositionY
+                }
                 
+                let scene = FieldScene()
                 let transition = SKTransition.crossFade(withDuration: 1.0)
+                
                 self.view?.presentScene(scene,
                                         transition: transition)
             }
@@ -86,15 +95,19 @@ extension AliahanTownScene {
             showMainTileMap(color: self.greenBGColor)
         }
         else if enterHouse {
-            setMoveProhibited()
+            headNode.setMoveProhibited()
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 SoundEffectManager.play(.stairs)
                 
-                let scene = AliahanTownHouseScene()
-                scene.heroPositionX = AliahanTownHouseStairsPositionX
-                scene.heroPositionY = AliahanTownHouseStairsPositionY
+                headNode.positionX = AliahanTownHouseStairsPositionX
+                headNode.positionY = AliahanTownHouseStairsPositionY
                 
+                for node in DataManager.adventureLog.partyCharacterNodes {
+                    node.removeFromParent()
+                }
+                
+                let scene = AliahanTownHouseScene()
                 let transition = SKTransition.crossFade(withDuration: 1.0)
                 
                 self.view?.presentScene(scene,

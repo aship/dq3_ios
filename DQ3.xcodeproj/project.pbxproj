@@ -65,11 +65,7 @@
 		AA14A7F825B67E13009076DB /* BaseSceneVirtualPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A7F525B67E13009076DB /* BaseSceneVirtualPad.swift */; };
 		AA14A7F925B67E13009076DB /* BaseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A7F625B67E13009076DB /* BaseScene.swift */; };
 		AA14A80625B67E27009076DB /* BaseMapScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A7FE25B67E27009076DB /* BaseMapScene.swift */; };
-		AA14A80925B67E27009076DB /* BaseMapSceneCharacterHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A80125B67E27009076DB /* BaseMapSceneCharacterHero.swift */; };
-		AA14A80A25B67E27009076DB /* BaseMapSceneCharacterNpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A80225B67E27009076DB /* BaseMapSceneCharacterNpc.swift */; };
-		AA14A80B25B67E27009076DB /* BaseMapSceneCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A80325B67E27009076DB /* BaseMapSceneCharacter.swift */; };
 		AA14A80C25B67E27009076DB /* BaseMapSceneTileMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A80425B67E27009076DB /* BaseMapSceneTileMap.swift */; };
-		AA14A80D25B67E27009076DB /* BaseMapSceneCharacterHeroMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A80525B67E27009076DB /* BaseMapSceneCharacterHeroMove.swift */; };
 		AA14A81825B67E36009076DB /* BattleSceneEnemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A81125B67E36009076DB /* BattleSceneEnemy.swift */; };
 		AA14A81925B67E36009076DB /* BattleSceneMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A81225B67E36009076DB /* BattleSceneMessage.swift */; };
 		AA14A81A25B67E36009076DB /* BattleSceneStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A81325B67E36009076DB /* BattleSceneStatus.swift */; };
@@ -94,14 +90,45 @@
 		AA14A85F25B67F5C009076DB /* ZPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A85E25B67F5C009076DB /* ZPosition.swift */; };
 		AA6B8666262BBF600010DAF5 /* AdventureLogTopWindowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B8664262BBF600010DAF5 /* AdventureLogTopWindowNode.swift */; };
 		AA6B8667262BBF600010DAF5 /* AdventureLogTopWindowNodeButtonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B8665262BBF600010DAF5 /* AdventureLogTopWindowNodeButtonA.swift */; };
+		AA6B8687262BCA8F0010DAF5 /* AdventureLogTopWindowNodeTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B8686262BCA8F0010DAF5 /* AdventureLogTopWindowNodeTriangle.swift */; };
+		AA6B8691262BCAC40010DAF5 /* AdventureLogMessageSpeedWindowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B868E262BCAC40010DAF5 /* AdventureLogMessageSpeedWindowNode.swift */; };
+		AA6B8692262BCAC40010DAF5 /* AdventureLogMessageSpeedWindowNodeButtonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B868F262BCAC40010DAF5 /* AdventureLogMessageSpeedWindowNodeButtonA.swift */; };
+		AA6B8693262BCAC40010DAF5 /* AdventureLogMessageSpeedWindowNodeTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B8690262BCAC40010DAF5 /* AdventureLogMessageSpeedWindowNodeTriangle.swift */; };
+		AA6B869A262BCAD80010DAF5 /* AdventureLogSelectEmptyLogWindowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B8697262BCAD80010DAF5 /* AdventureLogSelectEmptyLogWindowNode.swift */; };
+		AA6B869B262BCAD80010DAF5 /* AdventureLogSelectEmptyLogWindowNodeTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B8698262BCAD80010DAF5 /* AdventureLogSelectEmptyLogWindowNodeTriangle.swift */; };
+		AA6B869C262BCAD80010DAF5 /* AdventureLogSelectEmptyLogWindowNodeButtonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B8699262BCAD80010DAF5 /* AdventureLogSelectEmptyLogWindowNodeButtonA.swift */; };
+		AA6B86A4262BCAEC0010DAF5 /* AdventureLogInputNameWindowNodeTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B86A1262BCAEC0010DAF5 /* AdventureLogInputNameWindowNodeTriangle.swift */; };
+		AA6B86A5262BCAEC0010DAF5 /* AdventureLogInputNameWindowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B86A2262BCAEC0010DAF5 /* AdventureLogInputNameWindowNode.swift */; };
+		AA6B86A6262BCAEC0010DAF5 /* AdventureLogInputNameWindowNodeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B86A3262BCAEC0010DAF5 /* AdventureLogInputNameWindowNodeButton.swift */; };
+		AA6B86B1262BCAFC0010DAF5 /* AdventureLogSelectGenderWindowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B86AE262BCAFB0010DAF5 /* AdventureLogSelectGenderWindowNode.swift */; };
+		AA6B86B2262BCAFC0010DAF5 /* AdventureLogSelectGenderWindowNodeTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B86AF262BCAFB0010DAF5 /* AdventureLogSelectGenderWindowNodeTriangle.swift */; };
+		AA6B86B3262BCAFC0010DAF5 /* AdventureLogSelectGenderWindowNodeButtonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B86B0262BCAFC0010DAF5 /* AdventureLogSelectGenderWindowNodeButtonA.swift */; };
+		AA6B86BD262BCB100010DAF5 /* AdventureLogSelectLogWindowNodeTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B86BA262BCB100010DAF5 /* AdventureLogSelectLogWindowNodeTriangle.swift */; };
+		AA6B86BE262BCB100010DAF5 /* AdventureLogSelectLogWindowNodeButtonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B86BB262BCB100010DAF5 /* AdventureLogSelectLogWindowNodeButtonA.swift */; };
+		AA6B86BF262BCB100010DAF5 /* AdventureLogSelectLogWindowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B86BC262BCB100010DAF5 /* AdventureLogSelectLogWindowNode.swift */; };
+		AA6B86C6262BCB250010DAF5 /* AdventureLogConfirmDeleteLogWindowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B86C5262BCB250010DAF5 /* AdventureLogConfirmDeleteLogWindowNode.swift */; };
+		AA6B86CD262BCB2D0010DAF5 /* AdventureLogYesNoDeleteLogWindowNodeTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B86CA262BCB2D0010DAF5 /* AdventureLogYesNoDeleteLogWindowNodeTriangle.swift */; };
+		AA6B86CE262BCB2D0010DAF5 /* AdventureLogYesNoDeleteLogWindowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B86CB262BCB2D0010DAF5 /* AdventureLogYesNoDeleteLogWindowNode.swift */; };
+		AA6B86CF262BCB2D0010DAF5 /* AdventureLogYesNoDeleteLogWindowNodeButtonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B86CC262BCB2D0010DAF5 /* AdventureLogYesNoDeleteLogWindowNodeButtonA.swift */; };
+		AA6B86E0262BCC550010DAF5 /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B86DF262BCC550010DAF5 /* UserDefaultsUtil.swift */; };
+		AA6B86E8262BCC7B0010DAF5 /* AdventureLogStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B86E5262BCC7B0010DAF5 /* AdventureLogStory.swift */; };
+		AA6B86E9262BCC7B0010DAF5 /* AdventureLogFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B86E6262BCC7B0010DAF5 /* AdventureLogFunctions.swift */; };
+		AA6B86EA262BCC7B0010DAF5 /* AdventureLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B86E7262BCC7B0010DAF5 /* AdventureLog.swift */; };
+		AA6B86F2262BCE440010DAF5 /* NextElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B86F1262BCE440010DAF5 /* NextElement.swift */; };
 		AA80D37B259AA9A30001304E /* DQ3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80D37A259AA9A30001304E /* DQ3App.swift */; };
 		AA80D37D259AA9A30001304E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80D37C259AA9A30001304E /* ContentView.swift */; };
 		AA80D37F259AA9A40001304E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA80D37E259AA9A40001304E /* Assets.xcassets */; };
 		AA80D382259AA9A40001304E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA80D381259AA9A40001304E /* Preview Assets.xcassets */; };
 		AA80D38D259AA9A40001304E /* DQ3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80D38C259AA9A40001304E /* DQ3Tests.swift */; };
 		AA80D398259AA9A40001304E /* DQ3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80D397259AA9A40001304E /* DQ3UITests.swift */; };
-		AAB52E6F264CC0CF0006B4E0 /* castle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AAB52E6E264CC0CF0006B4E0 /* castle.mp3 */; };
 		AAAE1CF125B7C30100BF57B1 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAE1CF025B7C30100BF57B1 /* Window.swift */; };
+		AAB52E6F264CC0CF0006B4E0 /* castle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AAB52E6E264CC0CF0006B4E0 /* castle.mp3 */; };
+		AAD0EEFA260A21050022849C /* CharacterNodePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0EEF6260A21040022849C /* CharacterNodePosition.swift */; };
+		AAD0EEFB260A21050022849C /* CharacterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0EEF7260A21040022849C /* CharacterNode.swift */; };
+		AAD0EEFC260A21050022849C /* CharacterNodeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0EEF8260A21050022849C /* CharacterNodeDirection.swift */; };
+		AAD0EEFD260A21050022849C /* CharacterNodeMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0EEF9260A21050022849C /* CharacterNodeMove.swift */; };
+		AAD0EF05260A21190022849C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0EF04260A21190022849C /* DataManager.swift */; };
+		AAD0EF0A260A21510022849C /* BaseMapSceneUpdateProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0EF09260A21510022849C /* BaseMapSceneUpdateProcess.swift */; };
 		AAD4D54626073F4D00C21321 /* MapMessageWindowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD4D54226073F4D00C21321 /* MapMessageWindowNode.swift */; };
 		AAD4D54726073F4D00C21321 /* MapMessageWindowNodeShowAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD4D54326073F4D00C21321 /* MapMessageWindowNodeShowAll.swift */; };
 		AAD4D54826073F4D00C21321 /* MapMessageWindowNodeShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD4D54426073F4D00C21321 /* MapMessageWindowNodeShow.swift */; };
@@ -193,11 +220,7 @@
 		AA14A7F525B67E13009076DB /* BaseSceneVirtualPad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneVirtualPad.swift; sourceTree = "<group>"; };
 		AA14A7F625B67E13009076DB /* BaseScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseScene.swift; sourceTree = "<group>"; };
 		AA14A7FE25B67E27009076DB /* BaseMapScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapScene.swift; sourceTree = "<group>"; };
-		AA14A80125B67E27009076DB /* BaseMapSceneCharacterHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapSceneCharacterHero.swift; sourceTree = "<group>"; };
-		AA14A80225B67E27009076DB /* BaseMapSceneCharacterNpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapSceneCharacterNpc.swift; sourceTree = "<group>"; };
-		AA14A80325B67E27009076DB /* BaseMapSceneCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapSceneCharacter.swift; sourceTree = "<group>"; };
 		AA14A80425B67E27009076DB /* BaseMapSceneTileMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapSceneTileMap.swift; sourceTree = "<group>"; };
-		AA14A80525B67E27009076DB /* BaseMapSceneCharacterHeroMove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapSceneCharacterHeroMove.swift; sourceTree = "<group>"; };
 		AA14A81125B67E36009076DB /* BattleSceneEnemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleSceneEnemy.swift; sourceTree = "<group>"; };
 		AA14A81225B67E36009076DB /* BattleSceneMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleSceneMessage.swift; sourceTree = "<group>"; };
 		AA14A81325B67E36009076DB /* BattleSceneStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleSceneStatus.swift; sourceTree = "<group>"; };
@@ -222,6 +245,31 @@
 		AA14A85E25B67F5C009076DB /* ZPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPosition.swift; sourceTree = "<group>"; };
 		AA6B8664262BBF600010DAF5 /* AdventureLogTopWindowNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogTopWindowNode.swift; sourceTree = "<group>"; };
 		AA6B8665262BBF600010DAF5 /* AdventureLogTopWindowNodeButtonA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogTopWindowNodeButtonA.swift; sourceTree = "<group>"; };
+		AA6B8686262BCA8F0010DAF5 /* AdventureLogTopWindowNodeTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogTopWindowNodeTriangle.swift; sourceTree = "<group>"; };
+		AA6B868E262BCAC40010DAF5 /* AdventureLogMessageSpeedWindowNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogMessageSpeedWindowNode.swift; sourceTree = "<group>"; };
+		AA6B868F262BCAC40010DAF5 /* AdventureLogMessageSpeedWindowNodeButtonA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogMessageSpeedWindowNodeButtonA.swift; sourceTree = "<group>"; };
+		AA6B8690262BCAC40010DAF5 /* AdventureLogMessageSpeedWindowNodeTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogMessageSpeedWindowNodeTriangle.swift; sourceTree = "<group>"; };
+		AA6B8697262BCAD80010DAF5 /* AdventureLogSelectEmptyLogWindowNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogSelectEmptyLogWindowNode.swift; sourceTree = "<group>"; };
+		AA6B8698262BCAD80010DAF5 /* AdventureLogSelectEmptyLogWindowNodeTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogSelectEmptyLogWindowNodeTriangle.swift; sourceTree = "<group>"; };
+		AA6B8699262BCAD80010DAF5 /* AdventureLogSelectEmptyLogWindowNodeButtonA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogSelectEmptyLogWindowNodeButtonA.swift; sourceTree = "<group>"; };
+		AA6B86A1262BCAEC0010DAF5 /* AdventureLogInputNameWindowNodeTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogInputNameWindowNodeTriangle.swift; sourceTree = "<group>"; };
+		AA6B86A2262BCAEC0010DAF5 /* AdventureLogInputNameWindowNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogInputNameWindowNode.swift; sourceTree = "<group>"; };
+		AA6B86A3262BCAEC0010DAF5 /* AdventureLogInputNameWindowNodeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogInputNameWindowNodeButton.swift; sourceTree = "<group>"; };
+		AA6B86AE262BCAFB0010DAF5 /* AdventureLogSelectGenderWindowNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogSelectGenderWindowNode.swift; sourceTree = "<group>"; };
+		AA6B86AF262BCAFB0010DAF5 /* AdventureLogSelectGenderWindowNodeTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogSelectGenderWindowNodeTriangle.swift; sourceTree = "<group>"; };
+		AA6B86B0262BCAFC0010DAF5 /* AdventureLogSelectGenderWindowNodeButtonA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogSelectGenderWindowNodeButtonA.swift; sourceTree = "<group>"; };
+		AA6B86BA262BCB100010DAF5 /* AdventureLogSelectLogWindowNodeTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogSelectLogWindowNodeTriangle.swift; sourceTree = "<group>"; };
+		AA6B86BB262BCB100010DAF5 /* AdventureLogSelectLogWindowNodeButtonA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogSelectLogWindowNodeButtonA.swift; sourceTree = "<group>"; };
+		AA6B86BC262BCB100010DAF5 /* AdventureLogSelectLogWindowNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogSelectLogWindowNode.swift; sourceTree = "<group>"; };
+		AA6B86C5262BCB250010DAF5 /* AdventureLogConfirmDeleteLogWindowNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogConfirmDeleteLogWindowNode.swift; sourceTree = "<group>"; };
+		AA6B86CA262BCB2D0010DAF5 /* AdventureLogYesNoDeleteLogWindowNodeTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogYesNoDeleteLogWindowNodeTriangle.swift; sourceTree = "<group>"; };
+		AA6B86CB262BCB2D0010DAF5 /* AdventureLogYesNoDeleteLogWindowNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogYesNoDeleteLogWindowNode.swift; sourceTree = "<group>"; };
+		AA6B86CC262BCB2D0010DAF5 /* AdventureLogYesNoDeleteLogWindowNodeButtonA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogYesNoDeleteLogWindowNodeButtonA.swift; sourceTree = "<group>"; };
+		AA6B86DF262BCC550010DAF5 /* UserDefaultsUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtil.swift; sourceTree = "<group>"; };
+		AA6B86E5262BCC7B0010DAF5 /* AdventureLogStory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogStory.swift; sourceTree = "<group>"; };
+		AA6B86E6262BCC7B0010DAF5 /* AdventureLogFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogFunctions.swift; sourceTree = "<group>"; };
+		AA6B86E7262BCC7B0010DAF5 /* AdventureLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLog.swift; sourceTree = "<group>"; };
+		AA6B86F1262BCE440010DAF5 /* NextElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextElement.swift; sourceTree = "<group>"; };
 		AA80D377259AA9A30001304E /* DQ3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DQ3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA80D37A259AA9A30001304E /* DQ3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DQ3App.swift; sourceTree = "<group>"; };
 		AA80D37C259AA9A30001304E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -234,8 +282,14 @@
 		AA80D393259AA9A40001304E /* DQ3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DQ3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA80D397259AA9A40001304E /* DQ3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DQ3UITests.swift; sourceTree = "<group>"; };
 		AA80D399259AA9A40001304E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AAB52E6E264CC0CF0006B4E0 /* castle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = castle.mp3; sourceTree = "<group>"; };
 		AAAE1CF025B7C30100BF57B1 /* Window.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
+		AAB52E6E264CC0CF0006B4E0 /* castle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = castle.mp3; sourceTree = "<group>"; };
+		AAD0EEF6260A21040022849C /* CharacterNodePosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterNodePosition.swift; sourceTree = "<group>"; };
+		AAD0EEF7260A21040022849C /* CharacterNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterNode.swift; sourceTree = "<group>"; };
+		AAD0EEF8260A21050022849C /* CharacterNodeDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterNodeDirection.swift; sourceTree = "<group>"; };
+		AAD0EEF9260A21050022849C /* CharacterNodeMove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterNodeMove.swift; sourceTree = "<group>"; };
+		AAD0EF04260A21190022849C /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		AAD0EF09260A21510022849C /* BaseMapSceneUpdateProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapSceneUpdateProcess.swift; sourceTree = "<group>"; };
 		AAD4D54226073F4D00C21321 /* MapMessageWindowNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapMessageWindowNode.swift; sourceTree = "<group>"; };
 		AAD4D54326073F4D00C21321 /* MapMessageWindowNodeShowAll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapMessageWindowNodeShowAll.swift; sourceTree = "<group>"; };
 		AAD4D54426073F4D00C21321 /* MapMessageWindowNodeShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapMessageWindowNodeShow.swift; sourceTree = "<group>"; };
@@ -331,6 +385,7 @@
 		AA14A76F25B67A5C009076DB /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				AAD0EF04260A21190022849C /* DataManager.swift */,
 				AA14A77425B67BB7009076DB /* AudioManager.swift */,
 				AAD4D55326073F8700C21321 /* SoundEffectManager.swift */,
 			);
@@ -379,6 +434,7 @@
 		AA14A77325B67A7E009076DB /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				AAD0EEF5260A20FA0022849C /* CharacterNode */,
 				AA14A79925B67D72009076DB /* ButtonOverlay.swift */,
 				AA14A79A25B67D72009076DB /* PadOverlay.swift */,
 			);
@@ -504,13 +560,10 @@
 			isa = PBXGroup;
 			children = (
 				AA14A7FE25B67E27009076DB /* BaseMapScene.swift */,
-				AA14A80325B67E27009076DB /* BaseMapSceneCharacter.swift */,
-				AA14A80125B67E27009076DB /* BaseMapSceneCharacterHero.swift */,
-				AA14A80525B67E27009076DB /* BaseMapSceneCharacterHeroMove.swift */,
-				AA14A80225B67E27009076DB /* BaseMapSceneCharacterNpc.swift */,
 				AA14A80425B67E27009076DB /* BaseMapSceneTileMap.swift */,
 				AA14A7E125B67E0A009076DB /* BaseMapSceneButtonA.swift */,
 				AA14A7E025B67E0A009076DB /* BaseMapSceneButtonB.swift */,
+				AAD0EF09260A21510022849C /* BaseMapSceneUpdateProcess.swift */,
 				AAD4D5C32607743800C21321 /* MapCommandWindow */,
 				AAD4D54126073F4200C21321 /* MapMessageWindow */,
 			);
@@ -520,6 +573,7 @@
 		AA14A84925B67EE5009076DB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AA6B86E4262BCC6F0010DAF5 /* AdventureLog */,
 				AA14A85025B67F48009076DB /* DQFont */,
 			);
 			path = Classes;
@@ -541,9 +595,95 @@
 			isa = PBXGroup;
 			children = (
 				AA6B8664262BBF600010DAF5 /* AdventureLogTopWindowNode.swift */,
+				AA6B8686262BCA8F0010DAF5 /* AdventureLogTopWindowNodeTriangle.swift */,
 				AA6B8665262BBF600010DAF5 /* AdventureLogTopWindowNodeButtonA.swift */,
+				AA6B868B262BCAA80010DAF5 /* AdventureLogMessageSpeedWindow */,
+				AA6B868C262BCAAE0010DAF5 /* AdventureLogSelectEmptyLogWindow */,
+				AA6B868D262BCAB60010DAF5 /* AdventureLogSelectLogWindow */,
 			);
 			path = AdventureLogTopWindow;
+			sourceTree = "<group>";
+		};
+		AA6B868B262BCAA80010DAF5 /* AdventureLogMessageSpeedWindow */ = {
+			isa = PBXGroup;
+			children = (
+				AA6B868E262BCAC40010DAF5 /* AdventureLogMessageSpeedWindowNode.swift */,
+				AA6B868F262BCAC40010DAF5 /* AdventureLogMessageSpeedWindowNodeButtonA.swift */,
+				AA6B8690262BCAC40010DAF5 /* AdventureLogMessageSpeedWindowNodeTriangle.swift */,
+			);
+			path = AdventureLogMessageSpeedWindow;
+			sourceTree = "<group>";
+		};
+		AA6B868C262BCAAE0010DAF5 /* AdventureLogSelectEmptyLogWindow */ = {
+			isa = PBXGroup;
+			children = (
+				AA6B8697262BCAD80010DAF5 /* AdventureLogSelectEmptyLogWindowNode.swift */,
+				AA6B8699262BCAD80010DAF5 /* AdventureLogSelectEmptyLogWindowNodeButtonA.swift */,
+				AA6B8698262BCAD80010DAF5 /* AdventureLogSelectEmptyLogWindowNodeTriangle.swift */,
+				AA6B86A0262BCADF0010DAF5 /* AdventureLogInputNameWindow */,
+			);
+			path = AdventureLogSelectEmptyLogWindow;
+			sourceTree = "<group>";
+		};
+		AA6B868D262BCAB60010DAF5 /* AdventureLogSelectLogWindow */ = {
+			isa = PBXGroup;
+			children = (
+				AA6B86BC262BCB100010DAF5 /* AdventureLogSelectLogWindowNode.swift */,
+				AA6B86BB262BCB100010DAF5 /* AdventureLogSelectLogWindowNodeButtonA.swift */,
+				AA6B86BA262BCB100010DAF5 /* AdventureLogSelectLogWindowNodeTriangle.swift */,
+				AA6B86C3262BCB160010DAF5 /* AdventureLogConfirmDeleteLogWindow */,
+				AA6B86C4262BCB1C0010DAF5 /* AdventureLogYesNoDeleteLogWindow */,
+			);
+			path = AdventureLogSelectLogWindow;
+			sourceTree = "<group>";
+		};
+		AA6B86A0262BCADF0010DAF5 /* AdventureLogInputNameWindow */ = {
+			isa = PBXGroup;
+			children = (
+				AA6B86A2262BCAEC0010DAF5 /* AdventureLogInputNameWindowNode.swift */,
+				AA6B86A3262BCAEC0010DAF5 /* AdventureLogInputNameWindowNodeButton.swift */,
+				AA6B86A1262BCAEC0010DAF5 /* AdventureLogInputNameWindowNodeTriangle.swift */,
+				AA6B86AD262BCAF40010DAF5 /* AdventureLogSelectGenderWindow */,
+			);
+			path = AdventureLogInputNameWindow;
+			sourceTree = "<group>";
+		};
+		AA6B86AD262BCAF40010DAF5 /* AdventureLogSelectGenderWindow */ = {
+			isa = PBXGroup;
+			children = (
+				AA6B86AE262BCAFB0010DAF5 /* AdventureLogSelectGenderWindowNode.swift */,
+				AA6B86B0262BCAFC0010DAF5 /* AdventureLogSelectGenderWindowNodeButtonA.swift */,
+				AA6B86AF262BCAFB0010DAF5 /* AdventureLogSelectGenderWindowNodeTriangle.swift */,
+			);
+			path = AdventureLogSelectGenderWindow;
+			sourceTree = "<group>";
+		};
+		AA6B86C3262BCB160010DAF5 /* AdventureLogConfirmDeleteLogWindow */ = {
+			isa = PBXGroup;
+			children = (
+				AA6B86C5262BCB250010DAF5 /* AdventureLogConfirmDeleteLogWindowNode.swift */,
+			);
+			path = AdventureLogConfirmDeleteLogWindow;
+			sourceTree = "<group>";
+		};
+		AA6B86C4262BCB1C0010DAF5 /* AdventureLogYesNoDeleteLogWindow */ = {
+			isa = PBXGroup;
+			children = (
+				AA6B86CB262BCB2D0010DAF5 /* AdventureLogYesNoDeleteLogWindowNode.swift */,
+				AA6B86CC262BCB2D0010DAF5 /* AdventureLogYesNoDeleteLogWindowNodeButtonA.swift */,
+				AA6B86CA262BCB2D0010DAF5 /* AdventureLogYesNoDeleteLogWindowNodeTriangle.swift */,
+			);
+			path = AdventureLogYesNoDeleteLogWindow;
+			sourceTree = "<group>";
+		};
+		AA6B86E4262BCC6F0010DAF5 /* AdventureLog */ = {
+			isa = PBXGroup;
+			children = (
+				AA6B86E7262BCC7B0010DAF5 /* AdventureLog.swift */,
+				AA6B86E6262BCC7B0010DAF5 /* AdventureLogFunctions.swift */,
+				AA6B86E5262BCC7B0010DAF5 /* AdventureLogStory.swift */,
+			);
+			path = AdventureLog;
 			sourceTree = "<group>";
 		};
 		AA80D36E259AA9A30001304E = {
@@ -615,6 +755,8 @@
 		AAAE1CEF25B7C2F300BF57B1 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				AA6B86DF262BCC550010DAF5 /* UserDefaultsUtil.swift */,
+				AA6B86F1262BCE440010DAF5 /* NextElement.swift */,
 				AAD4D5F526077DA300C21321 /* CharacterAnimation.swift */,
 				AAAE1CF025B7C30100BF57B1 /* Window.swift */,
 				AAD4D56A260740F600C21321 /* Window2.swift */,
@@ -622,6 +764,17 @@
 				AAD4D5D4260774FD00C21321 /* Words.swift */,
 			);
 			path = Functions;
+			sourceTree = "<group>";
+		};
+		AAD0EEF5260A20FA0022849C /* CharacterNode */ = {
+			isa = PBXGroup;
+			children = (
+				AAD0EEF7260A21040022849C /* CharacterNode.swift */,
+				AAD0EEF6260A21040022849C /* CharacterNodePosition.swift */,
+				AAD0EEF8260A21050022849C /* CharacterNodeDirection.swift */,
+				AAD0EEF9260A21050022849C /* CharacterNodeMove.swift */,
+			);
+			path = CharacterNode;
 			sourceTree = "<group>";
 		};
 		AAD4D54126073F4200C21321 /* MapMessageWindow */ = {
@@ -796,23 +949,31 @@
 				AA14A77525B67BB7009076DB /* AudioManager.swift in Sources */,
 				AA14A85925B67F51009076DB /* DQFont.swift in Sources */,
 				AA14A7B225B67DF4009076DB /* AdventureLogSceneProcessing.swift in Sources */,
-				AA14A80B25B67E27009076DB /* BaseMapSceneCharacter.swift in Sources */,
+				AA6B8691262BCAC40010DAF5 /* AdventureLogMessageSpeedWindowNode.swift in Sources */,
 				AAD4D5D5260774FD00C21321 /* Triangle.swift in Sources */,
 				AA14A79525B67BDF009076DB /* UIColor.swift in Sources */,
+				AA6B86BF262BCB100010DAF5 /* AdventureLogSelectLogWindowNode.swift in Sources */,
 				AA14A79C25B67D72009076DB /* PadOverlay.swift in Sources */,
 				AA14A78625B67BC7009076DB /* DQVocation.swift in Sources */,
 				AA14A79B25B67D72009076DB /* ButtonOverlay.swift in Sources */,
-				AA14A80925B67E27009076DB /* BaseMapSceneCharacterHero.swift in Sources */,
 				AA14A83225B67E3D009076DB /* FieldSceneCheckPosition.swift in Sources */,
 				AA14A7EF25B67E0A009076DB /* AliahanTownHouseSceneButton.swift in Sources */,
+				AAD0EEFB260A21050022849C /* CharacterNode.swift in Sources */,
 				AA14A7C825B67DFF009076DB /* AliahanTownSceneButtonAOpening.swift in Sources */,
+				AA6B86CF262BCB2D0010DAF5 /* AdventureLogYesNoDeleteLogWindowNodeButtonA.swift in Sources */,
 				AA6B8667262BBF600010DAF5 /* AdventureLogTopWindowNodeButtonA.swift in Sources */,
+				AA6B8693262BCAC40010DAF5 /* AdventureLogMessageSpeedWindowNodeTriangle.swift in Sources */,
 				AA14A81925B67E36009076DB /* BattleSceneMessage.swift in Sources */,
+				AA6B86A5262BCAEC0010DAF5 /* AdventureLogInputNameWindowNode.swift in Sources */,
 				AA6B8666262BBF600010DAF5 /* AdventureLogTopWindowNode.swift in Sources */,
 				AA14A78525B67BC7009076DB /* DQStory.swift in Sources */,
 				AA14A7CA25B67DFF009076DB /* AliahanTownSceneStick.swift in Sources */,
 				AAAE1CF125B7C30100BF57B1 /* Window.swift in Sources */,
 				AA80D37D259AA9A30001304E /* ContentView.swift in Sources */,
+				AA6B869A262BCAD80010DAF5 /* AdventureLogSelectEmptyLogWindowNode.swift in Sources */,
+				AAD0EEFD260A21050022849C /* CharacterNodeMove.swift in Sources */,
+				AAD0EF0A260A21510022849C /* BaseMapSceneUpdateProcess.swift in Sources */,
+				AA6B86BE262BCB100010DAF5 /* AdventureLogSelectLogWindowNodeButtonA.swift in Sources */,
 				AA14A7EE25B67E0A009076DB /* BaseMapSceneButtonA.swift in Sources */,
 				AA80D37B259AA9A30001304E /* DQ3App.swift in Sources */,
 				AA14A7E425B67E0A009076DB /* AliahanTownHouseSceneCheckCanMove.swift in Sources */,
@@ -821,20 +982,29 @@
 				AA14A81D25B67E36009076DB /* BattleSceneTarget.swift in Sources */,
 				AA14A7F825B67E13009076DB /* BaseSceneVirtualPad.swift in Sources */,
 				AAD4D54626073F4D00C21321 /* MapMessageWindowNode.swift in Sources */,
+				AAD0EF05260A21190022849C /* DataManager.swift in Sources */,
+				AA6B86EA262BCC7B0010DAF5 /* AdventureLog.swift in Sources */,
+				AAD0EEFC260A21050022849C /* CharacterNodeDirection.swift in Sources */,
 				AA14A7EA25B67E0A009076DB /* AliahanTownHouseSceneEvent.swift in Sources */,
+				AA6B86E0262BCC550010DAF5 /* UserDefaultsUtil.swift in Sources */,
 				AA14A7F925B67E13009076DB /* BaseScene.swift in Sources */,
 				AA14A83025B67E3D009076DB /* FieldSceneButton.swift in Sources */,
 				AA14A7E725B67E0A009076DB /* AliahanTownHouseScenePartyCharacters.swift in Sources */,
 				AA14A78E25B67BD4009076DB /* AliahanTownHouse.swift in Sources */,
+				AA6B86E9262BCC7B0010DAF5 /* AdventureLogFunctions.swift in Sources */,
+				AA6B8687262BCA8F0010DAF5 /* AdventureLogTopWindowNodeTriangle.swift in Sources */,
 				AAD4D58F2607441900C21321 /* OpeningSceneStick.swift in Sources */,
 				AA14A82C25B67E3D009076DB /* FieldScenePartyCharacters.swift in Sources */,
 				AA14A78125B67BC7009076DB /* Direction.swift in Sources */,
 				AA14A7B325B67DF4009076DB /* AdventureLogScene.swift in Sources */,
 				AAD4D5F626077DA300C21321 /* CharacterAnimation.swift in Sources */,
 				AAD4D54826073F4D00C21321 /* MapMessageWindowNodeShow.swift in Sources */,
+				AA6B86A4262BCAEC0010DAF5 /* AdventureLogInputNameWindowNodeTriangle.swift in Sources */,
 				AA14A7CC25B67DFF009076DB /* AliahanTownSceneCheckCanMove.swift in Sources */,
+				AA6B86CE262BCB2D0010DAF5 /* AdventureLogYesNoDeleteLogWindowNode.swift in Sources */,
 				AA14A82D25B67E3D009076DB /* FieldSceneCheckCanMove.swift in Sources */,
 				AA14A7EB25B67E0A009076DB /* AliahanTownHouseScene.swift in Sources */,
+				AA6B86CD262BCB2D0010DAF5 /* AdventureLogYesNoDeleteLogWindowNodeTriangle.swift in Sources */,
 				AA14A81825B67E36009076DB /* BattleSceneEnemy.swift in Sources */,
 				AA14A7ED25B67E0A009076DB /* BaseMapSceneButtonB.swift in Sources */,
 				AA14A85825B67F51009076DB /* DQFontNormal.swift in Sources */,
@@ -844,22 +1014,28 @@
 				AA14A7CE25B67DFF009076DB /* AliahanTownSceneEvent.swift in Sources */,
 				AAD4D55426073F8700C21321 /* SoundEffectManager.swift in Sources */,
 				AA14A85A25B67F51009076DB /* DQFontLittleDashes.swift in Sources */,
+				AA6B8692262BCAC40010DAF5 /* AdventureLogMessageSpeedWindowNodeButtonA.swift in Sources */,
 				AAD4D54726073F4D00C21321 /* MapMessageWindowNodeShowAll.swift in Sources */,
+				AA6B86E8262BCC7B0010DAF5 /* AdventureLogStory.swift in Sources */,
 				AA14A80C25B67E27009076DB /* BaseMapSceneTileMap.swift in Sources */,
 				AA14A83525B67E3D009076DB /* FieldSceneUpdate.swift in Sources */,
 				AA14A7E525B67E0A009076DB /* AliahanTownHouseSceneCheckPosition.swift in Sources */,
+				AAD0EEFA260A21050022849C /* CharacterNodePosition.swift in Sources */,
 				AA14A78025B67BC7009076DB /* DQAudio.swift in Sources */,
+				AA6B86F2262BCE440010DAF5 /* NextElement.swift in Sources */,
 				AA14A81C25B67E36009076DB /* BattleScenePad.swift in Sources */,
 				AA14A7C925B67DFF009076DB /* AliahanTownSceneUpdate.swift in Sources */,
 				AAD4D5D6260774FD00C21321 /* Words.swift in Sources */,
+				AA6B869B262BCAD80010DAF5 /* AdventureLogSelectEmptyLogWindowNodeTriangle.swift in Sources */,
+				AA6B869C262BCAD80010DAF5 /* AdventureLogSelectEmptyLogWindowNodeButtonA.swift in Sources */,
 				AAD4D5C82607745300C21321 /* MapCommandWindowNodeButtonA.swift in Sources */,
 				AA14A83325B67E3D009076DB /* FieldSceneStick.swift in Sources */,
 				AA14A85F25B67F5C009076DB /* ZPosition.swift in Sources */,
 				AA14A7EC25B67E0A009076DB /* AliahanTownHouseSceneUpdate.swift in Sources */,
 				AA14A81B25B67E36009076DB /* BattleScene.swift in Sources */,
-				AA14A80A25B67E27009076DB /* BaseMapSceneCharacterNpc.swift in Sources */,
 				AA14A7E625B67E0A009076DB /* AliahanTownHouseSceneStick.swift in Sources */,
 				AA14A78325B67BC7009076DB /* DQCharacter.swift in Sources */,
+				AA6B86BD262BCB100010DAF5 /* AdventureLogSelectLogWindowNodeTriangle.swift in Sources */,
 				AA14A7F025B67E0A009076DB /* AliahanTownHouseSceneNpcCharacters.swift in Sources */,
 				AAD4D5902607441900C21321 /* OpeningSceneButton.swift in Sources */,
 				AA14A7D025B67DFF009076DB /* AliahanTownScene.swift in Sources */,
@@ -867,16 +1043,20 @@
 				AA14A83C25B67E4A009076DB /* OpeningScene.swift in Sources */,
 				AA14A85725B67F51009076DB /* DQFontLittleCircle.swift in Sources */,
 				AAD4D54926073F4D00C21321 /* MapMessageWindowNodeLine.swift in Sources */,
+				AA6B86C6262BCB250010DAF5 /* AdventureLogConfirmDeleteLogWindowNode.swift in Sources */,
 				AAD4D56B260740F600C21321 /* Window2.swift in Sources */,
+				AA6B86B1262BCAFC0010DAF5 /* AdventureLogSelectGenderWindowNode.swift in Sources */,
 				AA14A7A925B67DE9009076DB /* TitleScene.swift in Sources */,
 				AAD4D5C72607745300C21321 /* MapCommandWindowNode.swift in Sources */,
 				AA14A7C625B67DFF009076DB /* AliahanTownSceneNpcCharacters.swift in Sources */,
+				AA6B86A6262BCAEC0010DAF5 /* AdventureLogInputNameWindowNodeButton.swift in Sources */,
 				AA14A80625B67E27009076DB /* BaseMapScene.swift in Sources */,
+				AA6B86B2262BCAFC0010DAF5 /* AdventureLogSelectGenderWindowNodeTriangle.swift in Sources */,
 				AA14A78F25B67BD4009076DB /* AliahanTown.swift in Sources */,
 				AA14A7D325B67DFF009076DB /* AliahanTownScenePartyCharacters.swift in Sources */,
 				AA14A7E925B67E0A009076DB /* AliahanTownHouseSceneButtonAOpening.swift in Sources */,
+				AA6B86B3262BCAFC0010DAF5 /* AdventureLogSelectGenderWindowNodeButtonA.swift in Sources */,
 				AA14A78225B67BC7009076DB /* Constant.swift in Sources */,
-				AA14A80D25B67E27009076DB /* BaseMapSceneCharacterHeroMove.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1042,7 +1222,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2;
+				MARKETING_VERSION = 0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1064,7 +1244,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2;
+				MARKETING_VERSION = 0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
