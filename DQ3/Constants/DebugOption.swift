@@ -29,3 +29,6 @@ let DebugNoBattle = false
 
 // 最初から仲間いる状態
 let DebugWithParty = false
+
+// NPCを動かなくする
+let DebugStopNpc = false
