@@ -31,17 +31,17 @@ extension AliahanTownScene {
             positionX = AliahanTownMotherStartPositionX
             positionY = AliahanTownMotherStartPositionY
             
-            let texture = getCharacterTexture(direction: .left,
-                                              dqCharacter: .lady)
-            self.motherNode.texture = texture
+            let actionMother = getCharacterAnimationAction(direction: .left,
+                                                           dqCharacter: .lady)
+            self.motherNode.run(actionMother)
         }
         else if dqStory == .mother_waiting {
             positionX = AliahanTownMotherWaitingPositionX
             positionY = AliahanTownMotherWaitingPositionY
             
-            let texture = getCharacterTexture(direction: .up,
-                                              dqCharacter: .lady)
-            self.motherNode.texture = texture
+            let actionMother = getCharacterAnimationAction(direction: .up,
+                                                           dqCharacter: .lady)
+            self.motherNode.run(actionMother)
         }
         
         setCharacterNpcPosition(positionX: positionX,

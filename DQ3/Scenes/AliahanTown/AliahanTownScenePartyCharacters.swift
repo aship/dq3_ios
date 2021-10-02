@@ -15,14 +15,14 @@ extension AliahanTownScene {
                      isTown: true)
         
         if dqStory == .opening {
-            let texture = getCharacterTexture(direction: .left,
-                                              dqCharacter: .hero)
-            self.heroNode.texture = texture
+            let action = getCharacterAnimationAction(direction: .left,
+                                                     dqCharacter: .hero)
+            self.heroNode.run(action)
         }
         else {
-            let texture = getCharacterTexture(direction: .right,
-                                              dqCharacter: .hero)
-            self.heroNode.texture = texture
+            let action = getCharacterAnimationAction(direction: .right,
+                                                     dqCharacter: .hero)
+            self.heroNode.run(action)
         }
         
         setCharacterHeroPosition(positionX: self.heroPositionX,
