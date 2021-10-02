@@ -103,6 +103,10 @@
 		AA67587C264B43CD0053DA2A /* ShipPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA67587B264B43CD0053DA2A /* ShipPosition.swift */; };
 		AA67587E264B44B70053DA2A /* DQZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA67587D264B44B70053DA2A /* DQZoom.swift */; };
 		AA675880264B45940053DA2A /* DQMapSceneVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA67587F264B45940053DA2A /* DQMapSceneVehicle.swift */; };
+		AA675882264B496A0053DA2A /* FieldRamia.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA675881264B496A0053DA2A /* FieldRamia.swift */; };
+		AA675886264B49F20053DA2A /* FieldSceneAddRamia.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA675883264B49F20053DA2A /* FieldSceneAddRamia.swift */; };
+		AA675887264B49F20053DA2A /* FieldSceneRamiaRideOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA675884264B49F20053DA2A /* FieldSceneRamiaRideOn.swift */; };
+		AA675888264B49F20053DA2A /* FieldSceneRamiaGetOff.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA675885264B49F20053DA2A /* FieldSceneRamiaGetOff.swift */; };
 		AA6B8666262BBF600010DAF5 /* AdventureLogTopWindowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B8664262BBF600010DAF5 /* AdventureLogTopWindowNode.swift */; };
 		AA6B8667262BBF600010DAF5 /* AdventureLogTopWindowNodeButtonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B8665262BBF600010DAF5 /* AdventureLogTopWindowNodeButtonA.swift */; };
 		AA6B8687262BCA8F0010DAF5 /* AdventureLogTopWindowNodeTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B8686262BCA8F0010DAF5 /* AdventureLogTopWindowNodeTriangle.swift */; };
@@ -138,6 +142,7 @@
 		AA7997ED264966E300407828 /* TalkMessageLuidaWishWindowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7997EA264966E300407828 /* TalkMessageLuidaWishWindowNode.swift */; };
 		AA7997EE264966E300407828 /* TalkMessageLuidaWishWindowNodeTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7997EB264966E300407828 /* TalkMessageLuidaWishWindowNodeTriangle.swift */; };
 		AA7997EF264966E300407828 /* TalkMessageLuidaWishWindowNodeButtonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7997EC264966E300407828 /* TalkMessageLuidaWishWindowNodeButtonA.swift */; };
+		AA7D92FB264BA8D20099350A /* FieldSceneButtonARamia.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7D92FA264BA8D20099350A /* FieldSceneButtonARamia.swift */; };
 		AA80D37B259AA9A30001304E /* DQ3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80D37A259AA9A30001304E /* DQ3App.swift */; };
 		AA80D37D259AA9A30001304E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80D37C259AA9A30001304E /* ContentView.swift */; };
 		AA80D37F259AA9A40001304E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA80D37E259AA9A40001304E /* Assets.xcassets */; };
@@ -323,6 +328,10 @@
 		AA67587B264B43CD0053DA2A /* ShipPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipPosition.swift; sourceTree = "<group>"; };
 		AA67587D264B44B70053DA2A /* DQZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQZoom.swift; sourceTree = "<group>"; };
 		AA67587F264B45940053DA2A /* DQMapSceneVehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQMapSceneVehicle.swift; sourceTree = "<group>"; };
+		AA675881264B496A0053DA2A /* FieldRamia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldRamia.swift; sourceTree = "<group>"; };
+		AA675883264B49F20053DA2A /* FieldSceneAddRamia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldSceneAddRamia.swift; sourceTree = "<group>"; };
+		AA675884264B49F20053DA2A /* FieldSceneRamiaRideOn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldSceneRamiaRideOn.swift; sourceTree = "<group>"; };
+		AA675885264B49F20053DA2A /* FieldSceneRamiaGetOff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldSceneRamiaGetOff.swift; sourceTree = "<group>"; };
 		AA6B8664262BBF600010DAF5 /* AdventureLogTopWindowNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogTopWindowNode.swift; sourceTree = "<group>"; };
 		AA6B8665262BBF600010DAF5 /* AdventureLogTopWindowNodeButtonA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogTopWindowNodeButtonA.swift; sourceTree = "<group>"; };
 		AA6B8686262BCA8F0010DAF5 /* AdventureLogTopWindowNodeTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogTopWindowNodeTriangle.swift; sourceTree = "<group>"; };
@@ -358,6 +367,7 @@
 		AA7997EA264966E300407828 /* TalkMessageLuidaWishWindowNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkMessageLuidaWishWindowNode.swift; sourceTree = "<group>"; };
 		AA7997EB264966E300407828 /* TalkMessageLuidaWishWindowNodeTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkMessageLuidaWishWindowNodeTriangle.swift; sourceTree = "<group>"; };
 		AA7997EC264966E300407828 /* TalkMessageLuidaWishWindowNodeButtonA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkMessageLuidaWishWindowNodeButtonA.swift; sourceTree = "<group>"; };
+		AA7D92FA264BA8D20099350A /* FieldSceneButtonARamia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldSceneButtonARamia.swift; sourceTree = "<group>"; };
 		AA80D377259AA9A30001304E /* DQ3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DQ3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA80D37A259AA9A30001304E /* DQ3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DQ3App.swift; sourceTree = "<group>"; };
 		AA80D37C259AA9A30001304E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -577,6 +587,7 @@
 				AA14A78C25B67BD4009076DB /* AliahanTown.swift */,
 				AA14A78B25B67BD4009076DB /* AliahanTownHouse.swift */,
 				AA14A78D25B67BD4009076DB /* Field.swift */,
+				AA675881264B496A0053DA2A /* FieldRamia.swift */,
 				AA67587B264B43CD0053DA2A /* ShipPosition.swift */,
 				AA953B4726C2FBB900F57775 /* ZoomPosition.swift */,
 			);
@@ -669,6 +680,10 @@
 				AA14A82325B67E3D009076DB /* FieldSceneCheckCanMove.swift */,
 				AA14A82825B67E3D009076DB /* FieldSceneCheckPosition.swift */,
 				AA675879264B43B10053DA2A /* FieldSceneShipLanding.swift */,
+				AA675883264B49F20053DA2A /* FieldSceneAddRamia.swift */,
+				AA7D92FA264BA8D20099350A /* FieldSceneButtonARamia.swift */,
+				AA675885264B49F20053DA2A /* FieldSceneRamiaGetOff.swift */,
+				AA675884264B49F20053DA2A /* FieldSceneRamiaRideOn.swift */,
 				AA14A82A25B67E3D009076DB /* field.csv */,
 			);
 			path = Field;
@@ -1257,6 +1272,7 @@
 				AA14A85925B67F51009076DB /* DQFont.swift in Sources */,
 				AABDB250262F111600B46945 /* AliahanTownLuida.swift in Sources */,
 				AABDB12B262EDB8F00B46945 /* TalkMessageWindowNodeAliahanTownParty.swift in Sources */,
+				AA675887264B49F20053DA2A /* FieldSceneRamiaRideOn.swift in Sources */,
 				AA14A7B225B67DF4009076DB /* AdventureLogSceneProcessing.swift in Sources */,
 				AA675875264B429D0053DA2A /* DQMapShipSceneAddShip.swift in Sources */,
 				AA6B8691262BCAC40010DAF5 /* AdventureLogMessageSpeedWindowNode.swift in Sources */,
@@ -1288,6 +1304,7 @@
 				AA14A78525B67BC7009076DB /* DQStory.swift in Sources */,
 				AA244D92262C09D600CA0EB6 /* DQMapScene.swift in Sources */,
 				AAAE1CF125B7C30100BF57B1 /* Window.swift in Sources */,
+				AA675886264B49F20053DA2A /* FieldSceneAddRamia.swift in Sources */,
 				AAF6B0C5264563FB002298C8 /* SpellMessageWindowNode.swift in Sources */,
 				AABDB1DC262F02BC00B46945 /* MapCommandWindowNodeTalk.swift in Sources */,
 				AA80D37D259AA9A30001304E /* ContentView.swift in Sources */,
@@ -1306,6 +1323,7 @@
 				AA244DD1262C0EEF00CA0EB6 /* BaseSceneButton.swift in Sources */,
 				AA14A81E25B67E36009076DB /* BattleSceneCommand.swift in Sources */,
 				AA14A81D25B67E36009076DB /* BattleSceneTarget.swift in Sources */,
+				AA675882264B496A0053DA2A /* FieldRamia.swift in Sources */,
 				AAD4D54626073F4D00C21321 /* MapMessageWindowNode.swift in Sources */,
 				AA675880264B45940053DA2A /* DQMapSceneVehicle.swift in Sources */,
 				AAFC8B37262D5C9C00F5E13C /* DQMapSceneNpc.swift in Sources */,
@@ -1352,6 +1370,7 @@
 				AA14A81825B67E36009076DB /* BattleSceneEnemy.swift in Sources */,
 				AA244D9F262C0B0B00CA0EB6 /* BaseSceneTransitionToBattle.swift in Sources */,
 				AA14A85825B67F51009076DB /* DQFontNormal.swift in Sources */,
+				AA675888264B49F20053DA2A /* FieldSceneRamiaGetOff.swift in Sources */,
 				AA14A79025B67BD4009076DB /* Field.swift in Sources */,
 				AABDB11B262EDB8600B46945 /* TalkMessageWindowNodeAliahanTownHouseButtonA.swift in Sources */,
 				AA244DC3262C0EC300CA0EB6 /* BaseSceneUpdate.swift in Sources */,
@@ -1378,6 +1397,7 @@
 				AABDB20D262F105900B46945 /* AliahanTownBoy1.swift in Sources */,
 				AA67587A264B43B10053DA2A /* FieldSceneShipLanding.swift in Sources */,
 				AAFC8B87262E5C9500F5E13C /* MapCommandWindowNodeTriangle.swift in Sources */,
+				AA7D92FB264BA8D20099350A /* FieldSceneButtonARamia.swift in Sources */,
 				AA6B86F2262BCE440010DAF5 /* NextElement.swift in Sources */,
 				AA244D93262C09D600CA0EB6 /* DQMapSceneButtonB.swift in Sources */,
 				AA67587C264B43CD0053DA2A /* ShipPosition.swift in Sources */,
@@ -1594,7 +1614,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.11;
+				MARKETING_VERSION = 0.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1616,7 +1636,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.11;
+				MARKETING_VERSION = 0.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

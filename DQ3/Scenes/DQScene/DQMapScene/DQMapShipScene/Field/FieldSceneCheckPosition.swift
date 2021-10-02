@@ -24,7 +24,9 @@ extension FieldScene {
             }
         }
         
-        enterBattle = checkEnterBattle()
+        if self.scene.fieldMoveMode != .ramia {
+            enterBattle = checkEnterBattle()
+        }
         
         if enterAliahan {
             processEnterAliahan()

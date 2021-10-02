@@ -21,4 +21,5 @@ enum DQCharacter: String {
     case npc_warrior
     case minister
     case ship
+    case ramia
 }

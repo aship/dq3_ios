@@ -12,8 +12,10 @@ extension FieldScene {
         if button == self.scene.buttonA {
             processButtonA(mapCommandWindowNode: &self.mapCommandWindowNode,
                            mapMessageWindowNode: self.mapMessageWindowNode,
-                           characterNpcNodes: self.characterNpcNodes,
                            adventureLog: DataManager.adventureLog,
+                           characterNpcNodes: self.characterNpcNodes,
+                           queueFollowDirections: &DataManager.queueFollowDirections,
+                           tileMapNode: self.mainTileMapNode,
                            scene: self.scene)
         }
         else if button == self.scene.buttonB {

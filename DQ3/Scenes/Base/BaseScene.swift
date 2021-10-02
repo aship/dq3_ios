@@ -11,6 +11,7 @@ class BaseScene: SKScene,
                  PadOverlayDelegate,
                  ButtonOverlayDelegate {
     var fieldMoveMode: FieldMoveMode = .walk
+    var ramiaDirection: Direction = .neutral
     
     let scale = CGFloat(ScreenHeight / 240)
     

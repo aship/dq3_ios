@@ -22,8 +22,8 @@ class DataManager {
     static var queueFollowDirections: [Direction] = []
     static var showInsideMap = false
     
-    // 船の位置は冒険の書には保存されない
-    // 船の位置がリセットされるのは
+    // 船/ラーミアの位置は冒険の書には保存されない
+    // 船/ラーミアの位置がリセットされるのは
     // ルーラ使用時と、冒険の書読み込み時
     // 向きはルーラでもリセットされない
     // 冒険の書読み込み時のデフォルトは上
@@ -32,8 +32,13 @@ class DataManager {
     static var shipPositionY = 0
     static var shipDirection: Direction = .up
     
+    static var resetRamiaPosition = true
+    static var ramiaPositionX = 0
+    static var ramiaPositionY = 0
+    static var ramiaDirection: Direction = .up
+    
     // 冒険の書を再開した場所 or 最後にルーラで到着した場所
-    // 船の初期位置リセットのために使う
+    // 船/ラーミアの初期位置リセットのために使う
     static var currentZoomArea: DQZoom = .aliahan
     
     static var scene = BaseScene()

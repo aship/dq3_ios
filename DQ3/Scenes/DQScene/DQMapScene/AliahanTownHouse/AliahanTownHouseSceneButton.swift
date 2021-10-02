@@ -20,8 +20,10 @@ extension AliahanTownHouseScene {
             else {
                 processButtonA(mapCommandWindowNode: &self.mapCommandWindowNode,
                                mapMessageWindowNode: self.mapMessageWindowNode,
-                               characterNpcNodes: self.characterNpcNodes,
                                adventureLog: DataManager.adventureLog,
+                               characterNpcNodes: self.characterNpcNodes,
+                               queueFollowDirections: &DataManager.queueFollowDirections,
+                               tileMapNode: self.mainTileMapNode,
                                scene: self.scene)
             }
         }

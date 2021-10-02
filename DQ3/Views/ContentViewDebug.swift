@@ -22,6 +22,7 @@ func setDebugCurrentMemory() {
     adventureLog.dqStory = .go_adventure
     
     adventureLog.hasShip = true
+    adventureLog.hasRamia = true
     
     addNode(adventureLog: adventureLog,
             name: "あしへー",
@@ -95,6 +96,7 @@ func setDebugAdventureLog() {
     // adventureLog.dqStory = .go_adventure
     
     adventureLog.hasShip = true
+    adventureLog.hasRamia = true
     
     addNode(adventureLog: adventureLog,
             name: "あしへー",

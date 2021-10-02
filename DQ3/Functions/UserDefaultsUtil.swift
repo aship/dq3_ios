@@ -27,8 +27,9 @@ class UserDefaultsUtil {
             }
         }
         
-        // 冒険の書読み込みしたら、船の位置をリセット
+        // 冒険の書読み込みしたら、船/ラーミアの位置をリセット
         DataManager.resetShipPosition = true
+        DataManager.resetRamiaPosition = true
         
         return adventureLog
     }
