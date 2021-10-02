@@ -11,12 +11,16 @@ extension FieldScene {
     func checkPosition(newPositionX: Int,
                        newPositionY: Int) {
         var enterAliahan = false
+        var enterAlltradesAbbey = false
         var enterShip = false
         var enterBattle = false
         
         if self.scene.fieldMoveMode == .walk {
             enterAliahan = checkEnterAliahan(newPositionX: newPositionX,
                                              newPositionY: newPositionY)
+            
+            enterAlltradesAbbey = checkEnterAlltradesAbbey(newPositionX: newPositionX,
+                                                           newPositionY: newPositionY)
             
             if DataManager.adventureLog.hasShip {
                 enterShip = checkBoardingShip(newPositionX: newPositionX,
@@ -30,6 +34,9 @@ extension FieldScene {
         
         if enterAliahan {
             processEnterAliahan()
+        }
+        else if enterAlltradesAbbey {
+            processEnterAlltradesAbbey()
         }
         else if enterShip {
             processBoardingShip(tileMapNode: self.mainTileMapNode,
@@ -49,6 +56,16 @@ extension FieldScene {
                                    newPositionY: Int) -> Bool {
         if newPositionX == FieldAliahanPositionX &&
             newPositionY == FieldAliahanPositionY {
+            return true
+        }
+        
+        return false
+    }
+    
+    private func checkEnterAlltradesAbbey(newPositionX: Int,
+                                          newPositionY: Int) -> Bool {
+        if newPositionX == FieldAlltradesAbbeyPositionX &&
+            newPositionY == FieldAlltradesAbbeyPositionY {
             return true
         }
         
@@ -86,6 +103,25 @@ extension FieldScene {
             dqSceneTypeFrom: .field,
             dqSceneTypeTo: .aliahan_town,
             dqAudio: .town)
+    }
+    
+    private func processEnterAlltradesAbbey() {
+        DataManager.queueFollowDirections = []
+        
+        for (index, node) in DataManager.adventureLog.partyCharacterNodes.enumerated() {
+            node.positionX = AlltradesAbbeyEntrancePositionX
+            node.positionY = AlltradesAbbeyEntrancePositionY - index
+            node.direction = .up
+            
+            if 0 < index {
+                DataManager.queueFollowDirections.append(.up)
+            }
+        }
+        
+        self.scene.transitionToMapWithStairs(
+            dqSceneTypeFrom: .field,
+            dqSceneTypeTo: .alltrades_abbey,
+            dqAudio: .castle)
     }
     
     private func processEnterBattle() {

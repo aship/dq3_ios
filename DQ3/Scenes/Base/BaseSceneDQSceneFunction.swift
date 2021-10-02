@@ -20,6 +20,7 @@ extension BaseScene {
         case .alefgard: checkCanMove = self.alefgardScene?.checkCanMove
         case .aliahan_town: checkCanMove = self.aliahanTownScene?.checkCanMove
         case .aliahan_town_house: checkCanMove = self.aliahanTownHouseScene?.checkCanMove
+        case .alltrades_abbey: checkCanMove = self.alltradesAbbeyScene?.checkCanMove
         }
         
         return checkCanMove
@@ -37,6 +38,7 @@ extension BaseScene {
         case .alefgard: checkPosition = self.alefgardScene?.checkPosition
         case .aliahan_town: checkPosition = self.aliahanTownScene?.checkPosition
         case .aliahan_town_house: checkPosition = self.aliahanTownHouseScene?.checkPosition
+        case .alltrades_abbey: checkPosition = self.alltradesAbbeyScene?.checkPosition
         }
         
         return checkPosition

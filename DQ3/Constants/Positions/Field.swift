@@ -8,3 +8,7 @@
 // アリアハン
 let FieldAliahanPositionX = 169
 let FieldAliahanPositionY = 42
+
+// ダーマ
+let FieldAlltradesAbbeyPositionX = 119
+let FieldAlltradesAbbeyPositionY = 131

@@ -20,6 +20,7 @@ extension BaseScene {
         case .alefgard: break
         case .aliahan_town: break
         case .aliahan_town_house: break
+        case .alltrades_abbey: break
         }
         
         return dqScene
@@ -37,6 +38,7 @@ extension BaseScene {
         case .alefgard: dqMapScene = self.alefgardScene
         case .aliahan_town: dqMapScene = self.aliahanTownScene
         case .aliahan_town_house: dqMapScene = self.aliahanTownHouseScene
+        case .alltrades_abbey: dqMapScene = self.alltradesAbbeyScene
         }
         
         return dqMapScene

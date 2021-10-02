@@ -14,4 +14,5 @@ enum DQSceneType: String {
     case alefgard
     case aliahan_town
     case aliahan_town_house
+    case alltrades_abbey
 }

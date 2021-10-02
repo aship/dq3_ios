@@ -30,6 +30,8 @@ class BaseScene: SKScene,
     var alefgardScene: AlefgardScene?
     var aliahanTownScene: AliahanTownScene?
     var aliahanTownHouseScene: AliahanTownHouseScene?
+    var alltradesAbbeyScene: AlltradesAbbeyScene?
+    
     var battleScene: BattleScene?
     
     override func sceneDidLoad() {

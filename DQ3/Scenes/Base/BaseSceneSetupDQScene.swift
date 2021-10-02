@@ -51,6 +51,9 @@ extension BaseScene {
         case .aliahan_town_house:
             self.aliahanTownHouseScene = AliahanTownHouseScene(scene: self)
             self.aliahanTownHouseScene?.setup()
+        case .alltrades_abbey:
+            self.alltradesAbbeyScene = AlltradesAbbeyScene(scene: self)
+            self.alltradesAbbeyScene?.setup()
         }
     }
 }
