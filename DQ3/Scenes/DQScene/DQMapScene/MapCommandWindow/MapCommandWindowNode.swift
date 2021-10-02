@@ -35,6 +35,7 @@ class MapCommandWindowNode: SKTileMapNode {
     var talkMessageWindowAliahanTownHouse: TalkMessageWindowNodeAliahanTownHouse?
     
     var spellMessageWindowNode: SpellMessageWindowNode?
+    var mapMessageWindowNode: MapMessageWindowNode?
     
     // 呪文用、他と共用できるか？
     var mapCommandWhoWindowNode: MapCommandWhoWindowNode?

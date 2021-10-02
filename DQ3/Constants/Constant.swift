@@ -14,8 +14,13 @@ let ScreenHeight = UIScreen.main.bounds.size.height
 let MapMessageWindowChildOfScenePointX = -128 + 48
 let MapMessageWindowChildOfScenePointY = 112 - 136
 
+// コマンドのあとのメッセージウインドウ位置
 let MapMessageWindowChildOfCommandWindowPointX = 0
 let MapMessageWindowChildOfCommandWindowPointY = -128
+
+// コマンドのあとのステータスウインドウ位置
+let MapStatusWindowChildOfCommandWindowPointX = 0
+let MapStatusWindowChildOfCommandWindowPointY = -144
 
 let MapMessageWindowChildOfSpellPointX = -112
 let MapMessageWindowChildOfSpellPointY = -128

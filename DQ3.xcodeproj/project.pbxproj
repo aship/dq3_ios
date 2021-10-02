@@ -169,6 +169,7 @@
 		AAADECD4264B6CBF00AC0CFC /* MapCommandZoomWindowNodeTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAADECD1264B6CBF00AC0CFC /* MapCommandZoomWindowNodeTriangle.swift */; };
 		AAADECD6264B6CE000AC0CFC /* BaseSceneTransitionToMapWithZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAADECD5264B6CE000AC0CFC /* BaseSceneTransitionToMapWithZoom.swift */; };
 		AAADECD8264B6D0C00AC0CFC /* DQSpell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAADECD7264B6D0C00AC0CFC /* DQSpell.swift */; };
+		AAADECDB264B6EFE00AC0CFC /* MapStatusWindowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAADECDA264B6EFE00AC0CFC /* MapStatusWindowNode.swift */; };
 		AAAE1CF125B7C30100BF57B1 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAE1CF025B7C30100BF57B1 /* Window.swift */; };
 		AAB52E6F264CC0CF0006B4E0 /* castle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AAB52E6E264CC0CF0006B4E0 /* castle.mp3 */; };
 		AABDB0F0262ED89600B46945 /* AliahanTownSceneNpcMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDB0EF262ED89600B46945 /* AliahanTownSceneNpcMove.swift */; };
@@ -417,6 +418,7 @@
 		AAADECD1264B6CBF00AC0CFC /* MapCommandZoomWindowNodeTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCommandZoomWindowNodeTriangle.swift; sourceTree = "<group>"; };
 		AAADECD5264B6CE000AC0CFC /* BaseSceneTransitionToMapWithZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneTransitionToMapWithZoom.swift; sourceTree = "<group>"; };
 		AAADECD7264B6D0C00AC0CFC /* DQSpell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQSpell.swift; sourceTree = "<group>"; };
+		AAADECDA264B6EFE00AC0CFC /* MapStatusWindowNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapStatusWindowNode.swift; sourceTree = "<group>"; };
 		AAAE1CF025B7C30100BF57B1 /* Window.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		AAB52E6E264CC0CF0006B4E0 /* castle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = castle.mp3; sourceTree = "<group>"; };
 		AABDB0EF262ED89600B46945 /* AliahanTownSceneNpcMove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliahanTownSceneNpcMove.swift; sourceTree = "<group>"; };
@@ -777,6 +779,7 @@
 				AA244D8F262C09D600CA0EB6 /* DQMapScene.swift */,
 				AAD4D54126073F4200C21321 /* MapMessageWindow */,
 				AAD4D5C32607743800C21321 /* MapCommandWindow */,
+				AAADECD9264B6EF300AC0CFC /* MapStatusWindow */,
 				AA244D8E262C09D600CA0EB6 /* DQMapSceneButtonA.swift */,
 				AA244D90262C09D600CA0EB6 /* DQMapSceneButtonB.swift */,
 				AA14A80425B67E27009076DB /* DQMapSceneTileMap.swift */,
@@ -1074,6 +1077,14 @@
 				AAADECD1264B6CBF00AC0CFC /* MapCommandZoomWindowNodeTriangle.swift */,
 			);
 			path = MapCommandZoomWindow;
+			sourceTree = "<group>";
+		};
+		AAADECD9264B6EF300AC0CFC /* MapStatusWindow */ = {
+			isa = PBXGroup;
+			children = (
+				AAADECDA264B6EFE00AC0CFC /* MapStatusWindowNode.swift */,
+			);
+			path = MapStatusWindow;
 			sourceTree = "<group>";
 		};
 		AAAE1CEF25B7C2F300BF57B1 /* Functions */ = {
@@ -1423,6 +1434,7 @@
 				AAADECBA264B63A700AC0CFC /* AlefgardSceneCheckPosition.swift in Sources */,
 				AA14A7CD25B67DFF009076DB /* AliahanTownSceneCheckPosition.swift in Sources */,
 				AA244DD1262C0EEF00CA0EB6 /* BaseSceneButton.swift in Sources */,
+				AAADECDB264B6EFE00AC0CFC /* MapStatusWindowNode.swift in Sources */,
 				AA14A81E25B67E36009076DB /* BattleSceneCommand.swift in Sources */,
 				AA14A81D25B67E36009076DB /* BattleSceneTarget.swift in Sources */,
 				AA675882264B496A0053DA2A /* FieldRamia.swift in Sources */,
@@ -1723,7 +1735,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.14;
+				MARKETING_VERSION = 0.15;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1745,7 +1757,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.14;
+				MARKETING_VERSION = 0.15;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

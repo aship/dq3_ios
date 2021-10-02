@@ -9,6 +9,7 @@ import SpriteKit
 
 extension DQMapScene {
     func processButtonB(mapCommandWindowNode: MapCommandWindowNode,
+                        mapStatusWindowNode: MapStatusWindowNode,
                         mapMessageWindowNode: MapMessageWindowNode) {
         let headNode = DataManager.adventureLog.partyCharacterNodes.first!
         let partyCharacterNodes = DataManager.adventureLog.partyCharacterNodes
@@ -16,6 +17,7 @@ extension DQMapScene {
         if mapCommandWindowNode.isOpen {
             headNode.setMovePermitted()
             mapCommandWindowNode.close()
+            mapStatusWindowNode.close()
             
             for node in partyCharacterNodes {
                 node.isPaused = false
@@ -31,6 +33,7 @@ extension DQMapScene {
         if mapMessageWindowNode.isOpen {
             headNode.setMovePermitted()
             mapMessageWindowNode.close()
+            mapStatusWindowNode.close()
             
             for node in partyCharacterNodes {
                 node.isPaused = false

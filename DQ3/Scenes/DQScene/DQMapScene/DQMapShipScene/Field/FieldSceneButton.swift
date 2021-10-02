@@ -11,6 +11,7 @@ extension FieldScene {
     func willPress(_ button: ButtonOverlay) {
         if button == self.scene.buttonA {
             processButtonA(mapCommandWindowNode: &self.mapCommandWindowNode,
+                           mapStatusWindowNode: &self.mapStatusWindowNode,
                            mapMessageWindowNode: self.mapMessageWindowNode,
                            adventureLog: DataManager.adventureLog,
                            characterNpcNodes: self.characterNpcNodes,
@@ -20,6 +21,7 @@ extension FieldScene {
         }
         else if button == self.scene.buttonB {
             processButtonB(mapCommandWindowNode: self.mapCommandWindowNode,
+                           mapStatusWindowNode: self.mapStatusWindowNode,
                            mapMessageWindowNode: self.mapMessageWindowNode)
         }
     }
