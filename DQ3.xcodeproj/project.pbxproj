@@ -79,6 +79,8 @@
 		AA14A85925B67F51009076DB /* DQFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A85425B67F51009076DB /* DQFont.swift */; };
 		AA14A85A25B67F51009076DB /* DQFontLittleDashes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A85525B67F51009076DB /* DQFontLittleDashes.swift */; };
 		AA14A85F25B67F5C009076DB /* ZPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A85E25B67F5C009076DB /* ZPosition.swift */; };
+		AA14C8C4262D1F3F00EB3D41 /* BaseSceneNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14C8C2262D1F3F00EB3D41 /* BaseSceneNotification.swift */; };
+		AA14C8C5262D1F3F00EB3D41 /* BaseSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14C8C3262D1F3F00EB3D41 /* BaseSceneController.swift */; };
 		AA244D91262C09D600CA0EB6 /* DQMapSceneButtonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA244D8E262C09D600CA0EB6 /* DQMapSceneButtonA.swift */; };
 		AA244D92262C09D600CA0EB6 /* DQMapScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA244D8F262C09D600CA0EB6 /* DQMapScene.swift */; };
 		AA244D93262C09D600CA0EB6 /* DQMapSceneButtonB.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA244D90262C09D600CA0EB6 /* DQMapSceneButtonB.swift */; };
@@ -238,6 +240,8 @@
 		AA14A85425B67F51009076DB /* DQFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQFont.swift; sourceTree = "<group>"; };
 		AA14A85525B67F51009076DB /* DQFontLittleDashes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQFontLittleDashes.swift; sourceTree = "<group>"; };
 		AA14A85E25B67F5C009076DB /* ZPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPosition.swift; sourceTree = "<group>"; };
+		AA14C8C2262D1F3F00EB3D41 /* BaseSceneNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneNotification.swift; sourceTree = "<group>"; };
+		AA14C8C3262D1F3F00EB3D41 /* BaseSceneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneController.swift; sourceTree = "<group>"; };
 		AA244D8E262C09D600CA0EB6 /* DQMapSceneButtonA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQMapSceneButtonA.swift; sourceTree = "<group>"; };
 		AA244D8F262C09D600CA0EB6 /* DQMapScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQMapScene.swift; sourceTree = "<group>"; };
 		AA244D90262C09D600CA0EB6 /* DQMapSceneButtonB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQMapSceneButtonB.swift; sourceTree = "<group>"; };
@@ -462,6 +466,8 @@
 			isa = PBXGroup;
 			children = (
 				AA14A7F625B67E13009076DB /* BaseScene.swift */,
+				AA14C8C3262D1F3F00EB3D41 /* BaseSceneController.swift */,
+				AA14C8C2262D1F3F00EB3D41 /* BaseSceneNotification.swift */,
 				AA14A7F525B67E13009076DB /* BaseSceneVirtualPad.swift */,
 				AA14A7FD25B67E18009076DB /* BaseMap */,
 			);
@@ -989,6 +995,7 @@
 				AAD0EEFB260A21050022849C /* CharacterNode.swift in Sources */,
 				AA14A7C825B67DFF009076DB /* AliahanTownSceneButtonAOpening.swift in Sources */,
 				AA6B86CF262BCB2D0010DAF5 /* AdventureLogYesNoDeleteLogWindowNodeButtonA.swift in Sources */,
+				AA14C8C4262D1F3F00EB3D41 /* BaseSceneNotification.swift in Sources */,
 				AA6B8667262BBF600010DAF5 /* AdventureLogTopWindowNodeButtonA.swift in Sources */,
 				AA6B8693262BCAC40010DAF5 /* AdventureLogMessageSpeedWindowNodeTriangle.swift in Sources */,
 				AA14A81925B67E36009076DB /* BattleSceneMessage.swift in Sources */,
@@ -1075,6 +1082,7 @@
 				AAD4D54926073F4D00C21321 /* MapMessageWindowNodeLine.swift in Sources */,
 				AA6B86C6262BCB250010DAF5 /* AdventureLogConfirmDeleteLogWindowNode.swift in Sources */,
 				AAD4D56B260740F600C21321 /* Window2.swift in Sources */,
+				AA14C8C5262D1F3F00EB3D41 /* BaseSceneController.swift in Sources */,
 				AA6B86B1262BCAFC0010DAF5 /* AdventureLogSelectGenderWindowNode.swift in Sources */,
 				AA14A7A925B67DE9009076DB /* TitleScene.swift in Sources */,
 				AAD4D5C72607745300C21321 /* MapCommandWindowNode.swift in Sources */,
@@ -1254,7 +1262,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4;
+				MARKETING_VERSION = 0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1276,7 +1284,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4;
+				MARKETING_VERSION = 0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

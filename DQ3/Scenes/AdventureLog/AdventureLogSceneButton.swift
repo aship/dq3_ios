@@ -20,7 +20,7 @@ extension AdventureLogScene {
         self.padDirection = .neutral
     }
     
-    func willPress(_ button: ButtonOverlay) {
+    override func willPress(_ button: ButtonOverlay) {
         if !self.isProcessing {
             
             if button == self.buttonA {
