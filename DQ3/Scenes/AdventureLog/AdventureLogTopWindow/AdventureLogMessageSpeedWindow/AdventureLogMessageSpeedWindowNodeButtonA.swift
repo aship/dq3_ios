@@ -27,7 +27,7 @@ extension AdventureLogMessageSpeedWindowNode {
                                               number: adventureLogNumber)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                let scene = OpeningScene()
+                let scene = BaseMapScene()
                 
                 let transition = SKTransition.crossFade(withDuration: 0.5)
                 DataManager.adventureLogScene.view?.presentScene(scene,

@@ -20,7 +20,7 @@ extension BattleScene {
         windowNode.setScale(scale)
         windowNode.position = CGPoint(x: pointX, y: pointY)
         
-        self.addChild(windowNode)
+        self.scene.addChild(windowNode)
         
         labelNode.text = "スライムが　あらわれた！\nいっかくうさぎが　あらわれた！"
         labelNode.horizontalAlignmentMode = .left

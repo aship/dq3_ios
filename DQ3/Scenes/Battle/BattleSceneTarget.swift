@@ -20,6 +20,6 @@ extension BattleScene {
         node.setScale(scale)
         node.isHidden = true
         
-        self.addChild(node)
+        self.scene.addChild(node)
     }
 }
