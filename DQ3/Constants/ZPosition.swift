@@ -18,5 +18,5 @@ let ZPositionParty3rd: CGFloat = 4
 let ZPositionParty4th: CGFloat = 3
 
 let ZPositionWindow: CGFloat = 8
-let ZPositionBlackScreen: CGFloat = 60
-let ZPositionVirtualPad: CGFloat = 61
+let ZPositionBlackScreen: CGFloat = 100
+let ZPositionVirtualPad: CGFloat = 101

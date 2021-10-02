@@ -16,12 +16,11 @@ func reloadAdventureLogScene() {
                                                          adventureLog2: adventureLog2,
                                                          adventureLog3: adventureLog3)
     
-    DataManager.adventureLogScene.adventureLogTopWindowNode?.removeFromParent()
-    DataManager.adventureLogScene.adventureLogTopWindowNode = AdventureLogTopWindowNode()
-    DataManager.adventureLogScene.adventureLogTopWindowNode?.addToScene(scene: DataManager.adventureLogScene,
-                                                                        numberOfAdventureLogs: numberOfAdventureLogs,
-                                                                        scale: DataManager.adventureLogScene.scale)
-    
+    DataManager.scene.adventureLogScene?.adventureLogTopWindowNode?.removeFromParent()
+    DataManager.scene.adventureLogScene?.adventureLogTopWindowNode = AdventureLogTopWindowNode()
+    DataManager.scene.adventureLogScene?.adventureLogTopWindowNode?.addToScene(scene: DataManager.scene,
+                                                                              numberOfAdventureLogs: numberOfAdventureLogs,
+                                                                              scale: DataManager.scene.scale)
 }
 
 func getNumberOfAdventureLogs(adventureLog1: AdventureLog?,

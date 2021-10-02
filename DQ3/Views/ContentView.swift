@@ -10,22 +10,29 @@ import SpriteKit
 
 struct ContentView: View {
     var body: some View {
-        // let scene = TitleScene()
-        let scene = AdventureLogScene()
+        let scene = DataManager.scene
         
-        // let scene = AliahanTownScene()
-        // for node in DataManager.adventureLog.partyCharacterNodes {
-        //     node.positionX = AliahanTownEntrancePositionX
-        //     node.positionY = AliahanTownEntrancePositionY
-        // }
+        if DebugSetCurrentMemory {
+            setDebugCurrentMemory()
+        }
         
-        // let scene = AliahanTownHouseScene()
-        
-        // let scene = FieldScene()
-        // for node in DataManager.adventureLog.partyCharacterNodes {
-        //     node.positionX = FieldAliahanPositionX
-        //     node.positionY = FieldAliahanPositionY
-        // }
+        // debug optiion が有効な時は、
+        // 強制的に冒険の書1を書き換え
+        if DebugSetAdventureLog {
+            if DebugSetAdventureLogEveryAppLaunch {
+                setDebugAdventureLog()
+            }
+            else {
+                let isSetAdventureLog = UserDefaultsUtil.loadDebugSetAdventureLogState()
+                
+                if !isSetAdventureLog {
+                    // フラグセットされてないときのみ
+                    // debug用冒険の書を書き込み
+                    setDebugAdventureLog()
+                    UserDefaultsUtil.saveDebugSetAdventureLogState(true)
+                }
+            }
+        }
         
         return Group {
             SpriteView(scene: scene)

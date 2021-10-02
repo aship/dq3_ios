@@ -46,7 +46,7 @@
 		AA14A7CE25B67DFF009076DB /* AliahanTownSceneEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A7C025B67DFF009076DB /* AliahanTownSceneEvent.swift */; };
 		AA14A7D025B67DFF009076DB /* AliahanTownScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A7C225B67DFF009076DB /* AliahanTownScene.swift */; };
 		AA14A7D125B67DFF009076DB /* aliahan_town_inside.csv in Resources */ = {isa = PBXBuildFile; fileRef = AA14A7C325B67DFF009076DB /* aliahan_town_inside.csv */; };
-		AA14A7D325B67DFF009076DB /* AliahanTownScenePartyCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A7C525B67DFF009076DB /* AliahanTownScenePartyCharacters.swift */; };
+		AA14A7D325B67DFF009076DB /* DQMapScenePartyCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A7C525B67DFF009076DB /* DQMapScenePartyCharacters.swift */; };
 		AA14A7E425B67E0A009076DB /* AliahanTownHouseSceneCheckCanMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A7D725B67E09009076DB /* AliahanTownHouseSceneCheckCanMove.swift */; };
 		AA14A7E525B67E0A009076DB /* AliahanTownHouseSceneCheckPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A7D825B67E09009076DB /* AliahanTownHouseSceneCheckPosition.swift */; };
 		AA14A7E725B67E0A009076DB /* AliahanTownHouseScenePartyCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A7DA25B67E09009076DB /* AliahanTownHouseScenePartyCharacters.swift */; };
@@ -56,17 +56,15 @@
 		AA14A7EB25B67E0A009076DB /* AliahanTownHouseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A7DE25B67E0A009076DB /* AliahanTownHouseScene.swift */; };
 		AA14A7EF25B67E0A009076DB /* AliahanTownHouseSceneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A7E225B67E0A009076DB /* AliahanTownHouseSceneButton.swift */; };
 		AA14A7F025B67E0A009076DB /* AliahanTownHouseSceneNpcCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A7E325B67E0A009076DB /* AliahanTownHouseSceneNpcCharacters.swift */; };
-		AA14A7F825B67E13009076DB /* BaseSceneVirtualPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A7F525B67E13009076DB /* BaseSceneVirtualPad.swift */; };
 		AA14A7F925B67E13009076DB /* BaseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A7F625B67E13009076DB /* BaseScene.swift */; };
-		AA14A80625B67E27009076DB /* BaseMapScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A7FE25B67E27009076DB /* BaseMapScene.swift */; };
-		AA14A80C25B67E27009076DB /* BaseMapSceneTileMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A80425B67E27009076DB /* BaseMapSceneTileMap.swift */; };
+		AA14A80625B67E27009076DB /* BaseSceneGetDQScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A7FE25B67E27009076DB /* BaseSceneGetDQScene.swift */; };
+		AA14A80C25B67E27009076DB /* DQMapSceneTileMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A80425B67E27009076DB /* DQMapSceneTileMap.swift */; };
 		AA14A81825B67E36009076DB /* BattleSceneEnemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A81125B67E36009076DB /* BattleSceneEnemy.swift */; };
 		AA14A81925B67E36009076DB /* BattleSceneMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A81225B67E36009076DB /* BattleSceneMessage.swift */; };
 		AA14A81A25B67E36009076DB /* BattleSceneStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A81325B67E36009076DB /* BattleSceneStatus.swift */; };
 		AA14A81B25B67E36009076DB /* BattleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A81425B67E36009076DB /* BattleScene.swift */; };
 		AA14A81D25B67E36009076DB /* BattleSceneTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A81625B67E36009076DB /* BattleSceneTarget.swift */; };
 		AA14A81E25B67E36009076DB /* BattleSceneCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A81725B67E36009076DB /* BattleSceneCommand.swift */; };
-		AA14A82C25B67E3D009076DB /* FieldScenePartyCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A82225B67E3D009076DB /* FieldScenePartyCharacters.swift */; };
 		AA14A82D25B67E3D009076DB /* FieldSceneCheckCanMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A82325B67E3D009076DB /* FieldSceneCheckCanMove.swift */; };
 		AA14A82E25B67E3D009076DB /* FieldScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A82425B67E3D009076DB /* FieldScene.swift */; };
 		AA14A83025B67E3D009076DB /* FieldSceneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14A82625B67E3D009076DB /* FieldSceneButton.swift */; };
@@ -84,16 +82,16 @@
 		AA244D91262C09D600CA0EB6 /* DQMapSceneButtonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA244D8E262C09D600CA0EB6 /* DQMapSceneButtonA.swift */; };
 		AA244D92262C09D600CA0EB6 /* DQMapScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA244D8F262C09D600CA0EB6 /* DQMapScene.swift */; };
 		AA244D93262C09D600CA0EB6 /* DQMapSceneButtonB.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA244D90262C09D600CA0EB6 /* DQMapSceneButtonB.swift */; };
-		AA244D9C262C0B0B00CA0EB6 /* BaseMapSceneTransitionToMapWithStairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA244D98262C0B0B00CA0EB6 /* BaseMapSceneTransitionToMapWithStairs.swift */; };
-		AA244D9D262C0B0B00CA0EB6 /* BaseMapSceneTransitionToMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA244D99262C0B0B00CA0EB6 /* BaseMapSceneTransitionToMap.swift */; };
-		AA244D9E262C0B0B00CA0EB6 /* BaseMapSceneTransitionFromBattle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA244D9A262C0B0B00CA0EB6 /* BaseMapSceneTransitionFromBattle.swift */; };
-		AA244D9F262C0B0B00CA0EB6 /* BaseMapSceneTransitionToBattle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA244D9B262C0B0B00CA0EB6 /* BaseMapSceneTransitionToBattle.swift */; };
+		AA244D9C262C0B0B00CA0EB6 /* BaseSceneTransitionToMapWithStairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA244D98262C0B0B00CA0EB6 /* BaseSceneTransitionToMapWithStairs.swift */; };
+		AA244D9D262C0B0B00CA0EB6 /* BaseSceneTransitionToMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA244D99262C0B0B00CA0EB6 /* BaseSceneTransitionToMap.swift */; };
+		AA244D9E262C0B0B00CA0EB6 /* BaseSceneTransitionFromBattle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA244D9A262C0B0B00CA0EB6 /* BaseSceneTransitionFromBattle.swift */; };
+		AA244D9F262C0B0B00CA0EB6 /* BaseSceneTransitionToBattle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA244D9B262C0B0B00CA0EB6 /* BaseSceneTransitionToBattle.swift */; };
 		AA244DB9262C0D0400CA0EB6 /* BattleSceneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA244DB8262C0D0400CA0EB6 /* BattleSceneButton.swift */; };
 		AA244DBE262C0E2D00CA0EB6 /* DQSceneType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA244DBD262C0E2D00CA0EB6 /* DQSceneType.swift */; };
-		AA244DC3262C0EC300CA0EB6 /* BaseMapSceneUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA244DC2262C0EC300CA0EB6 /* BaseMapSceneUpdate.swift */; };
-		AA244DC8262C0ED000CA0EB6 /* BaseMapSceneDQMapScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA244DC7262C0ED000CA0EB6 /* BaseMapSceneDQMapScene.swift */; };
-		AA244DD1262C0EEF00CA0EB6 /* BaseMapSceneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA244DCF262C0EEF00CA0EB6 /* BaseMapSceneButton.swift */; };
-		AA244DD2262C0EEF00CA0EB6 /* BaseMapSceneStick.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA244DD0262C0EEF00CA0EB6 /* BaseMapSceneStick.swift */; };
+		AA244DC3262C0EC300CA0EB6 /* BaseSceneUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA244DC2262C0EC300CA0EB6 /* BaseSceneUpdate.swift */; };
+		AA244DC8262C0ED000CA0EB6 /* BaseSceneSetupDQScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA244DC7262C0ED000CA0EB6 /* BaseSceneSetupDQScene.swift */; };
+		AA244DD1262C0EEF00CA0EB6 /* BaseSceneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA244DCF262C0EEF00CA0EB6 /* BaseSceneButton.swift */; };
+		AA244DD2262C0EEF00CA0EB6 /* BaseSceneStick.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA244DD0262C0EEF00CA0EB6 /* BaseSceneStick.swift */; };
 		AA244DDD262C106400CA0EB6 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA244DDC262C106400CA0EB6 /* Typealiases.swift */; };
 		AA6B8666262BBF600010DAF5 /* AdventureLogTopWindowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B8664262BBF600010DAF5 /* AdventureLogTopWindowNode.swift */; };
 		AA6B8667262BBF600010DAF5 /* AdventureLogTopWindowNodeButtonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B8665262BBF600010DAF5 /* AdventureLogTopWindowNodeButtonA.swift */; };
@@ -122,12 +120,14 @@
 		AA6B86E9262BCC7B0010DAF5 /* AdventureLogFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B86E6262BCC7B0010DAF5 /* AdventureLogFunctions.swift */; };
 		AA6B86EA262BCC7B0010DAF5 /* AdventureLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B86E7262BCC7B0010DAF5 /* AdventureLog.swift */; };
 		AA6B86F2262BCE440010DAF5 /* NextElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B86F1262BCE440010DAF5 /* NextElement.swift */; };
+		AA7D92F8264B86690099350A /* MapMessageWindowNodeMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7D92F7264B86690099350A /* MapMessageWindowNodeMark.swift */; };
 		AA80D37B259AA9A30001304E /* DQ3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80D37A259AA9A30001304E /* DQ3App.swift */; };
 		AA80D37D259AA9A30001304E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80D37C259AA9A30001304E /* ContentView.swift */; };
 		AA80D37F259AA9A40001304E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA80D37E259AA9A40001304E /* Assets.xcassets */; };
 		AA80D382259AA9A40001304E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA80D381259AA9A40001304E /* Preview Assets.xcassets */; };
 		AA80D38D259AA9A40001304E /* DQ3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80D38C259AA9A40001304E /* DQ3Tests.swift */; };
 		AA80D398259AA9A40001304E /* DQ3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80D397259AA9A40001304E /* DQ3UITests.swift */; };
+		AA919EF426496F7B00A4BBE8 /* CharacterStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA919EF326496F7B00A4BBE8 /* CharacterStatus.swift */; };
 		AAAE1CF125B7C30100BF57B1 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAE1CF025B7C30100BF57B1 /* Window.swift */; };
 		AAB52E6F264CC0CF0006B4E0 /* castle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AAB52E6E264CC0CF0006B4E0 /* castle.mp3 */; };
 		AAD0EEFA260A21050022849C /* CharacterNodePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0EEF6260A21040022849C /* CharacterNodePosition.swift */; };
@@ -135,10 +135,10 @@
 		AAD0EEFC260A21050022849C /* CharacterNodeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0EEF8260A21050022849C /* CharacterNodeDirection.swift */; };
 		AAD0EEFD260A21050022849C /* CharacterNodeMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0EEF9260A21050022849C /* CharacterNodeMove.swift */; };
 		AAD0EF05260A21190022849C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0EF04260A21190022849C /* DataManager.swift */; };
-		AAD0EF0A260A21510022849C /* BaseMapSceneUpdateProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0EF09260A21510022849C /* BaseMapSceneUpdateProcess.swift */; };
+		AAD0EF0A260A21510022849C /* BaseSceneUpdateProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0EF09260A21510022849C /* BaseSceneUpdateProcess.swift */; };
 		AAD4D54626073F4D00C21321 /* MapMessageWindowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD4D54226073F4D00C21321 /* MapMessageWindowNode.swift */; };
-		AAD4D54726073F4D00C21321 /* MapMessageWindowNodeShowAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD4D54326073F4D00C21321 /* MapMessageWindowNodeShowAll.swift */; };
-		AAD4D54826073F4D00C21321 /* MapMessageWindowNodeShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD4D54426073F4D00C21321 /* MapMessageWindowNodeShow.swift */; };
+		AAD4D54726073F4D00C21321 /* MapMessageWindowNodeMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD4D54326073F4D00C21321 /* MapMessageWindowNodeMessages.swift */; };
+		AAD4D54826073F4D00C21321 /* MapMessageWindowNodeMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD4D54426073F4D00C21321 /* MapMessageWindowNodeMessage.swift */; };
 		AAD4D54926073F4D00C21321 /* MapMessageWindowNodeLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD4D54526073F4D00C21321 /* MapMessageWindowNodeLine.swift */; };
 		AAD4D55426073F8700C21321 /* SoundEffectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD4D55326073F8700C21321 /* SoundEffectManager.swift */; };
 		AAD4D56B260740F600C21321 /* Window2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD4D56A260740F600C21321 /* Window2.swift */; };
@@ -148,6 +148,13 @@
 		AAD4D5D5260774FD00C21321 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD4D5D3260774FD00C21321 /* Triangle.swift */; };
 		AAD4D5D6260774FD00C21321 /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD4D5D4260774FD00C21321 /* Words.swift */; };
 		AAD4D5F626077DA300C21321 /* CharacterAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD4D5F526077DA300C21321 /* CharacterAnimation.swift */; };
+		AAFC8B00262D214000F5E13C /* DQScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFC8AFF262D214000F5E13C /* DQScene.swift */; };
+		AAFC8B37262D5C9C00F5E13C /* DQMapSceneNpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFC8B36262D5C9C00F5E13C /* DQMapSceneNpc.swift */; };
+		AAFC8B3F262E483900F5E13C /* BaseSceneTransitionToScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFC8B3E262E483900F5E13C /* BaseSceneTransitionToScene.swift */; };
+		AAFC8B4A262E4AB400F5E13C /* BaseSceneVirtualPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFC8B49262E4AB400F5E13C /* BaseSceneVirtualPad.swift */; };
+		AAFC8B7C262E551600F5E13C /* BaseSceneDQSceneFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFC8B7B262E551600F5E13C /* BaseSceneDQSceneFunction.swift */; };
+		AAFC8B87262E5C9500F5E13C /* MapCommandWindowNodeTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFC8B86262E5C9500F5E13C /* MapCommandWindowNodeTriangle.swift */; };
+		AAFC8B92262E881600F5E13C /* ContentViewDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFC8B91262E881600F5E13C /* ContentViewDebug.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -207,7 +214,7 @@
 		AA14A7C025B67DFF009076DB /* AliahanTownSceneEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliahanTownSceneEvent.swift; sourceTree = "<group>"; };
 		AA14A7C225B67DFF009076DB /* AliahanTownScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliahanTownScene.swift; sourceTree = "<group>"; };
 		AA14A7C325B67DFF009076DB /* aliahan_town_inside.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aliahan_town_inside.csv; sourceTree = "<group>"; };
-		AA14A7C525B67DFF009076DB /* AliahanTownScenePartyCharacters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliahanTownScenePartyCharacters.swift; sourceTree = "<group>"; };
+		AA14A7C525B67DFF009076DB /* DQMapScenePartyCharacters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQMapScenePartyCharacters.swift; sourceTree = "<group>"; };
 		AA14A7D725B67E09009076DB /* AliahanTownHouseSceneCheckCanMove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliahanTownHouseSceneCheckCanMove.swift; sourceTree = "<group>"; };
 		AA14A7D825B67E09009076DB /* AliahanTownHouseSceneCheckPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliahanTownHouseSceneCheckPosition.swift; sourceTree = "<group>"; };
 		AA14A7DA25B67E09009076DB /* AliahanTownHouseScenePartyCharacters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliahanTownHouseScenePartyCharacters.swift; sourceTree = "<group>"; };
@@ -217,17 +224,15 @@
 		AA14A7DE25B67E0A009076DB /* AliahanTownHouseScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliahanTownHouseScene.swift; sourceTree = "<group>"; };
 		AA14A7E225B67E0A009076DB /* AliahanTownHouseSceneButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliahanTownHouseSceneButton.swift; sourceTree = "<group>"; };
 		AA14A7E325B67E0A009076DB /* AliahanTownHouseSceneNpcCharacters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliahanTownHouseSceneNpcCharacters.swift; sourceTree = "<group>"; };
-		AA14A7F525B67E13009076DB /* BaseSceneVirtualPad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneVirtualPad.swift; sourceTree = "<group>"; };
 		AA14A7F625B67E13009076DB /* BaseScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseScene.swift; sourceTree = "<group>"; };
-		AA14A7FE25B67E27009076DB /* BaseMapScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapScene.swift; sourceTree = "<group>"; };
-		AA14A80425B67E27009076DB /* BaseMapSceneTileMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapSceneTileMap.swift; sourceTree = "<group>"; };
+		AA14A7FE25B67E27009076DB /* BaseSceneGetDQScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneGetDQScene.swift; sourceTree = "<group>"; };
+		AA14A80425B67E27009076DB /* DQMapSceneTileMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQMapSceneTileMap.swift; sourceTree = "<group>"; };
 		AA14A81125B67E36009076DB /* BattleSceneEnemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleSceneEnemy.swift; sourceTree = "<group>"; };
 		AA14A81225B67E36009076DB /* BattleSceneMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleSceneMessage.swift; sourceTree = "<group>"; };
 		AA14A81325B67E36009076DB /* BattleSceneStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleSceneStatus.swift; sourceTree = "<group>"; };
 		AA14A81425B67E36009076DB /* BattleScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleScene.swift; sourceTree = "<group>"; };
 		AA14A81625B67E36009076DB /* BattleSceneTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleSceneTarget.swift; sourceTree = "<group>"; };
 		AA14A81725B67E36009076DB /* BattleSceneCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleSceneCommand.swift; sourceTree = "<group>"; };
-		AA14A82225B67E3D009076DB /* FieldScenePartyCharacters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldScenePartyCharacters.swift; sourceTree = "<group>"; };
 		AA14A82325B67E3D009076DB /* FieldSceneCheckCanMove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldSceneCheckCanMove.swift; sourceTree = "<group>"; };
 		AA14A82425B67E3D009076DB /* FieldScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldScene.swift; sourceTree = "<group>"; };
 		AA14A82625B67E3D009076DB /* FieldSceneButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldSceneButton.swift; sourceTree = "<group>"; };
@@ -245,16 +250,16 @@
 		AA244D8E262C09D600CA0EB6 /* DQMapSceneButtonA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQMapSceneButtonA.swift; sourceTree = "<group>"; };
 		AA244D8F262C09D600CA0EB6 /* DQMapScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQMapScene.swift; sourceTree = "<group>"; };
 		AA244D90262C09D600CA0EB6 /* DQMapSceneButtonB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQMapSceneButtonB.swift; sourceTree = "<group>"; };
-		AA244D98262C0B0B00CA0EB6 /* BaseMapSceneTransitionToMapWithStairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapSceneTransitionToMapWithStairs.swift; sourceTree = "<group>"; };
-		AA244D99262C0B0B00CA0EB6 /* BaseMapSceneTransitionToMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapSceneTransitionToMap.swift; sourceTree = "<group>"; };
-		AA244D9A262C0B0B00CA0EB6 /* BaseMapSceneTransitionFromBattle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapSceneTransitionFromBattle.swift; sourceTree = "<group>"; };
-		AA244D9B262C0B0B00CA0EB6 /* BaseMapSceneTransitionToBattle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapSceneTransitionToBattle.swift; sourceTree = "<group>"; };
+		AA244D98262C0B0B00CA0EB6 /* BaseSceneTransitionToMapWithStairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneTransitionToMapWithStairs.swift; sourceTree = "<group>"; };
+		AA244D99262C0B0B00CA0EB6 /* BaseSceneTransitionToMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneTransitionToMap.swift; sourceTree = "<group>"; };
+		AA244D9A262C0B0B00CA0EB6 /* BaseSceneTransitionFromBattle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneTransitionFromBattle.swift; sourceTree = "<group>"; };
+		AA244D9B262C0B0B00CA0EB6 /* BaseSceneTransitionToBattle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneTransitionToBattle.swift; sourceTree = "<group>"; };
 		AA244DB8262C0D0400CA0EB6 /* BattleSceneButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleSceneButton.swift; sourceTree = "<group>"; };
 		AA244DBD262C0E2D00CA0EB6 /* DQSceneType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQSceneType.swift; sourceTree = "<group>"; };
-		AA244DC2262C0EC300CA0EB6 /* BaseMapSceneUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapSceneUpdate.swift; sourceTree = "<group>"; };
-		AA244DC7262C0ED000CA0EB6 /* BaseMapSceneDQMapScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapSceneDQMapScene.swift; sourceTree = "<group>"; };
-		AA244DCF262C0EEF00CA0EB6 /* BaseMapSceneButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapSceneButton.swift; sourceTree = "<group>"; };
-		AA244DD0262C0EEF00CA0EB6 /* BaseMapSceneStick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapSceneStick.swift; sourceTree = "<group>"; };
+		AA244DC2262C0EC300CA0EB6 /* BaseSceneUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneUpdate.swift; sourceTree = "<group>"; };
+		AA244DC7262C0ED000CA0EB6 /* BaseSceneSetupDQScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneSetupDQScene.swift; sourceTree = "<group>"; };
+		AA244DCF262C0EEF00CA0EB6 /* BaseSceneButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneButton.swift; sourceTree = "<group>"; };
+		AA244DD0262C0EEF00CA0EB6 /* BaseSceneStick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneStick.swift; sourceTree = "<group>"; };
 		AA244DDC262C106400CA0EB6 /* Typealiases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		AA6B8664262BBF600010DAF5 /* AdventureLogTopWindowNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogTopWindowNode.swift; sourceTree = "<group>"; };
 		AA6B8665262BBF600010DAF5 /* AdventureLogTopWindowNodeButtonA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogTopWindowNodeButtonA.swift; sourceTree = "<group>"; };
@@ -283,6 +288,7 @@
 		AA6B86E6262BCC7B0010DAF5 /* AdventureLogFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogFunctions.swift; sourceTree = "<group>"; };
 		AA6B86E7262BCC7B0010DAF5 /* AdventureLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLog.swift; sourceTree = "<group>"; };
 		AA6B86F1262BCE440010DAF5 /* NextElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextElement.swift; sourceTree = "<group>"; };
+		AA7D92F7264B86690099350A /* MapMessageWindowNodeMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMessageWindowNodeMark.swift; sourceTree = "<group>"; };
 		AA80D377259AA9A30001304E /* DQ3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DQ3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA80D37A259AA9A30001304E /* DQ3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DQ3App.swift; sourceTree = "<group>"; };
 		AA80D37C259AA9A30001304E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -295,6 +301,7 @@
 		AA80D393259AA9A40001304E /* DQ3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DQ3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA80D397259AA9A40001304E /* DQ3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DQ3UITests.swift; sourceTree = "<group>"; };
 		AA80D399259AA9A40001304E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA919EF326496F7B00A4BBE8 /* CharacterStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterStatus.swift; sourceTree = "<group>"; };
 		AAAE1CF025B7C30100BF57B1 /* Window.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		AAB52E6E264CC0CF0006B4E0 /* castle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = castle.mp3; sourceTree = "<group>"; };
 		AAD0EEF6260A21040022849C /* CharacterNodePosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterNodePosition.swift; sourceTree = "<group>"; };
@@ -302,10 +309,10 @@
 		AAD0EEF8260A21050022849C /* CharacterNodeDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterNodeDirection.swift; sourceTree = "<group>"; };
 		AAD0EEF9260A21050022849C /* CharacterNodeMove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterNodeMove.swift; sourceTree = "<group>"; };
 		AAD0EF04260A21190022849C /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		AAD0EF09260A21510022849C /* BaseMapSceneUpdateProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapSceneUpdateProcess.swift; sourceTree = "<group>"; };
+		AAD0EF09260A21510022849C /* BaseSceneUpdateProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneUpdateProcess.swift; sourceTree = "<group>"; };
 		AAD4D54226073F4D00C21321 /* MapMessageWindowNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapMessageWindowNode.swift; sourceTree = "<group>"; };
-		AAD4D54326073F4D00C21321 /* MapMessageWindowNodeShowAll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapMessageWindowNodeShowAll.swift; sourceTree = "<group>"; };
-		AAD4D54426073F4D00C21321 /* MapMessageWindowNodeShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapMessageWindowNodeShow.swift; sourceTree = "<group>"; };
+		AAD4D54326073F4D00C21321 /* MapMessageWindowNodeMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapMessageWindowNodeMessages.swift; sourceTree = "<group>"; };
+		AAD4D54426073F4D00C21321 /* MapMessageWindowNodeMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapMessageWindowNodeMessage.swift; sourceTree = "<group>"; };
 		AAD4D54526073F4D00C21321 /* MapMessageWindowNodeLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapMessageWindowNodeLine.swift; sourceTree = "<group>"; };
 		AAD4D55326073F8700C21321 /* SoundEffectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffectManager.swift; sourceTree = "<group>"; };
 		AAD4D56A260740F600C21321 /* Window2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Window2.swift; sourceTree = "<group>"; };
@@ -315,6 +322,13 @@
 		AAD4D5D3260774FD00C21321 /* Triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		AAD4D5D4260774FD00C21321 /* Words.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
 		AAD4D5F526077DA300C21321 /* CharacterAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterAnimation.swift; sourceTree = "<group>"; };
+		AAFC8AFF262D214000F5E13C /* DQScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQScene.swift; sourceTree = "<group>"; };
+		AAFC8B36262D5C9C00F5E13C /* DQMapSceneNpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQMapSceneNpc.swift; sourceTree = "<group>"; };
+		AAFC8B3E262E483900F5E13C /* BaseSceneTransitionToScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneTransitionToScene.swift; sourceTree = "<group>"; };
+		AAFC8B49262E4AB400F5E13C /* BaseSceneVirtualPad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneVirtualPad.swift; sourceTree = "<group>"; };
+		AAFC8B7B262E551600F5E13C /* BaseSceneDQSceneFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneDQSceneFunction.swift; sourceTree = "<group>"; };
+		AAFC8B86262E5C9500F5E13C /* MapCommandWindowNodeTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCommandWindowNodeTriangle.swift; sourceTree = "<group>"; };
+		AAFC8B91262E881600F5E13C /* ContentViewDebug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewDebug.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -390,6 +404,7 @@
 			isa = PBXGroup;
 			children = (
 				AA80D37C259AA9A30001304E /* ContentView.swift */,
+				AAFC8B91262E881600F5E13C /* ContentViewDebug.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -408,10 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				AA14A7A025B67D93009076DB /* Base */,
-				AA14A7A725B67DC6009076DB /* Title */,
-				AA14A7A125B67D9F009076DB /* AdventureLog */,
-				AA244D8D262C092000CA0EB6 /* DQMapScene */,
-				AA14A7A425B67DB1009076DB /* Battle */,
+				AAFC8AFE262D20D200F5E13C /* DQScene */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -445,6 +457,7 @@
 		AA14A77325B67A7E009076DB /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				AA919EF226496F7400A4BBE8 /* CharacterStatus */,
 				AAD0EEF5260A20FA0022849C /* CharacterNode */,
 				AA14A79925B67D72009076DB /* ButtonOverlay.swift */,
 				AA14A79A25B67D72009076DB /* PadOverlay.swift */,
@@ -466,10 +479,17 @@
 			isa = PBXGroup;
 			children = (
 				AA14A7F625B67E13009076DB /* BaseScene.swift */,
+				AAFC8B49262E4AB400F5E13C /* BaseSceneVirtualPad.swift */,
 				AA14C8C3262D1F3F00EB3D41 /* BaseSceneController.swift */,
 				AA14C8C2262D1F3F00EB3D41 /* BaseSceneNotification.swift */,
-				AA14A7F525B67E13009076DB /* BaseSceneVirtualPad.swift */,
-				AA14A7FD25B67E18009076DB /* BaseMap */,
+				AA244DD0262C0EEF00CA0EB6 /* BaseSceneStick.swift */,
+				AA244DCF262C0EEF00CA0EB6 /* BaseSceneButton.swift */,
+				AA14A7FE25B67E27009076DB /* BaseSceneGetDQScene.swift */,
+				AA244DC7262C0ED000CA0EB6 /* BaseSceneSetupDQScene.swift */,
+				AA244DC2262C0EC300CA0EB6 /* BaseSceneUpdate.swift */,
+				AAD0EF09260A21510022849C /* BaseSceneUpdateProcess.swift */,
+				AAFC8B7B262E551600F5E13C /* BaseSceneDQSceneFunction.swift */,
+				AA244D97262C0AEE00CA0EB6 /* Transition */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -495,7 +515,6 @@
 				AA14A7BF25B67DFF009076DB /* AliahanTownSceneCheckPosition.swift */,
 				AA14A7C025B67DFF009076DB /* AliahanTownSceneEvent.swift */,
 				AA14A7B825B67DFF009076DB /* AliahanTownSceneNpcCharacters.swift */,
-				AA14A7C525B67DFF009076DB /* AliahanTownScenePartyCharacters.swift */,
 				AA14A7C325B67DFF009076DB /* aliahan_town_inside.csv */,
 				AA14A7BD25B67DFF009076DB /* aliahan_town.csv */,
 			);
@@ -539,7 +558,6 @@
 				AA14A82625B67E3D009076DB /* FieldSceneButton.swift */,
 				AA14A82325B67E3D009076DB /* FieldSceneCheckCanMove.swift */,
 				AA14A82825B67E3D009076DB /* FieldSceneCheckPosition.swift */,
-				AA14A82225B67E3D009076DB /* FieldScenePartyCharacters.swift */,
 				AA14A82A25B67E3D009076DB /* field.csv */,
 			);
 			path = Field;
@@ -560,21 +578,6 @@
 				AA14A7A825B67DE9009076DB /* TitleScene.swift */,
 			);
 			path = Title;
-			sourceTree = "<group>";
-		};
-		AA14A7FD25B67E18009076DB /* BaseMap */ = {
-			isa = PBXGroup;
-			children = (
-				AA14A7FE25B67E27009076DB /* BaseMapScene.swift */,
-				AA14A80425B67E27009076DB /* BaseMapSceneTileMap.swift */,
-				AA244DC7262C0ED000CA0EB6 /* BaseMapSceneDQMapScene.swift */,
-				AA244DCF262C0EEF00CA0EB6 /* BaseMapSceneButton.swift */,
-				AA244DD0262C0EEF00CA0EB6 /* BaseMapSceneStick.swift */,
-				AA244DC2262C0EC300CA0EB6 /* BaseMapSceneUpdate.swift */,
-				AAD0EF09260A21510022849C /* BaseMapSceneUpdateProcess.swift */,
-				AA244D97262C0AEE00CA0EB6 /* Transition */,
-			);
-			path = BaseMap;
 			sourceTree = "<group>";
 		};
 		AA14A84925B67EE5009076DB /* Classes */ = {
@@ -606,6 +609,9 @@
 				AAD4D5C32607743800C21321 /* MapCommandWindow */,
 				AA244D8E262C09D600CA0EB6 /* DQMapSceneButtonA.swift */,
 				AA244D90262C09D600CA0EB6 /* DQMapSceneButtonB.swift */,
+				AA14A80425B67E27009076DB /* DQMapSceneTileMap.swift */,
+				AAFC8B36262D5C9C00F5E13C /* DQMapSceneNpc.swift */,
+				AA14A7C525B67DFF009076DB /* DQMapScenePartyCharacters.swift */,
 				AA14A7A625B67DBF009076DB /* Opening */,
 				AA14A7A325B67DAB009076DB /* AliahanTownHouse */,
 				AA14A7A225B67DA5009076DB /* AliahanTown */,
@@ -617,10 +623,11 @@
 		AA244D97262C0AEE00CA0EB6 /* Transition */ = {
 			isa = PBXGroup;
 			children = (
-				AA244D9A262C0B0B00CA0EB6 /* BaseMapSceneTransitionFromBattle.swift */,
-				AA244D9B262C0B0B00CA0EB6 /* BaseMapSceneTransitionToBattle.swift */,
-				AA244D99262C0B0B00CA0EB6 /* BaseMapSceneTransitionToMap.swift */,
-				AA244D98262C0B0B00CA0EB6 /* BaseMapSceneTransitionToMapWithStairs.swift */,
+				AA244D9A262C0B0B00CA0EB6 /* BaseSceneTransitionFromBattle.swift */,
+				AA244D9B262C0B0B00CA0EB6 /* BaseSceneTransitionToBattle.swift */,
+				AA244D99262C0B0B00CA0EB6 /* BaseSceneTransitionToMap.swift */,
+				AA244D98262C0B0B00CA0EB6 /* BaseSceneTransitionToMapWithStairs.swift */,
+				AAFC8B3E262E483900F5E13C /* BaseSceneTransitionToScene.swift */,
 			);
 			path = Transition;
 			sourceTree = "<group>";
@@ -786,6 +793,14 @@
 			path = DQ3UITests;
 			sourceTree = "<group>";
 		};
+		AA919EF226496F7400A4BBE8 /* CharacterStatus */ = {
+			isa = PBXGroup;
+			children = (
+				AA919EF326496F7B00A4BBE8 /* CharacterStatus.swift */,
+			);
+			path = CharacterStatus;
+			sourceTree = "<group>";
+		};
 		AAAE1CEF25B7C2F300BF57B1 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
@@ -816,8 +831,9 @@
 			children = (
 				AAD4D54226073F4D00C21321 /* MapMessageWindowNode.swift */,
 				AAD4D54526073F4D00C21321 /* MapMessageWindowNodeLine.swift */,
-				AAD4D54426073F4D00C21321 /* MapMessageWindowNodeShow.swift */,
-				AAD4D54326073F4D00C21321 /* MapMessageWindowNodeShowAll.swift */,
+				AA7D92F7264B86690099350A /* MapMessageWindowNodeMark.swift */,
+				AAD4D54426073F4D00C21321 /* MapMessageWindowNodeMessage.swift */,
+				AAD4D54326073F4D00C21321 /* MapMessageWindowNodeMessages.swift */,
 			);
 			path = MapMessageWindow;
 			sourceTree = "<group>";
@@ -827,8 +843,21 @@
 			children = (
 				AAD4D5C42607745300C21321 /* MapCommandWindowNode.swift */,
 				AAD4D5C52607745300C21321 /* MapCommandWindowNodeButtonA.swift */,
+				AAFC8B86262E5C9500F5E13C /* MapCommandWindowNodeTriangle.swift */,
 			);
 			path = MapCommandWindow;
+			sourceTree = "<group>";
+		};
+		AAFC8AFE262D20D200F5E13C /* DQScene */ = {
+			isa = PBXGroup;
+			children = (
+				AAFC8AFF262D214000F5E13C /* DQScene.swift */,
+				AA14A7A725B67DC6009076DB /* Title */,
+				AA14A7A125B67D9F009076DB /* AdventureLog */,
+				AA244D8D262C092000CA0EB6 /* DQMapScene */,
+				AA14A7A425B67DB1009076DB /* Battle */,
+			);
+			path = DQScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -991,6 +1020,7 @@
 				AA14A78625B67BC7009076DB /* DQVocation.swift in Sources */,
 				AA14A79B25B67D72009076DB /* ButtonOverlay.swift in Sources */,
 				AA14A83225B67E3D009076DB /* FieldSceneCheckPosition.swift in Sources */,
+				AAFC8B3F262E483900F5E13C /* BaseSceneTransitionToScene.swift in Sources */,
 				AA14A7EF25B67E0A009076DB /* AliahanTownHouseSceneButton.swift in Sources */,
 				AAD0EEFB260A21050022849C /* CharacterNode.swift in Sources */,
 				AA14A7C825B67DFF009076DB /* AliahanTownSceneButtonAOpening.swift in Sources */,
@@ -1007,17 +1037,18 @@
 				AA80D37D259AA9A30001304E /* ContentView.swift in Sources */,
 				AA6B869A262BCAD80010DAF5 /* AdventureLogSelectEmptyLogWindowNode.swift in Sources */,
 				AAD0EEFD260A21050022849C /* CharacterNodeMove.swift in Sources */,
-				AAD0EF0A260A21510022849C /* BaseMapSceneUpdateProcess.swift in Sources */,
+				AAD0EF0A260A21510022849C /* BaseSceneUpdateProcess.swift in Sources */,
 				AA6B86BE262BCB100010DAF5 /* AdventureLogSelectLogWindowNodeButtonA.swift in Sources */,
 				AA80D37B259AA9A30001304E /* DQ3App.swift in Sources */,
 				AA14A7E425B67E0A009076DB /* AliahanTownHouseSceneCheckCanMove.swift in Sources */,
 				AA14A7CD25B67DFF009076DB /* AliahanTownSceneCheckPosition.swift in Sources */,
-				AA244DD1262C0EEF00CA0EB6 /* BaseMapSceneButton.swift in Sources */,
+				AA244DD1262C0EEF00CA0EB6 /* BaseSceneButton.swift in Sources */,
 				AA14A81E25B67E36009076DB /* BattleSceneCommand.swift in Sources */,
 				AA14A81D25B67E36009076DB /* BattleSceneTarget.swift in Sources */,
-				AA14A7F825B67E13009076DB /* BaseSceneVirtualPad.swift in Sources */,
 				AAD4D54626073F4D00C21321 /* MapMessageWindowNode.swift in Sources */,
+				AAFC8B37262D5C9C00F5E13C /* DQMapSceneNpc.swift in Sources */,
 				AAD0EF05260A21190022849C /* DataManager.swift in Sources */,
+				AAFC8B92262E881600F5E13C /* ContentViewDebug.swift in Sources */,
 				AA244DDD262C106400CA0EB6 /* Typealiases.swift in Sources */,
 				AA6B86EA262BCC7B0010DAF5 /* AdventureLog.swift in Sources */,
 				AAD0EEFC260A21050022849C /* CharacterNodeDirection.swift in Sources */,
@@ -1026,16 +1057,17 @@
 				AA6B86E0262BCC550010DAF5 /* UserDefaultsUtil.swift in Sources */,
 				AA14A7F925B67E13009076DB /* BaseScene.swift in Sources */,
 				AA14A83025B67E3D009076DB /* FieldSceneButton.swift in Sources */,
+				AA919EF426496F7B00A4BBE8 /* CharacterStatus.swift in Sources */,
 				AA14A7E725B67E0A009076DB /* AliahanTownHouseScenePartyCharacters.swift in Sources */,
 				AA14A78E25B67BD4009076DB /* AliahanTownHouse.swift in Sources */,
 				AA6B86E9262BCC7B0010DAF5 /* AdventureLogFunctions.swift in Sources */,
 				AA6B8687262BCA8F0010DAF5 /* AdventureLogTopWindowNodeTriangle.swift in Sources */,
-				AA14A82C25B67E3D009076DB /* FieldScenePartyCharacters.swift in Sources */,
 				AA14A78125B67BC7009076DB /* Direction.swift in Sources */,
 				AA244D91262C09D600CA0EB6 /* DQMapSceneButtonA.swift in Sources */,
 				AA14A7B325B67DF4009076DB /* AdventureLogScene.swift in Sources */,
+				AAFC8B4A262E4AB400F5E13C /* BaseSceneVirtualPad.swift in Sources */,
 				AAD4D5F626077DA300C21321 /* CharacterAnimation.swift in Sources */,
-				AAD4D54826073F4D00C21321 /* MapMessageWindowNodeShow.swift in Sources */,
+				AAD4D54826073F4D00C21321 /* MapMessageWindowNodeMessage.swift in Sources */,
 				AA6B86A4262BCAEC0010DAF5 /* AdventureLogInputNameWindowNodeTriangle.swift in Sources */,
 				AA14A7CC25B67DFF009076DB /* AliahanTownSceneCheckCanMove.swift in Sources */,
 				AA6B86CE262BCB2D0010DAF5 /* AdventureLogYesNoDeleteLogWindowNode.swift in Sources */,
@@ -1044,22 +1076,25 @@
 				AA14A7EB25B67E0A009076DB /* AliahanTownHouseScene.swift in Sources */,
 				AA6B86CD262BCB2D0010DAF5 /* AdventureLogYesNoDeleteLogWindowNodeTriangle.swift in Sources */,
 				AA14A81825B67E36009076DB /* BattleSceneEnemy.swift in Sources */,
-				AA244D9F262C0B0B00CA0EB6 /* BaseMapSceneTransitionToBattle.swift in Sources */,
+				AA244D9F262C0B0B00CA0EB6 /* BaseSceneTransitionToBattle.swift in Sources */,
 				AA14A85825B67F51009076DB /* DQFontNormal.swift in Sources */,
 				AA14A79025B67BD4009076DB /* Field.swift in Sources */,
-				AA244DC3262C0EC300CA0EB6 /* BaseMapSceneUpdate.swift in Sources */,
+				AA244DC3262C0EC300CA0EB6 /* BaseSceneUpdate.swift in Sources */,
 				AA14A78425B67BC7009076DB /* DebugOption.swift in Sources */,
 				AA14A85625B67F51009076DB /* DQFontCheck.swift in Sources */,
+				AAFC8B7C262E551600F5E13C /* BaseSceneDQSceneFunction.swift in Sources */,
+				AAFC8B00262D214000F5E13C /* DQScene.swift in Sources */,
 				AA14A7CE25B67DFF009076DB /* AliahanTownSceneEvent.swift in Sources */,
 				AAD4D55426073F8700C21321 /* SoundEffectManager.swift in Sources */,
 				AA14A85A25B67F51009076DB /* DQFontLittleDashes.swift in Sources */,
 				AA6B8692262BCAC40010DAF5 /* AdventureLogMessageSpeedWindowNodeButtonA.swift in Sources */,
-				AAD4D54726073F4D00C21321 /* MapMessageWindowNodeShowAll.swift in Sources */,
+				AAD4D54726073F4D00C21321 /* MapMessageWindowNodeMessages.swift in Sources */,
 				AA6B86E8262BCC7B0010DAF5 /* AdventureLogStory.swift in Sources */,
-				AA14A80C25B67E27009076DB /* BaseMapSceneTileMap.swift in Sources */,
+				AA14A80C25B67E27009076DB /* DQMapSceneTileMap.swift in Sources */,
 				AA14A7E525B67E0A009076DB /* AliahanTownHouseSceneCheckPosition.swift in Sources */,
 				AAD0EEFA260A21050022849C /* CharacterNodePosition.swift in Sources */,
 				AA14A78025B67BC7009076DB /* DQAudio.swift in Sources */,
+				AAFC8B87262E5C9500F5E13C /* MapCommandWindowNodeTriangle.swift in Sources */,
 				AA6B86F2262BCE440010DAF5 /* NextElement.swift in Sources */,
 				AA244D93262C09D600CA0EB6 /* DQMapSceneButtonB.swift in Sources */,
 				AAD4D5D6260774FD00C21321 /* Words.swift in Sources */,
@@ -1067,18 +1102,19 @@
 				AA6B869C262BCAD80010DAF5 /* AdventureLogSelectEmptyLogWindowNodeButtonA.swift in Sources */,
 				AAD4D5C82607745300C21321 /* MapCommandWindowNodeButtonA.swift in Sources */,
 				AA14A85F25B67F5C009076DB /* ZPosition.swift in Sources */,
-				AA244D9E262C0B0B00CA0EB6 /* BaseMapSceneTransitionFromBattle.swift in Sources */,
+				AA244D9E262C0B0B00CA0EB6 /* BaseSceneTransitionFromBattle.swift in Sources */,
 				AA14A81B25B67E36009076DB /* BattleScene.swift in Sources */,
 				AA14A78325B67BC7009076DB /* DQCharacter.swift in Sources */,
 				AA6B86BD262BCB100010DAF5 /* AdventureLogSelectLogWindowNodeTriangle.swift in Sources */,
+				AA7D92F8264B86690099350A /* MapMessageWindowNodeMark.swift in Sources */,
 				AA14A7F025B67E0A009076DB /* AliahanTownHouseSceneNpcCharacters.swift in Sources */,
 				AAD4D5902607441900C21321 /* OpeningSceneButton.swift in Sources */,
-				AA244DC8262C0ED000CA0EB6 /* BaseMapSceneDQMapScene.swift in Sources */,
+				AA244DC8262C0ED000CA0EB6 /* BaseSceneSetupDQScene.swift in Sources */,
 				AA14A7D025B67DFF009076DB /* AliahanTownScene.swift in Sources */,
 				AA14A82E25B67E3D009076DB /* FieldScene.swift in Sources */,
 				AA14A83C25B67E4A009076DB /* OpeningScene.swift in Sources */,
 				AA14A85725B67F51009076DB /* DQFontLittleCircle.swift in Sources */,
-				AA244DD2262C0EEF00CA0EB6 /* BaseMapSceneStick.swift in Sources */,
+				AA244DD2262C0EEF00CA0EB6 /* BaseSceneStick.swift in Sources */,
 				AAD4D54926073F4D00C21321 /* MapMessageWindowNodeLine.swift in Sources */,
 				AA6B86C6262BCB250010DAF5 /* AdventureLogConfirmDeleteLogWindowNode.swift in Sources */,
 				AAD4D56B260740F600C21321 /* Window2.swift in Sources */,
@@ -1088,12 +1124,12 @@
 				AAD4D5C72607745300C21321 /* MapCommandWindowNode.swift in Sources */,
 				AA14A7C625B67DFF009076DB /* AliahanTownSceneNpcCharacters.swift in Sources */,
 				AA6B86A6262BCAEC0010DAF5 /* AdventureLogInputNameWindowNodeButton.swift in Sources */,
-				AA14A80625B67E27009076DB /* BaseMapScene.swift in Sources */,
+				AA14A80625B67E27009076DB /* BaseSceneGetDQScene.swift in Sources */,
 				AA6B86B2262BCAFC0010DAF5 /* AdventureLogSelectGenderWindowNodeTriangle.swift in Sources */,
 				AA14A78F25B67BD4009076DB /* AliahanTown.swift in Sources */,
-				AA244D9C262C0B0B00CA0EB6 /* BaseMapSceneTransitionToMapWithStairs.swift in Sources */,
-				AA14A7D325B67DFF009076DB /* AliahanTownScenePartyCharacters.swift in Sources */,
-				AA244D9D262C0B0B00CA0EB6 /* BaseMapSceneTransitionToMap.swift in Sources */,
+				AA244D9C262C0B0B00CA0EB6 /* BaseSceneTransitionToMapWithStairs.swift in Sources */,
+				AA14A7D325B67DFF009076DB /* DQMapScenePartyCharacters.swift in Sources */,
+				AA244D9D262C0B0B00CA0EB6 /* BaseSceneTransitionToMap.swift in Sources */,
 				AA14A7E925B67E0A009076DB /* AliahanTownHouseSceneButtonAOpening.swift in Sources */,
 				AA6B86B3262BCAFC0010DAF5 /* AdventureLogSelectGenderWindowNodeButtonA.swift in Sources */,
 				AA14A78225B67BC7009076DB /* Constant.swift in Sources */,
@@ -1262,7 +1298,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.5;
+				MARKETING_VERSION = 0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1284,7 +1320,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.5;
+				MARKETING_VERSION = 0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

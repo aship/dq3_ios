@@ -46,9 +46,6 @@ class UserDefaultsUtil {
         return isMember
     }
     
-    
-    
-    
     // MARK: - MemberState
     
     class func initUserDefailts() -> Void {
