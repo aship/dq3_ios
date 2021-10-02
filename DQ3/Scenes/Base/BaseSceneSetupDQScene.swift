@@ -26,7 +26,14 @@ extension BaseScene {
             self.battleScene?.setup()
         case .field:
             self.fieldScene = FieldScene(scene: self)
-            self.fieldScene?.setup()
+            
+            var dqAudio: DQAudio = .field
+            
+            if self.fieldMoveMode == .ship {
+                dqAudio = .ship
+            }
+            
+            self.fieldScene?.setup(dqAudio: dqAudio)
         case .aliahan_town:
             self.aliahanTownScene = AliahanTownScene(scene: self)
             self.aliahanTownScene?.setup()

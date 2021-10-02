@@ -44,7 +44,7 @@ extension BaseScene {
         
         processUpdate(padDirection: self.padDirection,
                       tileMapNode: tileMapNode!,
-                      characterNodes: DataManager.adventureLog.partyCharacterNodes,
+                      characterNodes: &DataManager.adventureLog.partyCharacterNodes,
                       queueFollowDirections: &DataManager.queueFollowDirections,
                       dqSceneType: dqSceneType,
                       scale: self.scale,

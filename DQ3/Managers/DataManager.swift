@@ -22,6 +22,20 @@ class DataManager {
     static var queueFollowDirections: [Direction] = []
     static var showInsideMap = false
     
+    // 船の位置は冒険の書には保存されない
+    // 船の位置がリセットされるのは
+    // ルーラ使用時と、冒険の書読み込み時
+    // 向きはルーラでもリセットされない
+    // 冒険の書読み込み時のデフォルトは上
+    static var resetShipPosition = true
+    static var shipPositionX = 0
+    static var shipPositionY = 0
+    static var shipDirection: Direction = .up
+    
+    // 冒険の書を再開した場所 or 最後にルーラで到着した場所
+    // 船の初期位置リセットのために使う
+    static var currentZoomArea: DQZoom = .aliahan
+    
     static var scene = BaseScene()
     
     // はなす、で使う

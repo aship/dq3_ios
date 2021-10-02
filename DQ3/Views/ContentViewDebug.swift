@@ -14,13 +14,14 @@ func setDebugCurrentMemory() {
     //adventureLog.dqSceneType = .title
     // adventureLog.dqSceneType = .opening
     // adventureLog.dqSceneType = .aliahan_town_house
-    adventureLog.dqSceneType = .aliahan_town
-    // adventureLog.dqSceneType = .alltrades_abbey
-    // adventureLog.dqSceneType = .field
+    // adventureLog.dqSceneType = .aliahan_town
+    adventureLog.dqSceneType = .field
     
-    //adventureLog.dqStory = .opening
+    // adventureLog.dqStory = .opening
     // adventureLog.dqStory = .mother_waiting
     adventureLog.dqStory = .go_adventure
+    
+    adventureLog.hasShip = true
     
     addNode(adventureLog: adventureLog,
             name: "あしへー",
@@ -47,15 +48,13 @@ func setDebugCurrentMemory() {
             node.positionX = FieldAliahanPositionX
             node.positionY = FieldAliahanPositionY
         }
+        
+        DataManager.currentZoomArea = .aliahan
     }
     else if adventureLog.dqSceneType == .aliahan_town {
         for node in adventureLog.partyCharacterNodes {
-            //            node.positionX = AliahanTownEntrancePositionX
-            //            node.positionY = AliahanTownEntrancePositionY
-            
-            node.positionX = AliahanTownLuidaTalkPositionX
-            node.positionY = AliahanTownLuidaTalkPositionY - 1
-            node.direction = .up
+            node.positionX = AliahanTownEntrancePositionX
+            node.positionY = AliahanTownEntrancePositionY
         }
     }
     
@@ -92,8 +91,10 @@ func setDebugAdventureLog() {
     // adventureLog.dqSceneType = .field
     
     adventureLog.dqStory = .opening
-    // adventureLog.debugDQStory = .mother_waiting
-    // adventureLog.debugDQStory = .go_adventure
+    // adventureLog.dqStory = .mother_waiting
+    // adventureLog.dqStory = .go_adventure
+    
+    adventureLog.hasShip = true
     
     addNode(adventureLog: adventureLog,
             name: "あしへー",

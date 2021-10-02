@@ -21,6 +21,9 @@ class AdventureLog: NSObject,
     var dqSceneType: DQSceneType = .title
     var dqStory: DQStory = .opening
     
+    // 船所持
+    var hasShip = false
+    
     // 保存するもの
     // 現在のキャラクター max 4人
     // ルイーダにいるキャラクター max ?人
@@ -33,6 +36,8 @@ class AdventureLog: NSObject,
         coder.encode(self.dqSceneType.rawValue, forKey: "dqSceneType")
         coder.encode(self.dqStory.rawValue, forKey: "dqStory")
         
+        coder.encode(self.hasShip, forKey: "hasShip")
+        
         coder.encode(self.heroName, forKey: "heroName")
         coder.encode(self.messageSpeed, forKey: "messageSpeed")
         
@@ -43,6 +48,8 @@ class AdventureLog: NSObject,
     required init?(coder decoder: NSCoder) {
         self.dqSceneType = DQSceneType(rawValue: decoder.decodeObject(forKey: "dqSceneType") as! String)!
         self.dqStory = DQStory(rawValue: decoder.decodeInteger(forKey: "dqStory"))!
+        
+        self.hasShip = decoder.decodeBool(forKey: "hasShip")
         
         self.heroName = decoder.decodeObject(forKey: "heroName") as! String
         self.messageSpeed = decoder.decodeInteger(forKey: "messageSpeed")

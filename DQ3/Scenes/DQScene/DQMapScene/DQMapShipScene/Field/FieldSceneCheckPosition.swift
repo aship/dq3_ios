@@ -11,14 +11,32 @@ extension FieldScene {
     func checkPosition(newPositionX: Int,
                        newPositionY: Int) {
         var enterAliahan = false
+        var enterShip = false
         var enterBattle = false
         
-        enterAliahan = checkEnterAliahan(newPositionX: newPositionX,
-                                         newPositionY: newPositionY)
+        if self.scene.fieldMoveMode == .walk {
+            enterAliahan = checkEnterAliahan(newPositionX: newPositionX,
+                                             newPositionY: newPositionY)
+            
+            if DataManager.adventureLog.hasShip {
+                enterShip = checkBoardingShip(newPositionX: newPositionX,
+                                              newPositionY: newPositionY)
+            }
+        }
+        
         enterBattle = checkEnterBattle()
         
         if enterAliahan {
             processEnterAliahan()
+        }
+        else if enterShip {
+            processBoardingShip(tileMapNode: self.mainTileMapNode,
+                                characterNodes: &DataManager.adventureLog.partyCharacterNodes,
+                                shipNode: self.shipNode!,
+                                queueFollowDirections: &DataManager.queueFollowDirections,
+                                scale: self.scene.scale,
+                                newPositionX: newPositionX,
+                                newPositionY: newPositionY)
         }
         else if enterBattle {
             processEnterBattle()

@@ -27,6 +27,9 @@ class UserDefaultsUtil {
             }
         }
         
+        // 冒険の書読み込みしたら、船の位置をリセット
+        DataManager.resetShipPosition = true
+        
         return adventureLog
     }
     

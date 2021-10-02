@@ -35,6 +35,11 @@ enum DQGender: String {
     case female
 }
 
+enum FieldMoveMode {
+    case walk
+    case ship
+}
+
 enum BattleStatus {
     case start
     case command

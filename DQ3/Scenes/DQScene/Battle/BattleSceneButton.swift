@@ -51,12 +51,14 @@ extension BattleScene {
             else if self.battleStatus == .end {
                 self.battleStatus = .moveToField
                 
-                AudioManager.stop()
+                var dqAudio: DQAudio = .field
                 
-                SoundEffectManager.play(.win)
+                if self.scene.fieldMoveMode == .ship {
+                    dqAudio = .ship
+                }
                 
                 self.scene.transitionFromBattle(dqSceneType: .field,
-                                                dqAudio: .field)
+                                                dqAudio: dqAudio)
             }
         }
     }
