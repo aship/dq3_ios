@@ -51,14 +51,20 @@ extension BattleScene {
             else if self.battleStatus == .end {
                 self.battleStatus = .moveToField
                 
-                var dqAudio: DQAudio = .field
-                
-                if self.scene.fieldMoveMode == .ship {
-                    dqAudio = .ship
+                if DataManager.dqSceneTypeFromBattle == .field {
+                    var dqAudio: DQAudio = .field
+                    
+                    if self.scene.fieldMoveMode == .ship {
+                        dqAudio = .ship
+                    }
+                    
+                    self.scene.transitionFromBattle(dqSceneType: .field,
+                                                    dqAudio: dqAudio)
                 }
-                
-                self.scene.transitionFromBattle(dqSceneType: .field,
-                                                dqAudio: dqAudio)
+                else if DataManager.dqSceneTypeFromBattle == .alefgard {
+                    self.scene.transitionFromBattle(dqSceneType: .alefgard,
+                                                    dqAudio: .alefgard)
+                }
             }
         }
     }

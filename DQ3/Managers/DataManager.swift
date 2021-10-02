@@ -22,6 +22,9 @@ class DataManager {
     static var queueFollowDirections: [Direction] = []
     static var showInsideMap = false
     
+    // 戦闘から戻るときに使う type
+    static var dqSceneTypeFromBattle: DQSceneType = .field
+    
     // 船/ラーミアの位置は冒険の書には保存されない
     // 船/ラーミアの位置がリセットされるのは
     // ルーラ使用時と、冒険の書読み込み時

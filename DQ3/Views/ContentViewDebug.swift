@@ -11,15 +11,16 @@ import Foundation
 func setDebugCurrentMemory() {
     let adventureLog = AdventureLog()
     
-    //adventureLog.dqSceneType = .title
+    adventureLog.dqSceneType = .title
     // adventureLog.dqSceneType = .opening
     // adventureLog.dqSceneType = .aliahan_town_house
     // adventureLog.dqSceneType = .aliahan_town
-    adventureLog.dqSceneType = .field
+    // adventureLog.dqSceneType = .field
+    // adventureLog.dqSceneType = .alefgard
     
-    // adventureLog.dqStory = .opening
+    adventureLog.dqStory = .opening
     // adventureLog.dqStory = .mother_waiting
-    adventureLog.dqStory = .go_adventure
+    // adventureLog.dqStory = .go_adventure
     
     adventureLog.hasShip = true
     adventureLog.hasRamia = true
@@ -57,6 +58,14 @@ func setDebugCurrentMemory() {
             node.positionX = AliahanTownEntrancePositionX
             node.positionY = AliahanTownEntrancePositionY
         }
+    }
+    else if adventureLog.dqSceneType == .alefgard {
+        for node in adventureLog.partyCharacterNodes {
+            node.positionX = ZoomTantegelPositionX
+            node.positionY = ZoomTantegelPositionY
+        }
+        
+        DataManager.currentZoomArea = .tantegel
     }
     
     DataManager.adventureLog = adventureLog
@@ -97,6 +106,8 @@ func setDebugAdventureLog() {
     
     adventureLog.hasShip = true
     adventureLog.hasRamia = true
+    
+    adventureLog.hasShip = true
     
     addNode(adventureLog: adventureLog,
             name: "あしへー",

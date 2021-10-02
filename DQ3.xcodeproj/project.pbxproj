@@ -152,6 +152,12 @@
 		AA919EF426496F7B00A4BBE8 /* CharacterStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA919EF326496F7B00A4BBE8 /* CharacterStatus.swift */; };
 		AA953B4826C2FBB900F57775 /* ZoomPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA953B4726C2FBB900F57775 /* ZoomPosition.swift */; };
 		AAA7C4D62630041A0039F1D0 /* AliahanTownTalkMessageYesNoWindowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA7C4D52630041A0039F1D0 /* AliahanTownTalkMessageYesNoWindowNode.swift */; };
+		AAADECB7264B63A700AC0CFC /* AlefgardSceneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAADECB1264B63A700AC0CFC /* AlefgardSceneButton.swift */; };
+		AAADECB8264B63A700AC0CFC /* AlefgardScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAADECB2264B63A700AC0CFC /* AlefgardScene.swift */; };
+		AAADECB9264B63A700AC0CFC /* alefgard.csv in Resources */ = {isa = PBXBuildFile; fileRef = AAADECB3264B63A700AC0CFC /* alefgard.csv */; };
+		AAADECBA264B63A700AC0CFC /* AlefgardSceneCheckPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAADECB4264B63A700AC0CFC /* AlefgardSceneCheckPosition.swift */; };
+		AAADECBC264B63A700AC0CFC /* AlefgardSceneCheckCanMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAADECB6264B63A700AC0CFC /* AlefgardSceneCheckCanMove.swift */; };
+		AAADECBE264B64C800AC0CFC /* AlefgardSceneShipLanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAADECBD264B64C800AC0CFC /* AlefgardSceneShipLanding.swift */; };
 		AAAE1CF125B7C30100BF57B1 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAE1CF025B7C30100BF57B1 /* Window.swift */; };
 		AAB52E6F264CC0CF0006B4E0 /* castle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AAB52E6E264CC0CF0006B4E0 /* castle.mp3 */; };
 		AABDB0F0262ED89600B46945 /* AliahanTownSceneNpcMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDB0EF262ED89600B46945 /* AliahanTownSceneNpcMove.swift */; };
@@ -383,6 +389,12 @@
 		AA919EF326496F7B00A4BBE8 /* CharacterStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterStatus.swift; sourceTree = "<group>"; };
 		AA953B4726C2FBB900F57775 /* ZoomPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomPosition.swift; sourceTree = "<group>"; };
 		AAA7C4D52630041A0039F1D0 /* AliahanTownTalkMessageYesNoWindowNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliahanTownTalkMessageYesNoWindowNode.swift; sourceTree = "<group>"; };
+		AAADECB1264B63A700AC0CFC /* AlefgardSceneButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlefgardSceneButton.swift; sourceTree = "<group>"; };
+		AAADECB2264B63A700AC0CFC /* AlefgardScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlefgardScene.swift; sourceTree = "<group>"; };
+		AAADECB3264B63A700AC0CFC /* alefgard.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = alefgard.csv; sourceTree = "<group>"; };
+		AAADECB4264B63A700AC0CFC /* AlefgardSceneCheckPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlefgardSceneCheckPosition.swift; sourceTree = "<group>"; };
+		AAADECB6264B63A700AC0CFC /* AlefgardSceneCheckCanMove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlefgardSceneCheckCanMove.swift; sourceTree = "<group>"; };
+		AAADECBD264B64C800AC0CFC /* AlefgardSceneShipLanding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlefgardSceneShipLanding.swift; sourceTree = "<group>"; };
 		AAAE1CF025B7C30100BF57B1 /* Window.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		AAB52E6E264CC0CF0006B4E0 /* castle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = castle.mp3; sourceTree = "<group>"; };
 		AABDB0EF262ED89600B46945 /* AliahanTownSceneNpcMove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliahanTownSceneNpcMove.swift; sourceTree = "<group>"; };
@@ -776,6 +788,7 @@
 				AA675873264B429C0053DA2A /* DQMapShipSceneShipBoarding.swift */,
 				AA675874264B429D0053DA2A /* DQMapShipSceneShipLanding.swift */,
 				AA14A7A525B67DB9009076DB /* Field */,
+				AAADECB0264B639B00AC0CFC /* Alefgard */,
 			);
 			path = DQMapShipScene;
 			sourceTree = "<group>";
@@ -984,6 +997,19 @@
 				AAA7C4D52630041A0039F1D0 /* AliahanTownTalkMessageYesNoWindowNode.swift */,
 			);
 			path = TalkMessageYesNoWindow;
+			sourceTree = "<group>";
+		};
+		AAADECB0264B639B00AC0CFC /* Alefgard */ = {
+			isa = PBXGroup;
+			children = (
+				AAADECB2264B63A700AC0CFC /* AlefgardScene.swift */,
+				AAADECB1264B63A700AC0CFC /* AlefgardSceneButton.swift */,
+				AAADECB6264B63A700AC0CFC /* AlefgardSceneCheckCanMove.swift */,
+				AAADECB4264B63A700AC0CFC /* AlefgardSceneCheckPosition.swift */,
+				AAADECBD264B64C800AC0CFC /* AlefgardSceneShipLanding.swift */,
+				AAADECB3264B63A700AC0CFC /* alefgard.csv */,
+			);
+			path = Alefgard;
 			sourceTree = "<group>";
 		};
 		AAAE1CEF25B7C2F300BF57B1 /* Functions */ = {
@@ -1230,6 +1256,7 @@
 				AA14A73F25B67747009076DB /* town.mp3 in Resources */,
 				AA14A7D125B67DFF009076DB /* aliahan_town_inside.csv in Resources */,
 				AA14A7E825B67E0A009076DB /* aliahan_town_house.csv in Resources */,
+				AAADECB9264B63A700AC0CFC /* alefgard.csv in Resources */,
 				AA14A74E25B67773009076DB /* rest.mp3 in Resources */,
 				AA091EC6261C17FE00D97AD4 /* ramia.mp3 in Resources */,
 				AA091ECC261C185B00D97AD4 /* alefgard.mp3 in Resources */,
@@ -1291,8 +1318,10 @@
 				AABDB217262F107800B46945 /* AliahanTownOldMan1.swift in Sources */,
 				AA675878264B429D0053DA2A /* DQMapShipSceneShipLanding.swift in Sources */,
 				AA6B86CF262BCB2D0010DAF5 /* AdventureLogYesNoDeleteLogWindowNodeButtonA.swift in Sources */,
+				AAADECBE264B64C800AC0CFC /* AlefgardSceneShipLanding.swift in Sources */,
 				AA14C8C4262D1F3F00EB3D41 /* BaseSceneNotification.swift in Sources */,
 				AABDB246262F10FC00B46945 /* AliahanTownInn.swift in Sources */,
+				AAADECBC264B63A700AC0CFC /* AlefgardSceneCheckCanMove.swift in Sources */,
 				AA6B8667262BBF600010DAF5 /* AdventureLogTopWindowNodeButtonA.swift in Sources */,
 				AABDB0F0262ED89600B46945 /* AliahanTownSceneNpcMove.swift in Sources */,
 				AABDB1F0262F056800B46945 /* MapCommandWindowNodeEquip.swift in Sources */,
@@ -1313,12 +1342,14 @@
 				AA7997ED264966E300407828 /* TalkMessageLuidaWishWindowNode.swift in Sources */,
 				AAD0EEFD260A21050022849C /* CharacterNodeMove.swift in Sources */,
 				AA711F06263118D900C0459D /* AliahanTownHouseGrandfather.swift in Sources */,
+				AAADECB7264B63A700AC0CFC /* AlefgardSceneButton.swift in Sources */,
 				AAD0EF0A260A21510022849C /* BaseSceneUpdateProcess.swift in Sources */,
 				AA675877264B429D0053DA2A /* DQMapShipSceneShipBoarding.swift in Sources */,
 				AA6B86BE262BCB100010DAF5 /* AdventureLogSelectLogWindowNodeButtonA.swift in Sources */,
 				AA80D37B259AA9A30001304E /* DQ3App.swift in Sources */,
 				AABDB1F5262F057400B46945 /* MapCommandWindowNodeSearch.swift in Sources */,
 				AA14A7E425B67E0A009076DB /* AliahanTownHouseSceneCheckCanMove.swift in Sources */,
+				AAADECBA264B63A700AC0CFC /* AlefgardSceneCheckPosition.swift in Sources */,
 				AA14A7CD25B67DFF009076DB /* AliahanTownSceneCheckPosition.swift in Sources */,
 				AA244DD1262C0EEF00CA0EB6 /* BaseSceneButton.swift in Sources */,
 				AA14A81E25B67E36009076DB /* BattleSceneCommand.swift in Sources */,
@@ -1433,6 +1464,7 @@
 				AABDB203262F104100B46945 /* AliahanTownLady2.swift in Sources */,
 				AAD4D5C72607745300C21321 /* MapCommandWindowNode.swift in Sources */,
 				AAA7C4D62630041A0039F1D0 /* AliahanTownTalkMessageYesNoWindowNode.swift in Sources */,
+				AAADECB8264B63A700AC0CFC /* AlefgardScene.swift in Sources */,
 				AABDB115262EDB8600B46945 /* TalkMessageWindowNodeAliahanTownHouse.swift in Sources */,
 				AA14A7C625B67DFF009076DB /* AliahanTownSceneNpcCharacters.swift in Sources */,
 				AA711F2526311E9300C0459D /* BaseTalkMessageWindowNodeInitializeTalk.swift in Sources */,
@@ -1614,7 +1646,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.12;
+				MARKETING_VERSION = 0.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1636,7 +1668,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.12;
+				MARKETING_VERSION = 0.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

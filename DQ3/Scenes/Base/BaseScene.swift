@@ -29,6 +29,7 @@ class BaseScene: SKScene,
     var adventureLogScene: AdventureLogScene?
     var openingScene: OpeningScene?
     var fieldScene: FieldScene?
+    var alefgardScene: AlefgardScene?
     var aliahanTownScene: AliahanTownScene?
     var aliahanTownHouseScene: AliahanTownHouseScene?
     var battleScene: BattleScene?

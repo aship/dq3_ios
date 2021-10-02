@@ -9,6 +9,7 @@ enum DQAudio: String {
     case none
     case town
     case field
+    case alefgard
     case battle
     case ship
     case ramia

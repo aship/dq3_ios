@@ -17,6 +17,7 @@ extension BaseScene {
         case .opening: break
         case .battle: break
         case .field: checkCanMove = self.fieldScene?.checkCanMove
+        case .alefgard: checkCanMove = self.alefgardScene?.checkCanMove
         case .aliahan_town: checkCanMove = self.aliahanTownScene?.checkCanMove
         case .aliahan_town_house: checkCanMove = self.aliahanTownHouseScene?.checkCanMove
         }
@@ -33,6 +34,7 @@ extension BaseScene {
         case .opening: break
         case .battle: break
         case .field: checkPosition = self.fieldScene?.checkPosition
+        case .alefgard: checkPosition = self.alefgardScene?.checkPosition
         case .aliahan_town: checkPosition = self.aliahanTownScene?.checkPosition
         case .aliahan_town_house: checkPosition = self.aliahanTownHouseScene?.checkPosition
         }
