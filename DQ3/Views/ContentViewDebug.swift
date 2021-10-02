@@ -11,16 +11,16 @@ import Foundation
 func setDebugCurrentMemory() {
     let adventureLog = AdventureLog()
     
-    adventureLog.dqSceneType = .title
+    //adventureLog.dqSceneType = .title
     // adventureLog.dqSceneType = .opening
     // adventureLog.dqSceneType = .aliahan_town_house
-    // adventureLog.dqSceneType = .aliahan_town
+    adventureLog.dqSceneType = .aliahan_town
     // adventureLog.dqSceneType = .field
     // adventureLog.dqSceneType = .alefgard
     
-    adventureLog.dqStory = .opening
+    //adventureLog.dqStory = .opening
     // adventureLog.dqStory = .mother_waiting
-    // adventureLog.dqStory = .go_adventure
+    adventureLog.dqStory = .go_adventure
     
     adventureLog.hasShip = true
     adventureLog.hasRamia = true

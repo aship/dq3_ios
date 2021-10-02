@@ -36,6 +36,9 @@ class MapCommandWindowNode: SKTileMapNode {
     
     var spellMessageWindowNode: SpellMessageWindowNode?
     
+    // 呪文用、他と共用できるか？
+    var mapCommandWhoWindowNode: MapCommandWhoWindowNode?
+    
     var characterNpcNodes: [CharacterNode] = []
     
     init(characterNpcNodes: [CharacterNode]) {

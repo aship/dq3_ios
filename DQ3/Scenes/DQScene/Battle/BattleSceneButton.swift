@@ -13,7 +13,7 @@ extension BattleScene {
             if self.battleStatus == .start {
                 self.messageWindowNode.isHidden = true
                 
-                self.commandWindowNode.isHidden = false
+                self.mapCommandWindowNode.isHidden = false
                 self.statusWindowNode.isHidden = false
                 self.targetWindowNode.isHidden = false
                 
@@ -22,7 +22,7 @@ extension BattleScene {
             else if self.battleStatus == .command {
                 SoundEffectManager.play(.command)
                 
-                self.commandWindowNode.isHidden = true
+                self.mapCommandWindowNode.isHidden = true
                 self.targetWindowNode.isHidden = true
                 
                 self.messageWindowNode.isHidden = false

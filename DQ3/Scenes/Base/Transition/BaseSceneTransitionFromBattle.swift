@@ -19,7 +19,7 @@ extension BaseScene {
         self.blackScreenNode.run(actionFadeOut, completion: {
             let battleScene = self.getDQScene(dqSceneType: .battle) as! BattleScene
             battleScene.messageWindowNode.removeFromParent()
-            battleScene.commandWindowNode.removeFromParent()
+            battleScene.mapCommandWindowNode.removeFromParent()
             battleScene.statusWindowNode.removeFromParent()
             battleScene.targetWindowNode.removeFromParent()
             battleScene.labelNode.removeFromParent()

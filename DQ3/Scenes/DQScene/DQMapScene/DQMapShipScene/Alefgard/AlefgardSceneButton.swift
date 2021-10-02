@@ -16,8 +16,7 @@ extension AlefgardScene {
                            characterNpcNodes: self.characterNpcNodes,
                            queueFollowDirections: &DataManager.queueFollowDirections,
                            tileMapNode: self.mainTileMapNode,
-                           scene: self.scene,
-                           scale: self.scene.scale)
+                           scene: self.scene)
         }
         else if button == self.scene.buttonB {
             processButtonB(mapCommandWindowNode: self.mapCommandWindowNode,

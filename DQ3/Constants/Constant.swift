@@ -17,6 +17,12 @@ let MapMessageWindowChildOfScenePointY = 112 - 136
 let MapMessageWindowChildOfCommandWindowPointX = 0
 let MapMessageWindowChildOfCommandWindowPointY = -128
 
+let MapMessageWindowChildOfSpellPointX = -112
+let MapMessageWindowChildOfSpellPointY = -128
+
+let MapMessageWindowChildOfZoomPointX = -16
+let MapMessageWindowChildOfZoomPointY = -16
+
 enum DQAdventureLogTop {
     case go // ぼうけんをする
     case change_message_speed // ひょうじそくどをかえる

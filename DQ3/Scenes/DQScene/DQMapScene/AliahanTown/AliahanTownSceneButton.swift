@@ -27,8 +27,7 @@ extension AliahanTownScene {
                                scene: self.scene)
             }
         }
-        
-        if button == self.scene.buttonB {
+        else if button == self.scene.buttonB {
             processButtonB(mapCommandWindowNode: self.mapCommandWindowNode,
                            mapMessageWindowNode: self.mapMessageWindowNode)
         }

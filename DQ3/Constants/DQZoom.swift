@@ -129,6 +129,4 @@ enum DQZoom {
     case cantlin // メルキド
     case kol // マイラ
     case rimuldar // リムルダール
-    // case mur // ムオル
-    // case alefgard // アレフガルド
 }

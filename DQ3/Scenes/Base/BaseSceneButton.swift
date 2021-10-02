@@ -8,7 +8,7 @@
 import SpriteKit
 
 extension BaseScene {
-    @objc func willPress(_ button: ButtonOverlay) {
+    func willPress(_ button: ButtonOverlay) {
         let dqSceneType = DataManager.adventureLog.dqSceneType
         
         if dqSceneType == .opening {

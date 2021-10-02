@@ -11,7 +11,7 @@ class BattleScene: DQScene {
     var battleStatus: BattleStatus = .start
     
     let messageWindowNode = SKSpriteNode(imageNamed: "battle/message_window.png")
-    let commandWindowNode = SKSpriteNode(imageNamed: "battle/command_window.png")
+    let mapCommandWindowNode = SKSpriteNode(imageNamed: "battle/command_window.png")
     let statusWindowNode = SKSpriteNode(imageNamed: "battle/status_window.png")
     let targetWindowNode = SKSpriteNode(imageNamed: "battle/target_window.png")
     
@@ -35,7 +35,7 @@ class BattleScene: DQScene {
         addEnemy2(node: self.nodeIkkaku,
                   scale: self.scene.scale)
         
-        addCommandWindow(node: self.commandWindowNode,
+        addCommandWindow(node: self.mapCommandWindowNode,
                          scale: self.scene.scale)
         
         addTargetWindow(node: self.targetWindowNode,
