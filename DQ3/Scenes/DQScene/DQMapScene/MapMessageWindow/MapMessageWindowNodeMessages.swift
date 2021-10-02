@@ -8,12 +8,12 @@
 import SpriteKit
 
 extension MapMessageWindowNode {
-    func showMessages(text1: String,
-                      text2: String?,
-                      text3: String?,
-                      withSe: Bool,
-                      withNextMark: Bool,
-                      completion: @escaping () -> Void) {
+    internal func showMessages(text1: String,
+                               text2: String?,
+                               text3: String?,
+                               withSe: Bool,
+                               withNextMark: Bool,
+                               completion: @escaping () -> Void) {
         showMessage(string: text1,
                     line: 0,
                     withSe: withSe,
@@ -45,7 +45,6 @@ extension MapMessageWindowNode {
                                                                         if withNextMark {
                                                                             self.showNextMark(line: 3)
                                                                         }
-                                                                        
                                                                         completion()
                                                                      })
                                                 }

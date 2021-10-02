@@ -84,7 +84,7 @@ class AliahanTownScene: DQMapScene {
                 let text2 = "　　おしろ　です。"
                 
                 self.mapMessageWindowNode = MapMessageWindowNode()
-                self.mapMessageWindowNode.addToScene(
+                self.mapMessageWindowNode.addToNode(
                     node: self.scene,
                     pointX: MapMessageWindowChildOfScenePointX,
                     pointY: MapMessageWindowChildOfScenePointY,
@@ -101,5 +101,8 @@ class AliahanTownScene: DQMapScene {
                     })
             })
         }
+        
+        // debug!!!
+        self.showInsideTileMap(insideTileMapNode: self.insideTileMapNode)
     }
 }

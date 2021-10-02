@@ -11,15 +11,16 @@ import Foundation
 func setDebugCurrentMemory() {
     let adventureLog = AdventureLog()
     
-    adventureLog.dqSceneType = .title
+    //adventureLog.dqSceneType = .title
     // adventureLog.dqSceneType = .opening
     // adventureLog.dqSceneType = .aliahan_town_house
-    // adventureLog.dqSceneType = .aliahan_town
+    adventureLog.dqSceneType = .aliahan_town
+    // adventureLog.dqSceneType = .alltrades_abbey
     // adventureLog.dqSceneType = .field
     
-    adventureLog.dqStory = .opening
+    //adventureLog.dqStory = .opening
     // adventureLog.dqStory = .mother_waiting
-    // adventureLog.dqStory = .go_adventure
+    adventureLog.dqStory = .go_adventure
     
     addNode(adventureLog: adventureLog,
             name: "あしへー",
@@ -49,8 +50,12 @@ func setDebugCurrentMemory() {
     }
     else if adventureLog.dqSceneType == .aliahan_town {
         for node in adventureLog.partyCharacterNodes {
-            node.positionX = AliahanTownEntrancePositionX
-            node.positionY = AliahanTownEntrancePositionY
+            //            node.positionX = AliahanTownEntrancePositionX
+            //            node.positionY = AliahanTownEntrancePositionY
+            
+            node.positionX = AliahanTownLuidaTalkPositionX
+            node.positionY = AliahanTownLuidaTalkPositionY - 1
+            node.direction = .up
         }
     }
     

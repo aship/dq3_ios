@@ -79,13 +79,12 @@ extension AdventureLogSelectLogWindowNode {
         
         if dqAdventureLogTop == .go {
             DataManager.scene.adventureLogScene?.setProcessing()
+            DataManager.loadAdventureLog(number: adventureLogNumber)
             
-            let adventureLog = UserDefaultsUtil.loadAdventureLog(number: adventureLogNumber)!
-            DataManager.adventureLog = adventureLog
+            let dqSceneType = DataManager.adventureLog.dqSceneType
             
-            print("adventureLogNumber \(adventureLogNumber)  adventureLog.dqSceneType   \(adventureLog.dqSceneType)  ")
             DataManager.scene.transitionToMap(dqSceneTypeFrom: .adventure_log,
-                                              dqSceneTypeTo: adventureLog.dqSceneType,
+                                              dqSceneTypeTo: dqSceneType,
                                               dqAudio: .none)
         }
         else if dqAdventureLogTop == .change_message_speed {

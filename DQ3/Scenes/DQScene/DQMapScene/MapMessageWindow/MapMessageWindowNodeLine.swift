@@ -8,7 +8,7 @@
 import SpriteKit
 
 extension MapMessageWindowNode {
-    func moveLine() {
+    internal func moveLine() {
         // 全体を一つ上にずらす
         for line in self.arrLines {
             for letter in line {

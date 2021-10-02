@@ -13,7 +13,9 @@ class FieldScene: DQMapScene {
         
         self.scene.backgroundColor = .black
         
-        if DataManager.adventureLog.partyCharacterNodes.count == 1 {
+        let partyCharacterNodes = DataManager.adventureLog.partyCharacterNodes
+        
+        if partyCharacterNodes.count == 1 {
             DataManager.adventureLog.partyCharacterNodes.append(CharacterNode(dqCharacter: .warrior_female))
             DataManager.adventureLog.partyCharacterNodes.append(CharacterNode(dqCharacter: .priest_female))
             DataManager.adventureLog.partyCharacterNodes.append(CharacterNode(dqCharacter: .mage_female))

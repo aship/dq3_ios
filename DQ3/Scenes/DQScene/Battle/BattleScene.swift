@@ -37,7 +37,7 @@ class BattleScene: DQScene {
         
         addCommandWindow(node: self.commandWindowNode,
                          scale: self.scene.scale)
-
+        
         addTargetWindow(node: self.targetWindowNode,
                         scale: self.scene.scale)
         

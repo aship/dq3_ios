@@ -8,7 +8,7 @@
 import SpriteKit
 
 extension MapMessageWindowNode {
-    func showNextMark(line: Int) {
+    internal func showNextMark(line: Int) {
         let BaseX = 8
         let BaseY = -24 - 16 * line
         let index = 9

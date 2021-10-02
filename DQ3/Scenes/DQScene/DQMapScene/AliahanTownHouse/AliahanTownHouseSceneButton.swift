@@ -20,11 +20,12 @@ extension AliahanTownHouseScene {
             else {
                 processButtonA(mapCommandWindowNode: &self.mapCommandWindowNode,
                                mapMessageWindowNode: self.mapMessageWindowNode,
-                               scale: self.scene.scale)
+                               characterNpcNodes: self.characterNpcNodes,
+                               adventureLog: DataManager.adventureLog,
+                               scene: self.scene)
             }
         }
-        
-        if button == self.scene.buttonB {
+        else if button == self.scene.buttonB {
             processButtonB(mapCommandWindowNode: self.mapCommandWindowNode,
                            mapMessageWindowNode: self.mapMessageWindowNode)
         }

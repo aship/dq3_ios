@@ -21,7 +21,15 @@ class AliahanTownHouseScene: DQMapScene {
         case mother_start_escorting
     }
     
+    enum MotherMessageFlag {
+        case no_message
+        case message_one
+        case message_two
+        case message_two_finished
+    }
+    
     var openingStateFlag: OpeningStateFlag = .none
+    var motherMessageFlag: MotherMessageFlag = .no_message
     
     func setup() {
         AudioManager.play(dqAudio: .town)
@@ -60,7 +68,9 @@ class AliahanTownHouseScene: DQMapScene {
             let text2 = "　　もう　あさですよ。"
             
             self.mapMessageWindowNode = MapMessageWindowNode()
-            self.mapMessageWindowNode.addToScene(
+            
+            
+            self.mapMessageWindowNode.addToNode(
                 node: self.scene,
                 pointX: MapMessageWindowChildOfScenePointX,
                 pointY: MapMessageWindowChildOfScenePointY,

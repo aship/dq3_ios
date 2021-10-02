@@ -10,13 +10,13 @@ import SpriteKit
 extension AdventureLogScene {
     func willPress(_ button: ButtonOverlay) {
         if checkIsProcessing() {
-           return
+            return
         }
         
         if button == self.scene.buttonA {
             self.adventureLogTopWindowNode?.processButtonA()
         }
-        else if button == self.scene.buttonB { 
+        else if button == self.scene.buttonB {
             if let topWindowNode = self.adventureLogTopWindowNode {
                 if let selectEmptyLogWindowNode = topWindowNode.adventureLogSelectEmptyLogWindowNode {
                     if let inputNameWindowNode = selectEmptyLogWindowNode.adventureLogInputNameWindowNode {
@@ -29,7 +29,7 @@ extension AdventureLogScene {
                     }
                 }
             }
-
+            
             // それ以外の B は最初の画面に戻る
             reloadAdventureLogScene()
         }

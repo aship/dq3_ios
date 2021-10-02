@@ -8,15 +8,15 @@
 import SpriteKit
 
 extension MapMessageWindowNode {
-    func showMessage(string: String,
-                     line: Int,
-                     withSe: Bool,
-                     completion: @escaping () -> Void) {
+    internal func showMessage(string: String,
+                              line: Int,
+                              withSe: Bool,
+                              completion: @escaping () -> Void) {
         let BaseX = 8
         let BaseY = -24 - 16 * line
         
         if withSe {
-            SoundEffectManager.play(.message)
+            MessageSoundManager.play()
         }
         
         var arrLine: [SKSpriteNode] = []
