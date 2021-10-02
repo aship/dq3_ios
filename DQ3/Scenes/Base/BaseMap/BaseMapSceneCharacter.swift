@@ -42,21 +42,4 @@ extension BaseMapScene {
         
         return (characterMoveX, characterMoveY)
     }
-    
-    func getCharacterTexture(direction: Direction,
-                             dqCharacter: DQCharacter) -> SKTexture {
-        let dqVocation = DQVocation(rawValue: dqCharacter.rawValue)
-        
-        var type = "vocation"
-        
-        if dqVocation == nil {
-            type = "npc"
-        }
-        
-        let imagePath = "character/\(type)/\(dqCharacter.rawValue)"
-        let imageName = "\(imagePath)/\(direction.rawValue)1.png"
-        let texture = SKTexture(imageNamed: imageName)
-        
-        return texture
-    }
 }

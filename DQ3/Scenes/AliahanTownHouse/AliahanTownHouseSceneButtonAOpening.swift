@@ -50,8 +50,11 @@ extension AliahanTownHouseScene {
                 
                 self.openingStateFlag = .message_two_end
             }
+            
+            return
         }
-        else if openingStateFlag == .message_two_end {
+        
+        if openingStateFlag == .message_two_end {
             openingStateFlag = .message_three_start
             
             let text1 = "＊「このひのために　おまえを"
@@ -79,7 +82,7 @@ extension AliahanTownHouseScene {
                     string: text3,
                     line: 3,
                     withSe: true)
-
+                
                 self.mapMessageWindowNode.moveLine()
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
@@ -92,11 +95,15 @@ extension AliahanTownHouseScene {
                     })
                 }
             }
+            
+            return
         }
-        else if openingStateFlag == .mother_moved {
+        
+        if openingStateFlag == .mother_moved {
             processButtonA(mapCommandWindowNode: &self.mapCommandWindowNode,
                            mapMessageWindowNode: &self.mapMessageWindowNode,
                            scale: self.scale)
+            return
         }
     }
 }

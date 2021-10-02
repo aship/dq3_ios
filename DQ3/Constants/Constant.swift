@@ -17,12 +17,6 @@ let MapMessageWindowChildOfScenePointY = 112 - 136
 let MapMessageWindowChildOfCommandWindowPointX = 0
 let MapMessageWindowChildOfCommandWindowPointY = -128
 
-let ImagePathHero = "character/vocation/hero"
-let ImagePathWarriorFemale = "character/vocation/warrior_female"
-let ImagePathPriestFemale = "character/vocation/priest_female"
-let ImagePathMageFemale = "character/vocation/mage_female"
-let ImagePathLady = "character/npc/lady"
-
 enum BattleStatus {
     case start
     case command

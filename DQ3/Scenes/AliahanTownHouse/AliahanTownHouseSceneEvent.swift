@@ -9,17 +9,12 @@ import SpriteKit
 
 extension AliahanTownHouseScene {
     func motherMove(completion: @escaping () -> Void) {
-        let textureMotherDown = getCharacterTexture(direction: .down,
-                                                    dqCharacter: .lady)
-        let textureMotherRight = getCharacterTexture(direction: .right,
-                                                     dqCharacter: .lady)
-        let textureMotherLeft = getCharacterTexture(direction: .left,
-                                                    dqCharacter: .lady)
-        
-        let actionMotherTextureDown = SKAction.setTexture(textureMotherDown)
-        let actionMotherTextureLeft = SKAction.setTexture(textureMotherLeft)
-        let actionMotherTextureRight = SKAction.setTexture(textureMotherRight)
-        
+        let actionMotherAnimationDown = getCharacterAnimationAction(direction: .down,
+                                                                    dqCharacter: .lady)
+        let actionMotherAnimationLeft = getCharacterAnimationAction(direction: .left,
+                                                                    dqCharacter: .lady)
+        let actionMotherAnimationRight = getCharacterAnimationAction(direction: .right,
+                                                                     dqCharacter: .lady)
         let actionMove1 = SKAction.moveBy(x: -16 * 3,
                                           y: 0,
                                           duration: 1 / 4 * 3)
@@ -31,19 +26,21 @@ extension AliahanTownHouseScene {
         let actionMove3 = SKAction.moveBy(x: 16 * 7,
                                           y: 0,
                                           duration: 1 / 4 * 7)
-        
-        let sequence = SKAction.sequence([actionMotherTextureLeft,
-                                          actionMove1,
-                                          actionMotherTextureDown,
-                                          actionMove2,
-                                          actionMotherTextureRight,
-                                          actionMove3])
         let motherNode = self.motherNode
         
-        motherNode.run(sequence,
-                       completion: {
-                        completion()
-                       })
+        motherNode.run(actionMotherAnimationLeft)
+        
+        Task {
+            await motherNode.run(actionMove1)
+            
+            motherNode.run(actionMotherAnimationDown, withKey: "")
+            await motherNode.run(actionMove2)
+            
+            motherNode.run(actionMotherAnimationRight, withKey: "")
+            await motherNode.run(actionMove3)
+            
+            completion()
+        }
     }
     
     func motherAndHeroMoveCatchUp2(completion: @escaping () -> Void) {
@@ -52,30 +49,25 @@ extension AliahanTownHouseScene {
                                            duration: 1 / 4 * 1)
         let motherNode = self.motherNode
         
-        motherNode.run(actionMother,
-                       completion: {})
+        motherNode.run(actionMother)
         
         let actionHero = SKAction.moveBy(x: 16 * 2,
                                          y: 0,
                                          duration: 1 / 4 * 2)
         let heroNode = self.heroNode
         
-        heroNode.run(actionHero,
-                     completion: {
-                        completion()
-                     }
-        )
+        Task {
+            await heroNode.run(actionHero)
+            
+            completion()
+        }
     }
     
     func motherAndHeroMoveCatchUp1(completion: @escaping () -> Void) {
-        let textureHeroUp = getCharacterTexture(direction: .up,
-                                                dqCharacter: .hero)
-        let textureHeroRight = getCharacterTexture(direction: .right,
-                                                   dqCharacter: .hero)
-        
-        let actionHeroTextureUp = SKAction.setTexture(textureHeroUp)
-        let actionHeroTextureRight = SKAction.setTexture(textureHeroRight)
-        
+        let actionHeroAnimationUp = getCharacterAnimationAction(direction: .up,
+                                                                dqCharacter: .hero)
+        let actionHeroAnimationRight = getCharacterAnimationAction(direction: .right,
+                                                                   dqCharacter: .hero)
         let actionMother = SKAction.moveBy(x: 16 * 1,
                                            y: 0,
                                            duration: 1 / 4 * 1)
@@ -91,17 +83,17 @@ extension AliahanTownHouseScene {
         let actionHero2 = SKAction.moveBy(x: 16 * 2,
                                           y: 0,
                                           duration: 1 / 4 * 2)
-        
-        let actionsHero = SKAction.sequence([actionHeroTextureUp,
-                                             actionHero1,
-                                             actionHeroTextureRight,
-                                             actionHero2])
         let heroNode = self.heroNode
         
-        heroNode.run(actionsHero,
-                     completion: {
-                        completion()
-                     }
-        )
+        heroNode.run(actionHeroAnimationUp)
+        
+        Task {
+            await heroNode.run(actionHero1)
+            
+            heroNode.run(actionHeroAnimationRight, withKey: "")
+            await heroNode.run(actionHero2)
+            
+            completion()
+        }
     }
 }

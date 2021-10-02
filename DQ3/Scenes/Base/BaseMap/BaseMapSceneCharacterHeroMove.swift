@@ -94,9 +94,13 @@ extension BaseMapScene {
                                          duration: 1 / 4)
             self.warriorNode.run(action)
             
-            let texture = getCharacterTexture(direction: direction!,
-                                              dqCharacter: .warrior_female)
-            self.warriorNode.texture = texture
+            if self.direction2nd != direction! {
+                let action = getCharacterAnimationAction(direction: direction!,
+                                                         dqCharacter: .warrior_female)
+                self.warriorNode.run(action)
+                
+                self.direction2nd = direction!
+            }
         }
         
         if 1 < self.queueFollowDirections.count {
@@ -117,9 +121,13 @@ extension BaseMapScene {
                                          duration: 1 / 4)
             self.priestNode.run(action)
             
-            let texture = getCharacterTexture(direction: direction,
-                                              dqCharacter: .priest_female)
-            self.priestNode.texture = texture
+            if self.direction3rd != direction {
+                let action = getCharacterAnimationAction(direction: direction,
+                                                         dqCharacter: .priest_female)
+                self.priestNode.run(action)
+                
+                self.direction3rd = direction
+            }
         }
         
         if 2 < self.queueFollowDirections.count {
@@ -140,9 +148,13 @@ extension BaseMapScene {
                                          duration: 1 / 4)
             self.mageNode.run(action)
             
-            let texture = getCharacterTexture(direction: direction,
-                                              dqCharacter: .mage_female)
-            self.mageNode.texture = texture
+            if self.direction4th != direction {
+                let action = getCharacterAnimationAction(direction: direction,
+                                                         dqCharacter: .mage_female)
+                self.mageNode.run(action)
+                
+                self.direction4th = direction
+            }
         }
         
         if self.queueFollowDirections.count == 3 {

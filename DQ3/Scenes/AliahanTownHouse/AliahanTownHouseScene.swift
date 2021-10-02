@@ -23,7 +23,8 @@ class AliahanTownHouseScene: BaseMapScene,
     
     var openingStateFlag: OpeningStateFlag = .none
     
-    let motherNode = SKSpriteNode(imageNamed: "\(ImagePathLady)/down1.png")
+    let motherNode = SKSpriteNode(texture: nil,
+                                  size: CGSize(width: 16, height: 16))
     
     override init() {
         super.init()
@@ -53,6 +54,7 @@ class AliahanTownHouseScene: BaseMapScene,
                                              green: 192,
                                              blue: 252,
                                              alpha: 1)
+        
         addMainTileMap(name: "aliahan_town_house",
                        tileMapNode: &self.mainTileMapNode,
                        numberOfImages: 9,
