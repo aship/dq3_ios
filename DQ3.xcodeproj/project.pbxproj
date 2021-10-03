@@ -14,6 +14,19 @@
 		AA4E9EE32709B7F400D4F7C8 /* DQ3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4E9EE22709B7F400D4F7C8 /* DQ3Tests.swift */; };
 		AA4E9EED2709B7F400D4F7C8 /* DQ3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4E9EEC2709B7F400D4F7C8 /* DQ3UITests.swift */; };
 		AA4E9EEF2709B7F400D4F7C8 /* DQ3UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4E9EEE2709B7F400D4F7C8 /* DQ3UITestsLaunchTests.swift */; };
+		AA4E9F052709BA3800D4F7C8 /* battle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA4E9EFE2709BA3700D4F7C8 /* battle.mp3 */; };
+		AA4E9F062709BA3800D4F7C8 /* town.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA4E9EFF2709BA3700D4F7C8 /* town.mp3 */; };
+		AA4E9F072709BA3800D4F7C8 /* field.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA4E9F002709BA3700D4F7C8 /* field.mp3 */; };
+		AA4E9F082709BA3800D4F7C8 /* alefgard.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA4E9F012709BA3700D4F7C8 /* alefgard.mp3 */; };
+		AA4E9F092709BA3800D4F7C8 /* ramia.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA4E9F022709BA3700D4F7C8 /* ramia.mp3 */; };
+		AA4E9F0A2709BA3800D4F7C8 /* castle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA4E9F032709BA3800D4F7C8 /* castle.mp3 */; };
+		AA4E9F0B2709BA3800D4F7C8 /* ship.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA4E9F042709BA3800D4F7C8 /* ship.mp3 */; };
+		AA4E9F122709BA4000D4F7C8 /* command.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA4E9F0C2709BA4000D4F7C8 /* command.mp3 */; };
+		AA4E9F132709BA4000D4F7C8 /* spell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA4E9F0D2709BA4000D4F7C8 /* spell.mp3 */; };
+		AA4E9F142709BA4000D4F7C8 /* rest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA4E9F0E2709BA4000D4F7C8 /* rest.mp3 */; };
+		AA4E9F152709BA4000D4F7C8 /* stairs.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA4E9F0F2709BA4000D4F7C8 /* stairs.mp3 */; };
+		AA4E9F162709BA4000D4F7C8 /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA4E9F102709BA4000D4F7C8 /* win.mp3 */; };
+		AA4E9F172709BA4000D4F7C8 /* message.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA4E9F112709BA4000D4F7C8 /* message.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +57,19 @@
 		AA4E9EE82709B7F400D4F7C8 /* DQ3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DQ3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA4E9EEC2709B7F400D4F7C8 /* DQ3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DQ3UITests.swift; sourceTree = "<group>"; };
 		AA4E9EEE2709B7F400D4F7C8 /* DQ3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DQ3UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AA4E9EFE2709BA3700D4F7C8 /* battle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = battle.mp3; sourceTree = "<group>"; };
+		AA4E9EFF2709BA3700D4F7C8 /* town.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = town.mp3; sourceTree = "<group>"; };
+		AA4E9F002709BA3700D4F7C8 /* field.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = field.mp3; sourceTree = "<group>"; };
+		AA4E9F012709BA3700D4F7C8 /* alefgard.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alefgard.mp3; sourceTree = "<group>"; };
+		AA4E9F022709BA3700D4F7C8 /* ramia.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ramia.mp3; sourceTree = "<group>"; };
+		AA4E9F032709BA3800D4F7C8 /* castle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = castle.mp3; sourceTree = "<group>"; };
+		AA4E9F042709BA3800D4F7C8 /* ship.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ship.mp3; sourceTree = "<group>"; };
+		AA4E9F0C2709BA4000D4F7C8 /* command.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = command.mp3; sourceTree = "<group>"; };
+		AA4E9F0D2709BA4000D4F7C8 /* spell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = spell.mp3; sourceTree = "<group>"; };
+		AA4E9F0E2709BA4000D4F7C8 /* rest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rest.mp3; sourceTree = "<group>"; };
+		AA4E9F0F2709BA4000D4F7C8 /* stairs.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stairs.mp3; sourceTree = "<group>"; };
+		AA4E9F102709BA4000D4F7C8 /* win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = win.mp3; sourceTree = "<group>"; };
+		AA4E9F112709BA4000D4F7C8 /* message.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = message.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +122,7 @@
 			children = (
 				AA4E9ED12709B7F300D4F7C8 /* DQ3App.swift */,
 				AA4E9ED32709B7F300D4F7C8 /* ContentView.swift */,
+				AA4E9EFB2709BA0E00D4F7C8 /* mp3 */,
 				AA4E9ED52709B7F400D4F7C8 /* Assets.xcassets */,
 				AA4E9ED72709B7F400D4F7C8 /* Preview Content */,
 			);
@@ -125,6 +152,42 @@
 				AA4E9EEE2709B7F400D4F7C8 /* DQ3UITestsLaunchTests.swift */,
 			);
 			path = DQ3UITests;
+			sourceTree = "<group>";
+		};
+		AA4E9EFB2709BA0E00D4F7C8 /* mp3 */ = {
+			isa = PBXGroup;
+			children = (
+				AA4E9EFC2709BA2200D4F7C8 /* bgm */,
+				AA4E9EFD2709BA2700D4F7C8 /* se */,
+			);
+			path = mp3;
+			sourceTree = "<group>";
+		};
+		AA4E9EFC2709BA2200D4F7C8 /* bgm */ = {
+			isa = PBXGroup;
+			children = (
+				AA4E9F012709BA3700D4F7C8 /* alefgard.mp3 */,
+				AA4E9EFE2709BA3700D4F7C8 /* battle.mp3 */,
+				AA4E9F032709BA3800D4F7C8 /* castle.mp3 */,
+				AA4E9F002709BA3700D4F7C8 /* field.mp3 */,
+				AA4E9F022709BA3700D4F7C8 /* ramia.mp3 */,
+				AA4E9F042709BA3800D4F7C8 /* ship.mp3 */,
+				AA4E9EFF2709BA3700D4F7C8 /* town.mp3 */,
+			);
+			path = bgm;
+			sourceTree = "<group>";
+		};
+		AA4E9EFD2709BA2700D4F7C8 /* se */ = {
+			isa = PBXGroup;
+			children = (
+				AA4E9F0C2709BA4000D4F7C8 /* command.mp3 */,
+				AA4E9F112709BA4000D4F7C8 /* message.mp3 */,
+				AA4E9F0E2709BA4000D4F7C8 /* rest.mp3 */,
+				AA4E9F0D2709BA4000D4F7C8 /* spell.mp3 */,
+				AA4E9F0F2709BA4000D4F7C8 /* stairs.mp3 */,
+				AA4E9F102709BA4000D4F7C8 /* win.mp3 */,
+			);
+			path = se;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,7 +295,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA4E9ED92709B7F400D4F7C8 /* Preview Assets.xcassets in Resources */,
+				AA4E9F072709BA3800D4F7C8 /* field.mp3 in Resources */,
+				AA4E9F0B2709BA3800D4F7C8 /* ship.mp3 in Resources */,
+				AA4E9F052709BA3800D4F7C8 /* battle.mp3 in Resources */,
+				AA4E9F122709BA4000D4F7C8 /* command.mp3 in Resources */,
+				AA4E9F152709BA4000D4F7C8 /* stairs.mp3 in Resources */,
+				AA4E9F062709BA3800D4F7C8 /* town.mp3 in Resources */,
+				AA4E9F0A2709BA3800D4F7C8 /* castle.mp3 in Resources */,
+				AA4E9F082709BA3800D4F7C8 /* alefgard.mp3 in Resources */,
+				AA4E9F162709BA4000D4F7C8 /* win.mp3 in Resources */,
+				AA4E9F142709BA4000D4F7C8 /* rest.mp3 in Resources */,
+				AA4E9F092709BA3800D4F7C8 /* ramia.mp3 in Resources */,
 				AA4E9ED62709B7F400D4F7C8 /* Assets.xcassets in Resources */,
+				AA4E9F132709BA4000D4F7C8 /* spell.mp3 in Resources */,
+				AA4E9F172709BA4000D4F7C8 /* message.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
