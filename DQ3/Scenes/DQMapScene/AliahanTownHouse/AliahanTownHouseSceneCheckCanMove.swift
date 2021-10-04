@@ -8,9 +8,9 @@
 import SpriteKit
 
 extension AliahanTownHouseScene {
-    override func checkCanMove(tileMapNode: SKTileMapNode,
-                               newPositionX: Int,
-                               newPositionY: Int) -> Bool {
+    func checkCanMove(tileMapNode: SKTileMapNode,
+                      newPositionX: Int,
+                      newPositionY: Int) -> Bool {
         let tileGroup = tileMapNode.tileGroup(atColumn: newPositionX,
                                               row: newPositionY)
         let name = tileGroup?.name
