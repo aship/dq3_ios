@@ -9,7 +9,10 @@ import SpriteKit
 
 func getCharacterAnimationAction(direction: Direction,
                                  dqCharacter: DQCharacter) -> SKAction {
-    let dqVocation = DQVocation(rawValue: dqCharacter.rawValue)
+    let characterString = dqCharacter.rawValue
+    let vocatinString = characterString.components(separatedBy: "_").first!
+    
+    let dqVocation = DQVocation(rawValue: vocatinString)
     
     var type = "vocation"
     

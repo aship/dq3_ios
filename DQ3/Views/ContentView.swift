@@ -10,16 +10,9 @@ import SpriteKit
 
 struct ContentView: View {
     var body: some View {
-       // let scene = TitleScene()
-        let scene = AdventureLogScene()
-
-        let characterNode = CharacterNode(dqCharacter: .hero)
+        let scene = DataManager.scene
         
-        let adventureLog = AdventureLog()
-        adventureLog.heroName = "えにくす"
-        adventureLog.partyCharacterNodes.append(characterNode)
-        
-        DataManager.adventureLog = adventureLog
+        setDebugAdventureLog()
         
         // let scene = AliahanTownScene()
         // for node in DataManager.adventureLog.partyCharacterNodes {
