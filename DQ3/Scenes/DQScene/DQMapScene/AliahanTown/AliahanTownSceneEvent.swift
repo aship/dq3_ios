@@ -50,6 +50,10 @@ extension AliahanTownScene {
         
         let motherNode = self.characterNpcNodes.first!
         
+        // どうせ移動するから最終ポジションに座標をセット
+        motherNode.positionX = AliahanTownMotherWaitingPositionX
+        motherNode.positionY = AliahanTownMotherWaitingPositionY
+        
         Task {
             await motherNode.run(actionWait6)
             

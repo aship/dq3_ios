@@ -48,6 +48,16 @@ extension BaseScene {
             return
         }
         
+        // NPC 衝突チェック
+        let dqMapScene = getDQMapScene(dqSceneType: dqSceneType)!
+        
+        for characterNpcNode in dqMapScene.characterNpcNodes {
+            if characterNpcNode.positionX == newPositionX &&
+                characterNpcNode.positionY == newPositionY {
+                return
+            }
+        }
+        
         headNode.isMoving = true
         headNode.move(direction: padDirection,
                       tileMapNode: tileMapNode,
