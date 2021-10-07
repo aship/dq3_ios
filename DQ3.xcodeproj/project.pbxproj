@@ -107,6 +107,12 @@
 		AA4E9FEC270AD64700D4F7C8 /* BaseSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4E9FEA270AD64700D4F7C8 /* BaseSceneController.swift */; };
 		AA4E9FED270AD64700D4F7C8 /* BaseSceneNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4E9FEB270AD64700D4F7C8 /* BaseSceneNotification.swift */; };
 		AA4E9FF0270AD89200D4F7C8 /* DQScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4E9FEF270AD89200D4F7C8 /* DQScene.swift */; };
+		AA75B323270F0F6700C45A6A /* field.csv in Resources */ = {isa = PBXBuildFile; fileRef = AA75B31E270F0F6600C45A6A /* field.csv */; };
+		AA75B324270F0F6700C45A6A /* FieldSceneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75B31F270F0F6600C45A6A /* FieldSceneButton.swift */; };
+		AA75B325270F0F6700C45A6A /* FieldSceneCheckCanMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75B320270F0F6600C45A6A /* FieldSceneCheckCanMove.swift */; };
+		AA75B326270F0F6700C45A6A /* FieldSceneCheckPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75B321270F0F6600C45A6A /* FieldSceneCheckPosition.swift */; };
+		AA75B327270F0F6700C45A6A /* FieldScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75B322270F0F6600C45A6A /* FieldScene.swift */; };
+		AA75B329270F0FA000C45A6A /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75B328270F0FA000C45A6A /* Field.swift */; };
 		AAC7252C270ADE3D00C44CEE /* BaseSceneTransitionToScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC7252B270ADE3D00C44CEE /* BaseSceneTransitionToScene.swift */; };
 		AAC72530270AE26500C44CEE /* MapMessageWindowNodeMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC7252D270AE26500C44CEE /* MapMessageWindowNodeMessage.swift */; };
 		AAC72531270AE26500C44CEE /* MapMessageWindowNodeMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC7252E270AE26500C44CEE /* MapMessageWindowNodeMessages.swift */; };
@@ -237,6 +243,12 @@
 		AA4E9FEA270AD64700D4F7C8 /* BaseSceneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneController.swift; sourceTree = "<group>"; };
 		AA4E9FEB270AD64700D4F7C8 /* BaseSceneNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneNotification.swift; sourceTree = "<group>"; };
 		AA4E9FEF270AD89200D4F7C8 /* DQScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQScene.swift; sourceTree = "<group>"; };
+		AA75B31E270F0F6600C45A6A /* field.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = field.csv; sourceTree = "<group>"; };
+		AA75B31F270F0F6600C45A6A /* FieldSceneButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldSceneButton.swift; sourceTree = "<group>"; };
+		AA75B320270F0F6600C45A6A /* FieldSceneCheckCanMove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldSceneCheckCanMove.swift; sourceTree = "<group>"; };
+		AA75B321270F0F6600C45A6A /* FieldSceneCheckPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldSceneCheckPosition.swift; sourceTree = "<group>"; };
+		AA75B322270F0F6600C45A6A /* FieldScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldScene.swift; sourceTree = "<group>"; };
+		AA75B328270F0FA000C45A6A /* Field.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
 		AAC7252B270ADE3D00C44CEE /* BaseSceneTransitionToScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneTransitionToScene.swift; sourceTree = "<group>"; };
 		AAC7252D270AE26500C44CEE /* MapMessageWindowNodeMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapMessageWindowNodeMessage.swift; sourceTree = "<group>"; };
 		AAC7252E270AE26500C44CEE /* MapMessageWindowNodeMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapMessageWindowNodeMessages.swift; sourceTree = "<group>"; };
@@ -555,6 +567,7 @@
 			children = (
 				AA4E9F992709C1F200D4F7C8 /* AliahanTownHouse.swift */,
 				AA4E9F982709C1F200D4F7C8 /* AliahanTown.swift */,
+				AA75B328270F0FA000C45A6A /* Field.swift */,
 			);
 			path = CharacterPositions;
 			sourceTree = "<group>";
@@ -601,6 +614,7 @@
 				AA4E9F592709BF6800D4F7C8 /* Opening */,
 				AA4E9F7E2709C13800D4F7C8 /* AliahanTownHouse */,
 				AA4E9F9C2709C66100D4F7C8 /* AliahanTown */,
+				AA75B31D270F0F5200C45A6A /* Field */,
 				AA4E9FCD270ACE3F00D4F7C8 /* DQMapScene.swift */,
 				AA4E9FCE270ACE3F00D4F7C8 /* DQMapSceneButtonA.swift */,
 				AA4E9FCC270ACE3F00D4F7C8 /* DQMapSceneButtonB.swift */,
@@ -631,6 +645,18 @@
 				AA4E9FCB270ACE1700D4F7C8 /* DQMapScene */,
 			);
 			path = DQScene;
+			sourceTree = "<group>";
+		};
+		AA75B31D270F0F5200C45A6A /* Field */ = {
+			isa = PBXGroup;
+			children = (
+				AA75B322270F0F6600C45A6A /* FieldScene.swift */,
+				AA75B31F270F0F6600C45A6A /* FieldSceneButton.swift */,
+				AA75B320270F0F6600C45A6A /* FieldSceneCheckCanMove.swift */,
+				AA75B321270F0F6600C45A6A /* FieldSceneCheckPosition.swift */,
+				AA75B31E270F0F6600C45A6A /* field.csv */,
+			);
+			path = Field;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -738,6 +764,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA4E9ED92709B7F400D4F7C8 /* Preview Assets.xcassets in Resources */,
+				AA75B323270F0F6700C45A6A /* field.csv in Resources */,
 				AA4E9F072709BA3800D4F7C8 /* field.mp3 in Resources */,
 				AA4E9F0B2709BA3800D4F7C8 /* ship.mp3 in Resources */,
 				AA4E9F052709BA3800D4F7C8 /* battle.mp3 in Resources */,
@@ -788,6 +815,7 @@
 				AA4E9F402709BE1400D4F7C8 /* Words.swift in Sources */,
 				AA4E9F5E2709BF7E00D4F7C8 /* OpeningSceneButton.swift in Sources */,
 				AA4E9F702709BFF100D4F7C8 /* BaseSceneSetupDQScene.swift in Sources */,
+				AA75B325270F0F6700C45A6A /* FieldSceneCheckCanMove.swift in Sources */,
 				AA4E9F8E2709C14800D4F7C8 /* AliahanTownHouseSceneButton.swift in Sources */,
 				AA4E9F5D2709BF7E00D4F7C8 /* OpeningScene.swift in Sources */,
 				AA4E9F772709C02000D4F7C8 /* MapMessageWindowNode.swift in Sources */,
@@ -828,6 +856,7 @@
 				AA4E9F8A2709C14800D4F7C8 /* AliahanTownHouseScene.swift in Sources */,
 				AA4E9F6E2709BFF100D4F7C8 /* DQMapScenePartyCharacters.swift in Sources */,
 				AA4E9FB22709C67F00D4F7C8 /* AliahanTownSceneButtonAOpening.swift in Sources */,
+				AA75B329270F0FA000C45A6A /* Field.swift in Sources */,
 				AA4E9FF0270AD89200D4F7C8 /* DQScene.swift in Sources */,
 				AA4E9F9A2709C1F200D4F7C8 /* AliahanTown.swift in Sources */,
 				AA4E9F7D2709C0D700D4F7C8 /* DQVocation.swift in Sources */,
@@ -839,11 +868,13 @@
 				AA4E9F252709BD4300D4F7C8 /* AdventureLogSceneButton.swift in Sources */,
 				AAC72534270B326500C44CEE /* ContentViewDebug.swift in Sources */,
 				AA4E9F412709BE1400D4F7C8 /* Window.swift in Sources */,
+				AA75B326270F0F6700C45A6A /* FieldSceneCheckPosition.swift in Sources */,
 				AAC72531270AE26500C44CEE /* MapMessageWindowNodeMessages.swift in Sources */,
 				AAC72532270AE26500C44CEE /* MapMessageWindowNodeMark.swift in Sources */,
 				AA4E9F522709BE7900D4F7C8 /* AudioManager.swift in Sources */,
 				AA4E9F272709BD4300D4F7C8 /* AdventureLogScene.swift in Sources */,
 				AA4E9FCF270ACE3F00D4F7C8 /* DQMapSceneButtonB.swift in Sources */,
+				AA75B327270F0F6700C45A6A /* FieldScene.swift in Sources */,
 				AA4E9FE9270AD1FC00D4F7C8 /* Typealiases.swift in Sources */,
 				AA4E9FAB2709C67F00D4F7C8 /* AliahanTownScene.swift in Sources */,
 				AA4E9F362709BDC000D4F7C8 /* PadOverlay.swift in Sources */,
@@ -860,6 +891,7 @@
 				AAC7252C270ADE3D00C44CEE /* BaseSceneTransitionToScene.swift in Sources */,
 				AA4E9F2B2709BD6900D4F7C8 /* AdventureLogTopWindowNodeButtonA.swift in Sources */,
 				AA4E9FB02709C67F00D4F7C8 /* AliahanTownSceneEvent.swift in Sources */,
+				AA75B324270F0F6700C45A6A /* FieldSceneButton.swift in Sources */,
 				AA4E9FC7270A99E600D4F7C8 /* CharacterNodeMove.swift in Sources */,
 				AA4E9F302709BD9400D4F7C8 /* BaseScene.swift in Sources */,
 				AA4E9F7B2709C0BA00D4F7C8 /* DQCharacter.swift in Sources */,
@@ -1037,7 +1069,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.6;
+				MARKETING_VERSION = 0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1067,7 +1099,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.6;
+				MARKETING_VERSION = 0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
