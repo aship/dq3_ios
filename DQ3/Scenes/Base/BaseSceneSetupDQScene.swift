@@ -33,6 +33,9 @@ extension BaseScene {
         case .aliahan_town_house:
             self.aliahanTownHouseScene = AliahanTownHouseScene(scene: self)
             self.aliahanTownHouseScene?.setup()
+        case .field:
+            self.fieldScene = FieldScene(scene: self)
+            self.fieldScene?.setup()
         case .none: break
         }
     }

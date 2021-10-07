@@ -10,10 +10,15 @@ import SpriteKit
 extension AliahanTownScene {
     func checkPosition(newPositionX: Int,
                        newPositionY: Int) {
+        var enterField = false
         var enterHouse = false
         
         var enterInside = false
         var exitInside = false
+        
+        if newPositionX == AliahanTownExitPositionX {
+            enterField = true
+        }
         
         if newPositionX == AliahanTownStairsToHousePositionX &&
             newPositionY == AliahanTownStairsToHousePositionY {
@@ -57,7 +62,24 @@ extension AliahanTownScene {
             exitInside = true
         }
         
-        if enterHouse {
+        if enterField {
+            let headNode = DataManager.adventureLog.partyCharacterNodes.first!
+            headNode.setMoveProhibited()
+            
+            DataManager.queueFollowDirections = []
+            
+            for node in DataManager.adventureLog.partyCharacterNodes {
+                node.positionX = FieldAliahanPositionX
+                node.positionY = FieldAliahanPositionY
+                node.direction = .down
+            }
+            
+            self.scene.transitionToMapWithStairs(
+                dqSceneTypeFrom: .aliahan_town,
+                dqSceneTypeTo: .field,
+                dqAudio: .field)
+        }
+        else if enterHouse {
             let headNode = DataManager.adventureLog.partyCharacterNodes.first!
             headNode.setMoveProhibited()
             

@@ -17,4 +17,5 @@ enum DQSceneType: String {
     case opening
     case aliahan_town
     case aliahan_town_house
+    case field
 }
