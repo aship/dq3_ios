@@ -8,17 +8,16 @@
 import Foundation
 
 class DataManager {
-    static var dqStory: DQStory = .opening
-    // static var dqStory: DQStory = .mother_waiting
-    // static var dqStory: DQStory = .go_adventure
+    static var dqMainState = debugDqMainState
     
     // 現在読み込んでいる冒険の書
     static var adventureLog = AdventureLog()
     
+    static var queueFollowDirections: [Direction] = []
     static var showInsideMap = false
     
-    // for adventureLog transition
-    static var adventureLogScene = AdventureLogScene()
+    // trainsigionToMap で使う
+    static var scene = BaseScene()
     
     private init() {
     }

@@ -11,4 +11,7 @@ class AdventureLog: NSObject {
     var heroName: String = ""
     var messageSpeed = 4
     var partyCharacterNodes: [CharacterNode] = []
+
+    var dqSceneType: DQSceneType = .opening
+    var dqStory: DQStory = .opening
 }
