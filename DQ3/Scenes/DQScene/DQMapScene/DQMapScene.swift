@@ -13,6 +13,7 @@ class DQMapScene: DQScene {
     var mainTileMapNode: SKTileMapNode!
     var insideTileMapNode: SKTileMapNode!
     
+    var mapCommandWindowNode = MapCommandWindowNode()
     var mapMessageWindowNode = MapMessageWindowNode()
     
     var characterNpcNodes: [CharacterNode] = []

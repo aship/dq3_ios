@@ -17,7 +17,9 @@ extension AliahanTownHouseScene {
                                       openingStateFlag: &self.openingStateFlag)
             }
             else {
-                processButtonA()
+                processButtonA(mapCommandWindowNode: &mapCommandWindowNode,
+                               mapMessageWindowNode: mapMessageWindowNode,
+                               scale: self.scene.scale)
             }
         }
         

@@ -113,6 +113,9 @@
 		AA75B326270F0F6700C45A6A /* FieldSceneCheckPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75B321270F0F6600C45A6A /* FieldSceneCheckPosition.swift */; };
 		AA75B327270F0F6700C45A6A /* FieldScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75B322270F0F6600C45A6A /* FieldScene.swift */; };
 		AA75B329270F0FA000C45A6A /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75B328270F0FA000C45A6A /* Field.swift */; };
+		AA75B32E270F16AA00C45A6A /* MapCommandWindowNodeButtonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75B32B270F16AA00C45A6A /* MapCommandWindowNodeButtonA.swift */; };
+		AA75B32F270F16AA00C45A6A /* MapCommandWindowNodeTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75B32C270F16AA00C45A6A /* MapCommandWindowNodeTriangle.swift */; };
+		AA75B330270F16AA00C45A6A /* MapCommandWindowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75B32D270F16AA00C45A6A /* MapCommandWindowNode.swift */; };
 		AAC7252C270ADE3D00C44CEE /* BaseSceneTransitionToScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC7252B270ADE3D00C44CEE /* BaseSceneTransitionToScene.swift */; };
 		AAC72530270AE26500C44CEE /* MapMessageWindowNodeMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC7252D270AE26500C44CEE /* MapMessageWindowNodeMessage.swift */; };
 		AAC72531270AE26500C44CEE /* MapMessageWindowNodeMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC7252E270AE26500C44CEE /* MapMessageWindowNodeMessages.swift */; };
@@ -249,6 +252,9 @@
 		AA75B321270F0F6600C45A6A /* FieldSceneCheckPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldSceneCheckPosition.swift; sourceTree = "<group>"; };
 		AA75B322270F0F6600C45A6A /* FieldScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldScene.swift; sourceTree = "<group>"; };
 		AA75B328270F0FA000C45A6A /* Field.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
+		AA75B32B270F16AA00C45A6A /* MapCommandWindowNodeButtonA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCommandWindowNodeButtonA.swift; sourceTree = "<group>"; };
+		AA75B32C270F16AA00C45A6A /* MapCommandWindowNodeTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCommandWindowNodeTriangle.swift; sourceTree = "<group>"; };
+		AA75B32D270F16AA00C45A6A /* MapCommandWindowNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCommandWindowNode.swift; sourceTree = "<group>"; };
 		AAC7252B270ADE3D00C44CEE /* BaseSceneTransitionToScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneTransitionToScene.swift; sourceTree = "<group>"; };
 		AAC7252D270AE26500C44CEE /* MapMessageWindowNodeMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapMessageWindowNodeMessage.swift; sourceTree = "<group>"; };
 		AAC7252E270AE26500C44CEE /* MapMessageWindowNodeMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapMessageWindowNodeMessages.swift; sourceTree = "<group>"; };
@@ -621,6 +627,7 @@
 				AA4E9F662709BFF100D4F7C8 /* DQMapScenePartyCharacters.swift */,
 				AA4E9F622709BFF100D4F7C8 /* DQMapSceneNpc.swift */,
 				AA4E9F632709BFF100D4F7C8 /* DQMapSceneTileMap.swift */,
+				AA75B32A270F169900C45A6A /* MapCommandWindow */,
 				AA4E9F712709C00C00D4F7C8 /* MapMessageWindow */,
 			);
 			path = DQMapScene;
@@ -657,6 +664,16 @@
 				AA75B31E270F0F6600C45A6A /* field.csv */,
 			);
 			path = Field;
+			sourceTree = "<group>";
+		};
+		AA75B32A270F169900C45A6A /* MapCommandWindow */ = {
+			isa = PBXGroup;
+			children = (
+				AA75B32D270F16AA00C45A6A /* MapCommandWindowNode.swift */,
+				AA75B32B270F16AA00C45A6A /* MapCommandWindowNodeButtonA.swift */,
+				AA75B32C270F16AA00C45A6A /* MapCommandWindowNodeTriangle.swift */,
+			);
+			path = MapCommandWindow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -814,6 +831,7 @@
 				AA4E9FC5270A99E600D4F7C8 /* CharacterNodePosition.swift in Sources */,
 				AA4E9F402709BE1400D4F7C8 /* Words.swift in Sources */,
 				AA4E9F5E2709BF7E00D4F7C8 /* OpeningSceneButton.swift in Sources */,
+				AA75B32E270F16AA00C45A6A /* MapCommandWindowNodeButtonA.swift in Sources */,
 				AA4E9F702709BFF100D4F7C8 /* BaseSceneSetupDQScene.swift in Sources */,
 				AA75B325270F0F6700C45A6A /* FieldSceneCheckCanMove.swift in Sources */,
 				AA4E9F8E2709C14800D4F7C8 /* AliahanTownHouseSceneButton.swift in Sources */,
@@ -847,8 +865,10 @@
 				AA4E9FAC2709C67F00D4F7C8 /* AliahanTownSceneCheckPosition.swift in Sources */,
 				AA4E9FB32709C67F00D4F7C8 /* AliahanTownSceneButton.swift in Sources */,
 				AA4E9ED22709B7F300D4F7C8 /* DQ3App.swift in Sources */,
+				AA75B32F270F16AA00C45A6A /* MapCommandWindowNodeTriangle.swift in Sources */,
 				AA4E9F912709C14800D4F7C8 /* AliahanTownHouseSceneNpcCharacters.swift in Sources */,
 				AA4E9F4A2709BE4E00D4F7C8 /* DQFont.swift in Sources */,
+				AA75B330270F16AA00C45A6A /* MapCommandWindowNode.swift in Sources */,
 				AA4E9FCA270A9B4300D4F7C8 /* BaseSceneUpdateProcess.swift in Sources */,
 				AA4E9F312709BD9400D4F7C8 /* BaseSceneVirtualPad.swift in Sources */,
 				AA4E9F962709C17400D4F7C8 /* DQStory.swift in Sources */,
@@ -1069,7 +1089,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.9;
+				MARKETING_VERSION = 0.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1099,7 +1119,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.9;
+				MARKETING_VERSION = 0.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
