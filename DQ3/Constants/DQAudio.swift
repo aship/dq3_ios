@@ -18,5 +18,4 @@ enum DQSoundEffect: String {
     case spell
     case win
     case rest
-    case message
 }

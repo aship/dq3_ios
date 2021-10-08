@@ -8,7 +8,7 @@
 import SpriteKit
 
 extension DQFont {
-    internal class func getFontWithLittleCircle(string: String) -> SKSpriteNode {
+    class func getFontWithLittleCircle(string: String) -> SKSpriteNode {
         var path: String!
         
         switch string {

@@ -18,23 +18,37 @@ class MapCommandWindowNode: SKTileMapNode {
     }
     
     enum CommandWindowStatus {
-        case open
+        case prompt
         case processing
         case should_close
     }
     
     var isOpen = false
     var commandType: CommandType = .talk
-    var commandWindowStatus: CommandWindowStatus = .open
+    var commandWindowStatus: CommandWindowStatus = .prompt
     
     var triangleNode = SKSpriteNode()
     var triangleMoving = false
     
-    var mapMessageWindowNode: MapMessageWindowNode?
+    var baseTalkMessageWindowNode: BaseTalkMessageWindowNode?
+    var talkMessageWindowAliahanTown: TalkMessageWindowNodeAliahanTown?
+    var talkMessageWindowAliahanTownHouse: TalkMessageWindowNodeAliahanTownHouse?
+    
+    var characterNpcNodes: [CharacterNode] = []
+    
+    init(characterNpcNodes: [CharacterNode]) {
+        super.init()
+        
+        self.characterNpcNodes = characterNpcNodes
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     func close() {
-        self.isOpen = false
         self.removeFromParent()
+        self.isOpen = false
     }
     
     func addToScene(scene: SKScene,

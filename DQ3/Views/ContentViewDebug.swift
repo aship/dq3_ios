@@ -12,7 +12,7 @@ func setDebugAdventureLog() {
     let adventureLog = AdventureLog()
     
     adventureLog.heroName = "えにくす"
-    
+  
     addNode(adventureLog: adventureLog,
             name: "あしへー",
             dqCharacter: .hero,
@@ -27,27 +27,32 @@ func setDebugAdventureLog() {
     // adventureLog.dqStory = .mother_waiting
     adventureLog.dqStory = .go_adventure
     
-    addNode(adventureLog: adventureLog,
-            name: "あしひー",
-            dqCharacter: .warrior_female,
-            dqVocation: .warrior)
-    
-    addNode(adventureLog: adventureLog,
-            name: "あしひひ",
-            dqCharacter: .priest_female,
-            dqVocation: .priest)
-    
-    //    addNode(adventureLog: adventureLog,
-    //            name: "あしひん",
-    //            dqCharacter: .mage_female,
-    //            dqVocation: .mage)
-    
-        if adventureLog.dqSceneType == .aliahan_town {
-            for node in adventureLog.partyCharacterNodes {
-                node.positionX = AliahanTownEntrancePositionX
-                node.positionY = AliahanTownEntrancePositionY
-            }
+//    addNode(adventureLog: adventureLog,
+//            name: "あしひー",
+//            dqCharacter: .warrior_female,
+//            dqVocation: .warrior)
+//    
+//    addNode(adventureLog: adventureLog,
+//            name: "あしひひ",
+//            dqCharacter: .priest_female,
+//            dqVocation: .priest)
+//    
+    if adventureLog.dqSceneType == .field {
+        for node in adventureLog.partyCharacterNodes {
+            node.positionX = FieldAliahanPositionX
+            node.positionY = FieldAliahanPositionY
         }
+    }
+    else if adventureLog.dqSceneType == .aliahan_town {
+        for node in adventureLog.partyCharacterNodes {
+            //            node.positionX = AliahanTownEntrancePositionX
+            //            node.positionY = AliahanTownEntrancePositionY
+            
+            node.positionX = AliahanTownLuidaTalkPositionX
+            node.positionY = AliahanTownLuidaTalkPositionY - 1
+            node.direction = .up
+        }
+    }
     
     DataManager.adventureLog = adventureLog
 }

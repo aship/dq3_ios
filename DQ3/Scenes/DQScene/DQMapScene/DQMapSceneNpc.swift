@@ -14,12 +14,13 @@ extension DQMapScene {
                      positionY: Int,
                      direction: Direction,
                      tileMapNode: SKTileMapNode,
+                     isTown: Bool,
                      characterNpcNodes: inout [CharacterNode],
                      scale: CGFloat) {
         let node = CharacterNode(dqCharacter: dqCharacter)
         
         node.addToMap(tileMapNode: tileMapNode,
-                      isTown: true)
+                      isTown: isTown)
         
         node.positionX = positionX
         node.positionY = positionY

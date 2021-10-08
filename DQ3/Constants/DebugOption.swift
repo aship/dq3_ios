@@ -12,19 +12,18 @@ let debugDqMainState: DQMainState = .adventure_log_loaded
 
 // リリース時は以下全部 false
 // debug で必要なら true にする
+
 // ただし、デモ用途のためリリース時でも 以下 DebugSetAdventureLog は true でよいと思う
 // 冒険の書1を特別な値にセット(アプリ初回起動時起のみ)
 let DebugSetAdventureLog = true
 
 // 上記 DebugAdventureLog をアプリ起動時必ず行う
-// false の時は、初回起動時のみ(冒険の書が以後上書きされない)
-let DebugSetAdventureLogEveryAppLaunch = false
+// false の時は、アプリ初回起動時のみ
+// (以後アプリ起動時に冒険の書の上書きは行われない)
+let DebugSetAdventureLogEveryAppLaunch = true
 
 // BGM止める
 let DebugStopBgm = false
 
-// 戦闘エンカウントなし
-let DebugNoBattle = false
-
-// 最初から仲間いる状態
-let DebugWithParty = false
+// NPCを動かなくする
+let DebugStopNpc = false

@@ -15,7 +15,7 @@ extension MapMessageWindowNode {
         let BaseY = -24 - 16 * line
         
         if withSe {
-            SoundEffectManager.play(.message)
+            MessageSoundManager.play()
         }
         
         var arrLine: [SKSpriteNode] = []
