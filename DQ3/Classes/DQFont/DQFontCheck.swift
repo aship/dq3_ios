@@ -8,7 +8,7 @@
 import SpriteKit
 
 extension DQFont {
-    internal class func checkDqFontType(string: String) -> DQFontType {
+    class func checkDqFontType(string: String) -> DQFontType {
         var dqFontType: DQFontType = .none
         
         switch string {

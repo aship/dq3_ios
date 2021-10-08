@@ -27,12 +27,13 @@ extension BaseScene {
         case .opening:
             self.openingScene = OpeningScene(scene: self)
             self.openingScene?.setup()
-        case .aliahan_town:
-            self.aliahanTownScene = AliahanTownScene(scene: self)
-            self.aliahanTownScene?.setup()
         case .aliahan_town_house:
             self.aliahanTownHouseScene = AliahanTownHouseScene(scene: self)
             self.aliahanTownHouseScene?.setup()
+        case .aliahan_town:
+            self.aliahanTownScene = AliahanTownScene(scene: self)
+            self.aliahanTownScene?.setup()
+            DataManager.aliahanTownScene = self.aliahanTownScene
         case .field:
             self.fieldScene = FieldScene(scene: self)
             self.fieldScene?.setup()

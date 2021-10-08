@@ -8,7 +8,7 @@
 import SpriteKit
 
 extension DQFont {
-    internal class func getFontWithLittleDashes(string: String) -> SKSpriteNode {
+    class func getFontWithLittleDashes(string: String) -> SKSpriteNode {
         var path: String!
         
         switch string {
