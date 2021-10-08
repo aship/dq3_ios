@@ -8,6 +8,8 @@
 import SpriteKit
 
 class FieldScene: DQMapShipScene {
+    var ramiaNode: CharacterNode?
+    
     func setup(dqAudio: DQAudio) {
         AudioManager.play(dqAudio: dqAudio)
         
@@ -25,6 +27,12 @@ class FieldScene: DQMapShipScene {
             addShip(tileMapNode: self.mainTileMapNode,
                     characterNode: &self.shipNode,
                     scale: self.scene.scale)
+        }
+        
+        if DataManager.adventureLog.hasRamia {
+            addRamia(tileMapNode: self.mainTileMapNode,
+                     characterNode: &self.ramiaNode,
+                     scale: self.scene.scale)
         }
     }
 }

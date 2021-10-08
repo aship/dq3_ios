@@ -102,8 +102,10 @@ extension AliahanTownHouseScene {
         if openingStateFlag == .mother_moved {
             processButtonA(mapCommandWindowNode: &mapCommandWindowNode,
                            mapMessageWindowNode: mapMessageWindowNode,
-                           characterNpcNodes: self.characterNpcNodes,
                            adventureLog: DataManager.adventureLog,
+                           characterNpcNodes: self.characterNpcNodes,
+                           queueFollowDirections: &DataManager.queueFollowDirections,
+                           tileMapNode: self.mainTileMapNode,
                            scene: self.scene)
             return
         }

@@ -116,6 +116,11 @@
 		AA5162A627100C6600118A2A /* FieldSceneShipLanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5162A527100C6600118A2A /* FieldSceneShipLanding.swift */; };
 		AA5162A827100D6B00118A2A /* ShipPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5162A727100D6B00118A2A /* ShipPosition.swift */; };
 		AA5162AA27100D9800118A2A /* DQMapSceneVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5162A927100D9800118A2A /* DQMapSceneVehicle.swift */; };
+		AA5162AC2710179000118A2A /* RamiaPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5162AB2710179000118A2A /* RamiaPosition.swift */; };
+		AA5162B12710180A00118A2A /* FieldSceneRamiaGetOff.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5162AD2710180A00118A2A /* FieldSceneRamiaGetOff.swift */; };
+		AA5162B22710180A00118A2A /* FieldSceneAddRamia.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5162AE2710180A00118A2A /* FieldSceneAddRamia.swift */; };
+		AA5162B32710180A00118A2A /* FieldSceneButtonARamia.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5162AF2710180A00118A2A /* FieldSceneButtonARamia.swift */; };
+		AA5162B42710180A00118A2A /* FieldSceneRamiaRideOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5162B02710180A00118A2A /* FieldSceneRamiaRideOn.swift */; };
 		AA75B323270F0F6700C45A6A /* field.csv in Resources */ = {isa = PBXBuildFile; fileRef = AA75B31E270F0F6600C45A6A /* field.csv */; };
 		AA75B324270F0F6700C45A6A /* FieldSceneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75B31F270F0F6600C45A6A /* FieldSceneButton.swift */; };
 		AA75B325270F0F6700C45A6A /* FieldSceneCheckCanMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75B320270F0F6600C45A6A /* FieldSceneCheckCanMove.swift */; };
@@ -299,6 +304,11 @@
 		AA5162A527100C6600118A2A /* FieldSceneShipLanding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldSceneShipLanding.swift; sourceTree = "<group>"; };
 		AA5162A727100D6B00118A2A /* ShipPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipPosition.swift; sourceTree = "<group>"; };
 		AA5162A927100D9800118A2A /* DQMapSceneVehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQMapSceneVehicle.swift; sourceTree = "<group>"; };
+		AA5162AB2710179000118A2A /* RamiaPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RamiaPosition.swift; sourceTree = "<group>"; };
+		AA5162AD2710180A00118A2A /* FieldSceneRamiaGetOff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldSceneRamiaGetOff.swift; sourceTree = "<group>"; };
+		AA5162AE2710180A00118A2A /* FieldSceneAddRamia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldSceneAddRamia.swift; sourceTree = "<group>"; };
+		AA5162AF2710180A00118A2A /* FieldSceneButtonARamia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldSceneButtonARamia.swift; sourceTree = "<group>"; };
+		AA5162B02710180A00118A2A /* FieldSceneRamiaRideOn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldSceneRamiaRideOn.swift; sourceTree = "<group>"; };
 		AA75B31E270F0F6600C45A6A /* field.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = field.csv; sourceTree = "<group>"; };
 		AA75B31F270F0F6600C45A6A /* FieldSceneButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldSceneButton.swift; sourceTree = "<group>"; };
 		AA75B320270F0F6600C45A6A /* FieldSceneCheckCanMove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldSceneCheckCanMove.swift; sourceTree = "<group>"; };
@@ -666,6 +676,7 @@
 				AA4E9F982709C1F200D4F7C8 /* AliahanTown.swift */,
 				AA75B328270F0FA000C45A6A /* Field.swift */,
 				AA5162A727100D6B00118A2A /* ShipPosition.swift */,
+				AA5162AB2710179000118A2A /* RamiaPosition.swift */,
 			);
 			path = CharacterPositions;
 			sourceTree = "<group>";
@@ -768,6 +779,10 @@
 				AA75B320270F0F6600C45A6A /* FieldSceneCheckCanMove.swift */,
 				AA75B321270F0F6600C45A6A /* FieldSceneCheckPosition.swift */,
 				AA5162A527100C6600118A2A /* FieldSceneShipLanding.swift */,
+				AA5162AE2710180A00118A2A /* FieldSceneAddRamia.swift */,
+				AA5162AF2710180A00118A2A /* FieldSceneButtonARamia.swift */,
+				AA5162AD2710180A00118A2A /* FieldSceneRamiaGetOff.swift */,
+				AA5162B02710180A00118A2A /* FieldSceneRamiaRideOn.swift */,
 				AA75B31E270F0F6600C45A6A /* field.csv */,
 			);
 			path = Field;
@@ -1094,6 +1109,8 @@
 				AA4E9F4A2709BE4E00D4F7C8 /* DQFont.swift in Sources */,
 				AA75B357270FCFE600C45A6A /* TalkMessageLuidaWishWindowNodeTriangle.swift in Sources */,
 				AA75B373270FCFF700C45A6A /* AliahanTownDepository.swift in Sources */,
+				AA5162AC2710179000118A2A /* RamiaPosition.swift in Sources */,
+				AA5162B22710180A00118A2A /* FieldSceneAddRamia.swift in Sources */,
 				AA5162A327100C5100118A2A /* DQMapShipSceneAddShip.swift in Sources */,
 				AA75B359270FCFED00C45A6A /* AliahanTownTalkMessageYesNoWindowNode.swift in Sources */,
 				AA75B33E270FCF7A00C45A6A /* BaseYesNoWindowNodeTriangle.swift in Sources */,
@@ -1129,6 +1146,7 @@
 				AA5162A227100C5100118A2A /* DQMapShipSceneShipBoarding.swift in Sources */,
 				AAC72531270AE26500C44CEE /* MapMessageWindowNodeMessages.swift in Sources */,
 				AA75B33B270FCF7100C45A6A /* BaseTalkMessageWindowNode.swift in Sources */,
+				AA5162B32710180A00118A2A /* FieldSceneButtonARamia.swift in Sources */,
 				AA5162A627100C6600118A2A /* FieldSceneShipLanding.swift in Sources */,
 				AAC72532270AE26500C44CEE /* MapMessageWindowNodeMark.swift in Sources */,
 				AA75B339270FCF7100C45A6A /* BaseTalkMessageWindowNodeButtonA.swift in Sources */,
@@ -1155,6 +1173,7 @@
 				AA75B36B270FCFF700C45A6A /* AliahanTownWeaponShop.swift in Sources */,
 				AA75B356270FCFE600C45A6A /* TalkMessageLuidaWishWindowNode.swift in Sources */,
 				AA4E9FB12709C67F00D4F7C8 /* AliahanTownSceneNpcCharacters.swift in Sources */,
+				AA5162B42710180A00118A2A /* FieldSceneRamiaRideOn.swift in Sources */,
 				AA4E9F8F2709C14800D4F7C8 /* AliahanTownHouseSceneEvent.swift in Sources */,
 				AA4E9FE5270ACF8700D4F7C8 /* BaseSceneTransitionToMapWithStairs.swift in Sources */,
 				AA75B34D270FCFBD00C45A6A /* TalkMessageWindowNodeAliahanTown.swift in Sources */,
@@ -1168,6 +1187,7 @@
 				AA75B342270FCF8800C45A6A /* TalkMessageWindowNodeAliahanTownHouse.swift in Sources */,
 				AA4E9FC7270A99E600D4F7C8 /* CharacterNodeMove.swift in Sources */,
 				AA4E9F302709BD9400D4F7C8 /* BaseScene.swift in Sources */,
+				AA5162B12710180A00118A2A /* FieldSceneRamiaGetOff.swift in Sources */,
 				AA75B372270FCFF700C45A6A /* AliahanTownBoy2.swift in Sources */,
 				AA4E9F7B2709C0BA00D4F7C8 /* DQCharacter.swift in Sources */,
 				AA4E9F6B2709BFF100D4F7C8 /* DQMapSceneTileMap.swift in Sources */,
@@ -1345,7 +1365,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.13;
+				MARKETING_VERSION = 0.14;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1375,7 +1395,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.13;
+				MARKETING_VERSION = 0.14;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

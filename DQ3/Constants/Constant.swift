@@ -25,4 +25,5 @@ enum DQYesNo {
 enum FieldMoveMode {
     case walk
     case ship
+    case ramia
 }
