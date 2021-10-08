@@ -36,7 +36,14 @@ extension BaseScene {
             DataManager.aliahanTownScene = self.aliahanTownScene
         case .field:
             self.fieldScene = FieldScene(scene: self)
-            self.fieldScene?.setup()
+            
+            var dqAudio: DQAudio = .field
+            
+            if self.fieldMoveMode == .ship {
+                dqAudio = .ship
+            }
+            
+            self.fieldScene?.setup(dqAudio: dqAudio)
         case .none: break
         }
     }

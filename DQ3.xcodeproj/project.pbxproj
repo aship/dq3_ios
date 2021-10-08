@@ -109,6 +109,13 @@
 		AA4E9FF0270AD89200D4F7C8 /* DQScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4E9FEF270AD89200D4F7C8 /* DQScene.swift */; };
 		AA516299271005EF00118A2A /* AliahanTownHouseSceneNpcMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA516298271005EF00118A2A /* AliahanTownHouseSceneNpcMove.swift */; };
 		AA51629B271005F700118A2A /* AliahanTownSceneNpcMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51629A271005F700118A2A /* AliahanTownSceneNpcMove.swift */; };
+		AA5162A127100C5100118A2A /* DQMapShipSceneShipLanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51629D27100C5100118A2A /* DQMapShipSceneShipLanding.swift */; };
+		AA5162A227100C5100118A2A /* DQMapShipSceneShipBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51629E27100C5100118A2A /* DQMapShipSceneShipBoarding.swift */; };
+		AA5162A327100C5100118A2A /* DQMapShipSceneAddShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51629F27100C5100118A2A /* DQMapShipSceneAddShip.swift */; };
+		AA5162A427100C5100118A2A /* DQMapShipScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5162A027100C5100118A2A /* DQMapShipScene.swift */; };
+		AA5162A627100C6600118A2A /* FieldSceneShipLanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5162A527100C6600118A2A /* FieldSceneShipLanding.swift */; };
+		AA5162A827100D6B00118A2A /* ShipPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5162A727100D6B00118A2A /* ShipPosition.swift */; };
+		AA5162AA27100D9800118A2A /* DQMapSceneVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5162A927100D9800118A2A /* DQMapSceneVehicle.swift */; };
 		AA75B323270F0F6700C45A6A /* field.csv in Resources */ = {isa = PBXBuildFile; fileRef = AA75B31E270F0F6600C45A6A /* field.csv */; };
 		AA75B324270F0F6700C45A6A /* FieldSceneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75B31F270F0F6600C45A6A /* FieldSceneButton.swift */; };
 		AA75B325270F0F6700C45A6A /* FieldSceneCheckCanMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75B320270F0F6600C45A6A /* FieldSceneCheckCanMove.swift */; };
@@ -285,6 +292,13 @@
 		AA4E9FEF270AD89200D4F7C8 /* DQScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQScene.swift; sourceTree = "<group>"; };
 		AA516298271005EF00118A2A /* AliahanTownHouseSceneNpcMove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliahanTownHouseSceneNpcMove.swift; sourceTree = "<group>"; };
 		AA51629A271005F700118A2A /* AliahanTownSceneNpcMove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliahanTownSceneNpcMove.swift; sourceTree = "<group>"; };
+		AA51629D27100C5100118A2A /* DQMapShipSceneShipLanding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQMapShipSceneShipLanding.swift; sourceTree = "<group>"; };
+		AA51629E27100C5100118A2A /* DQMapShipSceneShipBoarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQMapShipSceneShipBoarding.swift; sourceTree = "<group>"; };
+		AA51629F27100C5100118A2A /* DQMapShipSceneAddShip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQMapShipSceneAddShip.swift; sourceTree = "<group>"; };
+		AA5162A027100C5100118A2A /* DQMapShipScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQMapShipScene.swift; sourceTree = "<group>"; };
+		AA5162A527100C6600118A2A /* FieldSceneShipLanding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldSceneShipLanding.swift; sourceTree = "<group>"; };
+		AA5162A727100D6B00118A2A /* ShipPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipPosition.swift; sourceTree = "<group>"; };
+		AA5162A927100D9800118A2A /* DQMapSceneVehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQMapSceneVehicle.swift; sourceTree = "<group>"; };
 		AA75B31E270F0F6600C45A6A /* field.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = field.csv; sourceTree = "<group>"; };
 		AA75B31F270F0F6600C45A6A /* FieldSceneButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldSceneButton.swift; sourceTree = "<group>"; };
 		AA75B320270F0F6600C45A6A /* FieldSceneCheckCanMove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldSceneCheckCanMove.swift; sourceTree = "<group>"; };
@@ -651,6 +665,7 @@
 				AA4E9F992709C1F200D4F7C8 /* AliahanTownHouse.swift */,
 				AA4E9F982709C1F200D4F7C8 /* AliahanTown.swift */,
 				AA75B328270F0FA000C45A6A /* Field.swift */,
+				AA5162A727100D6B00118A2A /* ShipPosition.swift */,
 			);
 			path = CharacterPositions;
 			sourceTree = "<group>";
@@ -698,13 +713,14 @@
 				AA4E9F592709BF6800D4F7C8 /* Opening */,
 				AA4E9F7E2709C13800D4F7C8 /* AliahanTownHouse */,
 				AA4E9F9C2709C66100D4F7C8 /* AliahanTown */,
-				AA75B31D270F0F5200C45A6A /* Field */,
+				AA51629C27100C3F00118A2A /* DQMapShipScene */,
 				AA4E9FCD270ACE3F00D4F7C8 /* DQMapScene.swift */,
 				AA4E9FCE270ACE3F00D4F7C8 /* DQMapSceneButtonA.swift */,
 				AA4E9FCC270ACE3F00D4F7C8 /* DQMapSceneButtonB.swift */,
 				AA4E9F662709BFF100D4F7C8 /* DQMapScenePartyCharacters.swift */,
 				AA4E9F622709BFF100D4F7C8 /* DQMapSceneNpc.swift */,
 				AA4E9F632709BFF100D4F7C8 /* DQMapSceneTileMap.swift */,
+				AA5162A927100D9800118A2A /* DQMapSceneVehicle.swift */,
 				AA75B32A270F169900C45A6A /* MapCommandWindow */,
 				AA4E9F712709C00C00D4F7C8 /* MapMessageWindow */,
 			);
@@ -732,6 +748,18 @@
 			path = DQScene;
 			sourceTree = "<group>";
 		};
+		AA51629C27100C3F00118A2A /* DQMapShipScene */ = {
+			isa = PBXGroup;
+			children = (
+				AA5162A027100C5100118A2A /* DQMapShipScene.swift */,
+				AA51629F27100C5100118A2A /* DQMapShipSceneAddShip.swift */,
+				AA51629E27100C5100118A2A /* DQMapShipSceneShipBoarding.swift */,
+				AA51629D27100C5100118A2A /* DQMapShipSceneShipLanding.swift */,
+				AA75B31D270F0F5200C45A6A /* Field */,
+			);
+			path = DQMapShipScene;
+			sourceTree = "<group>";
+		};
 		AA75B31D270F0F5200C45A6A /* Field */ = {
 			isa = PBXGroup;
 			children = (
@@ -739,6 +767,7 @@
 				AA75B31F270F0F6600C45A6A /* FieldSceneButton.swift */,
 				AA75B320270F0F6600C45A6A /* FieldSceneCheckCanMove.swift */,
 				AA75B321270F0F6600C45A6A /* FieldSceneCheckPosition.swift */,
+				AA5162A527100C6600118A2A /* FieldSceneShipLanding.swift */,
 				AA75B31E270F0F6600C45A6A /* field.csv */,
 			);
 			path = Field;
@@ -1016,6 +1045,7 @@
 				AA75B347270FCF9900C45A6A /* AliahanTownHouseMother.swift in Sources */,
 				AA4E9FC5270A99E600D4F7C8 /* CharacterNodePosition.swift in Sources */,
 				AA4E9F402709BE1400D4F7C8 /* Words.swift in Sources */,
+				AA5162A427100C5100118A2A /* DQMapShipScene.swift in Sources */,
 				AA4E9F5E2709BF7E00D4F7C8 /* OpeningSceneButton.swift in Sources */,
 				AA75B378270FCFF700C45A6A /* AliahanTownOldMan2.swift in Sources */,
 				AA75B370270FCFF700C45A6A /* AliahanTownToolShop.swift in Sources */,
@@ -1043,6 +1073,7 @@
 				AA4E9F4C2709BE4E00D4F7C8 /* DQFontLittleCircle.swift in Sources */,
 				AA4E9FE7270AD0E500D4F7C8 /* DQSceneType.swift in Sources */,
 				AA4E9FE4270ACF8700D4F7C8 /* BaseSceneTransitionToMap.swift in Sources */,
+				AA5162A827100D6B00118A2A /* ShipPosition.swift in Sources */,
 				AA4E9FD0270ACE3F00D4F7C8 /* DQMapScene.swift in Sources */,
 				AA4E9F8C2709C14800D4F7C8 /* AliahanTownHouseSceneCheckCanMove.swift in Sources */,
 				AA4E9F932709C14800D4F7C8 /* AliahanTownHouseSceneCheckPosition.swift in Sources */,
@@ -1063,6 +1094,7 @@
 				AA4E9F4A2709BE4E00D4F7C8 /* DQFont.swift in Sources */,
 				AA75B357270FCFE600C45A6A /* TalkMessageLuidaWishWindowNodeTriangle.swift in Sources */,
 				AA75B373270FCFF700C45A6A /* AliahanTownDepository.swift in Sources */,
+				AA5162A327100C5100118A2A /* DQMapShipSceneAddShip.swift in Sources */,
 				AA75B359270FCFED00C45A6A /* AliahanTownTalkMessageYesNoWindowNode.swift in Sources */,
 				AA75B33E270FCF7A00C45A6A /* BaseYesNoWindowNodeTriangle.swift in Sources */,
 				AA75B330270F16AA00C45A6A /* MapCommandWindowNode.swift in Sources */,
@@ -1094,8 +1126,10 @@
 				AA75B376270FCFF700C45A6A /* AliahanTownWarrior1.swift in Sources */,
 				AA4E9F412709BE1400D4F7C8 /* Window.swift in Sources */,
 				AA75B326270F0F6700C45A6A /* FieldSceneCheckPosition.swift in Sources */,
+				AA5162A227100C5100118A2A /* DQMapShipSceneShipBoarding.swift in Sources */,
 				AAC72531270AE26500C44CEE /* MapMessageWindowNodeMessages.swift in Sources */,
 				AA75B33B270FCF7100C45A6A /* BaseTalkMessageWindowNode.swift in Sources */,
+				AA5162A627100C6600118A2A /* FieldSceneShipLanding.swift in Sources */,
 				AAC72532270AE26500C44CEE /* MapMessageWindowNodeMark.swift in Sources */,
 				AA75B339270FCF7100C45A6A /* BaseTalkMessageWindowNodeButtonA.swift in Sources */,
 				AA4E9F522709BE7900D4F7C8 /* AudioManager.swift in Sources */,
@@ -1106,6 +1140,7 @@
 				AA4E9FAB2709C67F00D4F7C8 /* AliahanTownScene.swift in Sources */,
 				AA75B37F270FD43000C45A6A /* MapCommandWindowNodeTalk.swift in Sources */,
 				AA4E9F362709BDC000D4F7C8 /* PadOverlay.swift in Sources */,
+				AA5162AA27100D9800118A2A /* DQMapSceneVehicle.swift in Sources */,
 				AA4E9FEC270AD64700D4F7C8 /* BaseSceneController.swift in Sources */,
 				AA4E9F202709BC6600D4F7C8 /* Constant.swift in Sources */,
 				AA75B36D270FCFF700C45A6A /* AliahanTownBoy1.swift in Sources */,
@@ -1129,6 +1164,7 @@
 				AA75B377270FCFF700C45A6A /* AliahanTownWarrior2.swift in Sources */,
 				AA4E9FB02709C67F00D4F7C8 /* AliahanTownSceneEvent.swift in Sources */,
 				AA75B324270F0F6700C45A6A /* FieldSceneButton.swift in Sources */,
+				AA5162A127100C5100118A2A /* DQMapShipSceneShipLanding.swift in Sources */,
 				AA75B342270FCF8800C45A6A /* TalkMessageWindowNodeAliahanTownHouse.swift in Sources */,
 				AA4E9FC7270A99E600D4F7C8 /* CharacterNodeMove.swift in Sources */,
 				AA4E9F302709BD9400D4F7C8 /* BaseScene.swift in Sources */,
@@ -1309,7 +1345,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.12;
+				MARKETING_VERSION = 0.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1339,7 +1375,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.12;
+				MARKETING_VERSION = 0.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

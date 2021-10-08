@@ -15,8 +15,29 @@ extension FieldScene {
         enterAliahan = checkEnterAliahan(newPositionX: newPositionX,
                                          newPositionY: newPositionY)
         
+        var enterShip = false
+        
+        if self.scene.fieldMoveMode == .walk {
+            enterAliahan = checkEnterAliahan(newPositionX: newPositionX,
+                                             newPositionY: newPositionY)
+            
+            if DataManager.adventureLog.hasShip {
+                enterShip = checkBoardingShip(newPositionX: newPositionX,
+                                              newPositionY: newPositionY)
+            }
+        }
+        
         if enterAliahan {
             processEnterAliahan()
+        }
+        else if enterShip {
+            processBoardingShip(tileMapNode: self.mainTileMapNode,
+                                characterNodes: &DataManager.adventureLog.partyCharacterNodes,
+                                shipNode: self.shipNode!,
+                                queueFollowDirections: &DataManager.queueFollowDirections,
+                                scale: self.scene.scale,
+                                newPositionX: newPositionX,
+                                newPositionY: newPositionY)
         }
     }
     
