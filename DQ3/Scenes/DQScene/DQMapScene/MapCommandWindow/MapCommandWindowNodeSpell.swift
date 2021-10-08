@@ -9,16 +9,16 @@ import SpriteKit
 
 extension MapCommandWindowNode {
     internal func processSpellButtonA() {
+        if let mapCommandWhoWindowNode = self.mapCommandWhoWindowNode {
+            mapCommandWhoWindowNode.processButtonA()
+            
+            return
+        }
+        
         pauseTriangleAnimation(triangleNode: self.triangleNode)
         SoundEffectManager.play(.command)
         
-        self.spellMessageWindowNode = SpellMessageWindowNode()
-        self.spellMessageWindowNode?.addToNode(
-            node: self,
-            pointX: MapMessageWindowChildOfCommandWindowPointX,
-            pointY: MapMessageWindowChildOfCommandWindowPointY,
-            scale: 1)
-        
-        self.spellMessageWindowNode?.processButtonA()
+        self.mapCommandWhoWindowNode = MapCommandWhoWindowNode()
+        self.mapCommandWhoWindowNode?.addToWindow(windowNode: self)
     }
 }

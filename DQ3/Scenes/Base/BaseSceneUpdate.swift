@@ -17,11 +17,20 @@ extension BaseScene {
         }
         
         let dqSceneType = DataManager.adventureLog.dqSceneType
-        let dqMapScene = self.getDQMapScene(dqSceneType: dqSceneType)
+        let dqMapScene = self.getDQMapScene(dqSceneType: dqSceneType)!
+        
+        let mapCommandWindowNode = dqMapScene.mapCommandWindowNode
+        
+        if mapCommandWindowNode.isOpen {
+            mapCommandWindowNode.moveTriangle(direction: self.padDirection)
+            
+            return
+        }
+        
         let checkCanMove = getCheckCanMove(dqSceneType: dqSceneType)
         let checkPosition = getCheckPosition(dqSceneType: dqSceneType)
         
-        let tileMapNode = dqMapScene?.mainTileMapNode
+        let tileMapNode = dqMapScene.mainTileMapNode
         
         if tileMapNode == nil {
             return

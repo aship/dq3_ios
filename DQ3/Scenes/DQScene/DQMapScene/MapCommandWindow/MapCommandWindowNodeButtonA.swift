@@ -33,14 +33,12 @@ extension MapCommandWindowNode {
             return
         }
         
-        self.commandWindowStatus = .processing
-        
         if self.commandType == .talk {
             let dqSceneType = adventureLog.dqSceneType
             processTalkButtonA(dqSceneType: dqSceneType)
         }
         else if self.commandType == .spells {
-   //         processSpellButtonA()
+            processSpellButtonA()
         }
         else if self.commandType == .status {
      //       processStatusButtonA()
