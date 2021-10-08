@@ -21,3 +21,8 @@ enum DQYesNo {
     case yes
     case no
 }
+
+enum FieldMoveMode {
+    case walk
+    case ship
+}

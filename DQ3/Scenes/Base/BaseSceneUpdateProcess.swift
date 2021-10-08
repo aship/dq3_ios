@@ -10,7 +10,7 @@ import SpriteKit
 extension BaseScene {
     func processUpdate(padDirection: Direction,
                        tileMapNode: SKTileMapNode,
-                       characterNodes: [CharacterNode],
+                       characterNodes: inout [CharacterNode],
                        queueFollowDirections: inout [Direction],
                        dqSceneType: DQSceneType,
                        scale: CGFloat,
@@ -21,7 +21,7 @@ extension BaseScene {
             return
         }
         
-        let headNode = characterNodes.first!
+        var headNode = characterNodes.first!
         
         if headNode.isMoving {
             return
@@ -41,22 +41,58 @@ extension BaseScene {
         let newPositionX = headNode.positionX + diffX
         let newPositionY = headNode.positionY + diffY
         
-        let canMove = checkCanMove!(tileMapNode,
-                                    newPositionX,
-                                    newPositionY)
-        if !canMove {
-            return
-        }
-        
-        // NPC 衝突チェック
-        let dqMapScene = getDQMapScene(dqSceneType: dqSceneType)!
-        
-        for characterNpcNode in dqMapScene.characterNpcNodes {
-            if characterNpcNode.positionX == newPositionX &&
-                characterNpcNode.positionY == newPositionY {
+        if self.fieldMoveMode == .walk ||
+            self.fieldMoveMode == .ship {
+            let canMove = checkCanMove!(tileMapNode,
+                                        newPositionX,
+                                        newPositionY)
+            if !canMove {
                 return
             }
         }
+        
+        if self.fieldMoveMode == .walk {
+            // NPC 衝突チェック
+            let dqMapScene = getDQMapScene(dqSceneType: dqSceneType)!
+            
+            for characterNpcNode in dqMapScene.characterNpcNodes {
+                if characterNpcNode.positionX == newPositionX &&
+                    characterNpcNode.positionY == newPositionY {
+                    return
+                }
+            }
+        }
+        
+        // 船から出るときは、船を残して、先頭にキャラに変えてから移動
+        if self.fieldMoveMode == .ship {
+            var isLanding: Bool!
+            
+            if DataManager.adventureLog.dqSceneType == .field {
+                isLanding = self.fieldScene?.checkLandingFromShip(tileMapNode: tileMapNode,
+                                                                  newPositionX: newPositionX,
+                                                                  newPositionY: newPositionY)
+            }
+            
+            if isLanding! {
+                queueFollowDirections = []
+                
+                if DataManager.adventureLog.dqSceneType == .field {
+                    // 船を降りる処理
+                    self.fieldScene?.processLandingFromShip(characterNodes: &characterNodes,
+                                                            tileMapNode: tileMapNode,
+                                                            scale: scale)
+                }
+            }
+            else {
+                // 降りない時は、船の座標を記録
+                DataManager.shipPositionX = newPositionX
+                DataManager.shipPositionY = newPositionY
+                DataManager.shipDirection = padDirection
+            }
+        }
+        
+        // reload 必要
+        headNode = characterNodes.first!
         
         headNode.isMoving = true
         headNode.move(direction: padDirection,

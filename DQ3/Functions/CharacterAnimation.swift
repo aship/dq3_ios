@@ -16,7 +16,10 @@ func getCharacterAnimationAction(direction: Direction,
     
     var type = "vocation"
     
-    if dqVocation == nil {
+    if dqCharacter.rawValue == "ship" {
+        type = "vehicle"
+    }
+    else if dqVocation == nil {
         type = "npc"
     }
     
