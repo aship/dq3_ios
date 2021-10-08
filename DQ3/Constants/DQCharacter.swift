@@ -7,6 +7,7 @@
 
 // 表示キャラクター種別
 enum DQCharacter: String {
+    case none
     case hero
     case lady
 }
