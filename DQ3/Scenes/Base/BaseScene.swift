@@ -16,12 +16,10 @@ class BaseScene: SKScene {
     
     var padDirection: Direction = .neutral
     
-    var heroPositionX: Int = 0
-    var heroPositionY: Int = 0
-    
     var triangleNode = SKSpriteNode()
     
     var queueFollowDirections: [Direction] = []
+    var characterNpcNodes: [CharacterNode] = []
     
     override func sceneDidLoad() {
         self.scaleMode = .resizeFill

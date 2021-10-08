@@ -8,9 +8,11 @@
 import SpriteKit
 
 extension BaseMapScene {
-    func processButtonB(mapMessageWindowNode: MapMessageWindowNode) {        
+    func processButtonB(mapMessageWindowNode: MapMessageWindowNode) {
+        let headNode = DataManager.adventureLog.partyCharacterNodes.first!
+        
         if mapMessageWindowNode.isOpen {
-            setMovePermitted()
+            headNode.setMovePermitted()
             mapMessageWindowNode.close()
         }
     }
