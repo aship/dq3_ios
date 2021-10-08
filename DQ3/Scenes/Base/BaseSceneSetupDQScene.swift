@@ -23,6 +23,8 @@ extension BaseScene {
             return
         }
         
+        DataManager.adventureLog.dqSceneType = dqSceneType!
+        
         switch dqSceneType {
         case .opening:
             self.openingScene = OpeningScene(scene: self)

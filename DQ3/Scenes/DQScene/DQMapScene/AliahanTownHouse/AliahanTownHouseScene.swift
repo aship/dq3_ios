@@ -24,8 +24,6 @@ class AliahanTownHouseScene: DQMapScene {
     var openingStateFlag: OpeningStateFlag = .none
     
     func setup() {
-        DataManager.adventureLog.dqSceneType = .aliahan_town_house
-        
         AudioManager.play(dqAudio: .town)
         
         self.scene.backgroundColor = UIColor(red: 71 / 255,

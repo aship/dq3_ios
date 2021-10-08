@@ -16,7 +16,8 @@ func setDebugAdventureLog() {
     addNode(adventureLog: adventureLog,
             name: "あしへー",
             dqCharacter: .hero,
-            dqVocation: .hero)
+            dqVocation: .hero,
+            dqGender: .male)
     
     // adventureLog.dqSceneType = .opening
     // adventureLog.dqSceneType = .aliahan_town_house
@@ -33,17 +34,20 @@ func setDebugAdventureLog() {
     addNode(adventureLog: adventureLog,
             name: "あしひー",
             dqCharacter: .warrior_female,
-            dqVocation: .warrior)
+            dqVocation: .warrior,
+            dqGender: .female)
     
     addNode(adventureLog: adventureLog,
             name: "あしひひ",
             dqCharacter: .priest_female,
-            dqVocation: .priest)
+            dqVocation: .priest,
+            dqGender: .female)
     
     addNode(adventureLog: adventureLog,
             name: "あしひん",
             dqCharacter: .mage_female,
-            dqVocation: .mage)
+            dqVocation: .mage,
+            dqGender: .female)
     
     if adventureLog.dqSceneType == .field {
         for node in adventureLog.partyCharacterNodes {
@@ -64,8 +68,21 @@ func setDebugAdventureLog() {
 private func addNode(adventureLog: AdventureLog,
                      name: String,
                      dqCharacter: DQCharacter,
-                     dqVocation: DQVocation) {
+                     dqVocation: DQVocation,
+                     dqGender: DQGender) {
     let node = CharacterNode(dqCharacter: dqCharacter)
     
     adventureLog.partyCharacterNodes.append(node)
+    
+    let status = CharacterStatus()
+    status.name = name
+    status.dqGender = dqGender
+    status.dqVocation = dqVocation
+    status.hp = Int.random(in: 1 ... 999)
+    status.hpMax = Int.random(in: 1 ... 999)
+    status.mp = Int.random(in: 1 ... 999)
+    status.mpMax = Int.random(in: 1 ... 999)
+    status.level = Int.random(in: 1 ... 99)
+    
+    adventureLog.partyCharacterStatuses.append(status)
 }

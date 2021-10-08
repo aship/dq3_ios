@@ -137,6 +137,8 @@
 		AA5162D52710206400118A2A /* ZoomPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5162D42710206400118A2A /* ZoomPosition.swift */; };
 		AA5162D9271020D800118A2A /* BaseSceneTransitionToMapWithZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5162D8271020D800118A2A /* BaseSceneTransitionToMapWithZoom.swift */; };
 		AA5162DB271023E400118A2A /* MapCommandWindowNodeSpell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5162DA271023E400118A2A /* MapCommandWindowNodeSpell.swift */; };
+		AA5162DE271027A400118A2A /* MapStatusWindowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5162DD271027A400118A2A /* MapStatusWindowNode.swift */; };
+		AA5162E12710299900118A2A /* CharacterStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5162E02710299900118A2A /* CharacterStatus.swift */; };
 		AA75B323270F0F6700C45A6A /* field.csv in Resources */ = {isa = PBXBuildFile; fileRef = AA75B31E270F0F6600C45A6A /* field.csv */; };
 		AA75B324270F0F6700C45A6A /* FieldSceneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75B31F270F0F6600C45A6A /* FieldSceneButton.swift */; };
 		AA75B325270F0F6700C45A6A /* FieldSceneCheckCanMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75B320270F0F6600C45A6A /* FieldSceneCheckCanMove.swift */; };
@@ -341,6 +343,8 @@
 		AA5162D42710206400118A2A /* ZoomPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomPosition.swift; sourceTree = "<group>"; };
 		AA5162D8271020D800118A2A /* BaseSceneTransitionToMapWithZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneTransitionToMapWithZoom.swift; sourceTree = "<group>"; };
 		AA5162DA271023E400118A2A /* MapCommandWindowNodeSpell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCommandWindowNodeSpell.swift; sourceTree = "<group>"; };
+		AA5162DD271027A400118A2A /* MapStatusWindowNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapStatusWindowNode.swift; sourceTree = "<group>"; };
+		AA5162E02710299900118A2A /* CharacterStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterStatus.swift; sourceTree = "<group>"; };
 		AA75B31E270F0F6600C45A6A /* field.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = field.csv; sourceTree = "<group>"; };
 		AA75B31F270F0F6600C45A6A /* FieldSceneButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldSceneButton.swift; sourceTree = "<group>"; };
 		AA75B320270F0F6600C45A6A /* FieldSceneCheckCanMove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldSceneCheckCanMove.swift; sourceTree = "<group>"; };
@@ -613,6 +617,7 @@
 		AA4E9F322709BDB100D4F7C8 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				AA5162DF2710298F00118A2A /* CharacterStatus */,
 				AA4E9FC0270A99BF00D4F7C8 /* CharacterNode */,
 				AA4E9F332709BDC000D4F7C8 /* ButtonOverlay.swift */,
 				AA4E9F342709BDC000D4F7C8 /* PadOverlay.swift */,
@@ -768,6 +773,7 @@
 				AA4E9F632709BFF100D4F7C8 /* DQMapSceneTileMap.swift */,
 				AA5162A927100D9800118A2A /* DQMapSceneVehicle.swift */,
 				AA75B32A270F169900C45A6A /* MapCommandWindow */,
+				AA5162DC2710279800118A2A /* MapStatusWindow */,
 				AA4E9F712709C00C00D4F7C8 /* MapMessageWindow */,
 			);
 			path = DQMapScene;
@@ -854,6 +860,22 @@
 				AA5162D02710203200118A2A /* SpellMessageWindowNodeButtonA.swift */,
 			);
 			path = SpellMessageWindow;
+			sourceTree = "<group>";
+		};
+		AA5162DC2710279800118A2A /* MapStatusWindow */ = {
+			isa = PBXGroup;
+			children = (
+				AA5162DD271027A400118A2A /* MapStatusWindowNode.swift */,
+			);
+			path = MapStatusWindow;
+			sourceTree = "<group>";
+		};
+		AA5162DF2710298F00118A2A /* CharacterStatus */ = {
+			isa = PBXGroup;
+			children = (
+				AA5162E02710299900118A2A /* CharacterStatus.swift */,
+			);
+			path = CharacterStatus;
 			sourceTree = "<group>";
 		};
 		AA75B31D270F0F5200C45A6A /* Field */ = {
@@ -1215,6 +1237,7 @@
 				AA75B348270FCF9900C45A6A /* AliahanTownHouseGrandfather.swift in Sources */,
 				AA75B371270FCFF700C45A6A /* AliahanTownLady2.swift in Sources */,
 				AA516299271005EF00118A2A /* AliahanTownHouseSceneNpcMove.swift in Sources */,
+				AA5162DE271027A400118A2A /* MapStatusWindowNode.swift in Sources */,
 				AA4E9F1D2709BC2300D4F7C8 /* TitleScene.swift in Sources */,
 				AA4E9F8A2709C14800D4F7C8 /* AliahanTownHouseScene.swift in Sources */,
 				AA75B36A270FCFF700C45A6A /* AliahanTownLuida.swift in Sources */,
@@ -1234,6 +1257,7 @@
 				AA5162D9271020D800118A2A /* BaseSceneTransitionToMapWithZoom.swift in Sources */,
 				AA75B36E270FCFF700C45A6A /* AliahanTownMother.swift in Sources */,
 				AA4E9F252709BD4300D4F7C8 /* AdventureLogSceneButton.swift in Sources */,
+				AA5162E12710299900118A2A /* CharacterStatus.swift in Sources */,
 				AAC72534270B326500C44CEE /* ContentViewDebug.swift in Sources */,
 				AA75B376270FCFF700C45A6A /* AliahanTownWarrior1.swift in Sources */,
 				AA4E9F412709BE1400D4F7C8 /* Window.swift in Sources */,
@@ -1469,7 +1493,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.15;
+				MARKETING_VERSION = 0.16;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1499,7 +1523,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.15;
+				MARKETING_VERSION = 0.16;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
