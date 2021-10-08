@@ -22,7 +22,8 @@ func setDebugAdventureLog() {
     // adventureLog.dqSceneType = .opening
     // adventureLog.dqSceneType = .aliahan_town_house
     // adventureLog.dqSceneType = .aliahan_town
-    adventureLog.dqSceneType = .field
+    // adventureLog.dqSceneType = .field
+    adventureLog.dqSceneType = .alltrades_abbey
     
     // adventureLog.dqStory = .opening
     // adventureLog.dqStory = .mother_waiting
@@ -51,9 +52,29 @@ func setDebugAdventureLog() {
     
     if adventureLog.dqSceneType == .field {
         for node in adventureLog.partyCharacterNodes {
-            node.positionX = FieldAliahanPositionX
-            node.positionY = FieldAliahanPositionY
+            //            node.positionX = FieldAliahanPositionX
+            //            node.positionY = FieldAliahanPositionY
+            
+            node.positionX = ZoomAlltradesAbbeyPositionX
+            node.positionY = ZoomAlltradesAbbeyPositionY
         }
+        
+        // 船/ラーミアの位置決定
+        DataManager.currentZoomArea = .alltrades_abbey  // .aliahan
+    }
+    else if adventureLog.dqSceneType == .alltrades_abbey {
+        for (index, node) in adventureLog.partyCharacterNodes.enumerated() {
+            node.positionX = AlltradesAbbeyGameStartPositionX
+            node.positionY = AlltradesAbbeyGameStartPositionY - index
+            node.direction = AlltradesAbbeyGameStartDirection
+            
+            if 0 < index {
+                DataManager.queueFollowDirections.append(AlltradesAbbeyGameStartDirection)
+            }
+        }
+        
+        // 船/ラーミアの位置決定
+        DataManager.currentZoomArea = .alltrades_abbey
     }
     else if adventureLog.dqSceneType == .aliahan_town {
         for node in adventureLog.partyCharacterNodes {

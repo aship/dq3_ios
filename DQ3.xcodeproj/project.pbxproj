@@ -189,6 +189,18 @@
 		AAC72532270AE26500C44CEE /* MapMessageWindowNodeMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC7252F270AE26500C44CEE /* MapMessageWindowNodeMark.swift */; };
 		AAC72534270B326500C44CEE /* ContentViewDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC72533270B326500C44CEE /* ContentViewDebug.swift */; };
 		AAC72538270BCB1F00C44CEE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC72537270BCB1F00C44CEE /* DataManager.swift */; };
+		AAE0B4E027106185001FC1D0 /* AlltradesAbbeyScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0B4DA27106185001FC1D0 /* AlltradesAbbeyScene.swift */; };
+		AAE0B4E127106185001FC1D0 /* alltrades_abbey.csv in Resources */ = {isa = PBXBuildFile; fileRef = AAE0B4DB27106185001FC1D0 /* alltrades_abbey.csv */; };
+		AAE0B4E227106185001FC1D0 /* AlltradesAbbeySceneCheckPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0B4DC27106185001FC1D0 /* AlltradesAbbeySceneCheckPosition.swift */; };
+		AAE0B4E327106185001FC1D0 /* AlltradesAbbeySceneNpcCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0B4DD27106185001FC1D0 /* AlltradesAbbeySceneNpcCharacters.swift */; };
+		AAE0B4E427106185001FC1D0 /* AlltradesAbbeySceneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0B4DE27106185001FC1D0 /* AlltradesAbbeySceneButton.swift */; };
+		AAE0B4E527106185001FC1D0 /* AlltradesAbbeySceneCheckCanMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0B4DF27106185001FC1D0 /* AlltradesAbbeySceneCheckCanMove.swift */; };
+		AAE0B4E9271061B2001FC1D0 /* TalkMessageWindowNodeAlltradesAbbey.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0B4E7271061B2001FC1D0 /* TalkMessageWindowNodeAlltradesAbbey.swift */; };
+		AAE0B4EA271061B2001FC1D0 /* TalkMessageWindowNodeAlltradesAbbeyButtonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0B4E8271061B2001FC1D0 /* TalkMessageWindowNodeAlltradesAbbeyButtonA.swift */; };
+		AAE0B4EE271061CF001FC1D0 /* AlltradesAbbeyTalkMessageYesNoWindowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0B4ED271061CF001FC1D0 /* AlltradesAbbeyTalkMessageYesNoWindowNode.swift */; };
+		AAE0B4F0271061D7001FC1D0 /* AlltradesAbbeyMinister.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0B4EF271061D7001FC1D0 /* AlltradesAbbeyMinister.swift */; };
+		AAE0B4F1271061D7001FC1D0 /* AlltradesAbbeyMinister.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0B4EF271061D7001FC1D0 /* AlltradesAbbeyMinister.swift */; };
+		AAE0B4F327106207001FC1D0 /* AlltradesAbbey.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0B4F227106207001FC1D0 /* AlltradesAbbey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -293,7 +305,6 @@
 		AA4E9FA62709C67E00D4F7C8 /* AliahanTownSceneButtonAOpening.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliahanTownSceneButtonAOpening.swift; sourceTree = "<group>"; };
 		AA4E9FA72709C67E00D4F7C8 /* AliahanTownSceneButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliahanTownSceneButton.swift; sourceTree = "<group>"; };
 		AA4E9FB5270A93D300D4F7C8 /* CharacterAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterAnimation.swift; sourceTree = "<group>"; };
-		AA4E9FB7270A993D00D4F7C8 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		AA4E9FBA270A996000D4F7C8 /* AdventureLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLog.swift; sourceTree = "<group>"; };
 		AA4E9FC1270A99E600D4F7C8 /* CharacterNodePosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterNodePosition.swift; sourceTree = "<group>"; };
 		AA4E9FC2270A99E600D4F7C8 /* CharacterNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterNode.swift; sourceTree = "<group>"; };
@@ -395,6 +406,17 @@
 		AAC7252F270AE26500C44CEE /* MapMessageWindowNodeMark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapMessageWindowNodeMark.swift; sourceTree = "<group>"; };
 		AAC72533270B326500C44CEE /* ContentViewDebug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewDebug.swift; sourceTree = "<group>"; };
 		AAC72537270BCB1F00C44CEE /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		AAE0B4DA27106185001FC1D0 /* AlltradesAbbeyScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlltradesAbbeyScene.swift; sourceTree = "<group>"; };
+		AAE0B4DB27106185001FC1D0 /* alltrades_abbey.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = alltrades_abbey.csv; sourceTree = "<group>"; };
+		AAE0B4DC27106185001FC1D0 /* AlltradesAbbeySceneCheckPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlltradesAbbeySceneCheckPosition.swift; sourceTree = "<group>"; };
+		AAE0B4DD27106185001FC1D0 /* AlltradesAbbeySceneNpcCharacters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlltradesAbbeySceneNpcCharacters.swift; sourceTree = "<group>"; };
+		AAE0B4DE27106185001FC1D0 /* AlltradesAbbeySceneButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlltradesAbbeySceneButton.swift; sourceTree = "<group>"; };
+		AAE0B4DF27106185001FC1D0 /* AlltradesAbbeySceneCheckCanMove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlltradesAbbeySceneCheckCanMove.swift; sourceTree = "<group>"; };
+		AAE0B4E7271061B2001FC1D0 /* TalkMessageWindowNodeAlltradesAbbey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkMessageWindowNodeAlltradesAbbey.swift; sourceTree = "<group>"; };
+		AAE0B4E8271061B2001FC1D0 /* TalkMessageWindowNodeAlltradesAbbeyButtonA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkMessageWindowNodeAlltradesAbbeyButtonA.swift; sourceTree = "<group>"; };
+		AAE0B4ED271061CF001FC1D0 /* AlltradesAbbeyTalkMessageYesNoWindowNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlltradesAbbeyTalkMessageYesNoWindowNode.swift; sourceTree = "<group>"; };
+		AAE0B4EF271061D7001FC1D0 /* AlltradesAbbeyMinister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlltradesAbbeyMinister.swift; sourceTree = "<group>"; };
+		AAE0B4F227106207001FC1D0 /* AlltradesAbbey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlltradesAbbey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -711,6 +733,7 @@
 		AA4E9F972709C1DF00D4F7C8 /* CharacterPositions */ = {
 			isa = PBXGroup;
 			children = (
+				AAE0B4F227106207001FC1D0 /* AlltradesAbbey.swift */,
 				AA4E9F992709C1F200D4F7C8 /* AliahanTownHouse.swift */,
 				AA4E9F982709C1F200D4F7C8 /* AliahanTown.swift */,
 				AA75B328270F0FA000C45A6A /* Field.swift */,
@@ -764,6 +787,7 @@
 				AA4E9F592709BF6800D4F7C8 /* Opening */,
 				AA4E9F7E2709C13800D4F7C8 /* AliahanTownHouse */,
 				AA4E9F9C2709C66100D4F7C8 /* AliahanTown */,
+				AAE0B4D927106160001FC1D0 /* AlltradesAbbey */,
 				AA51629C27100C3F00118A2A /* DQMapShipScene */,
 				AA4E9FCD270ACE3F00D4F7C8 /* DQMapScene.swift */,
 				AA4E9FCE270ACE3F00D4F7C8 /* DQMapSceneButtonA.swift */,
@@ -917,6 +941,7 @@
 				AA75B333270FCF4A00C45A6A /* BaseYesNoWindow */,
 				AA75B335270FCF5400C45A6A /* AliahanTownHouse */,
 				AA75B334270FCF4F00C45A6A /* AliahanTown */,
+				AAE0B4E6271061A2001FC1D0 /* AlltradesAbbey */,
 			);
 			path = TalkMessageWindow;
 			sourceTree = "<group>";
@@ -1011,6 +1036,46 @@
 				AA75B354270FCFE600C45A6A /* TalkMessageLuidaWishWindowNodeTriangle.swift */,
 			);
 			path = TalkMessageLuidaWishWindow;
+			sourceTree = "<group>";
+		};
+		AAE0B4D927106160001FC1D0 /* AlltradesAbbey */ = {
+			isa = PBXGroup;
+			children = (
+				AAE0B4DB27106185001FC1D0 /* alltrades_abbey.csv */,
+				AAE0B4DA27106185001FC1D0 /* AlltradesAbbeyScene.swift */,
+				AAE0B4DE27106185001FC1D0 /* AlltradesAbbeySceneButton.swift */,
+				AAE0B4DF27106185001FC1D0 /* AlltradesAbbeySceneCheckCanMove.swift */,
+				AAE0B4DC27106185001FC1D0 /* AlltradesAbbeySceneCheckPosition.swift */,
+				AAE0B4DD27106185001FC1D0 /* AlltradesAbbeySceneNpcCharacters.swift */,
+			);
+			path = AlltradesAbbey;
+			sourceTree = "<group>";
+		};
+		AAE0B4E6271061A2001FC1D0 /* AlltradesAbbey */ = {
+			isa = PBXGroup;
+			children = (
+				AAE0B4E7271061B2001FC1D0 /* TalkMessageWindowNodeAlltradesAbbey.swift */,
+				AAE0B4E8271061B2001FC1D0 /* TalkMessageWindowNodeAlltradesAbbeyButtonA.swift */,
+				AAE0B4EB271061B8001FC1D0 /* Characters */,
+				AAE0B4EC271061C0001FC1D0 /* YesNoWindow */,
+			);
+			path = AlltradesAbbey;
+			sourceTree = "<group>";
+		};
+		AAE0B4EB271061B8001FC1D0 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				AAE0B4EF271061D7001FC1D0 /* AlltradesAbbeyMinister.swift */,
+			);
+			path = Characters;
+			sourceTree = "<group>";
+		};
+		AAE0B4EC271061C0001FC1D0 /* YesNoWindow */ = {
+			isa = PBXGroup;
+			children = (
+				AAE0B4ED271061CF001FC1D0 /* AlltradesAbbeyTalkMessageYesNoWindowNode.swift */,
+			);
+			path = YesNoWindow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1136,6 +1201,7 @@
 				AA4E9ED62709B7F400D4F7C8 /* Assets.xcassets in Resources */,
 				AA4E9F132709BA4000D4F7C8 /* spell.mp3 in Resources */,
 				AA4E9F172709BA4000D4F7C8 /* message.mp3 in Resources */,
+				AAE0B4E127106185001FC1D0 /* alltrades_abbey.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1162,6 +1228,8 @@
 			files = (
 				AA51629B271005F700118A2A /* AliahanTownSceneNpcMove.swift in Sources */,
 				AA4E9F492709BE4E00D4F7C8 /* DQFontLittleDashes.swift in Sources */,
+				AAE0B4F0271061D7001FC1D0 /* AlltradesAbbeyMinister.swift in Sources */,
+				AAE0B4E9271061B2001FC1D0 /* TalkMessageWindowNodeAlltradesAbbey.swift in Sources */,
 				AA4E9F352709BDC000D4F7C8 /* ButtonOverlay.swift in Sources */,
 				AA75B34C270FCFBD00C45A6A /* TalkMessageWindowNodeAliahanTownButtonA.swift in Sources */,
 				AA4E9F762709C02000D4F7C8 /* MapMessageWindowNodeLine.swift in Sources */,
@@ -1244,6 +1312,7 @@
 				AA4E9F6E2709BFF100D4F7C8 /* DQMapScenePartyCharacters.swift in Sources */,
 				AA75B374270FCFF700C45A6A /* AliahanTownInn.swift in Sources */,
 				AA4E9FB22709C67F00D4F7C8 /* AliahanTownSceneButtonAOpening.swift in Sources */,
+				AAE0B4EE271061CF001FC1D0 /* AlltradesAbbeyTalkMessageYesNoWindowNode.swift in Sources */,
 				AA75B355270FCFE600C45A6A /* TalkMessageLuidaWishWindowNodeButtonA.swift in Sources */,
 				AA75B329270F0FA000C45A6A /* Field.swift in Sources */,
 				AA4E9FF0270AD89200D4F7C8 /* DQScene.swift in Sources */,
@@ -1273,6 +1342,7 @@
 				AA4E9F522709BE7900D4F7C8 /* AudioManager.swift in Sources */,
 				AA4E9F272709BD4300D4F7C8 /* AdventureLogScene.swift in Sources */,
 				AA4E9FCF270ACE3F00D4F7C8 /* DQMapSceneButtonB.swift in Sources */,
+				AAE0B4E227106185001FC1D0 /* AlltradesAbbeySceneCheckPosition.swift in Sources */,
 				AA75B327270F0F6700C45A6A /* FieldScene.swift in Sources */,
 				AA5162D52710206400118A2A /* ZoomPosition.swift in Sources */,
 				AA4E9FE9270AD1FC00D4F7C8 /* Typealiases.swift in Sources */,
@@ -1286,13 +1356,17 @@
 				AA75B36D270FCFF700C45A6A /* AliahanTownBoy1.swift in Sources */,
 				AA75B375270FCFF700C45A6A /* AliahanTownOldMan1.swift in Sources */,
 				AA4E9FDE270ACF5300D4F7C8 /* BaseSceneStick.swift in Sources */,
+				AAE0B4E427106185001FC1D0 /* AlltradesAbbeySceneButton.swift in Sources */,
 				AA75B37B270FD25300C45A6A /* MessageSoundManager.swift in Sources */,
+				AAE0B4E327106185001FC1D0 /* AlltradesAbbeySceneNpcCharacters.swift in Sources */,
 				AA4E9F902709C14800D4F7C8 /* AliahanTownHouseScenePartyCharacters.swift in Sources */,
 				AA75B379270FCFF700C45A6A /* AliahanTownLady1.swift in Sources */,
 				AA4E9F3E2709BE1400D4F7C8 /* Triangle.swift in Sources */,
 				AA4E9FB6270A93D300D4F7C8 /* CharacterAnimation.swift in Sources */,
+				AAE0B4EA271061B2001FC1D0 /* TalkMessageWindowNodeAlltradesAbbeyButtonA.swift in Sources */,
 				AAC72538270BCB1F00C44CEE /* DataManager.swift in Sources */,
 				AA5162C927101EC100118A2A /* MapCommandZoomWindowNodeButtonA.swift in Sources */,
+				AAE0B4E027106185001FC1D0 /* AlltradesAbbeyScene.swift in Sources */,
 				AA5162D22710203200118A2A /* SpellMessageWindowNodeButtonA.swift in Sources */,
 				AA75B36B270FCFF700C45A6A /* AliahanTownWeaponShop.swift in Sources */,
 				AA75B356270FCFE600C45A6A /* TalkMessageLuidaWishWindowNode.swift in Sources */,
@@ -1311,10 +1385,12 @@
 				AA75B324270F0F6700C45A6A /* FieldSceneButton.swift in Sources */,
 				AA5162A127100C5100118A2A /* DQMapShipSceneShipLanding.swift in Sources */,
 				AA75B342270FCF8800C45A6A /* TalkMessageWindowNodeAliahanTownHouse.swift in Sources */,
+				AAE0B4E527106185001FC1D0 /* AlltradesAbbeySceneCheckCanMove.swift in Sources */,
 				AA4E9FC7270A99E600D4F7C8 /* CharacterNodeMove.swift in Sources */,
 				AA5162CD27101EE400118A2A /* DQZoom.swift in Sources */,
 				AA5162DB271023E400118A2A /* MapCommandWindowNodeSpell.swift in Sources */,
 				AA4E9F302709BD9400D4F7C8 /* BaseScene.swift in Sources */,
+				AAE0B4F327106207001FC1D0 /* AlltradesAbbey.swift in Sources */,
 				AA5162B12710180A00118A2A /* FieldSceneRamiaGetOff.swift in Sources */,
 				AA75B372270FCFF700C45A6A /* AliahanTownBoy2.swift in Sources */,
 				AA4E9F7B2709C0BA00D4F7C8 /* DQCharacter.swift in Sources */,
@@ -1336,6 +1412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA4E9EED2709B7F400D4F7C8 /* DQ3UITests.swift in Sources */,
+				AAE0B4F1271061D7001FC1D0 /* AlltradesAbbeyMinister.swift in Sources */,
 				AA4E9EEF2709B7F400D4F7C8 /* DQ3UITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1493,7 +1570,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.16;
+				MARKETING_VERSION = 0.17;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1523,7 +1600,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.16;
+				MARKETING_VERSION = 0.17;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

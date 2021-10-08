@@ -16,6 +16,7 @@ extension BaseScene {
         case .aliahan_town: dqMapScene = self.aliahanTownScene
         case .aliahan_town_house: dqMapScene = self.aliahanTownHouseScene
         case .field: dqMapScene = self.fieldScene
+        case .alltrades_abbey: dqMapScene = self.alltradesAbbeyScene
         }
         
         return dqMapScene
