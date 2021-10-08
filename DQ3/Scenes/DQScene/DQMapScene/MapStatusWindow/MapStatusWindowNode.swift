@@ -95,9 +95,9 @@ class MapStatusWindowNode: SKTileMapNode {
         
         switch dqVocation {
         case .hero: vocationLetter = "ゆ"
-        case .warrior_female: vocationLetter = "せ"
-        case .priest_female: vocationLetter = "そ"
-        case .mage_female: vocationLetter = "ま"
+        case .warrior: vocationLetter = "せ"
+        case .priest: vocationLetter = "そ"
+        case .mage: vocationLetter = "ま"
         }
         
         let hpString = String(format: "%3d", hp)
