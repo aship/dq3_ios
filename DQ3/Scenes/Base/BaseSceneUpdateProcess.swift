@@ -17,6 +17,35 @@ extension BaseScene {
                        checkCanMove: CheckCanMove?,
                        completion: @escaping (_ newPositionX: Int,
                                               _ newPositionY: Int) -> Void) {
+        if self.fieldMoveMode == .walk &&
+            self.ramiaDirection != .neutral {
+            // ラーミアから降りたら、即座に neutral にする
+            self.ramiaDirection = .neutral
+            self.padDirection = .neutral
+            
+            return
+        }
+        
+        if self.fieldMoveMode == .ramia {
+            if padDirection == .neutral {
+                if self.ramiaDirection != .neutral {
+                    // auto 移動のため、padDirection 書き換え
+                    self.padDirection = self.ramiaDirection
+                }
+            }
+            else {
+                if self.ramiaDirection == .neutral {
+                    // ラーミア乗った瞬間は動かないが、
+                    // 1歩でも動くと autoで動きだす
+                    // 1歩でも動いたら方向をセット
+                    self.ramiaDirection = padDirection
+                }
+                else if self.ramiaDirection != .neutral {
+                    self.ramiaDirection = padDirection
+                }
+            }
+        }
+        
         if padDirection == .neutral {
             return
         }

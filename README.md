@@ -3,7 +3,7 @@
 
 # Dragon Quest III iOS
 
-![](https://img.shields.io/badge/version-0.13-orange.svg)
+![](https://img.shields.io/badge/version-0.14-orange.svg)
 ![](https://img.shields.io/badge/iOS-15-brightgreen.svg)
 ![](https://img.shields.io/badge/SpriteKit-yellowgreen.svg)
 ![](https://img.shields.io/badge/SwiftUI-yellow.svg)
