@@ -30,6 +30,7 @@ class BaseScene: SKScene,
     var aliahanTownHouseScene: AliahanTownHouseScene?
     var fieldScene: FieldScene?
     var alltradesAbbeyScene: AlltradesAbbeyScene?
+    var battleScene: BattleScene?
     
     override func sceneDidLoad() {
         setupNotificationCenter()

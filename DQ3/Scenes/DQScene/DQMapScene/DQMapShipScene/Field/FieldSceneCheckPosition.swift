@@ -13,10 +13,7 @@ extension FieldScene {
         var enterAliahan = false
         var enterAlltradesAbbey = false
         var enterShip = false
-        
-        enterAliahan = checkEnterAliahan(newPositionX: newPositionX,
-                                         newPositionY: newPositionY)
-        
+        var enterBattle = false
         
         if self.scene.fieldMoveMode == .walk {
             enterAliahan = checkEnterAliahan(newPositionX: newPositionX,
@@ -29,6 +26,10 @@ extension FieldScene {
                 enterShip = checkBoardingShip(newPositionX: newPositionX,
                                               newPositionY: newPositionY)
             }
+        }
+        
+        if self.scene.fieldMoveMode != .ramia {
+            enterBattle = checkEnterBattle()
         }
         
         if enterAliahan {
@@ -45,6 +46,9 @@ extension FieldScene {
                                 scale: self.scene.scale,
                                 newPositionX: newPositionX,
                                 newPositionY: newPositionY)
+        }
+        else if enterBattle {
+            processEnterBattle()
         }
     }
     
@@ -104,5 +108,32 @@ extension FieldScene {
             dqSceneTypeFrom: .field,
             dqSceneTypeTo: .alltrades_abbey,
             dqAudio: .castle)
+    }
+    
+    private func checkEnterBattle() -> Bool {
+        let battleRandomMax = 1000
+        let iValue = Int.random(in: 1 ... battleRandomMax)
+        
+        self.enterBattlePoint +=  iValue
+        
+        if 1000 < self.enterBattlePoint ||
+            iValue == battleRandomMax {
+            return true
+        }
+        
+        return false
+    }
+    
+    private func processEnterBattle() {
+        if DebugNoBattle {
+            return
+        }
+        
+        let headNode = DataManager.adventureLog.partyCharacterNodes.first!
+        headNode.setMoveProhibited()
+        
+        let dqSceneType = DataManager.adventureLog.dqSceneType
+        
+        self.scene.transitionToBattle(dqSceneTypeFrom: dqSceneType)
     }
 }

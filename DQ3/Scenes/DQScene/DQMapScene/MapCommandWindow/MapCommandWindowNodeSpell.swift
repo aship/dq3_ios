@@ -8,7 +8,7 @@
 import SpriteKit
 
 extension MapCommandWindowNode {
-    internal func processSpellButtonA() {
+    func processSpellButtonA() {
         if let mapCommandWhoWindowNode = self.mapCommandWhoWindowNode {
             mapCommandWhoWindowNode.processButtonA()
             

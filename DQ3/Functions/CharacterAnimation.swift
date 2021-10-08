@@ -9,19 +9,24 @@ import SpriteKit
 
 func getCharacterAnimationAction(direction: Direction,
                                  dqCharacter: DQCharacter) -> SKAction {
-    let characterString = dqCharacter.rawValue
-    let vocatinString = characterString.components(separatedBy: "_").first!
-    
-    let dqVocation = DQVocation(rawValue: vocatinString)
-    
-    var type = "vocation"
+    var type = ""
     
     if dqCharacter.rawValue == "ship" ||
         dqCharacter.rawValue == "ramia" {
         type = "vehicle"
     }
-    else if dqVocation == nil {
-        type = "npc"
+    else {
+        let characterString = dqCharacter.rawValue
+        let vocatinString = characterString.components(separatedBy: "_").first!
+        
+        let dqVocation = DQVocation(rawValue: vocatinString)
+        
+        if dqVocation == nil {
+            type = "npc"
+        }
+        else {
+            type = "vocation"
+        }
     }
     
     let imagePath = "character/\(type)/\(dqCharacter.rawValue)"

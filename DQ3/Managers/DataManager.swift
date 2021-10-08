@@ -27,6 +27,9 @@ class DataManager {
     static var ramiaPositionY = 0
     static var ramiaDirection: Direction = .up
     
+    // 戦闘から戻るときに使う type
+    static var dqSceneTypeFromBattle: DQSceneType = .field
+    
     // 冒険の書を再開した場所 or 最後にルーラで到着した場所
     // 船/ラーミアの初期位置リセットのために使う
     static var currentZoomArea: DQZoom = .aliahan

@@ -17,8 +17,20 @@ extension BaseScene {
         case .aliahan_town_house: dqMapScene = self.aliahanTownHouseScene
         case .field: dqMapScene = self.fieldScene
         case .alltrades_abbey: dqMapScene = self.alltradesAbbeyScene
+        default: break
         }
         
         return dqMapScene
+    }
+    
+    func getDQScene(dqSceneType: DQSceneType) -> DQScene? {
+        var dqScene: DQScene?
+        
+        switch dqSceneType {
+        case .battle: dqScene = self.battleScene
+        default: break
+        }
+        
+        return dqScene
     }
 }
