@@ -13,6 +13,7 @@ extension BaseScene {
                          buttonB: ButtonOverlay) {
         self.view?.isMultipleTouchEnabled = true
         
+        leftPad.zPosition = ZPositionVirtualPad
         leftPad.position = CGPoint(x: CGFloat(20 - ScreenWidth / 2),
                                    y: CGFloat(20 - ScreenHeight / 2))
         self.addChild(leftPad)
@@ -27,6 +28,7 @@ extension BaseScene {
         let buttonAx = center.x - CGFloat(buttonDistance) * CGFloat(cosf(Float.pi / 2.0)) - (buttonA.size.width / 2)
         let buttonAy = center.y + CGFloat(buttonDistance) * CGFloat(sinf(Float.pi / 2.0)) - (buttonA.size.height / 2)
         
+        buttonA.zPosition = ZPositionVirtualPad
         buttonA.position = CGPoint(x: buttonAx + diffX,
                                    y: buttonAy + diffY)
         self.addChild(buttonA)
@@ -34,6 +36,7 @@ extension BaseScene {
         let buttonBx = center.x - CGFloat(buttonDistance) * CGFloat(cosf(Float.pi / 4.0)) - (buttonA.size.width / 2)
         let buttonBy = center.y + CGFloat(buttonDistance) * CGFloat(sinf(Float.pi / 4.0)) - (buttonA.size.height / 2)
         
+        buttonB.zPosition = ZPositionVirtualPad
         buttonB.position = CGPoint(x: buttonBx + diffX,
                                    y: buttonBy + diffY)
         self.addChild(buttonB)

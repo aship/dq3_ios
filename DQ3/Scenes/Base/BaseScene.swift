@@ -21,8 +21,6 @@ class BaseScene: SKScene,
     
     var padDirection: Direction = .neutral
     
-    var triangleNode = SKSpriteNode()
-    
     let blackScreenNode = SKSpriteNode()
     
     var titleScene: TitleScene?
@@ -51,7 +49,7 @@ class BaseScene: SKScene,
                                            height: ScreenHeight)
         self.blackScreenNode.color = .black
         self.blackScreenNode.alpha = 0.0
-        self.blackScreenNode.zPosition = 9
+        self.blackScreenNode.zPosition = ZPositionBlackScreen
         self.addChild(blackScreenNode)
     }
     

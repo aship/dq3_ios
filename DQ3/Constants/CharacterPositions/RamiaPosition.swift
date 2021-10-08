@@ -65,12 +65,58 @@ let RamiaManozaPositionY = 105
 let RamiaPersistencePositionX = 212
 let RamiaPersistencePositionY = 183
 
-func getRamiaDefaltPosition() -> (Int, Int) {
+func getRamiaDefaltPosition(dqZoom: DQZoom) -> (Int, Int) {
     var positionX = 0
     var positionY = 0
     
-    positionX = RamiaAliahanPositionX
-    positionY = RamiaAliahanPositionY
+    switch dqZoom {
+    case .aliahan:
+        positionX = RamiaAliahanPositionX
+        positionY = RamiaAliahanPositionY
+    case .reeve:
+        positionX = RamiaReevePositionX
+        positionY = RamiaReevePositionY
+    case .romaria:
+        positionX = RamiaRomariaPositionX
+        positionY = RamiaRomariaPositionY
+    case .khoryv:
+        positionX = RamiaKhoryvPositionX
+        positionY = RamiaKhoryvPositionY
+    case .norvik:
+        positionX = RamiaNorvikPositionX
+        positionY = RamiaNorvikPositionY
+    case .asham:
+        positionX = RamiaAshamPositionX
+        positionY = RamiaAshamPositionY
+    case .isis:
+        positionX = RamiaIsisPositionX
+        positionY = RamiaIsisPositionY
+    case .portoga:
+        positionX = RamiaPortogaPositionX
+        positionY = RamiaPortogaPositionY
+    case .baharata:
+        positionX = RamiaBaharataPositionX
+        positionY = RamiaBaharataPositionY
+    case .alltrades_abbey:
+        positionX = RamiaAlltradesSbbeyPositionX
+        positionY = RamiaAlltradesSbbeyPositionY
+    case .lanson:
+        positionX = RamiaLansonPositionX
+        positionY = RamiaLansonPositionY
+    case .jipang:
+        positionX = RamiaJipangPositionX
+        positionY = RamiaJipangPositionY
+    case .edina:
+        positionX = RamiaEdinaPositionX
+        positionY = RamiaEdinaPositionY
+    case .manoza:
+        positionX = RamiaManozaPositionX
+        positionY = RamiaManozaPositionY
+    case .persistence:
+        positionX = RamiaPersistencePositionX
+        positionY = RamiaPersistencePositionY
+    default: break
+    }
     
     return (positionX, positionY)
 }
