@@ -98,6 +98,10 @@ class MapStatusWindowNode: SKTileMapNode {
         case .warrior: vocationLetter = "せ"
         case .priest: vocationLetter = "そ"
         case .mage: vocationLetter = "ま"
+        case .martial_artist: vocationLetter = "ぶ"
+        case .merchant: vocationLetter = "し"
+        case .gadabout: vocationLetter = "あ"
+        case .sage: vocationLetter = "け"
         }
         
         let hpString = String(format: "%3d", hp)
