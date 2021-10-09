@@ -101,6 +101,11 @@ extension BaseScene {
                                                                   newPositionX: newPositionX,
                                                                   newPositionY: newPositionY)
             }
+            else if DataManager.adventureLog.dqSceneType == .alefgard {
+                isLanding = self.alefgardScene?.checkLandingFromShip(tileMapNode: tileMapNode,
+                                                                     newPositionX: newPositionX,
+                                                                     newPositionY: newPositionY)
+            }
             
             if isLanding! {
                 queueFollowDirections = []
@@ -110,6 +115,12 @@ extension BaseScene {
                     self.fieldScene?.processLandingFromShip(characterNodes: &characterNodes,
                                                             tileMapNode: tileMapNode,
                                                             scale: scale)
+                }
+                else if DataManager.adventureLog.dqSceneType == .alefgard {
+                    // 船を降りる処理
+                    self.alefgardScene?.processLandingFromShip(characterNodes: &characterNodes,
+                                                               tileMapNode: tileMapNode,
+                                                               scale: scale)
                 }
             }
             else {
@@ -128,6 +139,7 @@ extension BaseScene {
                       tileMapNode: tileMapNode,
                       withMoveMap: true,
                       scale: self.scale) {
+            //     print("SET MOVING FALSE")
             headNode.isMoving = false
             
             completion(newPositionX,

@@ -49,5 +49,11 @@ extension BattleCommandWindowNode {
                                            dqAudio: dqAudio)
             }
         }
+        else if DataManager.dqSceneTypeFromBattle == .alefgard {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                scene.transitionFromBattle(dqSceneType: .alefgard,
+                                           dqAudio: .alefgard)
+            }
+        }
     }
 }

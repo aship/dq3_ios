@@ -49,6 +49,16 @@ extension BaseScene {
         case .alltrades_abbey:
             self.alltradesAbbeyScene = AlltradesAbbeyScene(scene: self)
             self.alltradesAbbeyScene?.setup()
+        case .alefgard:
+            self.alefgardScene = AlefgardScene(scene: self)
+            
+            var dqAudio: DQAudio = .alefgard
+            
+            if self.fieldMoveMode == .ship {
+                dqAudio = .ship
+            }
+            
+            self.alefgardScene?.setup(dqAudio: dqAudio)
         case .battle:
             self.battleScene = BattleScene(scene: self)
             self.battleScene?.setup()
