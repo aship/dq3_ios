@@ -11,8 +11,14 @@ extension BaseScene {
     override func update(_ currentTime: TimeInterval) {
         let dqMainState = DataManager.dqMainState
         
-        if dqMainState == .title ||
-            dqMainState == .select_adventure_log {
+        if dqMainState == .title {
+            return
+        }
+        
+        if  dqMainState == .select_adventure_log {
+            let adventureLogTopWindowNode = self.adventureLogScene?.adventureLogTopWindowNode
+            adventureLogTopWindowNode?.moveTriangle(direction: self.padDirection)
+            
             return
         }
         

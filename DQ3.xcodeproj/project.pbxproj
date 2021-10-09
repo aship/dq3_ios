@@ -183,6 +183,29 @@
 		AA75B37B270FD25300C45A6A /* MessageSoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75B37A270FD25300C45A6A /* MessageSoundManager.swift */; };
 		AA75B37D270FD2D000C45A6A /* NextElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75B37C270FD2D000C45A6A /* NextElement.swift */; };
 		AA75B37F270FD43000C45A6A /* MapCommandWindowNodeTalk.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75B37E270FD43000C45A6A /* MapCommandWindowNodeTalk.swift */; };
+		AA9763BC2710FB5B002392CF /* AdventureLogTopWindowNodeTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9763BB2710FB5B002392CF /* AdventureLogTopWindowNodeTriangle.swift */; };
+		AA9763C32710FBAA002392CF /* AdventureLogSelectLogWindowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9763C02710FBAA002392CF /* AdventureLogSelectLogWindowNode.swift */; };
+		AA9763C42710FBAA002392CF /* AdventureLogSelectLogWindowNodeTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9763C12710FBAA002392CF /* AdventureLogSelectLogWindowNodeTriangle.swift */; };
+		AA9763C52710FBAA002392CF /* AdventureLogSelectLogWindowNodeButtonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9763C22710FBAA002392CF /* AdventureLogSelectLogWindowNodeButtonA.swift */; };
+		AA9763C92710FBC2002392CF /* AdventureLogConfirmDeleteLogWindowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9763C82710FBC2002392CF /* AdventureLogConfirmDeleteLogWindowNode.swift */; };
+		AA9763CD2710FBD6002392CF /* AdventureLogYesNoDeleteLogWindowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9763CA2710FBD6002392CF /* AdventureLogYesNoDeleteLogWindowNode.swift */; };
+		AA9763CE2710FBD6002392CF /* AdventureLogYesNoDeleteLogWindowNodeButtonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9763CB2710FBD6002392CF /* AdventureLogYesNoDeleteLogWindowNodeButtonA.swift */; };
+		AA9763CF2710FBD6002392CF /* AdventureLogYesNoDeleteLogWindowNodeTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9763CC2710FBD6002392CF /* AdventureLogYesNoDeleteLogWindowNodeTriangle.swift */; };
+		AA9763D32710FC36002392CF /* AdventureLogSelectEmptyLogWindowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9763D02710FC36002392CF /* AdventureLogSelectEmptyLogWindowNode.swift */; };
+		AA9763D42710FC36002392CF /* AdventureLogSelectEmptyLogWindowNodeButtonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9763D12710FC36002392CF /* AdventureLogSelectEmptyLogWindowNodeButtonA.swift */; };
+		AA9763D52710FC36002392CF /* AdventureLogSelectEmptyLogWindowNodeTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9763D22710FC36002392CF /* AdventureLogSelectEmptyLogWindowNodeTriangle.swift */; };
+		AA9763DA2710FC4D002392CF /* AdventureLogInputNameWindowNodeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9763D72710FC4D002392CF /* AdventureLogInputNameWindowNodeButton.swift */; };
+		AA9763DB2710FC4D002392CF /* AdventureLogInputNameWindowNodeTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9763D82710FC4D002392CF /* AdventureLogInputNameWindowNodeTriangle.swift */; };
+		AA9763DC2710FC4D002392CF /* AdventureLogInputNameWindowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9763D92710FC4D002392CF /* AdventureLogInputNameWindowNode.swift */; };
+		AA9763E12710FC5F002392CF /* AdventureLogSelectGenderWindowNodeButtonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9763DE2710FC5F002392CF /* AdventureLogSelectGenderWindowNodeButtonA.swift */; };
+		AA9763E22710FC5F002392CF /* AdventureLogSelectGenderWindowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9763DF2710FC5F002392CF /* AdventureLogSelectGenderWindowNode.swift */; };
+		AA9763E32710FC5F002392CF /* AdventureLogSelectGenderWindowNodeTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9763E02710FC5F002392CF /* AdventureLogSelectGenderWindowNodeTriangle.swift */; };
+		AA9763E72710FC6F002392CF /* AdventureLogMessageSpeedWindowNodeTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9763E42710FC6F002392CF /* AdventureLogMessageSpeedWindowNodeTriangle.swift */; };
+		AA9763E82710FC6F002392CF /* AdventureLogMessageSpeedWindowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9763E52710FC6F002392CF /* AdventureLogMessageSpeedWindowNode.swift */; };
+		AA9763E92710FC6F002392CF /* AdventureLogMessageSpeedWindowNodeButtonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9763E62710FC6F002392CF /* AdventureLogMessageSpeedWindowNodeButtonA.swift */; };
+		AA9763EB27112AC9002392CF /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9763EA27112AC9002392CF /* UserDefaultsUtil.swift */; };
+		AA9763EE27112B0B002392CF /* AdventureLogStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9763EC27112B0A002392CF /* AdventureLogStory.swift */; };
+		AA9763EF27112B0B002392CF /* AdventureLogFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9763ED27112B0B002392CF /* AdventureLogFunctions.swift */; };
 		AAC7252C270ADE3D00C44CEE /* BaseSceneTransitionToScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC7252B270ADE3D00C44CEE /* BaseSceneTransitionToScene.swift */; };
 		AAC72530270AE26500C44CEE /* MapMessageWindowNodeMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC7252D270AE26500C44CEE /* MapMessageWindowNodeMessage.swift */; };
 		AAC72531270AE26500C44CEE /* MapMessageWindowNodeMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC7252E270AE26500C44CEE /* MapMessageWindowNodeMessages.swift */; };
@@ -437,6 +460,29 @@
 		AA75B37A270FD25300C45A6A /* MessageSoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageSoundManager.swift; sourceTree = "<group>"; };
 		AA75B37C270FD2D000C45A6A /* NextElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NextElement.swift; path = ../../../../../Downloads/DQ3copy/DQ3/Functions/NextElement.swift; sourceTree = "<group>"; };
 		AA75B37E270FD43000C45A6A /* MapCommandWindowNodeTalk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapCommandWindowNodeTalk.swift; path = ../../../../../../../../Downloads/DQ3copy/DQ3/Scenes/DQScene/DQMapScene/MapCommandWindow/MapCommandWindowNodeTalk.swift; sourceTree = "<group>"; };
+		AA9763BB2710FB5B002392CF /* AdventureLogTopWindowNodeTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogTopWindowNodeTriangle.swift; sourceTree = "<group>"; };
+		AA9763C02710FBAA002392CF /* AdventureLogSelectLogWindowNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogSelectLogWindowNode.swift; sourceTree = "<group>"; };
+		AA9763C12710FBAA002392CF /* AdventureLogSelectLogWindowNodeTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogSelectLogWindowNodeTriangle.swift; sourceTree = "<group>"; };
+		AA9763C22710FBAA002392CF /* AdventureLogSelectLogWindowNodeButtonA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogSelectLogWindowNodeButtonA.swift; sourceTree = "<group>"; };
+		AA9763C82710FBC2002392CF /* AdventureLogConfirmDeleteLogWindowNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogConfirmDeleteLogWindowNode.swift; sourceTree = "<group>"; };
+		AA9763CA2710FBD6002392CF /* AdventureLogYesNoDeleteLogWindowNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogYesNoDeleteLogWindowNode.swift; sourceTree = "<group>"; };
+		AA9763CB2710FBD6002392CF /* AdventureLogYesNoDeleteLogWindowNodeButtonA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogYesNoDeleteLogWindowNodeButtonA.swift; sourceTree = "<group>"; };
+		AA9763CC2710FBD6002392CF /* AdventureLogYesNoDeleteLogWindowNodeTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogYesNoDeleteLogWindowNodeTriangle.swift; sourceTree = "<group>"; };
+		AA9763D02710FC36002392CF /* AdventureLogSelectEmptyLogWindowNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogSelectEmptyLogWindowNode.swift; sourceTree = "<group>"; };
+		AA9763D12710FC36002392CF /* AdventureLogSelectEmptyLogWindowNodeButtonA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogSelectEmptyLogWindowNodeButtonA.swift; sourceTree = "<group>"; };
+		AA9763D22710FC36002392CF /* AdventureLogSelectEmptyLogWindowNodeTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogSelectEmptyLogWindowNodeTriangle.swift; sourceTree = "<group>"; };
+		AA9763D72710FC4D002392CF /* AdventureLogInputNameWindowNodeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogInputNameWindowNodeButton.swift; sourceTree = "<group>"; };
+		AA9763D82710FC4D002392CF /* AdventureLogInputNameWindowNodeTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogInputNameWindowNodeTriangle.swift; sourceTree = "<group>"; };
+		AA9763D92710FC4D002392CF /* AdventureLogInputNameWindowNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogInputNameWindowNode.swift; sourceTree = "<group>"; };
+		AA9763DE2710FC5F002392CF /* AdventureLogSelectGenderWindowNodeButtonA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogSelectGenderWindowNodeButtonA.swift; sourceTree = "<group>"; };
+		AA9763DF2710FC5F002392CF /* AdventureLogSelectGenderWindowNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogSelectGenderWindowNode.swift; sourceTree = "<group>"; };
+		AA9763E02710FC5F002392CF /* AdventureLogSelectGenderWindowNodeTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogSelectGenderWindowNodeTriangle.swift; sourceTree = "<group>"; };
+		AA9763E42710FC6F002392CF /* AdventureLogMessageSpeedWindowNodeTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogMessageSpeedWindowNodeTriangle.swift; sourceTree = "<group>"; };
+		AA9763E52710FC6F002392CF /* AdventureLogMessageSpeedWindowNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogMessageSpeedWindowNode.swift; sourceTree = "<group>"; };
+		AA9763E62710FC6F002392CF /* AdventureLogMessageSpeedWindowNodeButtonA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogMessageSpeedWindowNodeButtonA.swift; sourceTree = "<group>"; };
+		AA9763EA27112AC9002392CF /* UserDefaultsUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtil.swift; sourceTree = "<group>"; };
+		AA9763EC27112B0A002392CF /* AdventureLogStory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogStory.swift; sourceTree = "<group>"; };
+		AA9763ED27112B0B002392CF /* AdventureLogFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureLogFunctions.swift; sourceTree = "<group>"; };
 		AAC7252B270ADE3D00C44CEE /* BaseSceneTransitionToScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneTransitionToScene.swift; sourceTree = "<group>"; };
 		AAC7252D270AE26500C44CEE /* MapMessageWindowNodeMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapMessageWindowNodeMessage.swift; sourceTree = "<group>"; };
 		AAC7252E270AE26500C44CEE /* MapMessageWindowNodeMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapMessageWindowNodeMessages.swift; sourceTree = "<group>"; };
@@ -690,6 +736,10 @@
 			children = (
 				AA4E9F2A2709BD6900D4F7C8 /* AdventureLogTopWindowNode.swift */,
 				AA4E9F292709BD6900D4F7C8 /* AdventureLogTopWindowNodeButtonA.swift */,
+				AA9763BB2710FB5B002392CF /* AdventureLogTopWindowNodeTriangle.swift */,
+				AA9763BF2710FB96002392CF /* AdventureLogSelectLogWindow */,
+				AA9763BE2710FB8B002392CF /* AdventureLogSelectEmptyLogWindow */,
+				AA9763BD2710FB7A002392CF /* AdventureLogMessageSpeedWindow */,
 			);
 			path = AdventureLogTopWindow;
 			sourceTree = "<group>";
@@ -735,6 +785,7 @@
 				AA4E9F3C2709BE1300D4F7C8 /* Words.swift */,
 				AA4E9FB5270A93D300D4F7C8 /* CharacterAnimation.swift */,
 				AA75B37C270FD2D000C45A6A /* NextElement.swift */,
+				AA9763EA27112AC9002392CF /* UserDefaultsUtil.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -846,6 +897,8 @@
 			isa = PBXGroup;
 			children = (
 				AA4E9FBA270A996000D4F7C8 /* AdventureLog.swift */,
+				AA9763ED27112B0B002392CF /* AdventureLogFunctions.swift */,
+				AA9763EC27112B0A002392CF /* AdventureLogStory.swift */,
 			);
 			path = AdventureLog;
 			sourceTree = "<group>";
@@ -1119,6 +1172,78 @@
 				AA75B354270FCFE600C45A6A /* TalkMessageLuidaWishWindowNodeTriangle.swift */,
 			);
 			path = TalkMessageLuidaWishWindow;
+			sourceTree = "<group>";
+		};
+		AA9763BD2710FB7A002392CF /* AdventureLogMessageSpeedWindow */ = {
+			isa = PBXGroup;
+			children = (
+				AA9763E52710FC6F002392CF /* AdventureLogMessageSpeedWindowNode.swift */,
+				AA9763E62710FC6F002392CF /* AdventureLogMessageSpeedWindowNodeButtonA.swift */,
+				AA9763E42710FC6F002392CF /* AdventureLogMessageSpeedWindowNodeTriangle.swift */,
+			);
+			path = AdventureLogMessageSpeedWindow;
+			sourceTree = "<group>";
+		};
+		AA9763BE2710FB8B002392CF /* AdventureLogSelectEmptyLogWindow */ = {
+			isa = PBXGroup;
+			children = (
+				AA9763D02710FC36002392CF /* AdventureLogSelectEmptyLogWindowNode.swift */,
+				AA9763D12710FC36002392CF /* AdventureLogSelectEmptyLogWindowNodeButtonA.swift */,
+				AA9763D22710FC36002392CF /* AdventureLogSelectEmptyLogWindowNodeTriangle.swift */,
+				AA9763D62710FC3F002392CF /* AdventureLogInputNameWindow */,
+			);
+			path = AdventureLogSelectEmptyLogWindow;
+			sourceTree = "<group>";
+		};
+		AA9763BF2710FB96002392CF /* AdventureLogSelectLogWindow */ = {
+			isa = PBXGroup;
+			children = (
+				AA9763C02710FBAA002392CF /* AdventureLogSelectLogWindowNode.swift */,
+				AA9763C22710FBAA002392CF /* AdventureLogSelectLogWindowNodeButtonA.swift */,
+				AA9763C12710FBAA002392CF /* AdventureLogSelectLogWindowNodeTriangle.swift */,
+				AA9763C72710FBB5002392CF /* AdventureLogConfirmDeleteLogWindow */,
+				AA9763C62710FBB2002392CF /* AdventureLogYesNoDeleteLogWindow */,
+			);
+			path = AdventureLogSelectLogWindow;
+			sourceTree = "<group>";
+		};
+		AA9763C62710FBB2002392CF /* AdventureLogYesNoDeleteLogWindow */ = {
+			isa = PBXGroup;
+			children = (
+				AA9763CA2710FBD6002392CF /* AdventureLogYesNoDeleteLogWindowNode.swift */,
+				AA9763CB2710FBD6002392CF /* AdventureLogYesNoDeleteLogWindowNodeButtonA.swift */,
+				AA9763CC2710FBD6002392CF /* AdventureLogYesNoDeleteLogWindowNodeTriangle.swift */,
+			);
+			path = AdventureLogYesNoDeleteLogWindow;
+			sourceTree = "<group>";
+		};
+		AA9763C72710FBB5002392CF /* AdventureLogConfirmDeleteLogWindow */ = {
+			isa = PBXGroup;
+			children = (
+				AA9763C82710FBC2002392CF /* AdventureLogConfirmDeleteLogWindowNode.swift */,
+			);
+			path = AdventureLogConfirmDeleteLogWindow;
+			sourceTree = "<group>";
+		};
+		AA9763D62710FC3F002392CF /* AdventureLogInputNameWindow */ = {
+			isa = PBXGroup;
+			children = (
+				AA9763D92710FC4D002392CF /* AdventureLogInputNameWindowNode.swift */,
+				AA9763D72710FC4D002392CF /* AdventureLogInputNameWindowNodeButton.swift */,
+				AA9763D82710FC4D002392CF /* AdventureLogInputNameWindowNodeTriangle.swift */,
+				AA9763DD2710FC55002392CF /* AdventureLogSelectGenderWindow */,
+			);
+			path = AdventureLogInputNameWindow;
+			sourceTree = "<group>";
+		};
+		AA9763DD2710FC55002392CF /* AdventureLogSelectGenderWindow */ = {
+			isa = PBXGroup;
+			children = (
+				AA9763DF2710FC5F002392CF /* AdventureLogSelectGenderWindowNode.swift */,
+				AA9763DE2710FC5F002392CF /* AdventureLogSelectGenderWindowNodeButtonA.swift */,
+				AA9763E02710FC5F002392CF /* AdventureLogSelectGenderWindowNodeTriangle.swift */,
+			);
+			path = AdventureLogSelectGenderWindow;
 			sourceTree = "<group>";
 		};
 		AAE0B4D927106160001FC1D0 /* AlltradesAbbey */ = {
@@ -1450,6 +1575,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA51629B271005F700118A2A /* AliahanTownSceneNpcMove.swift in Sources */,
+				AA9763C52710FBAA002392CF /* AdventureLogSelectLogWindowNodeButtonA.swift in Sources */,
 				AA4E9F492709BE4E00D4F7C8 /* DQFontLittleDashes.swift in Sources */,
 				AAE0B4F0271061D7001FC1D0 /* AlltradesAbbeyMinister.swift in Sources */,
 				AAE0B4E9271061B2001FC1D0 /* TalkMessageWindowNodeAlltradesAbbey.swift in Sources */,
@@ -1466,7 +1592,9 @@
 				AA5162A427100C5100118A2A /* DQMapShipScene.swift in Sources */,
 				AA4E9F5E2709BF7E00D4F7C8 /* OpeningSceneButton.swift in Sources */,
 				AA75B378270FCFF700C45A6A /* AliahanTownOldMan2.swift in Sources */,
+				AA9763DA2710FC4D002392CF /* AdventureLogInputNameWindowNodeButton.swift in Sources */,
 				AA75B370270FCFF700C45A6A /* AliahanTownToolShop.swift in Sources */,
+				AA9763C42710FBAA002392CF /* AdventureLogSelectLogWindowNodeTriangle.swift in Sources */,
 				AA75B32E270F16AA00C45A6A /* MapCommandWindowNodeButtonA.swift in Sources */,
 				AA4E9F702709BFF100D4F7C8 /* BaseSceneSetupDQScene.swift in Sources */,
 				AA75B325270F0F6700C45A6A /* FieldSceneCheckCanMove.swift in Sources */,
@@ -1477,6 +1605,7 @@
 				AA4E9F562709BEC400D4F7C8 /* DebugOption.swift in Sources */,
 				AA75B36F270FCFF700C45A6A /* AliahanTownWarrior3.swift in Sources */,
 				AA4E9F9B2709C1F200D4F7C8 /* AliahanTownHouse.swift in Sources */,
+				AA9763CE2710FBD6002392CF /* AdventureLogYesNoDeleteLogWindowNodeButtonA.swift in Sources */,
 				AA4E9F4B2709BE4E00D4F7C8 /* DQFontCheck.swift in Sources */,
 				AA4E9F6A2709BFF100D4F7C8 /* DQMapSceneNpc.swift in Sources */,
 				AAE0B503271068A1001FC1D0 /* BattleSceneCommand.swift in Sources */,
@@ -1494,6 +1623,7 @@
 				AA4E9FAD2709C67F00D4F7C8 /* AliahanTownScenePartyCharacters.swift in Sources */,
 				AA75B37D270FD2D000C45A6A /* NextElement.swift in Sources */,
 				AA4E9ED42709B7F300D4F7C8 /* ContentView.swift in Sources */,
+				AA9763DB2710FC4D002392CF /* AdventureLogInputNameWindowNodeTriangle.swift in Sources */,
 				AA4E9F4C2709BE4E00D4F7C8 /* DQFontLittleCircle.swift in Sources */,
 				AA4E9FE7270AD0E500D4F7C8 /* DQSceneType.swift in Sources */,
 				AA4E9FE4270ACF8700D4F7C8 /* BaseSceneTransitionToMap.swift in Sources */,
@@ -1502,18 +1632,22 @@
 				AA5162A827100D6B00118A2A /* ShipPosition.swift in Sources */,
 				AA4E9FD0270ACE3F00D4F7C8 /* DQMapScene.swift in Sources */,
 				AA4E9F8C2709C14800D4F7C8 /* AliahanTownHouseSceneCheckCanMove.swift in Sources */,
+				AA9763CF2710FBD6002392CF /* AdventureLogYesNoDeleteLogWindowNodeTriangle.swift in Sources */,
 				AA4E9F932709C14800D4F7C8 /* AliahanTownHouseSceneCheckPosition.swift in Sources */,
 				AAE0B52E27106918001FC1D0 /* BattleMessageWindowNode.swift in Sources */,
 				AAE0B522271068F8001FC1D0 /* BattleCommandWindowNodeTriangle.swift in Sources */,
 				AA4E9F542709BE9500D4F7C8 /* DQAudio.swift in Sources */,
 				AA5162C227101EB700118A2A /* MapCommandSpellWindowNode.swift in Sources */,
 				AAE0B53B27106A16001FC1D0 /* DQBattleCommand.swift in Sources */,
+				AA9763DC2710FC4D002392CF /* AdventureLogInputNameWindowNode.swift in Sources */,
 				AA4E9FE0270ACF6700D4F7C8 /* BaseSceneUpdate.swift in Sources */,
+				AA9763D52710FC36002392CF /* AdventureLogSelectEmptyLogWindowNodeTriangle.swift in Sources */,
 				AAE0B51A271068EA001FC1D0 /* BattleSceneWin.swift in Sources */,
 				AA4E9FBD270A996000D4F7C8 /* AdventureLog.swift in Sources */,
 				AA4E9F3F2709BE1400D4F7C8 /* Window2.swift in Sources */,
 				AAE0B54127106A74001FC1D0 /* MonsterNode.swift in Sources */,
 				AAE0B508271068A1001FC1D0 /* BattleSceneMonster.swift in Sources */,
+				AA9763E82710FC6F002392CF /* AdventureLogMessageSpeedWindowNode.swift in Sources */,
 				AAE0B50E271068BA001FC1D0 /* BattleSceneAsyncBattle.swift in Sources */,
 				AA4E9FC6270A99E600D4F7C8 /* CharacterNode.swift in Sources */,
 				AA4E9FC8270A99E600D4F7C8 /* CharacterNodeDirection.swift in Sources */,
@@ -1526,6 +1660,7 @@
 				AA75B33A270FCF7100C45A6A /* BaseTalkMessageWindowNodeInitializeTalk.swift in Sources */,
 				AA4E9ED22709B7F300D4F7C8 /* DQ3App.swift in Sources */,
 				AA75B32F270F16AA00C45A6A /* MapCommandWindowNodeTriangle.swift in Sources */,
+				AA9763C32710FBAA002392CF /* AdventureLogSelectLogWindowNode.swift in Sources */,
 				AA4E9F912709C14800D4F7C8 /* AliahanTownHouseSceneNpcCharacters.swift in Sources */,
 				AA4E9F4A2709BE4E00D4F7C8 /* DQFont.swift in Sources */,
 				AA5162C827101EC100118A2A /* MapCommandZoomWindowNode.swift in Sources */,
@@ -1538,12 +1673,14 @@
 				AA5162BD27101EA700118A2A /* MapCommandWhoWindowNodeTriangle.swift in Sources */,
 				AAE0B52927106909001FC1D0 /* BattleSpellWindowNode.swift in Sources */,
 				AA75B33E270FCF7A00C45A6A /* BaseYesNoWindowNodeTriangle.swift in Sources */,
+				AA9763C92710FBC2002392CF /* AdventureLogConfirmDeleteLogWindowNode.swift in Sources */,
 				AA5162CE27101EE400118A2A /* DQSpell.swift in Sources */,
 				AA75B330270F16AA00C45A6A /* MapCommandWindowNode.swift in Sources */,
 				AA4E9FCA270A9B4300D4F7C8 /* BaseSceneUpdateProcess.swift in Sources */,
 				AA4E9F312709BD9400D4F7C8 /* BaseSceneVirtualPad.swift in Sources */,
 				AA4E9F962709C17400D4F7C8 /* DQStory.swift in Sources */,
 				AA75B348270FCF9900C45A6A /* AliahanTownHouseGrandfather.swift in Sources */,
+				AA9763EB27112AC9002392CF /* UserDefaultsUtil.swift in Sources */,
 				AA75B371270FCFF700C45A6A /* AliahanTownLady2.swift in Sources */,
 				AA516299271005EF00118A2A /* AliahanTownHouseSceneNpcMove.swift in Sources */,
 				AAE0B504271068A1001FC1D0 /* BattleSceneSwitch.swift in Sources */,
@@ -1571,21 +1708,26 @@
 				AA4E9F382709BDE700D4F7C8 /* Direction.swift in Sources */,
 				AAE0B54727106AF5001FC1D0 /* BattleWindowPosition.swift in Sources */,
 				AA5162D9271020D800118A2A /* BaseSceneTransitionToMapWithZoom.swift in Sources */,
+				AA9763E32710FC5F002392CF /* AdventureLogSelectGenderWindowNodeTriangle.swift in Sources */,
 				AA75B36E270FCFF700C45A6A /* AliahanTownMother.swift in Sources */,
 				AA4E9F252709BD4300D4F7C8 /* AdventureLogSceneButton.swift in Sources */,
 				AA5162E12710299900118A2A /* CharacterStatus.swift in Sources */,
 				AAC72534270B326500C44CEE /* ContentViewDebug.swift in Sources */,
 				AA75B376270FCFF700C45A6A /* AliahanTownWarrior1.swift in Sources */,
 				AAE0B54B27106B42001FC1D0 /* BaseSceneTransitionFromBattle.swift in Sources */,
+				AA9763EF27112B0B002392CF /* AdventureLogFunctions.swift in Sources */,
 				AA4E9F412709BE1400D4F7C8 /* Window.swift in Sources */,
 				AA75B326270F0F6700C45A6A /* FieldSceneCheckPosition.swift in Sources */,
 				AA5162A227100C5100118A2A /* DQMapShipSceneShipBoarding.swift in Sources */,
 				AAC72531270AE26500C44CEE /* MapMessageWindowNodeMessages.swift in Sources */,
+				AA9763E22710FC5F002392CF /* AdventureLogSelectGenderWindowNode.swift in Sources */,
 				AA75B33B270FCF7100C45A6A /* BaseTalkMessageWindowNode.swift in Sources */,
 				AA5162B32710180A00118A2A /* FieldSceneButtonARamia.swift in Sources */,
 				AA5162A627100C6600118A2A /* FieldSceneShipLanding.swift in Sources */,
 				AAC72532270AE26500C44CEE /* MapMessageWindowNodeMark.swift in Sources */,
 				AA75B339270FCF7100C45A6A /* BaseTalkMessageWindowNodeButtonA.swift in Sources */,
+				AA9763BC2710FB5B002392CF /* AdventureLogTopWindowNodeTriangle.swift in Sources */,
+				AA9763E12710FC5F002392CF /* AdventureLogSelectGenderWindowNodeButtonA.swift in Sources */,
 				AA5162CA27101EC100118A2A /* MapCommandZoomWindowNodeTriangle.swift in Sources */,
 				AA4E9F522709BE7900D4F7C8 /* AudioManager.swift in Sources */,
 				AA4E9F272709BD4300D4F7C8 /* AdventureLogScene.swift in Sources */,
@@ -1602,7 +1744,9 @@
 				AA5162BC27101EA700118A2A /* MapCommandWhoWindowNodeButtonA.swift in Sources */,
 				AA4E9FEC270AD64700D4F7C8 /* BaseSceneController.swift in Sources */,
 				AA4E9F202709BC6600D4F7C8 /* Constant.swift in Sources */,
+				AA9763E72710FC6F002392CF /* AdventureLogMessageSpeedWindowNodeTriangle.swift in Sources */,
 				AA75B36D270FCFF700C45A6A /* AliahanTownBoy1.swift in Sources */,
+				AA9763CD2710FBD6002392CF /* AdventureLogYesNoDeleteLogWindowNode.swift in Sources */,
 				AA75B375270FCFF700C45A6A /* AliahanTownOldMan1.swift in Sources */,
 				AA4E9FDE270ACF5300D4F7C8 /* BaseSceneStick.swift in Sources */,
 				AAE0B4E427106185001FC1D0 /* AlltradesAbbeySceneButton.swift in Sources */,
@@ -1619,8 +1763,10 @@
 				AAC72538270BCB1F00C44CEE /* DataManager.swift in Sources */,
 				AA5162C927101EC100118A2A /* MapCommandZoomWindowNodeButtonA.swift in Sources */,
 				AAE0B4E027106185001FC1D0 /* AlltradesAbbeyScene.swift in Sources */,
+				AA9763EE27112B0B002392CF /* AdventureLogStory.swift in Sources */,
 				AA5162D22710203200118A2A /* SpellMessageWindowNodeButtonA.swift in Sources */,
 				AA75B36B270FCFF700C45A6A /* AliahanTownWeaponShop.swift in Sources */,
+				AA9763D32710FC36002392CF /* AdventureLogSelectEmptyLogWindowNode.swift in Sources */,
 				AA75B356270FCFE600C45A6A /* TalkMessageLuidaWishWindowNode.swift in Sources */,
 				AA4E9FB12709C67F00D4F7C8 /* AliahanTownSceneNpcCharacters.swift in Sources */,
 				AA5162B42710180A00118A2A /* FieldSceneRamiaRideOn.swift in Sources */,
@@ -1641,7 +1787,9 @@
 				AA4E9FB02709C67F00D4F7C8 /* AliahanTownSceneEvent.swift in Sources */,
 				AA75B324270F0F6700C45A6A /* FieldSceneButton.swift in Sources */,
 				AA5162A127100C5100118A2A /* DQMapShipSceneShipLanding.swift in Sources */,
+				AA9763E92710FC6F002392CF /* AdventureLogMessageSpeedWindowNodeButtonA.swift in Sources */,
 				AAE0B507271068A1001FC1D0 /* BattleSceneMessage.swift in Sources */,
+				AA9763D42710FC36002392CF /* AdventureLogSelectEmptyLogWindowNodeButtonA.swift in Sources */,
 				AA75B342270FCF8800C45A6A /* TalkMessageWindowNodeAliahanTownHouse.swift in Sources */,
 				AAE0B4E527106185001FC1D0 /* AlltradesAbbeySceneCheckCanMove.swift in Sources */,
 				AA4E9FC7270A99E600D4F7C8 /* CharacterNodeMove.swift in Sources */,
@@ -1830,7 +1978,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.17;
+				MARKETING_VERSION = 0.19;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1860,7 +2008,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.17;
+				MARKETING_VERSION = 0.19;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

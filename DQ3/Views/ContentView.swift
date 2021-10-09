@@ -14,19 +14,23 @@ struct ContentView: View {
         
         setDebugAdventureLog()
         
-        // let scene = AliahanTownScene()
-        // for node in DataManager.adventureLog.partyCharacterNodes {
-        //     node.positionX = AliahanTownEntrancePositionX
-        //     node.positionY = AliahanTownEntrancePositionY
-        // }
-        
-        // let scene = AliahanTownHouseScene()
-        
-        // let scene = FieldScene()
-        // for node in DataManager.adventureLog.partyCharacterNodes {
-        //     node.positionX = FieldAliahanPositionX
-        //     node.positionY = FieldAliahanPositionY
-        // }
+        // debug optiion が有効な時は、
+        // 強制的に冒険の書1を書き換え
+        if DebugSetAdventureLog {
+            if DebugSetAdventureLogEveryAppLaunch {
+                setSpecialAdventureLog()
+            }
+            else {
+                let isSetAdventureLog = UserDefaultsUtil.loadDebugSetAdventureLogState()
+                
+                if !isSetAdventureLog {
+                    // フラグセットされてないときのみ
+                    // debug用冒険の書を書き込み
+                    setSpecialAdventureLog()
+                    UserDefaultsUtil.saveDebugSetAdventureLogState(true)
+                }
+            }
+        }
         
         return Group {
             SpriteView(scene: scene)

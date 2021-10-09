@@ -13,7 +13,6 @@ extension BaseScene {
                          dqAudio: DQAudio) {
         var shouldStopAudio = false
         
-        
         if AudioManager.getDqAudio() != dqAudio {
             // 違う曲
             shouldStopAudio = true
@@ -35,7 +34,6 @@ extension BaseScene {
         
         let sequence = SKAction.sequence([actionWait,
                                           actionAudioStop])
-        
         Task {
             var shouldPlayAudio = false
             
@@ -50,10 +48,12 @@ extension BaseScene {
             if isFromAdventureLog {
                 let adventureLogTopWindowNode = DataManager.scene.adventureLogScene?.adventureLogTopWindowNode
                 adventureLogTopWindowNode?.removeFromParent()
+                
+                DataManager.dqMainState = .adventure_log_loaded
             }
             
             setupDQScene(dqMainState: nil,
-                              dqSceneType: dqSceneTypeTo)
+                         dqSceneType: dqSceneTypeTo)
             
             await self.blackScreenNode.run(actionFadeIn)
             
