@@ -46,6 +46,8 @@ extension BaseScene {
             }
             
             self.fieldScene?.setup(dqAudio: dqAudio)
+            
+            self.fieldScene?.addNightOverlay()
         case .alltrades_abbey:
             self.alltradesAbbeyScene = AlltradesAbbeyScene(scene: self)
             self.alltradesAbbeyScene?.setup()
