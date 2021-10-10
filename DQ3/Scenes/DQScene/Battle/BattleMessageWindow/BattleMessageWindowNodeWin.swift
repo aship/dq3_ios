@@ -18,12 +18,19 @@ extension BattleMessageWindowNode {
             string: text,
             line: 0)
         
+        
+        
         let actionWait = SKAction.wait(forDuration: 1)
         
         let scene = self.parent as! BaseScene
         
         await scene.run(actionWait)
              
+        
+        
+        
+        AudioManager.play(dqAudio: .field)
+        
         // それぞれ、xxx のけいけんちをかくとく
         // xxx ゴールドを手に入れた
         let textName = "えにくすは"
