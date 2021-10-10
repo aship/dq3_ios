@@ -11,21 +11,6 @@ extension BattleScene {
     func transitionScene() {
         let scene = self.scene!
         
-        if DataManager.dqSceneTypeFromBattle == .field {
-            var dqAudio: DQAudio = .field
-            
-            if scene.fieldMoveMode == .ship {
-                dqAudio = .ship
-            }
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                scene.transitionFromBattle(dqSceneType: .field)
-            }
-        }
-        else if DataManager.dqSceneTypeFromBattle == .alefgard {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                scene.transitionFromBattle(dqSceneType: .alefgard)
-            }
-        }
+        scene.transitionFromBattle()
     }
 }

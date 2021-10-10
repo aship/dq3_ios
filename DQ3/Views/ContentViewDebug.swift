@@ -52,11 +52,11 @@ func setDebugAdventureLog() {
     
     if adventureLog.dqSceneType == .field {
         for node in adventureLog.partyCharacterNodes {
-            //            node.positionX = FieldAliahanPositionX
-            //            node.positionY = FieldAliahanPositionY
+                        node.positionX = FieldAliahanPositionX
+                        node.positionY = FieldAliahanPositionY
             
-            node.positionX = ZoomAlltradesAbbeyPositionX
-            node.positionY = ZoomAlltradesAbbeyPositionY
+//            node.positionX = ZoomAlltradesAbbeyPositionX
+//            node.positionY = ZoomAlltradesAbbeyPositionY
         }
         
         // 船/ラーミアの位置決定
@@ -122,8 +122,8 @@ func setSpecialAdventureLog() {
     // adventureLog.dqSceneType = .opening
     // adventureLog.dqSceneType = .aliahan_town_house
     // adventureLog.dqSceneType = .aliahan_town
-    adventureLog.dqSceneType = .alltrades_abbey
-    // adventureLog.dqSceneType = .field
+    // adventureLog.dqSceneType = .alltrades_abbey
+    adventureLog.dqSceneType = .field
     // adventureLog.dqSceneType = .alefgard
     
     adventureLog.dqStory = .opening

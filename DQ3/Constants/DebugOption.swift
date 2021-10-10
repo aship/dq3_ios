@@ -23,7 +23,7 @@ let DebugSetAdventureLog = true
 let DebugSetAdventureLogEveryAppLaunch = true
 
 // BGM止める
-let DebugStopBgm = true
+let DebugStopBgm = false
 
 // NPCを動かなくする
 let DebugStopNpc = false
