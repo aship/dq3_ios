@@ -15,6 +15,12 @@ extension BattleScene {
                 
                 return
             }
+            
+            if self.battleMessageWindowNode.isOpen {
+                self.battleMessageWindowNode.processButtonA()
+                
+                return
+            }
         }
     }
 }

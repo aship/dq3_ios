@@ -213,9 +213,10 @@
 		AA97643127115502002392CF /* alefgard.csv in Resources */ = {isa = PBXBuildFile; fileRef = AA97642B27115502002392CF /* alefgard.csv */; };
 		AA97643227115502002392CF /* AlefgardScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA97642C27115502002392CF /* AlefgardScene.swift */; };
 		AAB7AA382712C84D006F6A74 /* BattleMessageWindowNodeLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB7AA372712C84D006F6A74 /* BattleMessageWindowNodeLine.swift */; };
-		AAB7AA3B2712C963006F6A74 /* BattleGoldWIndowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB7AA3A2712C963006F6A74 /* BattleGoldWIndowNode.swift */; };
-		AAB7AA3D2712C97E006F6A74 /* BattleGoldWIndowNodeButtonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB7AA3C2712C97E006F6A74 /* BattleGoldWIndowNodeButtonA.swift */; };
+		AAB7AA3B2712C963006F6A74 /* BattleGoldWindowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB7AA3A2712C963006F6A74 /* BattleGoldWindowNode.swift */; };
+		AAB7AA3D2712C97E006F6A74 /* BattleGoldWindowNodeButtonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB7AA3C2712C97E006F6A74 /* BattleGoldWindowNodeButtonA.swift */; };
 		AAB7AA402712CF49006F6A74 /* BattleMessageWindowNodeWin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB7AA3F2712CF49006F6A74 /* BattleMessageWindowNodeWin.swift */; };
+		AAB7AA422712D558006F6A74 /* BattleMessageWindowNodeButtonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB7AA412712D558006F6A74 /* BattleMessageWindowNodeButtonA.swift */; };
 		AAC7252C270ADE3D00C44CEE /* BaseSceneTransitionToScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC7252B270ADE3D00C44CEE /* BaseSceneTransitionToScene.swift */; };
 		AAC72530270AE26500C44CEE /* MapMessageWindowNodeMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC7252D270AE26500C44CEE /* MapMessageWindowNodeMessage.swift */; };
 		AAC72531270AE26500C44CEE /* MapMessageWindowNodeMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC7252E270AE26500C44CEE /* MapMessageWindowNodeMessages.swift */; };
@@ -500,9 +501,10 @@
 		AA97642B27115502002392CF /* alefgard.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = alefgard.csv; sourceTree = "<group>"; };
 		AA97642C27115502002392CF /* AlefgardScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlefgardScene.swift; sourceTree = "<group>"; };
 		AAB7AA372712C84D006F6A74 /* BattleMessageWindowNodeLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleMessageWindowNodeLine.swift; sourceTree = "<group>"; };
-		AAB7AA3A2712C963006F6A74 /* BattleGoldWIndowNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleGoldWIndowNode.swift; sourceTree = "<group>"; };
-		AAB7AA3C2712C97E006F6A74 /* BattleGoldWIndowNodeButtonA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleGoldWIndowNodeButtonA.swift; sourceTree = "<group>"; };
+		AAB7AA3A2712C963006F6A74 /* BattleGoldWindowNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleGoldWindowNode.swift; sourceTree = "<group>"; };
+		AAB7AA3C2712C97E006F6A74 /* BattleGoldWindowNodeButtonA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleGoldWindowNodeButtonA.swift; sourceTree = "<group>"; };
 		AAB7AA3F2712CF49006F6A74 /* BattleMessageWindowNodeWin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleMessageWindowNodeWin.swift; sourceTree = "<group>"; };
+		AAB7AA412712D558006F6A74 /* BattleMessageWindowNodeButtonA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleMessageWindowNodeButtonA.swift; sourceTree = "<group>"; };
 		AAC7252B270ADE3D00C44CEE /* BaseSceneTransitionToScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneTransitionToScene.swift; sourceTree = "<group>"; };
 		AAC7252D270AE26500C44CEE /* MapMessageWindowNodeMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapMessageWindowNodeMessage.swift; sourceTree = "<group>"; };
 		AAC7252E270AE26500C44CEE /* MapMessageWindowNodeMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapMessageWindowNodeMessages.swift; sourceTree = "<group>"; };
@@ -1280,13 +1282,13 @@
 			path = Alefgard;
 			sourceTree = "<group>";
 		};
-		AAB7AA392712C913006F6A74 /* BattleGoldWIndow */ = {
+		AAB7AA392712C913006F6A74 /* BattleGoldWindow */ = {
 			isa = PBXGroup;
 			children = (
-				AAB7AA3A2712C963006F6A74 /* BattleGoldWIndowNode.swift */,
-				AAB7AA3C2712C97E006F6A74 /* BattleGoldWIndowNodeButtonA.swift */,
+				AAB7AA3A2712C963006F6A74 /* BattleGoldWindowNode.swift */,
+				AAB7AA3C2712C97E006F6A74 /* BattleGoldWindowNodeButtonA.swift */,
 			);
-			path = BattleGoldWIndow;
+			path = BattleGoldWindow;
 			sourceTree = "<group>";
 		};
 		AAE0B4D927106160001FC1D0 /* AlltradesAbbey */ = {
@@ -1379,11 +1381,12 @@
 			isa = PBXGroup;
 			children = (
 				AAE0B52B27106918001FC1D0 /* BattleMessageWindowNode.swift */,
+				AAB7AA412712D558006F6A74 /* BattleMessageWindowNodeButtonA.swift */,
 				AAE0B52C27106918001FC1D0 /* BattleMessageWindowNodeMessage.swift */,
 				AAE0B52A27106918001FC1D0 /* BattleMessageWindowNodeMessageFluently.swift */,
 				AAB7AA372712C84D006F6A74 /* BattleMessageWindowNodeLine.swift */,
 				AAB7AA3F2712CF49006F6A74 /* BattleMessageWindowNodeWin.swift */,
-				AAB7AA392712C913006F6A74 /* BattleGoldWIndow */,
+				AAB7AA392712C913006F6A74 /* BattleGoldWindow */,
 			);
 			path = BattleMessageWindow;
 			sourceTree = "<group>";
@@ -1725,7 +1728,7 @@
 				AAE0B52927106909001FC1D0 /* BattleSpellWindowNode.swift in Sources */,
 				AA75B33E270FCF7A00C45A6A /* BaseYesNoWindowNodeTriangle.swift in Sources */,
 				AA9763C92710FBC2002392CF /* AdventureLogConfirmDeleteLogWindowNode.swift in Sources */,
-				AAB7AA3D2712C97E006F6A74 /* BattleGoldWIndowNodeButtonA.swift in Sources */,
+				AAB7AA3D2712C97E006F6A74 /* BattleGoldWindowNodeButtonA.swift in Sources */,
 				AA5162CE27101EE400118A2A /* DQSpell.swift in Sources */,
 				AA75B330270F16AA00C45A6A /* MapCommandWindowNode.swift in Sources */,
 				AA4E9FCA270A9B4300D4F7C8 /* BaseSceneUpdateProcess.swift in Sources */,
@@ -1744,6 +1747,7 @@
 				AAE0B5352710692D001FC1D0 /* BattleTargetWindowNodeButtonA.swift in Sources */,
 				AA4E9F6E2709BFF100D4F7C8 /* DQMapScenePartyCharacters.swift in Sources */,
 				AA75B374270FCFF700C45A6A /* AliahanTownInn.swift in Sources */,
+				AAB7AA422712D558006F6A74 /* BattleMessageWindowNodeButtonA.swift in Sources */,
 				AA4E9FB22709C67F00D4F7C8 /* AliahanTownSceneButtonAOpening.swift in Sources */,
 				AAE0B4EE271061CF001FC1D0 /* AlltradesAbbeyTalkMessageYesNoWindowNode.swift in Sources */,
 				AA75B355270FCFE600C45A6A /* TalkMessageLuidaWishWindowNodeButtonA.swift in Sources */,
@@ -1786,7 +1790,7 @@
 				AA5162CA27101EC100118A2A /* MapCommandZoomWindowNodeTriangle.swift in Sources */,
 				AA4E9F522709BE7900D4F7C8 /* AudioManager.swift in Sources */,
 				AA4E9F272709BD4300D4F7C8 /* AdventureLogScene.swift in Sources */,
-				AAB7AA3B2712C963006F6A74 /* BattleGoldWIndowNode.swift in Sources */,
+				AAB7AA3B2712C963006F6A74 /* BattleGoldWindowNode.swift in Sources */,
 				AA4E9FCF270ACE3F00D4F7C8 /* DQMapSceneButtonB.swift in Sources */,
 				AAE0B4E227106185001FC1D0 /* AlltradesAbbeySceneCheckPosition.swift in Sources */,
 				AAE0B53127106921001FC1D0 /* BattleStatusWindowNode.swift in Sources */,
