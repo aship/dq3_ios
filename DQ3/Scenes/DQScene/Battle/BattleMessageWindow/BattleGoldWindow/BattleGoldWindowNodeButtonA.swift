@@ -11,7 +11,7 @@ extension BattleGoldWindowNode {
     func processButtonA() {
         let scene = self.parent!.parent as! BaseScene
         
-     //   scene.transitionScene()
+        //   scene.transitionScene()
         
         
         if DataManager.dqSceneTypeFromBattle == .field {
@@ -22,14 +22,12 @@ extension BattleGoldWindowNode {
             }
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                scene.transitionFromBattle(dqSceneType: .field,
-                                           dqAudio: dqAudio)
+                scene.transitionFromBattle(dqSceneType: .field)
             }
         }
         else if DataManager.dqSceneTypeFromBattle == .alefgard {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                scene.transitionFromBattle(dqSceneType: .alefgard,
-                                           dqAudio: .alefgard)
+                scene.transitionFromBattle(dqSceneType: .alefgard)
             }
         }
     }

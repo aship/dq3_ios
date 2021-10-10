@@ -45,14 +45,12 @@ extension BattleCommandWindowNode {
             }
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                scene.transitionFromBattle(dqSceneType: .field,
-                                           dqAudio: dqAudio)
+                scene.transitionFromBattle(dqSceneType: .field)
             }
         }
         else if DataManager.dqSceneTypeFromBattle == .alefgard {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                scene.transitionFromBattle(dqSceneType: .alefgard,
-                                           dqAudio: .alefgard)
+                scene.transitionFromBattle(dqSceneType: .alefgard)
             }
         }
     }
