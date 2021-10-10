@@ -271,7 +271,6 @@
 		AAE0B54427106AAC001FC1D0 /* BattleActionStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0B54327106AAC001FC1D0 /* BattleActionStruct.swift */; };
 		AAE0B54727106AF5001FC1D0 /* BattleWindowPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0B54627106AF5001FC1D0 /* BattleWindowPosition.swift */; };
 		AAE0B54A27106B42001FC1D0 /* BaseSceneTransitionToBattle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0B54827106B42001FC1D0 /* BaseSceneTransitionToBattle.swift */; };
-		AAE0B54B27106B42001FC1D0 /* BaseSceneTransitionFromBattle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0B54927106B42001FC1D0 /* BaseSceneTransitionFromBattle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -558,7 +557,6 @@
 		AAE0B54327106AAC001FC1D0 /* BattleActionStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleActionStruct.swift; sourceTree = "<group>"; };
 		AAE0B54627106AF5001FC1D0 /* BattleWindowPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleWindowPosition.swift; sourceTree = "<group>"; };
 		AAE0B54827106B42001FC1D0 /* BaseSceneTransitionToBattle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneTransitionToBattle.swift; sourceTree = "<group>"; };
-		AAE0B54927106B42001FC1D0 /* BaseSceneTransitionFromBattle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseSceneTransitionFromBattle.swift; path = ../../../../../../../Downloads/DQ3copy/DQ3/Scenes/Base/Transition/BaseSceneTransitionFromBattle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -965,7 +963,6 @@
 				AA4E9FE2270ACF8700D4F7C8 /* BaseSceneTransitionToMap.swift */,
 				AA4E9FE3270ACF8700D4F7C8 /* BaseSceneTransitionToMapWithStairs.swift */,
 				AA5162D8271020D800118A2A /* BaseSceneTransitionToMapWithZoom.swift */,
-				AAE0B54927106B42001FC1D0 /* BaseSceneTransitionFromBattle.swift */,
 				AAE0B54827106B42001FC1D0 /* BaseSceneTransitionToBattle.swift */,
 			);
 			path = Transition;
@@ -1771,7 +1768,6 @@
 				AA5162E12710299900118A2A /* CharacterStatus.swift in Sources */,
 				AAC72534270B326500C44CEE /* ContentViewDebug.swift in Sources */,
 				AA75B376270FCFF700C45A6A /* AliahanTownWarrior1.swift in Sources */,
-				AAE0B54B27106B42001FC1D0 /* BaseSceneTransitionFromBattle.swift in Sources */,
 				AA9763EF27112B0B002392CF /* AdventureLogFunctions.swift in Sources */,
 				AA4E9F412709BE1400D4F7C8 /* Window.swift in Sources */,
 				AA75B326270F0F6700C45A6A /* FieldSceneCheckPosition.swift in Sources */,
