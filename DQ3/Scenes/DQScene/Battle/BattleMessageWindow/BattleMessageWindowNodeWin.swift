@@ -11,28 +11,32 @@ extension BattleMessageWindowNode {
     func showWinMessage() async {
         AudioManager.stop()
         SoundEffectManager.play(.win)
-    
+        
         let text = "まものたちを やっつけた!"
         
         await showMessageFluently(
             string: text,
             line: 0)
         
-        
-        
         let actionWait = SKAction.wait(forDuration: 1)
         
         let scene = self.parent as! BaseScene
         
         await scene.run(actionWait)
-             
         
+        var dqAudio: DQAudio = .field
         
+        if DataManager.dqSceneTypeFromBattle == .field {
+            if scene.fieldMoveMode == .ship {
+                dqAudio = .ship
+            }
+        }
+        else {
+            dqAudio = .alefgard
+        }
         
-        AudioManager.play(dqAudio: .field)
+        AudioManager.play(dqAudio: dqAudio)
         
-        // それぞれ、xxx のけいけんちをかくとく
-        // xxx ゴールドを手に入れた
         let textName = "えにくすは"
         await showMessageFluently(
             string: textName,

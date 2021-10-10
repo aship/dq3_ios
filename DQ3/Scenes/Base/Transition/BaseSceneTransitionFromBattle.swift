@@ -10,12 +10,6 @@ import SpriteKit
 extension BaseScene {
     func transitionFromBattle() {
         if DataManager.dqSceneTypeFromBattle == .field {
-            var dqAudio: DQAudio = .field
-            
-            if self.fieldMoveMode == .ship {
-                dqAudio = .ship
-            }
-            
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 self.fadeInOutFromBattle(dqSceneType: .field)
             }
@@ -25,7 +19,6 @@ extension BaseScene {
                 self.fadeInOutFromBattle(dqSceneType: .alefgard)
             }
         }
-        
     }
     
     private func fadeInOutFromBattle(dqSceneType: DQSceneType) {
