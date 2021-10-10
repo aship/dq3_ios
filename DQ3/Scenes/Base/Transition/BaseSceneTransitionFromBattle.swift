@@ -9,19 +9,6 @@ import SpriteKit
 
 extension BaseScene {
     func transitionFromBattle() {
-        if DataManager.dqSceneTypeFromBattle == .field {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                self.fadeInOutFromBattle(dqSceneType: .field)
-            }
-        }
-        else if DataManager.dqSceneTypeFromBattle == .alefgard {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                self.fadeInOutFromBattle(dqSceneType: .alefgard)
-            }
-        }
-    }
-    
-    private func fadeInOutFromBattle(dqSceneType: DQSceneType) {
         let actionFadeOut = SKAction.fadeAlpha(to: 1.0,
                                                duration: 0.5)
         
@@ -42,6 +29,8 @@ extension BaseScene {
                     monsterNode.removeFromParent()
                 }
             }
+            
+            let dqSceneType = DataManager.dqSceneTypeFromBattle
             
             self.setupDQScene(dqMainState: nil,
                               dqSceneType: dqSceneType)
