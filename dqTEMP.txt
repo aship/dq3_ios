@@ -1,0 +1,123 @@
+
+
+
+
+
+
+
+
+
+
+bumping version 0.1
+
+bumping version 0.2 with animation
+bumping version 0.3 implement AdventureLog and refactor with CharacterNode and DataManager
+bumping version 0.4 not use SKTransition for map
+
+bumping version 0.5 enable controller but GCControllerDidConnect is never called if SKTransition from TItle Scene
+
+bumping version 0.6 using only one SKScene because of PS4 controller problem
+
+
+
+bumping version 0.7 check NPC collision
+
+bumping version 0.8 add NPCs
+bumping version 0.9 NPC move
+bumping version 0.10 talk to NPC
+bumping version 0.11 ship
+bumping version 0.12 ramia
+bumping version 0.13 alefgard
+bumping version 0.14 ルーラ
+bumping version 0.15 add status window
+bumping version 0.16 ダーマ
+
+
+どうしよ
+
+
+bumping version 0.3 refactor with CharacterNode and DataManager
+
+
+bumping version 0.7 add field
+bumping version 0.8 add NPCs
+bumping version 0.9 check NPC collision
+bumping version 0.10 add command window only talk
+bumping version 0.11 takl to NPC
+bumping version 0.12 NPC MOVE
+bumping version 0.13 ship
+bumping version 0.14 ramia
+bumping version 0.15 ルーラ
+bumping version 0.16 status window
+bumping version 0.17 ダーマ
+bumping version 0.18 battle
+bumping version 0.19 adventure log
+bumping version 0.20 alefgard
+
+
+
+
+
+夜になる機能
+敵の範囲、海での戦闘どうしよ。
+バトルで呪文、、
+バトルで経験値、ゴールド、レベルアップ
+そうび
+つよさ
+しらべる
+へんげのつえ
+どうぐ機能
+買い物
+転職
+ゾーマ
+エンディング
+幽霊船
+洞窟
+馴染みの塔
+ダーマの背景問題
+
+ラーミア、船でマップループ問題
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+AliahanTownSceneEvent
+
+        let actionsMother = SKAction.sequence([actionWaitAll,
+                                               actionWait])
+        
+0.4 から変わってるみたい。
+
+
+
+        let actionWait1 = SKAction.wait(forDuration: 1 / 4)
+        let actionWait6 = SKAction.wait(forDuration: 6 / 4)
+        let actionWait8 = SKAction.wait(forDuration: 8 / 4)
+        

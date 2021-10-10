@@ -15,8 +15,17 @@ class MonsterNode: SKSpriteNode {
     init(dqMonsterType: DQMonsterType) {
         self.dqMonsterType = dqMonsterType
         
-        let size = CGSize(width: 16,
+        var size = CGSize(width: 16,
                           height: 16)
+        
+        
+        if dqMonsterType == .horned_rabbit {
+            // いっかくうさぎ
+            size = CGSize(width: 40,
+                          height: 32)
+        }
+        
+        
         
         super.init(texture: nil,
                    color: .clear,
@@ -24,7 +33,7 @@ class MonsterNode: SKSpriteNode {
         
         let imageName = "monster/\(dqMonsterType).png"
         self.texture = SKTexture(imageNamed: imageName)
-
+        
         if dqMonsterType == .slime {
             // スライム
             self.hp = 8

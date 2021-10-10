@@ -12,6 +12,8 @@ class BattleMessageWindowNode: SKTileMapNode {
     var arrLines: [[SKSpriteNode]] = []
     var nextMark: SKSpriteNode!
     
+    var battleGoldWindowNode: BattleGoldWindowNode?
+    
     func close() {
         self.isOpen = false
         self.removeFromParent()

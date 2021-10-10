@@ -11,27 +11,26 @@ import Foundation
 func setDebugAdventureLog() {
     let adventureLog = AdventureLog()
     
-    adventureLog.heroName = "えにくす"
-    
-    addNode(adventureLog: adventureLog,
-            name: "あしへー",
-            dqCharacter: .hero,
-            dqVocation: .hero,
-            dqGender: .male)
-    
     // adventureLog.dqSceneType = .opening
     // adventureLog.dqSceneType = .aliahan_town_house
     // adventureLog.dqSceneType = .aliahan_town
-    // adventureLog.dqSceneType = .field
+    adventureLog.dqSceneType = .field
     // adventureLog.dqSceneType = .alltrades_abbey
-    adventureLog.dqSceneType = .alefgard
+    // adventureLog.dqSceneType = .alefgard
     
     // adventureLog.dqStory = .opening
     // adventureLog.dqStory = .mother_waiting
     adventureLog.dqStory = .go_adventure
     
+    adventureLog.heroName = "えにくす"
     adventureLog.hasShip = true
     adventureLog.hasRamia = true
+
+    addNode(adventureLog: adventureLog,
+            name: "あしへー",
+            dqCharacter: .hero,
+            dqVocation: .hero,
+            dqGender: .male)
     
     addNode(adventureLog: adventureLog,
             name: "あしひー",
