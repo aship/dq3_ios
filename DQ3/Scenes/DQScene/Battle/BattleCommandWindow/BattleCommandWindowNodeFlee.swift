@@ -15,7 +15,7 @@ extension BattleCommandWindowNode {
         
         let text1 = "えにくすはにげだした!"
         
-        battleScene.battleMessageWindowNode = BattleMessageWindowNode()
+        battleScene.battleMessageWindowNode = BattleMessageWindowNode(battleScene: nil)
         
         let battleMessageWindowNode = battleScene.battleMessageWindowNode
         let scene = battleScene.scene!
@@ -37,23 +37,6 @@ extension BattleCommandWindowNode {
     private func fleetTransition() {
         let scene = self.battleScene.scene!
         
-        if DataManager.dqSceneTypeFromBattle == .field {
-            var dqAudio: DQAudio = .field
-            
-            if scene.fieldMoveMode == .ship {
-                dqAudio = .ship
-            }
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                scene.transitionFromBattle(dqSceneType: .field,
-                                           dqAudio: dqAudio)
-            }
-        }
-        else if DataManager.dqSceneTypeFromBattle == .alefgard {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                scene.transitionFromBattle(dqSceneType: .alefgard,
-                                           dqAudio: .alefgard)
-            }
-        }
+        scene.transitionFromBattle()
     }
 }

@@ -8,9 +8,23 @@
 import SpriteKit
 
 class BattleMessageWindowNode: SKTileMapNode {
+    private(set) var battleScene: BattleScene!
+    
     var isOpen = false
     var arrLines: [[SKSpriteNode]] = []
     var nextMark: SKSpriteNode!
+    
+    var battleGoldWindowNode: BattleGoldWindowNode?
+    
+    init(battleScene: BattleScene?) {
+        super.init()
+        
+        self.battleScene = battleScene
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     func close() {
         self.isOpen = false

@@ -8,15 +8,15 @@
 import SpriteKit
 
 extension BaseScene {
-    func transitionFromBattle(dqSceneType: DQSceneType,
-                              dqAudio: DQAudio) {
+    func transitionFromBattle() {
         let actionFadeOut = SKAction.fadeAlpha(to: 1.0,
                                                duration: 0.5)
         
         let actionFadeIn = SKAction.fadeAlpha(to: 0.0,
                                               duration: 0.5)
-        
-        self.blackScreenNode.run(actionFadeOut, completion: {
+        Task {
+            await self.blackScreenNode.run(actionFadeOut)
+            
             let battleScene = self.getDQScene(dqSceneType: .battle) as! BattleScene
             battleScene.battleMessageWindowNode.close()
             battleScene.battleStatusWindowNode.close()
@@ -30,9 +30,12 @@ extension BaseScene {
                 }
             }
             
-            self.setupDQScene(dqSceneType: dqSceneType)
+            let dqSceneType = DataManager.dqSceneTypeFromBattle
             
-            self.blackScreenNode.run(actionFadeIn)
-        })
+            self.setupDQScene(dqMainState: nil,
+                              dqSceneType: dqSceneType)
+            
+            await self.blackScreenNode.run(actionFadeIn)
+        }
     }
 }

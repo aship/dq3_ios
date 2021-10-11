@@ -12,7 +12,7 @@ extension BattleScene {
                           scene: BaseScene,
                           scale: CGFloat) {
         battleMessageWindowNode.close()
-        battleMessageWindowNode = BattleMessageWindowNode()
+        battleMessageWindowNode = BattleMessageWindowNode(battleScene: self)
         battleMessageWindowNode.addToScene(
             scene: scene,
             scale: scale)

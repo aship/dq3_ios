@@ -76,9 +76,11 @@ extension BattleScene {
             }
             else {
                 // モンスター数が0になったら終わり
-                self.winMonster()
-                
-                self.transitionScene()
+                Task {
+                    await self.winMonster()
+                    
+                    
+                }
             }
             
             print("All Process Done!")
