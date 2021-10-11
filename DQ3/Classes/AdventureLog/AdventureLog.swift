@@ -10,4 +10,7 @@ import SpriteKit
 class AdventureLog: NSObject {
     var heroName: String = ""
     var partyCharacterNodes: [CharacterNode] = []
+
+    var dqSceneType: DQSceneType = .opening
+    var dqStory: DQStory = .opening
 }

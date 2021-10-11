@@ -7,7 +7,9 @@
 
 import SpriteKit
 
-class BaseScene: SKScene {
+class BaseScene: SKScene,
+                 PadOverlayDelegate,
+                 ButtonOverlayDelegate {
     let scale = CGFloat(ScreenHeight / 240)
     
     let leftPad = PadOverlay()
@@ -18,8 +20,13 @@ class BaseScene: SKScene {
     
     var triangleNode = SKSpriteNode()
     
-    var queueFollowDirections: [Direction] = []
-    var characterNpcNodes: [CharacterNode] = []
+    let blackScreenNode = SKSpriteNode()
+    
+    var titleScene: TitleScene?
+    var adventureLogScene: AdventureLogScene?
+    var openingScene: OpeningScene?
+    var aliahanTownScene: AliahanTownScene?
+    var aliahanTownHouseScene: AliahanTownHouseScene?
     
     override func sceneDidLoad() {
         setupNotificationCenter()
@@ -27,5 +34,32 @@ class BaseScene: SKScene {
         self.scaleMode = .resizeFill
         self.anchorPoint = CGPoint(x: 0.5,
                                    y: 0.5)
+        
+        self.leftPad.delegate = self
+        self.buttonA.delegate = self
+        self.buttonB.delegate = self
+        
+        self.leftPad.zPosition = 10
+        self.buttonA.zPosition = 10
+        self.buttonB.zPosition = 10
+        
+        self.blackScreenNode.size = CGSize(width: ScreenWidth,
+                                           height: ScreenHeight)
+        self.blackScreenNode.color = .black
+        self.blackScreenNode.alpha = 0.0
+        self.blackScreenNode.zPosition = 9
+        self.addChild(blackScreenNode)
+    }
+    
+    override func didMove(to view: SKView) {
+        let dqMainState = DataManager.dqMainState
+        let dqSceneType = DataManager.adventureLog.dqSceneType
+        
+        setupDQScene(dqMainState: dqMainState,
+                     dqSceneType: dqSceneType)
+        
+        setupVirtualPad(leftPad: self.leftPad,
+                        buttonA: self.buttonA,
+                        buttonB: self.buttonB)
     }
 }
