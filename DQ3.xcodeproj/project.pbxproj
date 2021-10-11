@@ -106,6 +106,8 @@
 		AA4E9FE5270ACF8700D4F7C8 /* BaseMapSceneTransitionToMapWithStairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4E9FE3270ACF8700D4F7C8 /* BaseMapSceneTransitionToMapWithStairs.swift */; };
 		AA4E9FE7270AD0E500D4F7C8 /* DQSceneType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4E9FE6270AD0E500D4F7C8 /* DQSceneType.swift */; };
 		AA4E9FE9270AD1FC00D4F7C8 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4E9FE8270AD1FC00D4F7C8 /* Typealiases.swift */; };
+		AA4E9FEC270AD64700D4F7C8 /* BaseSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4E9FEA270AD64700D4F7C8 /* BaseSceneController.swift */; };
+		AA4E9FED270AD64700D4F7C8 /* BaseSceneNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4E9FEB270AD64700D4F7C8 /* BaseSceneNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -228,6 +230,8 @@
 		AA4E9FE3270ACF8700D4F7C8 /* BaseMapSceneTransitionToMapWithStairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapSceneTransitionToMapWithStairs.swift; sourceTree = "<group>"; };
 		AA4E9FE6270AD0E500D4F7C8 /* DQSceneType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQSceneType.swift; sourceTree = "<group>"; };
 		AA4E9FE8270AD1FC00D4F7C8 /* Typealiases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
+		AA4E9FEA270AD64700D4F7C8 /* BaseSceneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneController.swift; sourceTree = "<group>"; };
+		AA4E9FEB270AD64700D4F7C8 /* BaseSceneNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSceneNotification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -431,6 +435,8 @@
 			children = (
 				AA4E9F2E2709BD9400D4F7C8 /* BaseScene.swift */,
 				AA4E9F2F2709BD9400D4F7C8 /* BaseSceneVirtualPad.swift */,
+				AA4E9FEA270AD64700D4F7C8 /* BaseSceneController.swift */,
+				AA4E9FEB270AD64700D4F7C8 /* BaseSceneNotification.swift */,
 				AA4E9F602709BFE100D4F7C8 /* BaseMap */,
 			);
 			path = Base;
@@ -769,6 +775,7 @@
 				AA4E9F8E2709C14800D4F7C8 /* AliahanTownHouseSceneButton.swift in Sources */,
 				AA4E9F5D2709BF7E00D4F7C8 /* OpeningScene.swift in Sources */,
 				AA4E9F772709C02000D4F7C8 /* MapMessageWindowNode.swift in Sources */,
+				AA4E9FED270AD64700D4F7C8 /* BaseSceneNotification.swift in Sources */,
 				AA4E9F562709BEC400D4F7C8 /* DebugOption.swift in Sources */,
 				AA4E9F9B2709C1F200D4F7C8 /* AliahanTownHouse.swift in Sources */,
 				AA4E9F4B2709BE4E00D4F7C8 /* DQFontCheck.swift in Sources */,
@@ -821,6 +828,7 @@
 				AA4E9FE9270AD1FC00D4F7C8 /* Typealiases.swift in Sources */,
 				AA4E9FAB2709C67F00D4F7C8 /* AliahanTownScene.swift in Sources */,
 				AA4E9F362709BDC000D4F7C8 /* PadOverlay.swift in Sources */,
+				AA4E9FEC270AD64700D4F7C8 /* BaseSceneController.swift in Sources */,
 				AA4E9F202709BC6600D4F7C8 /* Constant.swift in Sources */,
 				AA4E9FDE270ACF5300D4F7C8 /* BaseMapSceneStick.swift in Sources */,
 				AA4E9F902709C14800D4F7C8 /* AliahanTownHouseScenePartyCharacters.swift in Sources */,
@@ -1008,7 +1016,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4;
+				MARKETING_VERSION = 0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1038,7 +1046,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4;
+				MARKETING_VERSION = 0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "info.office-aship.DQ3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
