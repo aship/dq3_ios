@@ -32,23 +32,23 @@ func setDebugAdventureLog() {
             dqVocation: .hero,
             dqGender: .male)
     
-    addNode(adventureLog: adventureLog,
-            name: "あしひー",
-            dqCharacter: .warrior_female,
-            dqVocation: .warrior,
-            dqGender: .female)
-    
-    addNode(adventureLog: adventureLog,
-            name: "あしひひ",
-            dqCharacter: .priest_female,
-            dqVocation: .priest,
-            dqGender: .female)
-    
-    addNode(adventureLog: adventureLog,
-            name: "あしひん",
-            dqCharacter: .mage_female,
-            dqVocation: .mage,
-            dqGender: .female)
+//    addNode(adventureLog: adventureLog,
+//            name: "あしひー",
+//            dqCharacter: .warrior_female,
+//            dqVocation: .warrior,
+//            dqGender: .female)
+//    
+//    addNode(adventureLog: adventureLog,
+//            name: "あしひひ",
+//            dqCharacter: .priest_female,
+//            dqVocation: .priest,
+//            dqGender: .female)
+//    
+//    addNode(adventureLog: adventureLog,
+//            name: "あしひん",
+//            dqCharacter: .mage_female,
+//            dqVocation: .mage,
+//            dqGender: .female)
     
     if adventureLog.dqSceneType == .field {
         for node in adventureLog.partyCharacterNodes {

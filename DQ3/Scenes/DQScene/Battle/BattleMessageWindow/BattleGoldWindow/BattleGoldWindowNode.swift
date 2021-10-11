@@ -13,8 +13,11 @@ class BattleGoldWindowNode: SKTileMapNode {
         let tileSet = SKTileSet(tileGroups: tileGroups)
         let size8 = CGSize(width: 8, height: 8)
         
+        let partyCharacterStatuses = DataManager.adventureLog.partyCharacterStatuses
+        let partyCount = partyCharacterStatuses.count
+
         let numberOfColumns = 16
-        let numberOfRows = 10
+        let numberOfRows = 4 + (2 * partyCount)
         
         self.tileSet = tileSet
         self.numberOfColumns = numberOfColumns
@@ -26,26 +29,21 @@ class BattleGoldWindowNode: SKTileMapNode {
                   numberOfRows: numberOfRows,
                   tileSet: tileSet)
         
+        let goldString = String(format: "%7d", 688)
+        
         showWord(windowNode: self,
-                 word: "   G:    130",
+                 word: "   G:\(goldString)",
                  pointX: 16,
                  pointY: -24)
-        
-        showWord(windowNode: self,
-                 word: "えにくす:      6",
-                 pointX: 16,
-                 pointY: -24 - 16)
-        
-        showWord(windowNode: self,
-                 word: "あしひい:    888",
-                 pointX: 16,
-                 pointY: -24 - 16 * 2)
-        
-        showWord(windowNode: self,
-                 word: "えしひい:9999999",
-                 pointX: 16,
-                 pointY: -24 - 16 * 3)
-        
+          
+        for (index, partyCharacterStatus) in partyCharacterStatuses.enumerated() {
+            let expString = String(format: "%7d", 88)
+            
+            showWord(windowNode: self,
+                     word: "\(partyCharacterStatus.name):\(expString)",
+                     pointX: 16,
+                     pointY: -24 - 16 * (index + 1))
+        }
         
         
         self.zPosition = ZPositionWindow
