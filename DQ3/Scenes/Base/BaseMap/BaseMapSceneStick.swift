@@ -1,15 +1,14 @@
 //
-//  AliahanTownSceneStick.swift
+//  BaseMapSceneStick.swift
 //  DQ3
 //
-//  Created by aship on 2020/12/29.
+//  Created by aship on 2020/12/09.
 //
 
 import SpriteKit
 
-extension AliahanTownScene {
+extension BaseMapScene {
     func padOverlayVirtualStickInteractionDidStart(_ padNode: PadOverlay) {
-        
     }
     
     func padOverlayVirtualStickInteractionDidChange(_ padNode: PadOverlay) {

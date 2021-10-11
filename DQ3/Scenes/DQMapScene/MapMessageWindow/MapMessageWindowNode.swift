@@ -9,11 +9,12 @@ import SpriteKit
 
 class MapMessageWindowNode: SKTileMapNode {
     var isOpen = false
+    
     var arrLines: [[SKSpriteNode]] = []
+    
     var nextMark: SKSpriteNode!
     
     func close() {
-        self.isOpen = false
         self.removeFromParent()
     }
     
@@ -21,7 +22,7 @@ class MapMessageWindowNode: SKTileMapNode {
                                pointX: Int,
                                pointY: Int,
                                scale: CGFloat) {
-        self.isOpen = true
+        self.removeFromParent()
         
         let tileGroups = getTileGroups()
         let tileSet = SKTileSet(tileGroups: tileGroups)
