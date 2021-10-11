@@ -56,5 +56,10 @@ extension BattleMessageWindowNode {
         
         self.battleGoldWindowNode = BattleGoldWindowNode()
         self.battleGoldWindowNode?.addToWindow(windowNode: self)
+        
+        // 1秒後にキー入力許可
+        await scene.run(actionWait)
+        
+        self.battleGoldWindowNode?.isProcessing = false
     }
 }

@@ -8,6 +8,8 @@
 import SpriteKit
 
 class BattleGoldWindowNode: SKTileMapNode {
+    var isProcessing = true
+        
     func addToWindow(windowNode: SKTileMapNode) {
         let tileGroups = getTileGroups()
         let tileSet = SKTileSet(tileGroups: tileGroups)
@@ -45,7 +47,6 @@ class BattleGoldWindowNode: SKTileMapNode {
                      pointX: 16,
                      pointY: -24 - 16 * (index + 1))
         }
-        
         
         self.zPosition = ZPositionWindow
         self.anchorPoint = CGPoint(x: 0, y: 1)

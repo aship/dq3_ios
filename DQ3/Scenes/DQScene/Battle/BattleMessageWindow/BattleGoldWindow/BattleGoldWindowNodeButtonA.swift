@@ -9,8 +9,11 @@ import SpriteKit
 
 extension BattleGoldWindowNode {
     func processButtonA() {
-        let scene = self.parent!.parent as! BaseScene
-        
-        scene.transitionFromBattle()
+        if !self.isProcessing {
+            self.isProcessing = true
+            
+            let scene = self.parent!.parent as! BaseScene
+            scene.transitionFromBattle()
+        }
     }
 }
