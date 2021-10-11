@@ -20,6 +20,22 @@ class CharacterStatus: NSObject,
     var level = 1
     var exp = 0
     
+    var power = 0
+    var rapid = 0
+    var tuffness = 0
+    var smart = 0
+    var lack = 0
+    
+    var offence = 0
+    var deffence = 0
+    
+    // どうぐ
+    var items: [String] = []
+    
+    // そうび
+    // ぶき たて よろい　かぶと
+    // じゅもん
+    
     override init() {
     }
     

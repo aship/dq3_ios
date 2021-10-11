@@ -249,7 +249,6 @@
 		AAE0B513271068D2001FC1D0 /* BattleSceneDefeatMonster.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0B510271068D2001FC1D0 /* BattleSceneDefeatMonster.swift */; };
 		AAE0B514271068D2001FC1D0 /* BattleSceneSelectMonster.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0B511271068D2001FC1D0 /* BattleSceneSelectMonster.swift */; };
 		AAE0B515271068D2001FC1D0 /* BattleSceneDamage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0B512271068D2001FC1D0 /* BattleSceneDamage.swift */; };
-		AAE0B519271068EA001FC1D0 /* BattleSceneTransitionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0B517271068EA001FC1D0 /* BattleSceneTransitionScene.swift */; };
 		AAE0B51A271068EA001FC1D0 /* BattleSceneWin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0B518271068EA001FC1D0 /* BattleSceneWin.swift */; };
 		AAE0B51F271068F8001FC1D0 /* BattleCommandWindowNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0B51B271068F8001FC1D0 /* BattleCommandWindowNode.swift */; };
 		AAE0B520271068F8001FC1D0 /* BattleCommandWindowNodeButtonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0B51C271068F8001FC1D0 /* BattleCommandWindowNodeButtonA.swift */; };
@@ -536,7 +535,6 @@
 		AAE0B510271068D2001FC1D0 /* BattleSceneDefeatMonster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleSceneDefeatMonster.swift; sourceTree = "<group>"; };
 		AAE0B511271068D2001FC1D0 /* BattleSceneSelectMonster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleSceneSelectMonster.swift; sourceTree = "<group>"; };
 		AAE0B512271068D2001FC1D0 /* BattleSceneDamage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleSceneDamage.swift; sourceTree = "<group>"; };
-		AAE0B517271068EA001FC1D0 /* BattleSceneTransitionScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleSceneTransitionScene.swift; sourceTree = "<group>"; };
 		AAE0B518271068EA001FC1D0 /* BattleSceneWin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleSceneWin.swift; sourceTree = "<group>"; };
 		AAE0B51B271068F8001FC1D0 /* BattleCommandWindowNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleCommandWindowNode.swift; sourceTree = "<group>"; };
 		AAE0B51C271068F8001FC1D0 /* BattleCommandWindowNodeButtonA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleCommandWindowNodeButtonA.swift; sourceTree = "<group>"; };
@@ -1428,7 +1426,6 @@
 			isa = PBXGroup;
 			children = (
 				AAE0B518271068EA001FC1D0 /* BattleSceneWin.swift */,
-				AAE0B517271068EA001FC1D0 /* BattleSceneTransitionScene.swift */,
 			);
 			path = Win;
 			sourceTree = "<group>";
@@ -1809,7 +1806,6 @@
 				AA75B375270FCFF700C45A6A /* AliahanTownOldMan1.swift in Sources */,
 				AA4E9FDE270ACF5300D4F7C8 /* BaseSceneStick.swift in Sources */,
 				AAE0B4E427106185001FC1D0 /* AlltradesAbbeySceneButton.swift in Sources */,
-				AAE0B519271068EA001FC1D0 /* BattleSceneTransitionScene.swift in Sources */,
 				AA75B37B270FD25300C45A6A /* MessageSoundManager.swift in Sources */,
 				AAE0B4E327106185001FC1D0 /* AlltradesAbbeySceneNpcCharacters.swift in Sources */,
 				AA4E9F902709C14800D4F7C8 /* AliahanTownHouseScenePartyCharacters.swift in Sources */,

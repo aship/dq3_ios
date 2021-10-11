@@ -55,6 +55,16 @@ extension BattleMessageWindowNode {
             string: textGold,
             line: 2)
         
+        let partyCharacterStatuses = DataManager.adventureLog.partyCharacterStatuses
+        
+        for (index, partyCharacterStatus) in partyCharacterStatuses.enumerated() {
+            partyCharacterStatus.exp += battleScene.exp
+        }
+        
+        DataManager.adventureLog.partyCharacterStatuses = partyCharacterStatuses
+        
+        DataManager.adventureLog.gold += battleScene.gold
+        
         self.battleGoldWindowNode = BattleGoldWindowNode()
         self.battleGoldWindowNode?.addToWindow(windowNode: self)
         
