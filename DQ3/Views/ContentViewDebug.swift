@@ -37,13 +37,13 @@ func setDebugAdventureLog() {
 //            dqCharacter: .warrior_female,
 //            dqVocation: .warrior,
 //            dqGender: .female)
-//    
+//
 //    addNode(adventureLog: adventureLog,
 //            name: "あしひひ",
 //            dqCharacter: .priest_female,
 //            dqVocation: .priest,
 //            dqGender: .female)
-//    
+//
 //    addNode(adventureLog: adventureLog,
 //            name: "あしひん",
 //            dqCharacter: .mage_female,
@@ -60,7 +60,7 @@ func setDebugAdventureLog() {
         }
         
         // 船/ラーミアの位置決定
-        DataManager.currentZoomArea = .alltrades_abbey  // .aliahan
+        DataManager.currentZoomArea = .aliahan // .alltrades_abbey
     }
     else if adventureLog.dqSceneType == .alltrades_abbey {
         for (index, node) in adventureLog.partyCharacterNodes.enumerated() {

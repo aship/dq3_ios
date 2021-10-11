@@ -18,6 +18,7 @@ class CharacterStatus: NSObject,
     var mp = 100
     var mpMax = 100
     var level = 1
+    var exp = 0
     
     override init() {
     }
@@ -40,6 +41,7 @@ class CharacterStatus: NSObject,
         aCoder.encode(self.mp, forKey: "mp")
         aCoder.encode(self.mpMax, forKey: "mpMax")
         aCoder.encode(self.level, forKey: "level")
+        aCoder.encode(self.exp, forKey: "exp")
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -53,5 +55,6 @@ class CharacterStatus: NSObject,
         self.mp = aDecoder.decodeInteger(forKey: "mp")
         self.mpMax = aDecoder.decodeInteger(forKey: "mpMax")
         self.level = aDecoder.decodeInteger(forKey: "level")
+        self.exp = aDecoder.decodeInteger(forKey: "exp")
     }
 }
