@@ -15,7 +15,7 @@ extension BattleCommandWindowNode {
         
         let text1 = "えにくすはにげだした!"
         
-        battleScene.battleMessageWindowNode = BattleMessageWindowNode()
+        battleScene.battleMessageWindowNode = BattleMessageWindowNode(battleScene: nil)
         
         let battleMessageWindowNode = battleScene.battleMessageWindowNode
         let scene = battleScene.scene!

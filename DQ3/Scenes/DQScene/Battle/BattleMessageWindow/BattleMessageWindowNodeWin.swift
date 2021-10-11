@@ -42,14 +42,15 @@ extension BattleMessageWindowNode {
             string: textName,
             line: 1)
         
-        let textExperience = "222ポイントの けいけんちをかくとく!"
+        let battleScene = self.battleScene!
+        let textExperience = "\(battleScene.exp)ポイントの けいけんちをかくとく!"
         await showMessageFluently(
             string: textExperience,
             line: 2)
         
         moveLine()
         
-        let textGold = "555ゴールドを てにいれた!"
+        let textGold = "\(battleScene.gold)ゴールドを てにいれた!"
         await showMessageFluently(
             string: textGold,
             line: 2)

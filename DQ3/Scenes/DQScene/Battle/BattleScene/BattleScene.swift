@@ -21,7 +21,7 @@ enum BattleArea: String {
 }
 
 class BattleScene: DQScene {
-    var battleMessageWindowNode = BattleMessageWindowNode()
+    var battleMessageWindowNode = BattleMessageWindowNode(battleScene: nil)
     var battleStatusWindowNode = BattleStatusWindowNode()
     var battleCommandWindowNode = BattleCommandWindowNode(battleScene: nil)
     var battleTargetWindowNode = BattleTargetWindowNode(battleScene: nil,
@@ -38,6 +38,10 @@ class BattleScene: DQScene {
     
     // 攻撃シーケンス何番目か
     var indexBattleSequence = 0
+    
+    // 獲得 exp, ゴールド
+    var exp = 0
+    var gold = 0
     
     // 敵を全部倒したら終了とする
     var isBattleFinished = false

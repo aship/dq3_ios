@@ -14,7 +14,7 @@ extension BattleScene {
         let scene = self.scene!
         let scale = scene.scale
         
-        self.battleMessageWindowNode = BattleMessageWindowNode()
+        await self.battleMessageWindowNode = BattleMessageWindowNode(battleScene: self)
         await self.battleMessageWindowNode.addToScene(
             scene: scene,
             scale: scale)
