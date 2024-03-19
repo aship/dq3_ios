@@ -38,7 +38,8 @@ let package = Package(
             name: "AppModule",
             path: ".",
             resources: [
-                .copy("mp3")
+                .copy("mp3"),
+                .copy("csv"),
             ]
         )
     ]
