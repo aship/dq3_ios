@@ -37,6 +37,7 @@ let package = Package(
             path: ".",
             resources: [
                 .copy("mp3"),
+                .copy("csv")
             ]
 
         )
