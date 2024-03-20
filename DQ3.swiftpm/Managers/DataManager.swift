@@ -8,6 +8,8 @@
 import Foundation
 
 class DataManager {
+    static var dqMainState = debugDqMainState
+
     static var dqSceneType: DQSceneType = .opening
     // static var dqSceneType: DQSceneType = .aliahan_town_house
     // static var dqSceneType: DQSceneType = .aliahan_town
@@ -22,6 +24,9 @@ class DataManager {
 
     static var queueFollowDirections: [Direction] = []
     static var showInsideMap = false
+
+    // trainsigionToMap で使う
+    static var scene = BaseScene()
 
     private init() {
     }

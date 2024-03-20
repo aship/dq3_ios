@@ -20,10 +20,12 @@ let AliahanTownStairsToHousePositionY = 4
 // オープニングで母の初期位置
 let AliahanTownMotherStartPositionX = 5
 let AliahanTownMotherStartPositionY = 4
+let AliahanTownMotherStartDirection: Direction = .left
 
 // オープニングで母の待機位置
 let AliahanTownMotherWaitingPositionX = 16
 let AliahanTownMotherWaitingPositionY = 20
+let AliahanTownMotherWaitingDirection: Direction = .up
 
 // ルイーダの店がある場所の屋根の下に入る
 let AliahanTownEnterInsidePubPositionX1 = 3

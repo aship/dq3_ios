@@ -1,5 +1,5 @@
 //
-//  BaseMapSceneNotification.swift
+//  BaseSceneNotification.swift
 //  DQ3
 //
 //  Created by aship on 2021/01/02.
