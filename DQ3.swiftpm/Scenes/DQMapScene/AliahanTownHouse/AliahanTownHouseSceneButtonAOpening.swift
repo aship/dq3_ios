@@ -9,7 +9,7 @@ import SpriteKit
 
 extension AliahanTownHouseScene {
     func processButtonAOpening(
-        mapMessageWindowNode: MapMessageWindowNode,
+        mapMessageWindowNode: MapMessageWindowNode?,
         openingStateFlag: inout OpeningStateFlag
     ) {
         if openingStateFlag == .message_one_start || openingStateFlag == .message_two_start
@@ -29,25 +29,25 @@ extension AliahanTownHouseScene {
             self.mapMessageWindowNode.nextMark.removeFromParent()
 
             Task {
-                await mapMessageWindowNode.showMessage(
+                await mapMessageWindowNode?.showMessage(
                     string: text1,
                     line: 2,
                     withSe: true)
 
-                await mapMessageWindowNode.showMessage(
+                await mapMessageWindowNode?.showMessage(
                     string: text2,
                     line: 3,
                     withSe: true)
 
-                self.mapMessageWindowNode.moveLine()
+                await self.mapMessageWindowNode.moveLine()
 
-                await mapMessageWindowNode.showMessage(
+                await mapMessageWindowNode?.showMessage(
                     string: text3,
                     line: 3,
                     withSe: true)
 
-                self.mapMessageWindowNode.moveLine()
-                self.mapMessageWindowNode.showNextMark(line: 3)
+                await self.mapMessageWindowNode.moveLine()
+                await self.mapMessageWindowNode.showNextMark(line: 3)
 
                 self.openingStateFlag = .message_two_end
             }
@@ -65,26 +65,26 @@ extension AliahanTownHouseScene {
             self.mapMessageWindowNode.nextMark.removeFromParent()
 
             Task {
-                await mapMessageWindowNode.showMessage(
+                await mapMessageWindowNode?.showMessage(
                     string: text1,
                     line: 3,
                     withSe: true)
 
-                mapMessageWindowNode.moveLine()
+                await mapMessageWindowNode?.moveLine()
 
-                await mapMessageWindowNode.showMessage(
+                await mapMessageWindowNode?.showMessage(
                     string: text2,
                     line: 3,
                     withSe: true)
 
-                mapMessageWindowNode.moveLine()
+                await mapMessageWindowNode?.moveLine()
 
-                await mapMessageWindowNode.showMessage(
+                await mapMessageWindowNode?.showMessage(
                     string: text3,
                     line: 3,
                     withSe: true)
 
-                self.mapMessageWindowNode.moveLine()
+                await mapMessageWindowNode?.moveLine()
 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                     self.mapMessageWindowNode.close()
@@ -97,6 +97,12 @@ extension AliahanTownHouseScene {
                     })
                 }
             }
+
+            return
+        }
+
+        if openingStateFlag == .mother_moved {
+            processButtonA()
 
             return
         }

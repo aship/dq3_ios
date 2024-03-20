@@ -25,7 +25,9 @@ extension AliahanTownScene {
         let actionHeroAnimationRight = getCharacterAnimationAction(
             direction: .right,
             dqCharacter: .hero)
-        let actionWait = SKAction.wait(forDuration: 1 / 4)
+        let actionWait1 = SKAction.wait(forDuration: 1 / 4)
+        let actionWait6 = SKAction.wait(forDuration: 6 / 4)
+        let actionWait8 = SKAction.wait(forDuration: 8 / 4)
 
         let actionMother1 = SKAction.moveBy(
             x: -16,
@@ -60,30 +62,31 @@ extension AliahanTownScene {
         let motherNode = self.characterNpcNodes.first!
 
         Task {
-            await motherNode.run(actionWait)
+            await motherNode.run(actionWait6)
 
-            motherNode.run(actionMotherAnimationRight, withKey: "")
-            await motherNode.run(actionWait)
+            await motherNode.run(actionMotherAnimationRight, withKey: "")
+            await motherNode.run(actionWait1)
 
-            motherNode.run(actionMotherAnimationLeft, withKey: "")
+            await motherNode.run(actionMotherAnimationLeft, withKey: "")
+            await motherNode.run(actionWait1)
             await motherNode.run(actionMother1)
 
-            motherNode.run(actionMotherAnimationUp, withKey: "")
+            await motherNode.run(actionMotherAnimationUp, withKey: "")
             await motherNode.run(actionMother2)
 
-            motherNode.run(actionMotherAnimationRight, withKey: "")
+            await motherNode.run(actionMotherAnimationRight, withKey: "")
             await motherNode.run(actionMother3)
 
-            motherNode.run(actionMotherAnimationUp, withKey: "")
+            await motherNode.run(actionMotherAnimationUp, withKey: "")
             await motherNode.run(actionMother4)
 
-            motherNode.run(actionMotherAnimationRight, withKey: "")
+            await motherNode.run(actionMotherAnimationRight, withKey: "")
             await motherNode.run(actionMother5)
 
-            motherNode.run(actionMotherAnimationUp, withKey: "")
+            await motherNode.run(actionMotherAnimationUp, withKey: "")
             await motherNode.run(actionMother6)
 
-            motherNode.run(actionMotherAnimationLeft, withKey: "")
+            await motherNode.run(actionMotherAnimationLeft, withKey: "")
         }
 
         let actionHero1 = SKAction.moveBy(
@@ -97,7 +100,9 @@ extension AliahanTownScene {
             duration: 1 / 4 * 2)
 
         let actionShowMainTileMap = SKAction.run {
-            self.showMainTileMap(color: self.greenBGColor)
+            self.scene.showMainTileMap(
+                color: self.greenBGColor,
+                insideTileMapNode: self.insideTileMapNode)
         }
 
         let actionHero3 = SKAction.moveBy(
@@ -125,11 +130,6 @@ extension AliahanTownScene {
             y: 16 * 7,
             duration: 1 / 4 * 7)
 
-        let actionsHero = SKAction.sequence([
-            actionWait,
-            actionWait,
-        ])
-
         let sequence = SKAction.sequence([
             actionHero2,
             actionShowMainTileMap,
@@ -139,60 +139,59 @@ extension AliahanTownScene {
         let heroNode = DataManager.adventureLog.partyCharacterNodes.first!
 
         Task {
-            await heroNode.run(actionsHero)
+            await heroNode.run(actionWait8)
             await heroNode.run(actionHero1)
 
-            heroNode.run(actionHeroAnimationUp, withKey: "")
+            await heroNode.run(actionHeroAnimationUp, withKey: "")
             await heroNode.run(sequence)
 
-            heroNode.run(actionHeroAnimationRight, withKey: "")
+            await heroNode.run(actionHeroAnimationRight, withKey: "")
             await heroNode.run(actionHero4)
 
-            heroNode.run(actionHeroAnimationUp, withKey: "")
+            await heroNode.run(actionHeroAnimationUp, withKey: "")
             await heroNode.run(actionHero5)
 
-            heroNode.run(actionHeroAnimationRight, withKey: "")
+            await heroNode.run(actionHeroAnimationRight, withKey: "")
             await heroNode.run(actionHero6)
 
-            heroNode.run(actionHeroAnimationUp, withKey: "")
+            await heroNode.run(actionHeroAnimationUp, withKey: "")
             await heroNode.run(actionHero7)
 
             completion()
         }
 
         let actionMap1 = SKAction.moveBy(
-            x: 16 * 2 * self.scale,
+            x: 16 * 2 * self.scene.scale,
             y: 0,
             duration: 1 / 4 * 2)
 
         let actionMap2 = SKAction.moveBy(
             x: 0,
-            y: -16 * 6 * self.scale,
+            y: -16 * 6 * self.scene.scale,
             duration: 1 / 4 * 6)
 
         let actionMap3 = SKAction.moveBy(
-            x: -16 * 2 * self.scale,
+            x: -16 * 2 * self.scene.scale,
             y: 0,
             duration: 1 / 4 * 2)
 
         let actionMap4 = SKAction.moveBy(
             x: 0,
-            y: -16 * 3 * self.scale,
+            y: -16 * 3 * self.scene.scale,
             duration: 1 / 4 * 3)
 
         let actionMap5 = SKAction.moveBy(
-            x: -16 * 9 * self.scale,
+            x: -16 * 9 * self.scene.scale,
             y: 0,
             duration: 1 / 4 * 9)
 
         let actionMap6 = SKAction.moveBy(
             x: 0,
-            y: -16 * 7 * self.scale,
+            y: -16 * 7 * self.scene.scale,
             duration: 1 / 4 * 7)
 
         let actionsMap = SKAction.sequence([
-            actionWait,
-            actionWait,
+            actionWait8,
             actionMap1,
             actionMap2,
             actionMap3,

@@ -7,32 +7,28 @@
 
 import SpriteKit
 
-class OpeningScene: BaseMapScene,
-    PadOverlayDelegate,
-    ButtonOverlayDelegate
-{
-    override func sceneDidLoad() {
-        super.sceneDidLoad()
-
-        self.leftPad.delegate = self
-        self.buttonA.delegate = self
-        self.buttonB.delegate = self
+class OpeningScene: DQMapScene {
+    enum SceneFlag {
+        case message_1_start
+        case message_1_end
+        case message_2_start
+        case message_2_end
+        case transition
     }
 
-    override func didMove(to view: SKView) {
-        self.backgroundColor = .black
+    var sceneFlag: SceneFlag = .message_1_start
 
-        setupVirtualPad(
-            leftPad: self.leftPad,
-            buttonA: self.buttonA,
-            buttonB: self.buttonB)
+    func setup() {
+        DataManager.dqSceneType = .opening
+
+        self.scene.backgroundColor = .black
 
         let text1 = "それは えにくすが 16さいになる"
         let text2 = "たんじょうびの ことであった。"
 
         self.mapMessageWindowNode = MapMessageWindowNode()
         self.mapMessageWindowNode.showMessages(
-            scene: self,
+            scene: self.scene,
             text1: text1,
             text2: text2,
             text3: nil,
@@ -40,7 +36,7 @@ class OpeningScene: BaseMapScene,
             withNextMark: false,
             pointX: MapMessageWindowChildOfScenePointX,
             pointY: MapMessageWindowChildOfScenePointY,
-            scale: self.scale,
+            scale: self.scene.scale,
             completion: {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                     self.showSecondMessage()
@@ -50,8 +46,8 @@ class OpeningScene: BaseMapScene,
 
     func showSecondMessage() {
         let text1 = "＊「おきなさい。"
-        let text2 = "  おきなさい わたしの かわいい"
-        let text3 = "  えにくすや……。"
+        let text2 = "　　おきなさい　わたしの　かわいい"
+        let text3 = "　　えにくすや……。"
 
         Task {
             await mapMessageWindowNode.showMessage(
@@ -64,24 +60,21 @@ class OpeningScene: BaseMapScene,
                 line: 3,
                 withSe: true)
 
-            self.mapMessageWindowNode.moveLine()
+            await self.mapMessageWindowNode.moveLine()
 
             await self.mapMessageWindowNode.showMessage(
                 string: text3,
                 line: 3,
                 withSe: true)
 
-            self.mapMessageWindowNode.moveLine()
+            await self.mapMessageWindowNode.moveLine()
 
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                 self.mapMessageWindowNode.close()
 
-                let scene = AliahanTownHouseScene()
-
-                let transition = SKTransition.crossFade(withDuration: 0.5)
-                self.view?.presentScene(
-                    scene,
-                    transition: transition)
+                self.scene.transitionToMap(
+                    dqSceneType: .aliahan_town_house,
+                    dqAudio: .town)
             }
         }
     }
