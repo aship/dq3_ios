@@ -19,22 +19,32 @@ extension AliahanTownHouseScene {
             && newPositionY == AliahanTownHouseStairsPositionY
         {
             enterAliahanTown = true
-        } else if dqStory == .opening && newPositionX == AliahanTownHouseMotherCallPositionX {
+        } else if DataManager.dqStory == .opening
+            && newPositionX == AliahanTownHouseMotherCallPositionX
+        {
             enterMotherEscorting = true
         }
 
+        let headNode = DataManager.adventureLog.partyCharacterNodes.first!
+
         if enterAliahanTown {
-            setMoveProhibited()
+            headNode.setMoveProhibited()
 
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 SoundEffectManager.play(.stairs)
 
+                headNode.positionX = AliahanTownStairsToHousePositionX
+                headNode.positionY = AliahanTownStairsToHousePositionY
+
+                for node in DataManager.adventureLog.partyCharacterNodes {
+                    node.removeFromParent()
+                }
+
                 let scene = AliahanTownScene()
-                scene.heroPositionX = AliahanTownStairsToHousePositionX
-                scene.heroPositionY = AliahanTownStairsToHousePositionY
-                scene.showInsideMap = true
+                DataManager.showInsideMap = true
 
                 let transition = SKTransition.crossFade(withDuration: 1.0)
+
                 self.view?.presentScene(
                     scene,
                     transition: transition)
@@ -42,7 +52,7 @@ extension AliahanTownHouseScene {
         } else if enterMotherEscorting {
             self.openingStateFlag = .mother_start_escorting
 
-            setMoveProhibited()
+            headNode.setMoveProhibited()
 
             let text1 = "＊「さあ　かあさんに"
             let text2 = "　　ついて　いらっしゃい。"
@@ -66,20 +76,20 @@ extension AliahanTownHouseScene {
 
                 if newPositionY == 2 {
                     self.motherAndHeroMoveCatchUp2(completion: {
-                        self.heroPositionX += 2
+                        headNode.positionX += 2
 
                         self.checkPosition(
-                            newPositionX: self.heroPositionX,
-                            newPositionY: self.heroPositionY)
+                            newPositionX: headNode.positionX,
+                            newPositionY: headNode.positionY)
                     })
                 } else if newPositionY == 1 {
                     self.motherAndHeroMoveCatchUp1(completion: {
-                        self.heroPositionX += 2
-                        self.heroPositionY += 1
+                        headNode.positionX += 2
+                        headNode.positionY += 1
 
                         self.checkPosition(
-                            newPositionX: self.heroPositionX,
-                            newPositionY: self.heroPositionY)
+                            newPositionX: headNode.positionX,
+                            newPositionY: headNode.positionY)
                     })
                 }
             }

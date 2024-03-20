@@ -92,7 +92,8 @@ extension AliahanTownHouseScene {
                     self.motherMove(completion: {
                         self.openingStateFlag = .mother_moved
 
-                        self.setMovePermitted()
+                        let headNode = DataManager.adventureLog.partyCharacterNodes.first!
+                        headNode.setMovePermitted()
                     })
                 }
             }

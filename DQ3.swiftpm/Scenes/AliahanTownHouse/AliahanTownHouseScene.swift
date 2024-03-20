@@ -29,9 +29,6 @@ class AliahanTownHouseScene: BaseMapScene,
         size: CGSize(width: 16, height: 16))
     override init() {
         super.init()
-
-        self.heroPositionX = AliahanTownHouseHeroPositionX
-        self.heroPositionY = AliahanTownHouseHeroPositionY
     }
 
     override init(size: CGSize) {
@@ -65,10 +62,12 @@ class AliahanTownHouseScene: BaseMapScene,
 
         addPartyCharacters(
             tileMapNode: self.mainTileMapNode,
+            dqStory: DataManager.dqStory,
             scale: self.scale)
 
         addNpcCharacters(
             tileMapNode: self.mainTileMapNode,
+            dqStory: DataManager.dqStory,
             scale: self.scale)
 
         setupVirtualPad(
@@ -78,8 +77,9 @@ class AliahanTownHouseScene: BaseMapScene,
 
         AudioManager.play(dqAudio: .town)
 
-        if dqStory == .opening {
-            setMoveProhibited()
+        if DataManager.dqStory == .opening {
+            let headNode = DataManager.adventureLog.partyCharacterNodes.first!
+            headNode.setMoveProhibited()
 
             let text1 = "*「おはよう えにくす。"
             let text2 = "  もう あさですよ。"
