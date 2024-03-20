@@ -9,21 +9,23 @@ import SpriteKit
 
 class MapMessageWindowNode: SKTileMapNode {
     var isOpen = false
-    
+
     var arrLines: [[SKSpriteNode]] = []
-    
+
     var nextMark: SKSpriteNode!
 
     func close() {
         self.removeFromParent()
     }
-    
-    func addToScene<T: SKNode>(node: T,
-                               pointX: Int,
-                               pointY: Int,
-                               scale: CGFloat) {
+
+    func addToScene<T: SKNode>(
+        node: T,
+        pointX: Int,
+        pointY: Int,
+        scale: CGFloat
+    ) {
         self.removeFromParent()
-        
+
         let tileGroups = getTileGroups()
         let tileSet = SKTileSet(tileGroups: tileGroups)
         let size8 = CGSize(width: 8, height: 8)

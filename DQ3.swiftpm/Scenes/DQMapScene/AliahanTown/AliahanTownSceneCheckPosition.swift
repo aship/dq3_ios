@@ -8,15 +8,18 @@
 import SpriteKit
 
 extension AliahanTownScene {
-    func checkPosition(newPositionX: Int,
-                       newPositionY: Int) {
+    func checkPosition(
+        newPositionX: Int,
+        newPositionY: Int
+    ) {
         var enterHouse = false
-        
+
         var enterInside = false
         var exitInside = false
-        
-        if newPositionX == AliahanTownStairsToHousePositionX &&
-            newPositionY == AliahanTownStairsToHousePositionY {
+
+        if newPositionX == AliahanTownStairsToHousePositionX
+            && newPositionY == AliahanTownStairsToHousePositionY
+        {
             enterHouse = true
         }
 
@@ -66,17 +69,16 @@ extension AliahanTownScene {
 
         if enterHouse {
             DataManager.queueFollowDirections = []
-            
+
             self.scene.transitionToMapWithStairs(
                 dqSceneType: .aliahan_town_house,
                 dqAudio: .town)
-        }
-        else if enterInside {
+        } else if enterInside {
             self.scene.showInsideTileMap(insideTileMapNode: self.insideTileMapNode)
-        }
-        else if exitInside {
-            self.scene.showMainTileMap(color: self.greenBGColor,
-                                       insideTileMapNode: self.insideTileMapNode)
+        } else if exitInside {
+            self.scene.showMainTileMap(
+                color: self.greenBGColor,
+                insideTileMapNode: self.insideTileMapNode)
         }
     }
 }
