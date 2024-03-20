@@ -37,22 +37,22 @@ extension AliahanTownScene {
                     string: text2,
                     line: 3,
                     withSe: true)
-
-                self.mapMessageWindowNode.moveLine()
-
+                
+                await mapMessageWindowNode.moveLine()
+                
                 await mapMessageWindowNode.showMessage(
                     string: text3,
                     line: 3,
                     withSe: true)
-
-                self.mapMessageWindowNode.moveLine()
-
+                
+                await mapMessageWindowNode.moveLine()
+                
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                     let headNode = DataManager.adventureLog.partyCharacterNodes.first!
                     headNode.setMovePermitted()
-
-                    self.mapMessageWindowNode.close()
-
+                    
+                    mapMessageWindowNode.close()
+                    
                     self.openingStateFlag = .finished
                     DataManager.dqStory = .mother_waiting
                 }

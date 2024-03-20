@@ -8,14 +8,17 @@
 import SpriteKit
 
 extension BaseMapScene {
-    func showMainTileMap(color: UIColor) {
+    func showMainTileMap(
+        color: UIColor,
+        insideTileMapNode: SKTileMapNode
+    ) {
         self.backgroundColor = color
-        self.insideTileMapNode.alpha = 0
+        insideTileMapNode.alpha = 0
     }
 
-    func showInsideTileMap() {
+    func showInsideTileMap(insideTileMapNode: SKTileMapNode) {
         self.backgroundColor = .black
-        self.insideTileMapNode.alpha = 1
+        insideTileMapNode.alpha = 1
     }
 
     func addMainTileMap(
@@ -78,11 +81,11 @@ extension BaseMapScene {
         let path = Bundle.module.path(
             forResource: "csv/" + name,
             ofType: "csv")
+        
         do {
             let csvString = try String(
                 contentsOfFile: path!,
                 encoding: String.Encoding.utf8)
-            
             var csvLines = csvString.components(separatedBy: .newlines)
             csvLines.removeLast()
 
@@ -127,6 +130,18 @@ extension BaseMapScene {
                 }
             }
         } catch {}
+
+        return tileMapNode
+    }
+
+    func getTileMapNode(dqSceneType: DQSceneType) -> SKTileMapNode {
+        var tileMapNode: SKTileMapNode!
+
+        switch dqSceneType {
+        case .opening: break
+        case .aliahan_town: tileMapNode = self.aliahanTownScene.mainTileMapNode
+        case .aliahan_town_house: tileMapNode = self.aliahanTownHouseScene.mainTileMapNode
+        }
 
         return tileMapNode
     }

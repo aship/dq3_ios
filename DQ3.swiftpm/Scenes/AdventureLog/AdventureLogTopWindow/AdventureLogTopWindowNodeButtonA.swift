@@ -17,11 +17,10 @@ extension AdventureLogTopWindowNode {
             SoundEffectManager.play(.command)
 
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                let scene = OpeningScene()
-
+                let parent = self.parent as! BaseScene
+                let scene = BaseMapScene()
                 let transition = SKTransition.crossFade(withDuration: 0.5)
 
-                let parent = self.parent as! BaseScene
                 parent.view?.presentScene(
                     scene,
                     transition: transition)

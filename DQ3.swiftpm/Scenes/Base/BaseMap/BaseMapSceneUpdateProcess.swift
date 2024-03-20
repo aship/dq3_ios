@@ -13,13 +13,19 @@ extension BaseMapScene {
         tileMapNode: SKTileMapNode,
         characterNodes: [CharacterNode],
         queueFollowDirections: inout [Direction],
-        scale: CGFloat
+        dqSceneType: DQSceneType,
+        scale: CGFloat,
+        checkCanMove: CheckCanMove,
+        completion: @escaping (
+            _ newPositionX: Int,
+            _ newPositionY: Int
+        ) -> Void
     ) {
-        let headNode = DataManager.adventureLog.partyCharacterNodes.first!
-
         if padDirection == .neutral {
             return
         }
+
+        let headNode = characterNodes.first!
 
         if headNode.isMoving {
             return
@@ -29,7 +35,7 @@ extension BaseMapScene {
             return
         }
 
-        headNode.initDirection(direction: padDirection)
+        headNode.changeDirection(direction: padDirection)
 
         let diffs = getDiffXY(direction: padDirection)
 
@@ -40,15 +46,14 @@ extension BaseMapScene {
         let newPositionY = headNode.positionY + diffY
 
         let canMove = checkCanMove(
-            tileMapNode: tileMapNode,
-            newPositionX: newPositionX,
-            newPositionY: newPositionY)
+            tileMapNode,
+            newPositionX,
+            newPositionY)
         if !canMove {
             return
         }
 
         headNode.isMoving = true
-
         headNode.move(
             direction: padDirection,
             tileMapNode: tileMapNode,
@@ -57,11 +62,9 @@ extension BaseMapScene {
         ) {
             headNode.isMoving = false
 
-            self.checkPosition(
-                newPositionX: newPositionX,
-                newPositionY: newPositionY)
-
-            print("position X: \(newPositionX), Y: \(newPositionY)")
+            completion(
+                newPositionX,
+                newPositionY)
         }
 
         if 0 < queueFollowDirections.count {
@@ -75,7 +78,7 @@ extension BaseMapScene {
                     withMoveMap: false,
                     scale: self.scale,
                     completion: {})
-                node.initDirection(direction: direction!)
+                node.changeDirection(direction: direction!)
             }
         }
 
@@ -91,7 +94,7 @@ extension BaseMapScene {
                     withMoveMap: false,
                     scale: self.scale,
                     completion: {})
-                node.initDirection(direction: direction)
+                node.changeDirection(direction: direction)
             }
         }
 
@@ -107,7 +110,7 @@ extension BaseMapScene {
                     withMoveMap: false,
                     scale: self.scale,
                     completion: {})
-                node.initDirection(direction: direction)
+                node.changeDirection(direction: direction)
             }
         }
 
@@ -121,19 +124,5 @@ extension BaseMapScene {
                 queueFollowDirections.removeFirst()
             }
         }
-    }
-
-    @objc func checkCanMove(
-        tileMapNode: SKTileMapNode,
-        newPositionX: Int,
-        newPositionY: Int
-    ) -> Bool {
-        return true
-    }
-
-    @objc func checkPosition(
-        newPositionX: Int,
-        newPositionY: Int
-    ) {
     }
 }
