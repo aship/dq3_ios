@@ -79,14 +79,10 @@ extension BaseMapScene {
             forResource: "csv/" + name,
             ofType: "csv")
         do {
-            print("NAME")
-            print(name)
-            print("PATH")
-            print(path)
-
             let csvString = try String(
                 contentsOfFile: path!,
                 encoding: String.Encoding.utf8)
+            
             var csvLines = csvString.components(separatedBy: .newlines)
             csvLines.removeLast()
 

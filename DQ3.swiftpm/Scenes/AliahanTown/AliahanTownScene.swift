@@ -24,7 +24,9 @@ class AliahanTownScene: BaseMapScene,
 
     var openingStateFlag: OpeningStateFlag = .none
 
-    let motherNode = SKSpriteNode(imageNamed: "\(ImagePathLady)/down1.png")
+    let motherNode = SKSpriteNode(
+        texture: nil,
+        size: CGSize(width: 16, height: 16))
 
     let greenBGColor = UIColor(
         red: 166 / 255,

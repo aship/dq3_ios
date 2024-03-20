@@ -13,7 +13,11 @@ class BaseMapScene: BaseScene {
 
     var mapMessageWindowNode = MapMessageWindowNode()
 
-    let heroNode = SKSpriteNode(imageNamed: "\(ImagePathHero)/down1.png")
+    let heroNode = SKSpriteNode(
+        texture: nil,
+        size: CGSize(width: 16, height: 16))
+
+    var direction: Direction = .neutral
 
     var isMoving = false
     var isMovePermitted = true
