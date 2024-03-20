@@ -12,34 +12,33 @@ extension AliahanTownScene {
         tileMapNode: SKTileMapNode,
         scale: CGFloat
     ) {
-        addCharacter(
-            node: self.heroNode,
+        let headNode = DataManager.adventureLog.partyCharacterNodes.first!
+
+        headNode.addToMap(
             tileMapNode: tileMapNode,
             isTown: true)
-
-        if dqStory == .opening {
-            let action = getCharacterAnimationAction(
-                direction: .left,
-                dqCharacter: .hero)
-            self.heroNode.run(action)
-        } else {
-            let action = getCharacterAnimationAction(
-                direction: .right,
-                dqCharacter: .hero)
-            self.heroNode.run(action)
+        // 前 Scene でキー入れっぱなしの時に
+        // 前 Scene の update -> setMove 処理が残ってて
+        // Scene 切り替え直後に1歩動いてしまうため必要
+        // 一度 setMoveProhibitted してるのに
+        // なぜか isMovePermitted = true になる解
+        // scene 切り替わってるのに前 Scene の update が走るのが原因か
+        // 起きたり起きなかったり条件不明、iOSのバグっぽい、直ってたら外す
+        // 後 Scene の setMovePermitted　が早すぎるのが問題っぽいので遅らせる暫定対応
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            headNode.setMovePermitted()
         }
 
-        setCharacterHeroPosition(
-            positionX: self.heroPositionX,
-            positionY: self.heroPositionY,
-            node: self.heroNode,
-            tileMapNode: tileMapNode,
-            scale: scale)
+        if DataManager.dqStory == .opening {
+            headNode.initDirection(direction: .left)
+        } else {
+            headNode.initDirection(direction: .right)
+        }
 
-        setMapPosition(
-            positionX: self.heroPositionX,
-            positionY: self.heroPositionY,
+        headNode.zPosition = 4
+        headNode.setPosition(
             tileMapNode: tileMapNode,
+            withMoveMap: true,
             scale: scale)
     }
 }

@@ -8,7 +8,7 @@
 import SpriteKit
 
 extension AliahanTownScene {
-    func checkCanMove(
+    override func checkCanMove(
         tileMapNode: SKTileMapNode,
         newPositionX: Int,
         newPositionY: Int

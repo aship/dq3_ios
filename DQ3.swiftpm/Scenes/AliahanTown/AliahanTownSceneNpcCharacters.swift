@@ -10,52 +10,48 @@ import SpriteKit
 extension AliahanTownScene {
     func addNpcCharacters(
         tileMapNode: SKTileMapNode,
+        dqStory: DQStory,
         scale: CGFloat
     ) {
         addMother(
             tileMapNode: tileMapNode,
+            dqStory: dqStory,
             scale: scale)
     }
 
     private func addMother(
         tileMapNode: SKTileMapNode,
+        dqStory: DQStory,
         scale: CGFloat
     ) {
         if DQStory.mother_waiting.rawValue < dqStory.rawValue {
             return
         }
 
-        addCharacter(
-            node: self.motherNode,
+        let motherNode = CharacterNode(dqCharacter: .lady)
+
+        motherNode.addToMap(
             tileMapNode: tileMapNode,
             isTown: true)
 
-        var positionX: Int!
-        var positionY: Int!
-
         if dqStory == .opening {
-            positionX = AliahanTownMotherStartPositionX
-            positionY = AliahanTownMotherStartPositionY
+            motherNode.positionX = AliahanTownMotherStartPositionX
+            motherNode.positionY = AliahanTownMotherStartPositionY
 
-            let actionMother = getCharacterAnimationAction(
-                direction: .left,
-                dqCharacter: .lady)
-            self.motherNode.run(actionMother)
+            motherNode.initDirection(direction: .left)
         } else if dqStory == .mother_waiting {
-            positionX = AliahanTownMotherWaitingPositionX
-            positionY = AliahanTownMotherWaitingPositionY
+            motherNode.positionX = AliahanTownMotherWaitingPositionX
+            motherNode.positionY = AliahanTownMotherWaitingPositionY
 
-            let actionMother = getCharacterAnimationAction(
-                direction: .up,
-                dqCharacter: .lady)
-            self.motherNode.run(actionMother)
+            motherNode.initDirection(direction: .up)
         }
 
-        setCharacterNpcPosition(
-            positionX: positionX,
-            positionY: positionY,
-            node: self.motherNode,
+        motherNode.zPosition = 1
+        motherNode.setPosition(
             tileMapNode: tileMapNode,
+            withMoveMap: false,
             scale: scale)
+
+        self.characterNpcNodes.append(motherNode)
     }
 }

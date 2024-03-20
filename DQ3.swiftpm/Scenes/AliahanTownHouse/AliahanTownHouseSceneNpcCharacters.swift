@@ -10,6 +10,7 @@ import SpriteKit
 extension AliahanTownHouseScene {
     func addNpcCharacters(
         tileMapNode: SKTileMapNode,
+        dqStory: DQStory,
         scale: CGFloat
     ) {
         addMother(
@@ -21,28 +22,25 @@ extension AliahanTownHouseScene {
         tileMapNode: SKTileMapNode,
         scale: CGFloat
     ) {
-        addCharacter(
-            node: self.motherNode,
+        let motherNode = CharacterNode(dqCharacter: .lady)
+        motherNode.addToMap(
             tileMapNode: tileMapNode,
             isTown: true)
 
-        if dqStory == .opening {
-            let actionMother = getCharacterAnimationAction(
-                direction: .down,
-                dqCharacter: .lady)
-            self.motherNode.run(actionMother)
+        motherNode.positionX = AliahanTownHouseMotherPositionX
+        motherNode.positionY = AliahanTownHouseMotherPositionY
+
+        if DataManager.dqStory == .opening {
+            motherNode.initDirection(direction: .down)
         } else {
-            let actionMother = getCharacterAnimationAction(
-                direction: .up,
-                dqCharacter: .lady)
-            self.motherNode.run(actionMother)
+            motherNode.initDirection(direction: .up)
         }
 
-        setCharacterNpcPosition(
-            positionX: AliahanTownHouseMotherPositionX,
-            positionY: AliahanTownHouseMotherPositionY,
-            node: self.motherNode,
+        motherNode.setPosition(
             tileMapNode: tileMapNode,
+            withMoveMap: false,
             scale: scale)
+
+        self.characterNpcNodes.append(motherNode)
     }
 }
