@@ -3,7 +3,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        let scene = TitleScene()
+        // let scene = TitleScene()
+        let scene = AdventureLogScene()
 
         let characterNode = CharacterNode(dqCharacter: .hero)
 

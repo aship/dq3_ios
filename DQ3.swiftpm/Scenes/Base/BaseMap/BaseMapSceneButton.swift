@@ -8,7 +8,7 @@
 import SpriteKit
 
 extension BaseMapScene {
-    func willPress(_ button: ButtonOverlay) {
+    override func willPress(_ button: ButtonOverlay) {
         let willPress = getWillPress(dqSceneType: DataManager.dqSceneType)
 
         willPress(button)
