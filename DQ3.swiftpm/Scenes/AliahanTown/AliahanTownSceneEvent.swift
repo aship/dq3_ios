@@ -56,7 +56,8 @@ extension AliahanTownScene {
             x: 0,
             y: 16 * 7,
             duration: 1 / 4 * 7)
-        let motherNode = self.motherNode
+
+        let motherNode = self.characterNpcNodes.first!
 
         Task {
             await motherNode.run(actionWait)
@@ -134,7 +135,8 @@ extension AliahanTownScene {
             actionShowMainTileMap,
             actionHero3,
         ])
-        let heroNode = self.heroNode
+
+        let heroNode = DataManager.adventureLog.partyCharacterNodes.first!
 
         Task {
             await heroNode.run(actionsHero)
