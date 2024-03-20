@@ -19,3 +19,8 @@ let AliahanTownHouseMotherCallPositionX = 7
 // 階段
 let AliahanTownHouseStairsPositionX = 9
 let AliahanTownHouseStairsPositionY = 2
+
+// 勇者のじいちゃん
+let AliahanTownHouseOldManPositionX = 7
+let AliahanTownHouseOldManPositionY = 5
+let AliahanTownHouseOldManDirection: Direction = .up

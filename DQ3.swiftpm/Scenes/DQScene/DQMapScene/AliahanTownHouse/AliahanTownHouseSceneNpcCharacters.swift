@@ -33,5 +33,15 @@ extension AliahanTownHouseScene {
             tileMapNode: tileMapNode,
             characterNpcNodes: &characterNpcNodes,
             scale: scale)
+
+        addNpcToMap(
+            name: "grandfather",
+            dqCharacter: .old_man,
+            positionX: AliahanTownHouseOldManPositionX,
+            positionY: AliahanTownHouseOldManPositionY,
+            direction: AliahanTownHouseOldManDirection,
+            tileMapNode: tileMapNode,
+            characterNpcNodes: &characterNpcNodes,
+            scale: scale)
     }
 }
