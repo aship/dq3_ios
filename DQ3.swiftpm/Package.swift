@@ -19,7 +19,7 @@ let package = Package(
             bundleIdentifier: "info.office-aship.DQ3",
             displayVersion: "1.0",
             bundleVersion: "1",
-            appIcon: .placeholder(icon: .bandage),
+            appIcon: .asset("AppIcon"),
             accentColor: .presetColor(.indigo),
             supportedDeviceFamilies: [
                 .pad,
