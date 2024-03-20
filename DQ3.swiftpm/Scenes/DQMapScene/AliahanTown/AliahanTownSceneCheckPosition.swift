@@ -8,14 +8,20 @@
 import SpriteKit
 
 extension AliahanTownScene {
-    override func checkPosition(
+    func checkPosition(
         newPositionX: Int,
         newPositionY: Int
     ) {
+        var enterHouse = false
+
         var enterInside = false
         var exitInside = false
 
-        var enterHouse = false
+        if newPositionX == AliahanTownStairsToHousePositionX
+            && newPositionY == AliahanTownStairsToHousePositionY
+        {
+            enterHouse = true
+        }
 
         // ルイーダの店がある場所の屋根の下に入る
         if (newPositionX == AliahanTownEnterInsidePubPositionX1
@@ -61,37 +67,18 @@ extension AliahanTownScene {
             exitInside = true
         }
 
-        if newPositionX == AliahanTownStairsToHousePositionX
-            && newPositionY == AliahanTownStairsToHousePositionY
-        {
-            enterHouse = true
-        }
+        if enterHouse {
+            DataManager.queueFollowDirections = []
 
-        if enterInside {
-            showInsideTileMap()
+            self.scene.transitionToMapWithStairs(
+                dqSceneType: .aliahan_town_house,
+                dqAudio: .town)
+        } else if enterInside {
+            self.scene.showInsideTileMap(insideTileMapNode: self.insideTileMapNode)
         } else if exitInside {
-            showMainTileMap(color: self.greenBGColor)
-        } else if enterHouse {
-            let headNode = DataManager.adventureLog.partyCharacterNodes.first!
-            headNode.setMoveProhibited()
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                SoundEffectManager.play(.stairs)
-
-                headNode.positionX = AliahanTownHouseStairsPositionX
-                headNode.positionY = AliahanTownHouseStairsPositionY
-
-                for node in DataManager.adventureLog.partyCharacterNodes {
-                    node.removeFromParent()
-                }
-
-                let scene = AliahanTownHouseScene()
-                let transition = SKTransition.crossFade(withDuration: 1.0)
-
-                self.view?.presentScene(
-                    scene,
-                    transition: transition)
-            }
+            self.scene.showMainTileMap(
+                color: self.greenBGColor,
+                insideTileMapNode: self.insideTileMapNode)
         }
     }
 }

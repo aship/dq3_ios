@@ -56,4 +56,8 @@ class AudioManager {
         self.audioPlayer.stop()
         self.dqAudio = .none
     }
+
+    class func getDqAudio() -> DQAudio {
+        return self.dqAudio
+    }
 }

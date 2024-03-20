@@ -7,10 +7,7 @@
 
 import SpriteKit
 
-class AliahanTownScene: BaseMapScene,
-    PadOverlayDelegate,
-    ButtonOverlayDelegate
-{
+class AliahanTownScene: DQMapScene {
     enum OpeningStateFlag {
         case none
         case mother_moving
@@ -29,73 +26,50 @@ class AliahanTownScene: BaseMapScene,
         green: 226 / 255,
         blue: 70 / 255,
         alpha: 1)
-    override init() {
-        super.init()
-    }
+    func setup() {
+        DataManager.dqSceneType = .aliahan_town
+        AudioManager.play(dqAudio: .town)
 
-    override init(size: CGSize) {
-        super.init(size: size)
-    }
+        self.scene.backgroundColor = UIColor(
+            red: 166 / 255,
+            green: 226 / 255,
+            blue: 70 / 255,
+            alpha: 1)
 
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    override func sceneDidLoad() {
-        super.sceneDidLoad()
-
-        self.leftPad.delegate = self
-        self.buttonA.delegate = self
-        self.buttonB.delegate = self
-    }
-
-    override func didMove(to view: SKView) {
-        self.backgroundColor = self.greenBGColor
-
-        addMainTileMap(
+        self.scene.addMainTileMap(
             name: "aliahan_town",
             tileMapNode: &self.mainTileMapNode,
-            numberOfImages: 60,
-            scale: self.scale)
+            numberOfImages: 20,
+            scale: self.scene.scale)
 
-        addInsideTileMap(
+        self.scene.addInsideTileMap(
             name: "aliahan_town_inside",
             mainTileMapNode: self.mainTileMapNode,
             insideTileMapNode: &self.insideTileMapNode,
-            numberOfImages: 66)
+            numberOfImages: 12)
 
         if DataManager.showInsideMap {
-            showInsideTileMap()
+            self.scene.showInsideTileMap(insideTileMapNode: self.insideTileMapNode)
 
             DataManager.showInsideMap = false
         }
 
         addPartyCharacters(
             tileMapNode: self.mainTileMapNode,
-            scale: self.scale)
+            scale: self.scene.scale)
 
         addNpcCharacters(
             tileMapNode: self.mainTileMapNode,
             dqStory: DataManager.dqStory,
-            scale: self.scale)
-
-        setupVirtualPad(
-            leftPad: self.leftPad,
-            buttonA: self.buttonA,
-            buttonB: self.buttonB)
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            AudioManager.play(dqAudio: .town)
-        }
+            scale: self.scene.scale)
 
         if DataManager.dqStory == .opening {
-            self.openingStateFlag = .mother_moving
-
             let headNode = DataManager.adventureLog.partyCharacterNodes.first!
             headNode.setMoveProhibited()
+            headNode.initDirection(direction: .left)
 
-            motherAndHeroMove(completion: {
-                self.openingStateFlag = .message_one_start
+            self.motherAndHeroMove(completion: {
+                self.openingStateFlag = .mother_moved
 
                 let headNode = DataManager.adventureLog.partyCharacterNodes.first!
                 headNode.positionX = AliahanTownMotherWaitingPositionX - 1
@@ -106,7 +80,7 @@ class AliahanTownScene: BaseMapScene,
 
                 self.mapMessageWindowNode = MapMessageWindowNode()
                 self.mapMessageWindowNode.showMessages(
-                    scene: self,
+                    scene: self.scene,
                     text1: text1,
                     text2: text2,
                     text3: nil,
@@ -114,7 +88,7 @@ class AliahanTownScene: BaseMapScene,
                     withNextMark: true,
                     pointX: MapMessageWindowChildOfScenePointX,
                     pointY: MapMessageWindowChildOfScenePointY,
-                    scale: self.scale,
+                    scale: self.scene.scale,
                     completion: {
                         self.openingStateFlag = .message_one_end
                     })

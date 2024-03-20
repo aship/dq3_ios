@@ -40,10 +40,10 @@ extension AliahanTownHouseScene {
         Task {
             await motherNode.run(actionMove1)
 
-            motherNode.run(actionMotherAnimationDown, withKey: "")
+            await motherNode.run(actionMotherAnimationDown, withKey: "")
             await motherNode.run(actionMove2)
 
-            motherNode.run(actionMotherAnimationRight, withKey: "")
+            await motherNode.run(actionMotherAnimationRight, withKey: "")
             await motherNode.run(actionMove3)
 
             completion()
@@ -109,7 +109,7 @@ extension AliahanTownHouseScene {
         Task {
             await heroNode.run(actionHero1)
 
-            heroNode.run(actionHeroAnimationRight, withKey: "")
+            await heroNode.run(actionHeroAnimationRight, withKey: "")
             await heroNode.run(actionHero2)
 
             completion()
