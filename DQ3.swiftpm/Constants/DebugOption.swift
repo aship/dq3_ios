@@ -8,7 +8,7 @@
 // アプリ起動時の状態
 // リリース時は .title にする
 // 任意の状態でスタートしたい場合は .adventure_log_loaded
-let debugDqMainState: DQMainState = .title
+let debugDqMainState: DQMainState = .adventure_log_loaded
 
 // リリース時は以下全部 false
 // debug で必要なら true にする

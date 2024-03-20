@@ -39,6 +39,7 @@ extension BaseScene {
         case .opening: break
         case .aliahan_town: willPress = self.aliahanTownScene?.willPress
         case .aliahan_town_house: willPress = self.aliahanTownHouseScene?.willPress
+        case .field: willPress = self.fieldScene?.willPress
         }
 
         return willPress

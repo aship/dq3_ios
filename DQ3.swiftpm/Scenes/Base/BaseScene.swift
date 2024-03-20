@@ -28,6 +28,7 @@ class BaseScene: SKScene,
     var openingScene: OpeningScene?
     var aliahanTownScene: AliahanTownScene?
     var aliahanTownHouseScene: AliahanTownHouseScene?
+    var fieldScene: FieldScene?
 
     override func sceneDidLoad() {
         setupNotificationCenter()
