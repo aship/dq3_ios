@@ -9,30 +9,22 @@ import SpriteKit
 
 extension AliahanTownScene {
     func motherAndHeroMove(completion: @escaping () -> Void) {
-        let textureMotherUp = getCharacterTexture(
+        let actionMotherAnimationUp = getCharacterAnimationAction(
             direction: .up,
             dqCharacter: .lady)
-        let textureMotherRight = getCharacterTexture(
-            direction: .right,
-            dqCharacter: .lady)
-        let textureMotherLeft = getCharacterTexture(
+        let actionMotherAnimationLeft = getCharacterAnimationAction(
             direction: .left,
             dqCharacter: .lady)
+        let actionMotherAnimationRight = getCharacterAnimationAction(
+            direction: .right,
+            dqCharacter: .lady)
 
-        let actionMotherTextureUp = SKAction.setTexture(textureMotherUp)
-        let actionMotherTextureLeft = SKAction.setTexture(textureMotherLeft)
-        let actionMotherTextureRight = SKAction.setTexture(textureMotherRight)
-
-        let textureHeroUp = getCharacterTexture(
+        let actionHeroAnimationUp = getCharacterAnimationAction(
             direction: .up,
             dqCharacter: .hero)
-        let textureHeroRight = getCharacterTexture(
+        let actionHeroAnimationRight = getCharacterAnimationAction(
             direction: .right,
             dqCharacter: .hero)
-
-        let actionHeroTextureUp = SKAction.setTexture(textureHeroUp)
-        let actionHeroTextureRight = SKAction.setTexture(textureHeroRight)
-
         let actionWait = SKAction.wait(forDuration: 1 / 4)
 
         let actionMother1 = SKAction.moveBy(
@@ -64,30 +56,34 @@ extension AliahanTownScene {
             x: 0,
             y: 16 * 7,
             duration: 1 / 4 * 7)
-
-        let actionsMother = SKAction.sequence([
-            actionWait,
-            actionMotherTextureRight,
-            actionWait,
-            actionMotherTextureLeft,
-            actionMother1,
-            actionMotherTextureUp,
-            actionMother2,
-            actionMotherTextureRight,
-            actionMother3,
-            actionMotherTextureUp,
-            actionMother4,
-            actionMotherTextureRight,
-            actionMother5,
-            actionMotherTextureUp,
-            actionMother6,
-            actionMotherTextureLeft,
-        ])
         let motherNode = self.motherNode
 
-        motherNode.run(
-            actionsMother,
-            completion: {})
+        Task {
+            await motherNode.run(actionWait)
+
+            motherNode.run(actionMotherAnimationRight, withKey: "")
+            await motherNode.run(actionWait)
+
+            motherNode.run(actionMotherAnimationLeft, withKey: "")
+            await motherNode.run(actionMother1)
+
+            motherNode.run(actionMotherAnimationUp, withKey: "")
+            await motherNode.run(actionMother2)
+
+            motherNode.run(actionMotherAnimationRight, withKey: "")
+            await motherNode.run(actionMother3)
+
+            motherNode.run(actionMotherAnimationUp, withKey: "")
+            await motherNode.run(actionMother4)
+
+            motherNode.run(actionMotherAnimationRight, withKey: "")
+            await motherNode.run(actionMother5)
+
+            motherNode.run(actionMotherAnimationUp, withKey: "")
+            await motherNode.run(actionMother6)
+
+            motherNode.run(actionMotherAnimationLeft, withKey: "")
+        }
 
         let actionHero1 = SKAction.moveBy(
             x: -16 * 2,
@@ -131,27 +127,36 @@ extension AliahanTownScene {
         let actionsHero = SKAction.sequence([
             actionWait,
             actionWait,
-            actionHero1,
-            actionHeroTextureUp,
+        ])
+
+        let sequence = SKAction.sequence([
             actionHero2,
             actionShowMainTileMap,
             actionHero3,
-            actionHeroTextureRight,
-            actionHero4,
-            actionHeroTextureUp,
-            actionHero5,
-            actionHeroTextureRight,
-            actionHero6,
-            actionHeroTextureUp,
-            actionHero7,
         ])
         let heroNode = self.heroNode
 
-        heroNode.run(
-            actionsHero,
-            completion: {
-                completion()
-            })
+        Task {
+            await heroNode.run(actionsHero)
+            await heroNode.run(actionHero1)
+
+            heroNode.run(actionHeroAnimationUp, withKey: "")
+            await heroNode.run(sequence)
+
+            heroNode.run(actionHeroAnimationRight, withKey: "")
+            await heroNode.run(actionHero4)
+
+            heroNode.run(actionHeroAnimationUp, withKey: "")
+            await heroNode.run(actionHero5)
+
+            heroNode.run(actionHeroAnimationRight, withKey: "")
+            await heroNode.run(actionHero6)
+
+            heroNode.run(actionHeroAnimationUp, withKey: "")
+            await heroNode.run(actionHero7)
+
+            completion()
+        }
 
         let actionMap1 = SKAction.moveBy(
             x: 16 * 2 * self.scale,
@@ -193,8 +198,6 @@ extension AliahanTownScene {
             actionMap5,
             actionMap6,
         ])
-        self.mainTileMapNode.run(
-            actionsMap,
-            completion: {})
+        self.mainTileMapNode.run(actionsMap)
     }
 }

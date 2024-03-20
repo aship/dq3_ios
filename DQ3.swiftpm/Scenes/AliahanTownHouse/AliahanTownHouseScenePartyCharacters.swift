@@ -20,10 +20,10 @@ extension AliahanTownHouseScene {
         if dqStory == .opening {
             self.heroNode.texture = SKTexture(imageNamed: "character/vocation/hero/sleep")
         } else {
-            let texture = getCharacterTexture(
+            let action = getCharacterAnimationAction(
                 direction: .right,
                 dqCharacter: .hero)
-            self.heroNode.texture = texture
+            self.heroNode.run(action)
         }
 
         setCharacterHeroPosition(

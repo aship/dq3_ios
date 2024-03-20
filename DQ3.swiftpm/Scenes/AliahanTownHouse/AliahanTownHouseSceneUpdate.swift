@@ -21,9 +21,14 @@ extension AliahanTownHouseScene {
             return
         }
 
-        self.heroNode.texture = getCharacterTexture(
-            direction: self.padDirection,
-            dqCharacter: .hero)
+        if self.direction != self.padDirection {
+            let action = getCharacterAnimationAction(
+                direction: self.padDirection,
+                dqCharacter: .hero)
+            self.heroNode.run(action)
+
+            self.direction = self.padDirection
+        }
 
         let diffs = getDiffXY(direction: self.padDirection)
 
