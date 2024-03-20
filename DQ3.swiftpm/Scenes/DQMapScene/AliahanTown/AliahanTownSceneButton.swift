@@ -14,12 +14,11 @@ extension AliahanTownScene {
                 processButtonAOpening(
                     mapMessageWindowNode: self.mapMessageWindowNode,
                     openingStateFlag: &self.openingStateFlag)
-            }
-            else {
+            } else {
                 processButtonA()
             }
         }
-        
+
         if button == self.scene.buttonB {
             processButtonB(mapMessageWindowNode: self.mapMessageWindowNode)
         }

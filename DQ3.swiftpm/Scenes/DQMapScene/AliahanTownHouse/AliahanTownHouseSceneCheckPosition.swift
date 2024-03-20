@@ -8,8 +8,10 @@
 import SpriteKit
 
 extension AliahanTownHouseScene {
-    func checkPosition(newPositionX: Int,
-                       newPositionY: Int) {
+    func checkPosition(
+        newPositionX: Int,
+        newPositionY: Int
+    ) {
         var enterAliahanTown = false
         var enterMotherEscorting = false
 
@@ -22,24 +24,23 @@ extension AliahanTownHouseScene {
         {
             enterMotherEscorting = true
         }
-        
+
         if enterAliahanTown {
             DataManager.showInsideMap = true
             DataManager.queueFollowDirections = []
-            
+
             for node in DataManager.adventureLog.partyCharacterNodes {
                 node.positionX = AliahanTownStairsToHousePositionX
                 node.positionY = AliahanTownStairsToHousePositionY
                 node.direction = .left
             }
-            
+
             self.scene.transitionToMapWithStairs(
                 dqSceneType: .aliahan_town,
                 dqAudio: .town)
-        }
-        else if enterMotherEscorting {
+        } else if enterMotherEscorting {
             self.openingStateFlag = .mother_start_escorting
-            
+
             let headNode = DataManager.adventureLog.partyCharacterNodes.first!
             headNode.setMoveProhibited()
 

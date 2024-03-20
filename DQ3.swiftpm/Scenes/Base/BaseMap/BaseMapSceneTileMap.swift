@@ -81,7 +81,7 @@ extension BaseMapScene {
         let path = Bundle.module.path(
             forResource: "csv/" + name,
             ofType: "csv")
-        
+
         do {
             let csvString = try String(
                 contentsOfFile: path!,
