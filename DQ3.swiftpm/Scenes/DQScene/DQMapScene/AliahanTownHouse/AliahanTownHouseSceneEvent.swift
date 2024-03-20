@@ -35,6 +35,10 @@ extension AliahanTownHouseScene {
 
         let motherNode = self.characterNpcNodes.first!
 
+        // どうせ移動するから最終ポジションに座標をセット
+        motherNode.positionX = AliahanTownHouseMotherWaitingPositionX
+        motherNode.positionY = AliahanTownHouseMotherWaitingPositionY
+
         motherNode.run(actionMotherAnimationLeft)
 
         Task {
