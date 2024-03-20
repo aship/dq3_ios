@@ -3,16 +3,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        // let scene = TitleScene()
-        let scene = AdventureLogScene()
+        let scene = DataManager.scene
 
-        let characterNode = CharacterNode(dqCharacter: .hero)
-
-        let adventureLog = AdventureLog()
-        adventureLog.heroName = "えにくす"
-        adventureLog.partyCharacterNodes.append(characterNode)
-
-        DataManager.adventureLog = adventureLog
+        setDebugAdventureLog()
 
         // let scene = AliahanTownScene()
         // for node in DataManager.adventureLog.partyCharacterNodes {

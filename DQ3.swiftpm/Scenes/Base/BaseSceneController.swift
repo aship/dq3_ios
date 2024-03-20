@@ -8,9 +8,6 @@
 import GameController
 
 extension BaseScene {
-    @objc func willPress(_ button: ButtonOverlay) {
-    }
-
     func handleGameController(gamepad: GCExtendedGamepad) {
         // △ ○ × □
         var triangleButton: GCControllerButtonInput?
