@@ -111,6 +111,7 @@ extension BaseMapScene {
             let csvString = try String(
                 contentsOfFile: path!,
                 encoding: String.Encoding.utf8)
+
             var csvLines = csvString.components(separatedBy: .newlines)
             csvLines.removeLast()
 
