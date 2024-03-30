@@ -62,6 +62,13 @@ class AliahanTownHouseScene: DQMapScene {
             scale: scale,
             dqStory: dqStory)
 
+        setNpcMove(
+            characterNodes: DataManager.adventureLog.partyCharacterNodes,
+            characterNpcNodes: self.characterNpcNodes,
+            tileMapNode: self.mainTileMapNode,
+            scale: self.scene.scale,
+            dqStory: dqStory)
+
         if dqStory == .opening {
             let text1 = "＊「おはよう　えにくす。"
             let text2 = "　　もう　あさですよ。"

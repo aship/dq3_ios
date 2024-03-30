@@ -13,6 +13,21 @@ enum Direction: String {
     case left
 }
 
+func getRandomDirection() -> Direction {
+    let value = Int.random(in: 0...3)
+    var direction: Direction!
+
+    switch value {
+    case 0: direction = .up
+    case 1: direction = .down
+    case 2: direction = .left
+    case 3: direction = .right
+    default: break
+    }
+
+    return direction
+}
+
 func getDiffXY(direction: Direction) -> (Int, Int) {
     var diffX = 0
     var diffY = 0
