@@ -12,6 +12,7 @@ enum DQAudio: String {
     case battle
     case ship
     case ramia
+    case castle
 }
 
 enum DQSoundEffect: String {

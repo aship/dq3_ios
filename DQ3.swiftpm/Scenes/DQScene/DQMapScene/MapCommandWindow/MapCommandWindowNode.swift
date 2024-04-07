@@ -33,6 +33,7 @@ class MapCommandWindowNode: SKTileMapNode {
     var baseTalkMessageWindowNode: BaseTalkMessageWindowNode?
     var talkMessageWindowAliahanTown: TalkMessageWindowNodeAliahanTown?
     var talkMessageWindowAliahanTownHouse: TalkMessageWindowNodeAliahanTownHouse?
+    var talkMessageWindowAlltradesAbbey: TalkMessageWindowNodeAlltradesAbbey?
 
     var spellMessageWindowNode: SpellMessageWindowNode?
     var mapMessageWindowNode: MapMessageWindowNode?

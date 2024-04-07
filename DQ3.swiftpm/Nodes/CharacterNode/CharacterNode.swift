@@ -47,6 +47,10 @@ class CharacterNode: SKSpriteNode {
 
     override func encode(with aCoder: NSCoder) {
         aCoder.encode(self.dqCharacter.rawValue, forKey: "dqCharacter")
+        aCoder.encode(self.direction.rawValue, forKey: "direction")
+
+        aCoder.encode(self.positionX, forKey: "positionX")
+        aCoder.encode(self.positionY, forKey: "positionY")
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -61,5 +65,9 @@ class CharacterNode: SKSpriteNode {
 
         self.dqCharacter = DQCharacter(
             rawValue: aDecoder.decodeObject(forKey: "dqCharacter") as! String)!
+        self.direction = Direction(rawValue: aDecoder.decodeObject(forKey: "direction") as! String)!
+
+        self.positionX = aDecoder.decodeInteger(forKey: "positionX")
+        self.positionY = aDecoder.decodeInteger(forKey: "positionY")
     }
 }

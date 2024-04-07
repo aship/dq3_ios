@@ -47,6 +47,9 @@ extension BaseScene {
             }
 
             self.fieldScene?.setup(dqAudio: dqAudio)
+        case .alltrades_abbey:
+            self.alltradesAbbeyScene = AlltradesAbbeyScene(scene: self)
+            self.alltradesAbbeyScene?.setup()
         case .none: break
         }
     }

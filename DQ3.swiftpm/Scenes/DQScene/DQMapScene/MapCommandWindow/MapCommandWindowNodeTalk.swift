@@ -14,6 +14,7 @@ extension MapCommandWindowNode {
         switch dqSceneType {
         case .aliahan_town: processTalkAliahanTownButtonA()
         case .aliahan_town_house: processTalkAliahanTownButtonA()
+        case .alltrades_abbey: processTalkAlltradesAbbeyButtonA()
         default: processTalkDefaultButtonA()
         }
     }
@@ -60,6 +61,28 @@ extension MapCommandWindowNode {
 
         self.talkMessageWindowAliahanTownHouse?.initializeTalk()
         self.talkMessageWindowAliahanTownHouse?.processButtonA()
+    }
+
+    private func processTalkAlltradesAbbeyButtonA() {
+        if let talkMessageWindowAlltradesAbbey = self.talkMessageWindowAlltradesAbbey {
+            talkMessageWindowAlltradesAbbey.processButtonA()
+
+            return
+        }
+
+        pauseTriangleAnimation(triangleNode: self.triangleNode)
+        SoundEffectManager.play(.command)
+
+        self.talkMessageWindowAlltradesAbbey = TalkMessageWindowNodeAlltradesAbbey(
+            characterNpcNodes: self.characterNpcNodes)
+        self.talkMessageWindowAlltradesAbbey?.addToNode(
+            node: self,
+            pointX: MapMessageWindowChildOfCommandWindowPointX,
+            pointY: MapMessageWindowChildOfCommandWindowPointY,
+            scale: 1)
+
+        self.talkMessageWindowAlltradesAbbey?.initializeTalk()
+        self.talkMessageWindowAlltradesAbbey?.processButtonA()
     }
 
     private func processTalkDefaultButtonA() {

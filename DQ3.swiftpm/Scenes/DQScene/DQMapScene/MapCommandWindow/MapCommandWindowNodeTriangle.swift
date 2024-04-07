@@ -19,6 +19,16 @@ extension MapCommandWindowNode {
             }
         }
 
+        if let talkMessageWindow = self.talkMessageWindowAlltradesAbbey {
+            let yesNoWindowNode = talkMessageWindow.alltradesAbbeyTalkMessageYesNoWindowNode
+
+            if yesNoWindowNode.isOpen {
+                yesNoWindowNode.moveTriangle(direction: direction)
+
+                return
+            }
+        }
+
         if let mapCommandWhoWindowNode = self.mapCommandWhoWindowNode {
             mapCommandWhoWindowNode.moveTriangle(direction: direction)
 
