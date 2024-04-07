@@ -58,6 +58,7 @@ extension BaseScene {
                         dqMapScene.mainTileMapNode?.removeFromParent()
                         dqMapScene.insideTileMapNode?.removeFromParent()
                         dqMapScene.mapCommandWindowNode.removeFromParent()
+                        dqMapScene.mapStatusWindowNode.removeFromParent()
 
                         // ルーラしたら船/ラーミアの位置をリセット
                         DataManager.resetShipPosition = true

@@ -8,13 +8,17 @@
 import SpriteKit
 
 extension MapCommandWindowNode {
-    func processButtonA(adventureLog: AdventureLog) {
+    func processButtonA(
+        mapStatusWindowNode: MapStatusWindowNode,
+        adventureLog: AdventureLog
+    ) {
         if self.commandWindowStatus == .processing {
             return
         }
 
         if self.commandWindowStatus == .should_close {
             self.close()
+            mapStatusWindowNode.close()
 
             let partyCharacterNodes = adventureLog.partyCharacterNodes
             let characterNpcNodes = self.characterNpcNodes

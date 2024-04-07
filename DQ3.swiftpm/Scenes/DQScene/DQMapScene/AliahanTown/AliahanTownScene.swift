@@ -27,8 +27,6 @@ class AliahanTownScene: DQMapScene {
         blue: 70 / 255,
         alpha: 1)
     func setup() {
-        DataManager.adventureLog.dqSceneType = .aliahan_town
-
         AudioManager.play(dqAudio: .town)
 
         self.scene.backgroundColor = UIColor(
@@ -113,6 +111,6 @@ class AliahanTownScene: DQMapScene {
         }
 
         // debug!!!
-        self.showInsideTileMap(insideTileMapNode: self.insideTileMapNode)
+        //  self.showInsideTileMap(insideTileMapNode: self.insideTileMapNode)
     }
 }

@@ -19,8 +19,6 @@ class OpeningScene: DQMapScene {
     var sceneFlag: SceneFlag = .message_1_start
 
     func setup() {
-        DataManager.adventureLog.dqSceneType = .opening
-
         self.scene.backgroundColor = .black
 
         let text1 = "それは えにくすが 16さいになる"

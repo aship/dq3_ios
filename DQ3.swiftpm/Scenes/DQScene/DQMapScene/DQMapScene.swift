@@ -14,6 +14,7 @@ class DQMapScene: DQScene {
     var insideTileMapNode: SKTileMapNode!
 
     var mapCommandWindowNode = MapCommandWindowNode(characterNpcNodes: [])
+    var mapStatusWindowNode = MapStatusWindowNode()
     var mapMessageWindowNode = MapMessageWindowNode()
 
     var characterNpcNodes: [CharacterNode] = []

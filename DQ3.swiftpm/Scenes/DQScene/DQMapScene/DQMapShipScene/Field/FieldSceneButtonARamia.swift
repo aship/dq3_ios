@@ -10,6 +10,7 @@ import SpriteKit
 extension FieldScene {
     func processButtonARamia(
         mapCommandWindowNode: inout MapCommandWindowNode,
+        mapStatusWindowNode: inout MapStatusWindowNode,
         characterNpcNodes: [CharacterNode],
         partyCharacterNodes: inout [CharacterNode],
         queueFollowDirections: inout [Direction],
@@ -45,6 +46,12 @@ extension FieldScene {
                 characterNpcNodes: characterNpcNodes,
                 scene: scene,
                 scale: scale)
+
+            showStatusWindow(
+                mapStatusWindowNode: &mapStatusWindowNode,
+                partyCharacterNodes: partyCharacterNodes,
+                scene: scene,
+                scale: scene.scale)
         }
     }
 

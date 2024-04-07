@@ -9,6 +9,7 @@ import SpriteKit
 extension DQMapScene {
     func processButtonA(
         mapCommandWindowNode: inout MapCommandWindowNode,
+        mapStatusWindowNode: inout MapStatusWindowNode,
         mapMessageWindowNode: MapMessageWindowNode,
         adventureLog: AdventureLog,
         characterNpcNodes: [CharacterNode],
@@ -17,17 +18,17 @@ extension DQMapScene {
         scene: BaseScene
     ) {
         if mapCommandWindowNode.isOpen {
-            mapCommandWindowNode.processButtonA(adventureLog: adventureLog)
+            mapCommandWindowNode.processButtonA(
+                mapStatusWindowNode: mapStatusWindowNode,
+                adventureLog: adventureLog)
 
             return
         }
 
-        let partyCharacterNodes = adventureLog.partyCharacterNodes
-        let headNode = partyCharacterNodes.first!
-
         if mapMessageWindowNode.isOpen {
             mapMessageWindowNode.close()
 
+            let headNode = adventureLog.partyCharacterNodes.first!
             headNode.setMovePermitted()
 
             return
@@ -38,19 +39,29 @@ extension DQMapScene {
 
             fieldScene.processButtonARamia(
                 mapCommandWindowNode: &mapCommandWindowNode,
+                mapStatusWindowNode: &mapStatusWindowNode,
                 characterNpcNodes: characterNpcNodes,
                 partyCharacterNodes: &adventureLog.partyCharacterNodes,
                 queueFollowDirections: &queueFollowDirections,
                 tileMapNode: tileMapNode,
                 scene: scene,
                 scale: scene.scale)
+
             return
         }
+
+        let partyCharacterNodes = adventureLog.partyCharacterNodes
 
         showCommandWindow(
             mapCommandWindowNode: &mapCommandWindowNode,
             partyCharacterNodes: partyCharacterNodes,
             characterNpcNodes: characterNpcNodes,
+            scene: scene,
+            scale: scene.scale)
+
+        showStatusWindow(
+            mapStatusWindowNode: &mapStatusWindowNode,
+            partyCharacterNodes: partyCharacterNodes,
             scene: scene,
             scale: scene.scale)
     }
@@ -78,6 +89,19 @@ extension DQMapScene {
         mapCommandWindowNode = MapCommandWindowNode(characterNpcNodes: characterNpcNodes)
         mapCommandWindowNode.addToScene(
             scene: scene,
-            scale: scene.scale)
+            scale: scale)
+    }
+
+    func showStatusWindow(
+        mapStatusWindowNode: inout MapStatusWindowNode,
+        partyCharacterNodes: [CharacterNode],
+        scene: BaseScene,
+        scale: CGFloat
+    ) {
+        mapStatusWindowNode = MapStatusWindowNode()
+        mapStatusWindowNode.addToScene(
+            partyCharacterNodes: partyCharacterNodes,
+            scene: scene,
+            scale: scale)
     }
 }

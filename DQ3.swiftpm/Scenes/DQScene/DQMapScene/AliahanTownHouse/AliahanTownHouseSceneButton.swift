@@ -19,6 +19,7 @@ extension AliahanTownHouseScene {
             } else {
                 processButtonA(
                     mapCommandWindowNode: &self.mapCommandWindowNode,
+                    mapStatusWindowNode: &self.mapStatusWindowNode,
                     mapMessageWindowNode: self.mapMessageWindowNode,
                     adventureLog: DataManager.adventureLog,
                     characterNpcNodes: self.characterNpcNodes,
@@ -31,6 +32,7 @@ extension AliahanTownHouseScene {
         if button == self.scene.buttonB {
             processButtonB(
                 mapCommandWindowNode: self.mapCommandWindowNode,
+                mapStatusWindowNode: self.mapStatusWindowNode,
                 mapMessageWindowNode: self.mapMessageWindowNode)
         }
     }
