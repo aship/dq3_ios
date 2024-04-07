@@ -85,12 +85,73 @@ let ShipKolPositionY = 121
 let ShipRimuldarPositionX = 142
 let ShipRimuldarPositionY = 53
 
-func getShipDefaltPosition() -> (Int, Int) {
+func getShipDefaltPosition(dqZoom: DQZoom) -> (Int, Int) {
     var positionX = 0
     var positionY = 0
 
-    positionX = ShipAliahanPositionX
-    positionY = ShipAliahanPositionY
+    switch dqZoom {
+    case .aliahan:
+        positionX = ShipAliahanPositionX
+        positionY = ShipAliahanPositionY
+    case .reeve:
+        positionX = ShipReevePositionX
+        positionY = ShipReevePositionY
+    case .romaria:
+        positionX = ShipRomariaPositionX
+        positionY = ShipRomariaPositionY
+    case .khoryv:
+        positionX = ShipKhoryvPositionX
+        positionY = ShipKhoryvPositionY
+    case .norvik:
+        positionX = ShipNorvikPositionX
+        positionY = ShipNorvikPositionY
+    case .asham:
+        positionX = ShipAshamPositionX
+        positionY = ShipAshamPositionY
+    case .isis:
+        positionX = ShipIsisPositionX
+        positionY = ShipIsisPositionY
+    case .portoga:
+        positionX = ShipPortogaPositionX
+        positionY = ShipPortogaPositionY
+    case .baharata:
+        positionX = ShipBaharataPositionX
+        positionY = ShipBaharataPositionY
+    case .alltrades_abbey:
+        positionX = ShipAlltradesAbbeyPositionX
+        positionY = ShipAlltradesAbbeyPositionY
+    case .lanson:
+        positionX = ShipLansonPositionX
+        positionY = ShipLansonPositionY
+    case .jipang:
+        positionX = ShipJipangPositionX
+        positionY = ShipJipangPositionY
+    case .edina:
+        positionX = ShipEdinaPositionX
+        positionY = ShipEdinaPositionY
+    case .manoza:
+        positionX = ShipManozaPositionX
+        positionY = ShipManozaPositionY
+    case .persistence:
+        positionX = ShipPersistencePositionX
+        positionY = ShipPersistencePositionY
+    case .tantegel:
+        positionX = ShipTantegelPositionX
+        positionY = ShipTantegelPositionY
+    case .damdara:
+        positionX = ShipDamdaraPositionX
+        positionY = ShipDamdaraPositionY
+    case .cantlin:
+        positionX = ShipCantlinPositionX
+        positionY = ShipCantlinPositionY
+    case .kol:
+        positionX = ShipKolPositionX
+        positionY = ShipKolPositionY
+    case .rimuldar:
+        positionX = ShipRimuldarPositionX
+        positionY = ShipRimuldarPositionY
+    default: break
+    }
 
     return (positionX, positionY)
 }

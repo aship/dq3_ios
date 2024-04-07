@@ -19,6 +19,12 @@ extension MapCommandWindowNode {
             }
         }
 
+        if let mapCommandWhoWindowNode = self.mapCommandWhoWindowNode {
+            mapCommandWhoWindowNode.moveTriangle(direction: direction)
+
+            return
+        }
+
         if self.triangleMoving == true {
             return
         }

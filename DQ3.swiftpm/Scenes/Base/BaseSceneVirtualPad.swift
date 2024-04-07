@@ -15,6 +15,7 @@ extension BaseScene {
     ) {
         self.view?.isMultipleTouchEnabled = true
 
+        leftPad.zPosition = ZPositionVirtualPad
         leftPad.position = CGPoint(
             x: CGFloat(20 - ScreenWidth / 2),
             y: CGFloat(20 - ScreenHeight / 2))
@@ -35,6 +36,7 @@ extension BaseScene {
             center.y + CGFloat(buttonDistance) * CGFloat(sinf(Float.pi / 2.0))
             - (buttonA.size.height / 2)
 
+        buttonA.zPosition = ZPositionVirtualPad
         buttonA.position = CGPoint(
             x: buttonAx + diffX,
             y: buttonAy + diffY)
@@ -47,6 +49,7 @@ extension BaseScene {
             center.y + CGFloat(buttonDistance) * CGFloat(sinf(Float.pi / 4.0))
             - (buttonA.size.height / 2)
 
+        buttonB.zPosition = ZPositionVirtualPad
         buttonB.position = CGPoint(
             x: buttonBx + diffX,
             y: buttonBy + diffY)
