@@ -13,4 +13,7 @@ class AdventureLog: NSObject {
 
     var dqSceneType: DQSceneType = .opening
     var dqStory: DQStory = .opening
+
+    // 船所持
+    var hasShip = false
 }

@@ -30,6 +30,10 @@ class DataManager {
     // はなす、で使う
     static var aliahanTownScene: AliahanTownScene!
 
+    static var shipPositionX = 0
+    static var shipPositionY = 0
+    static var shipDirection: Direction = .up
+
     private init() {
     }
 }

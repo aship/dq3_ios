@@ -21,23 +21,33 @@ func setDebugAdventureLog() {
 
     // adventureLog.dqSceneType = .opening
     // adventureLog.dqSceneType = .aliahan_town_house
-    adventureLog.dqSceneType = .aliahan_town
-    // adventureLog.dqSceneType = .field
+    // adventureLog.dqSceneType = .aliahan_town
+    adventureLog.dqSceneType = .field
 
     // adventureLog.dqStory = .opening
     // adventureLog.dqStory = .mother_waiting
     adventureLog.dqStory = .go_adventure
 
-    //    addNode(adventureLog: adventureLog,
-    //            name: "あしひー",
-    //            dqCharacter: .warrior_female,
-    //            dqVocation: .warrior)
-    //
-    //    addNode(adventureLog: adventureLog,
-    //            name: "あしひひ",
-    //            dqCharacter: .priest_female,
-    //            dqVocation: .priest)
-    //
+    adventureLog.hasShip = true
+
+    addNode(
+        adventureLog: adventureLog,
+        name: "あしひー",
+        dqCharacter: .warrior_female,
+        dqVocation: .warrior)
+
+    addNode(
+        adventureLog: adventureLog,
+        name: "あしひひ",
+        dqCharacter: .priest_female,
+        dqVocation: .priest)
+
+    addNode(
+        adventureLog: adventureLog,
+        name: "あしひん",
+        dqCharacter: .mage_female,
+        dqVocation: .mage)
+
     if adventureLog.dqSceneType == .field {
         for node in adventureLog.partyCharacterNodes {
             node.positionX = FieldAliahanPositionX
@@ -45,12 +55,8 @@ func setDebugAdventureLog() {
         }
     } else if adventureLog.dqSceneType == .aliahan_town {
         for node in adventureLog.partyCharacterNodes {
-            //            node.positionX = AliahanTownEntrancePositionX
-            //            node.positionY = AliahanTownEntrancePositionY
-
-            node.positionX = AliahanTownLuidaTalkPositionX
-            node.positionY = AliahanTownLuidaTalkPositionY - 1
-            node.direction = .up
+            node.positionX = AliahanTownEntrancePositionX
+            node.positionY = AliahanTownEntrancePositionY
         }
     }
 

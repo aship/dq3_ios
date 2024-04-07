@@ -11,6 +11,8 @@ class BaseScene: SKScene,
     PadOverlayDelegate,
     ButtonOverlayDelegate
 {
+    var fieldMoveMode: FieldMoveMode = .walk
+
     let scale = CGFloat(ScreenHeight / 240)
 
     let leftPad = PadOverlay()
