@@ -12,6 +12,7 @@ class BaseScene: SKScene,
     ButtonOverlayDelegate
 {
     var fieldMoveMode: FieldMoveMode = .walk
+    var ramiaDirection: Direction = .neutral
 
     let scale = CGFloat(ScreenHeight / 240)
 

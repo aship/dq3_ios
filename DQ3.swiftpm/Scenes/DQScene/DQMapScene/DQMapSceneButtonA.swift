@@ -10,8 +10,10 @@ extension DQMapScene {
     func processButtonA(
         mapCommandWindowNode: inout MapCommandWindowNode,
         mapMessageWindowNode: MapMessageWindowNode,
-        characterNpcNodes: [CharacterNode],
         adventureLog: AdventureLog,
+        characterNpcNodes: [CharacterNode],
+        queueFollowDirections: inout [Direction],
+        tileMapNode: SKTileMapNode,
         scene: BaseScene
     ) {
         if mapCommandWindowNode.isOpen {
@@ -20,12 +22,50 @@ extension DQMapScene {
             return
         }
 
+        let partyCharacterNodes = adventureLog.partyCharacterNodes
+        let headNode = partyCharacterNodes.first!
+
+        if mapMessageWindowNode.isOpen {
+            mapMessageWindowNode.close()
+
+            headNode.setMovePermitted()
+
+            return
+        }
+
+        if adventureLog.hasRamia && adventureLog.dqSceneType == .field {
+            let fieldScene = scene.fieldScene!
+
+            fieldScene.processButtonARamia(
+                mapCommandWindowNode: &mapCommandWindowNode,
+                characterNpcNodes: characterNpcNodes,
+                partyCharacterNodes: &adventureLog.partyCharacterNodes,
+                queueFollowDirections: &queueFollowDirections,
+                tileMapNode: tileMapNode,
+                scene: scene,
+                scale: scene.scale)
+            return
+        }
+
+        showCommandWindow(
+            mapCommandWindowNode: &mapCommandWindowNode,
+            partyCharacterNodes: partyCharacterNodes,
+            characterNpcNodes: characterNpcNodes,
+            scene: scene,
+            scale: scene.scale)
+    }
+
+    func showCommandWindow(
+        mapCommandWindowNode: inout MapCommandWindowNode,
+        partyCharacterNodes: [CharacterNode],
+        characterNpcNodes: [CharacterNode],
+        scene: BaseScene,
+        scale: CGFloat
+    ) {
         SoundEffectManager.play(.command)
 
-        let headNode = adventureLog.partyCharacterNodes.first!
+        let headNode = partyCharacterNodes.first!
         headNode.setMoveProhibited()
-
-        let partyCharacterNodes = adventureLog.partyCharacterNodes
 
         for node in partyCharacterNodes {
             node.isPaused = true
