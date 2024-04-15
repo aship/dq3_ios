@@ -23,10 +23,13 @@ let DebugSetAdventureLog = true
 let DebugSetAdventureLogEveryAppLaunch = true
 
 // BGM止める
-let DebugStopBgm = false
+let DebugStopBgm = true
 
 // 最初から仲間いる状態
 let DebugWithParty = false
 
 // NPCを動かなくする
 let DebugStopNpc = false
+
+// 戦闘のエンカウントなし
+let DebugNoBattle = false

@@ -125,7 +125,7 @@ class MapCommandZoomWindowNode: SKTileMapNode {
             ]
         }
 
-        let words = dqZooms.map { getZoomNameFrom(dqZoom: $0) }
+        let words = self.dqZooms.map { getZoomNameFrom(dqZoom: $0) }
 
         showWords(
             windowNode: self,

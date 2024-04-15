@@ -16,6 +16,17 @@ extension BaseScene {
         }
 
         let dqSceneType = DataManager.adventureLog.dqSceneType
+
+        if dqSceneType == .battle {
+            if let battleCommandWindowNode = self.battleScene?.battleCommandWindowNode {
+                if battleCommandWindowNode.isOpen {
+                    battleCommandWindowNode.moveTriangle(direction: self.padDirection)
+                }
+            }
+
+            return
+        }
+
         let dqMapScene = self.getDQMapScene(dqSceneType: dqSceneType)!
 
         let mapCommandWindowNode = dqMapScene.mapCommandWindowNode
@@ -26,9 +37,18 @@ extension BaseScene {
             return
         }
 
+        if let dqMapScene = self.getDQMapScene(dqSceneType: dqSceneType) {
+            let mapCommandWindowNode = dqMapScene.mapCommandWindowNode
+
+            if mapCommandWindowNode.isOpen {
+                mapCommandWindowNode.moveTriangle(direction: self.padDirection)
+
+                return
+            }
+        }
+
         let checkCanMove = getCheckCanMove(dqSceneType: dqSceneType)
         let checkPosition = getCheckPosition(dqSceneType: dqSceneType)
-
         let tileMapNode = dqMapScene.mainTileMapNode
 
         if tileMapNode == nil {
