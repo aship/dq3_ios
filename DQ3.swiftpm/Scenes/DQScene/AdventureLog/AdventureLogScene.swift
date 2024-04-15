@@ -20,10 +20,19 @@ class AdventureLogScene: DQScene {
         self.scene.buttonA.isHidden = false
         self.scene.buttonB.isHidden = false
 
+        let adventureLog1 = UserDefaultsUtil.loadAdventureLog(number: 1)
+        let adventureLog2 = UserDefaultsUtil.loadAdventureLog(number: 2)
+        let adventureLog3 = UserDefaultsUtil.loadAdventureLog(number: 3)
+
+        let numberOfAdventureLogs = getNumberOfAdventureLogs(
+            adventureLog1: adventureLog1,
+            adventureLog2: adventureLog2,
+            adventureLog3: adventureLog3)
+
         self.adventureLogTopWindowNode = AdventureLogTopWindowNode()
         self.adventureLogTopWindowNode?.addToScene(
-            numberOfAdventureLogs: 1,
             scene: self.scene,
+            numberOfAdventureLogs: numberOfAdventureLogs,
             scale: self.scene.scale)
     }
 }

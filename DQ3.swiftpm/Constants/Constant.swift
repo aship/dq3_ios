@@ -28,6 +28,14 @@ let MapMessageWindowChildOfSpellPointY = -128
 let MapMessageWindowChildOfZoomPointX = -16
 let MapMessageWindowChildOfZoomPointY = -16
 
+enum DQAdventureLogTop {
+    case go  // ぼうけんをする
+    case change_message_speed  // ひょうじそくどをかえる
+    case create  // ぼうけんのしょをつくる
+    case copy  // ぼうけんのしょをうつす
+    case delete  // ぼうけんのしょをけす
+}
+
 enum DQYesNo {
     case yes
     case no

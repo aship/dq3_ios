@@ -13,6 +13,10 @@ class DataManager {
     // 現在読み込んでいる冒険の書
     static var adventureLog = AdventureLog()
 
+    // 現在読み込んでいる冒険の書の番号
+    // ぼうけんのしょ1 -> 1
+    static var adventureLogNumber: Int?
+
     static var queueFollowDirections: [Direction] = []
     static var showInsideMap = false
 
@@ -41,5 +45,19 @@ class DataManager {
     static var aliahanTownScene: AliahanTownScene!
 
     private init() {
+    }
+
+    class func saveAdventureLog() {
+        let adventureLog = self.adventureLog
+        let number = self.adventureLogNumber!
+
+        UserDefaultsUtil.saveAdventureLog(
+            adventureLog: adventureLog,
+            number: number)
+    }
+
+    class func loadAdventureLog(number: Int) {
+        self.adventureLogNumber = number
+        self.adventureLog = UserDefaultsUtil.loadAdventureLog(number: number)!
     }
 }

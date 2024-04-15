@@ -111,3 +111,47 @@ private func addNode(
 
     adventureLog.partyCharacterStatuses.append(status)
 }
+
+// 冒険の書1を特別なデータで作成
+func setSpecialAdventureLog() {
+    let adventureLog = AdventureLog()
+    // adventureLog.dqSceneType = .opening
+    // adventureLog.dqSceneType = .aliahan_town_house
+    // adventureLog.dqSceneType = .aliahan_town
+    adventureLog.dqSceneType = .alltrades_abbey
+    // adventureLog.dqSceneType = .field
+    // adventureLog.dqSceneType = .alefgard
+
+    adventureLog.dqStory = .opening
+    // adventureLog.dqStory = .mother_waiting
+    // adventureLog.dqStory = .go_adventure
+
+    adventureLog.hasShip = true
+    adventureLog.hasRamia = true
+
+    addNode(
+        adventureLog: adventureLog,
+        name: "あしへー",
+        dqCharacter: .hero,
+        dqVocation: .hero,
+        dqGender: .male)
+
+    if adventureLog.dqSceneType == .alltrades_abbey {
+        for (index, node) in adventureLog.partyCharacterNodes.enumerated() {
+            node.positionX = AlltradesAbbeyGameStartPositionX
+            node.positionY = AlltradesAbbeyGameStartPositionY - index
+            node.direction = AlltradesAbbeyGameStartDirection
+
+            if 0 < index {
+                DataManager.queueFollowDirections.append(AlltradesAbbeyGameStartDirection)
+            }
+        }
+
+        // 船/ラーミアの位置決定
+        DataManager.currentZoomArea = .alltrades_abbey
+    }
+
+    UserDefaultsUtil.saveAdventureLog(
+        adventureLog: adventureLog,
+        number: 1)
+}

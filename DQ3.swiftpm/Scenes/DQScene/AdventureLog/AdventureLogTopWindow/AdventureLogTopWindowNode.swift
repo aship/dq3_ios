@@ -8,13 +8,18 @@
 import SpriteKit
 
 class AdventureLogTopWindowNode: SKTileMapNode {
-    var isProcessing = false
-
     var triangleNode = SKSpriteNode()
+    var triangleMoving = false
+
+    var adventureLogSelectLogWindowNode: AdventureLogSelectLogWindowNode?
+    var adventureLogSelectEmptyLogWindowNode: AdventureLogSelectEmptyLogWindowNode?
+
+    var dqAdventureLogTop: DQAdventureLogTop!
+    var dqAdventureLogTops: [DQAdventureLogTop] = []
 
     func addToScene(
-        numberOfAdventureLogs: Int,
         scene: SKScene,
+        numberOfAdventureLogs: Int,
         scale: CGFloat
     ) {
         // x: 48, y: 56 は左上(0, 0)基準
@@ -30,10 +35,29 @@ class AdventureLogTopWindowNode: SKTileMapNode {
 
         if numberOfAdventureLogs == 0 {
             numberOfRows = 4
+
+            self.dqAdventureLogTop = .create
+            self.dqAdventureLogTops = [.create]
         } else if numberOfAdventureLogs == 1 || numberOfAdventureLogs == 2 {
             numberOfRows = 12
+
+            self.dqAdventureLogTop = .go
+            self.dqAdventureLogTops = [
+                .go,
+                .change_message_speed,
+                .create,
+                .copy,
+                .delete,
+            ]
         } else if numberOfAdventureLogs == 3 {
             numberOfRows = 8
+
+            self.dqAdventureLogTop = .go
+            self.dqAdventureLogTops = [
+                .go,
+                .change_message_speed,
+                .delete,
+            ]
         }
 
         self.tileSet = tileSet

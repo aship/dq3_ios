@@ -8,7 +8,7 @@
 // アプリ起動時の状態
 // リリース時は .title にする
 // 任意の状態でスタートしたい場合は .adventure_log_loaded
-let debugDqMainState: DQMainState = .adventure_log_loaded
+let debugDqMainState: DQMainState = .title
 
 // リリース時は以下全部 false
 // debug で必要なら true にする
@@ -18,7 +18,7 @@ let debugDqMainState: DQMainState = .adventure_log_loaded
 let DebugSetAdventureLog = true
 
 // 上記 DebugAdventureLog をアプリ起動時必ず行う
-// false の時は、アプリ初回起動時のみ
+// false の時は、アプリ初回起動時のみ生成
 // (以後アプリ起動時に冒険の書の上書きは行われない)
 let DebugSetAdventureLogEveryAppLaunch = true
 

@@ -40,7 +40,6 @@ extension BaseScene {
             actionWait,
             actionAudioStop,
         ])
-
         Task {
             var shouldPlayAudio = false
 
@@ -56,6 +55,8 @@ extension BaseScene {
                 let adventureLogTopWindowNode = DataManager.scene.adventureLogScene?
                     .adventureLogTopWindowNode
                 adventureLogTopWindowNode?.removeFromParent()
+
+                DataManager.dqMainState = .adventure_log_loaded
             }
 
             setupDQScene(
