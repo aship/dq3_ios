@@ -20,7 +20,11 @@ class DataManager {
     static var queueFollowDirections: [Direction] = []
     static var showInsideMap = false
 
-    // 船/ラーミアの位置
+    // 船/ラーミアの位置は冒険の書には保存されない
+    // 船/ラーミアの位置がリセットされるのは
+    // ルーラ使用時と、冒険の書読み込み時
+    // 向きはルーラでもリセットされない
+    // 冒険の書読み込み時のデフォルトは上
     static var resetShipPosition = true
     static var shipPositionX = 0
     static var shipPositionY = 0

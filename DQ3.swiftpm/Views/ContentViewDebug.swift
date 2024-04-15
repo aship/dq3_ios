@@ -24,7 +24,8 @@ func setDebugAdventureLog() {
     // adventureLog.dqSceneType = .aliahan_town_house
     // adventureLog.dqSceneType = .aliahan_town
     // adventureLog.dqSceneType = .field
-    adventureLog.dqSceneType = .alltrades_abbey
+    // adventureLog.dqSceneType = .alltrades_abbey
+    adventureLog.dqSceneType = .alefgard
 
     // adventureLog.dqStory = .opening
     // adventureLog.dqStory = .mother_waiting
@@ -83,6 +84,13 @@ func setDebugAdventureLog() {
             node.positionX = AliahanTownEntrancePositionX
             node.positionY = AliahanTownEntrancePositionY
         }
+    } else if adventureLog.dqSceneType == .alefgard {
+        for node in adventureLog.partyCharacterNodes {
+            node.positionX = ZoomTantegelPositionX
+            node.positionY = ZoomTantegelPositionY
+        }
+
+        DataManager.currentZoomArea = .tantegel
     }
 
     DataManager.adventureLog = adventureLog

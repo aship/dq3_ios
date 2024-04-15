@@ -41,6 +41,7 @@ extension BaseScene {
         case .aliahan_town: willPress = self.aliahanTownScene?.willPress
         case .field: willPress = self.fieldScene?.willPress
         case .alltrades_abbey: willPress = self.alltradesAbbeyScene?.willPress
+        case .alefgard: willPress = self.alefgardScene?.willPress
         case .battle: willPress = self.battleScene?.willPress
         }
 

@@ -19,5 +19,6 @@ enum DQSceneType: String {
     case aliahan_town_house
     case field
     case alltrades_abbey
+    case alefgard
     case battle
 }

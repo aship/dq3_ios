@@ -32,6 +32,10 @@ extension DQMapShipScene {
                 scale: scale)
         }
 
-        AudioManager.play(dqAudio: .field)
+        if DataManager.adventureLog.dqSceneType == .field {
+            AudioManager.play(dqAudio: .field)
+        } else if DataManager.adventureLog.dqSceneType == .alefgard {
+            AudioManager.play(dqAudio: .alefgard)
+        }
     }
 }

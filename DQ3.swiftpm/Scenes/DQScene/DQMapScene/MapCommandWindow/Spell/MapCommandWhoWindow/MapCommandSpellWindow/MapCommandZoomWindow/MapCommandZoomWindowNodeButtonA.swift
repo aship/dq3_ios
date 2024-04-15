@@ -67,9 +67,19 @@ extension MapCommandZoomWindowNode {
 
         let dqSceneType = DataManager.adventureLog.dqSceneType
 
-        DataManager.scene.transitionToMapWithZoom(
-            dqSceneTypeFrom: dqSceneType,
-            dqSceneTypeTo: .field,
-            dqAudio: .field)
+        if self.dqZoom == .tantegel || self.dqZoom == .damdara || self.dqZoom == .cantlin
+            || self.dqZoom == .kol || self.dqZoom == .rimuldar
+        {
+            // temporary アレフガルド
+            DataManager.scene.transitionToMapWithZoom(
+                dqSceneTypeFrom: dqSceneType,
+                dqSceneTypeTo: .alefgard,
+                dqAudio: .alefgard)
+        } else {
+            DataManager.scene.transitionToMapWithZoom(
+                dqSceneTypeFrom: dqSceneType,
+                dqSceneTypeTo: .field,
+                dqAudio: .field)
+        }
     }
 }

@@ -17,6 +17,7 @@ extension BaseScene {
         case .aliahan_town_house: dqMapScene = self.aliahanTownHouseScene
         case .field: dqMapScene = self.fieldScene
         case .alltrades_abbey: dqMapScene = self.alltradesAbbeyScene
+        case .alefgard: dqMapScene = self.alefgardScene
         default: break
         }
 
