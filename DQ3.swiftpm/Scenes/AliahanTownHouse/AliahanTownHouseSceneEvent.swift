@@ -32,7 +32,8 @@ extension AliahanTownHouseScene {
             x: 16 * 7,
             y: 0,
             duration: 1 / 4 * 7)
-        let motherNode = self.motherNode
+
+        let motherNode = self.characterNpcNodes.first!
 
         motherNode.run(actionMotherAnimationLeft)
 
@@ -54,7 +55,8 @@ extension AliahanTownHouseScene {
             x: 16 * 1,
             y: 0,
             duration: 1 / 4 * 1)
-        let motherNode = self.motherNode
+
+        let motherNode = self.characterNpcNodes.first!
 
         motherNode.run(actionMother)
 
@@ -62,7 +64,8 @@ extension AliahanTownHouseScene {
             x: 16 * 2,
             y: 0,
             duration: 1 / 4 * 2)
-        let heroNode = self.heroNode
+
+        let heroNode = DataManager.adventureLog.partyCharacterNodes.first!
 
         Task {
             await heroNode.run(actionHero)
@@ -82,7 +85,8 @@ extension AliahanTownHouseScene {
             x: 16 * 1,
             y: 0,
             duration: 1 / 4 * 1)
-        let motherNode = self.motherNode
+
+        let motherNode = self.characterNpcNodes.first!
 
         motherNode.run(
             actionMother,
@@ -97,7 +101,8 @@ extension AliahanTownHouseScene {
             x: 16 * 2,
             y: 0,
             duration: 1 / 4 * 2)
-        let heroNode = self.heroNode
+
+        let heroNode = DataManager.adventureLog.partyCharacterNodes.first!
 
         heroNode.run(actionHeroAnimationUp)
 
