@@ -27,7 +27,7 @@ class OpeningScene: DQMapScene {
         let text2 = "たんじょうびの ことであった。"
 
         self.mapMessageWindowNode = MapMessageWindowNode()
-        self.mapMessageWindowNode.addToScene(
+        self.mapMessageWindowNode.addToNode(
             node: self.scene,
             pointX: MapMessageWindowChildOfScenePointX,
             pointY: MapMessageWindowChildOfScenePointY,

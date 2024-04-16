@@ -18,14 +18,18 @@ extension AliahanTownScene {
                     openingStateFlag: &self.openingStateFlag)
             } else {
                 processButtonA(
-                    mapCommandWindowNode: &mapCommandWindowNode,
-                    mapMessageWindowNode: mapMessageWindowNode,
-                    scale: self.scene.scale)
+                    mapCommandWindowNode: &self.mapCommandWindowNode,
+                    mapMessageWindowNode: self.mapMessageWindowNode,
+                    characterNpcNodes: self.characterNpcNodes,
+                    adventureLog: DataManager.adventureLog,
+                    scene: self.scene)
             }
         }
 
         if button == self.scene.buttonB {
-            processButtonB(mapMessageWindowNode: self.mapMessageWindowNode)
+            processButtonB(
+                mapCommandWindowNode: self.mapCommandWindowNode,
+                mapMessageWindowNode: self.mapMessageWindowNode)
         }
     }
 }

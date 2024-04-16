@@ -63,7 +63,7 @@ extension AliahanTownHouseScene {
             let text2 = "　　ついて　いらっしゃい。"
 
             self.mapMessageWindowNode = MapMessageWindowNode()
-            self.mapMessageWindowNode.addToScene(
+            self.mapMessageWindowNode.addToNode(
                 node: self.scene,
                 pointX: MapMessageWindowChildOfScenePointX,
                 pointY: MapMessageWindowChildOfScenePointY,

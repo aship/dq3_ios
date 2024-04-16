@@ -19,36 +19,38 @@ func setDebugAdventureLog() {
         dqCharacter: .hero,
         dqVocation: .hero)
 
-    adventureLog.dqSceneType = .opening
+    // adventureLog.dqSceneType = .opening
     // adventureLog.dqSceneType = .aliahan_town_house
-    // adventureLog.dqSceneType = .aliahan_town
+    adventureLog.dqSceneType = .aliahan_town
     // adventureLog.dqSceneType = .field
 
-    adventureLog.dqStory = .opening
+    // adventureLog.dqStory = .opening
     // adventureLog.dqStory = .mother_waiting
-    // adventureLog.dqStory = .go_adventure
-
-    addNode(
-        adventureLog: adventureLog,
-        name: "あしひー",
-        dqCharacter: .warrior_female,
-        dqVocation: .warrior)
-
-    addNode(
-        adventureLog: adventureLog,
-        name: "あしひひ",
-        dqCharacter: .priest_female,
-        dqVocation: .priest)
+    adventureLog.dqStory = .go_adventure
 
     //    addNode(adventureLog: adventureLog,
-    //            name: "あしひん",
-    //            dqCharacter: .mage_female,
-    //            dqVocation: .mage)
-
-    if adventureLog.dqSceneType == .aliahan_town {
+    //            name: "あしひー",
+    //            dqCharacter: .warrior_female,
+    //            dqVocation: .warrior)
+    //
+    //    addNode(adventureLog: adventureLog,
+    //            name: "あしひひ",
+    //            dqCharacter: .priest_female,
+    //            dqVocation: .priest)
+    //
+    if adventureLog.dqSceneType == .field {
         for node in adventureLog.partyCharacterNodes {
-            node.positionX = AliahanTownEntrancePositionX
-            node.positionY = AliahanTownEntrancePositionY
+            node.positionX = FieldAliahanPositionX
+            node.positionY = FieldAliahanPositionY
+        }
+    } else if adventureLog.dqSceneType == .aliahan_town {
+        for node in adventureLog.partyCharacterNodes {
+            //            node.positionX = AliahanTownEntrancePositionX
+            //            node.positionY = AliahanTownEntrancePositionY
+
+            node.positionX = AliahanTownLuidaTalkPositionX
+            node.positionY = AliahanTownLuidaTalkPositionY - 1
+            node.direction = .up
         }
     }
 

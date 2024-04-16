@@ -27,3 +27,17 @@ func getDiffXY(direction: Direction) -> (Int, Int) {
 
     return (diffX, diffY)
 }
+
+func getReverseDirection(direction: Direction) -> Direction {
+    var reverseDirection: Direction = .neutral
+
+    switch direction {
+    case .up: reverseDirection = .down
+    case .down: reverseDirection = .up
+    case .left: reverseDirection = .right
+    case .right: reverseDirection = .left
+    case .neutral: break
+    }
+
+    return reverseDirection
+}

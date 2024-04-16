@@ -16,3 +16,8 @@ let MapMessageWindowChildOfScenePointY = 112 - 136
 
 let MapMessageWindowChildOfCommandWindowPointX = 0
 let MapMessageWindowChildOfCommandWindowPointY = -128
+
+enum DQYesNo {
+    case yes
+    case no
+}

@@ -8,7 +8,7 @@
 import SpriteKit
 
 extension DQFont {
-    internal class func getFontNormal(string: String) -> SKSpriteNode {
+    class func getFontNormal(string: String) -> SKSpriteNode {
         var path: String!
 
         switch string {

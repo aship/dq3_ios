@@ -10,29 +10,34 @@ extension DQMapScene {
     func processButtonA(
         mapCommandWindowNode: inout MapCommandWindowNode,
         mapMessageWindowNode: MapMessageWindowNode,
-        scale: CGFloat
+        characterNpcNodes: [CharacterNode],
+        adventureLog: AdventureLog,
+        scene: BaseScene
     ) {
-        let headNode = DataManager.adventureLog.partyCharacterNodes.first!
-
         if mapCommandWindowNode.isOpen {
-            // コマンド処理中
-            let shouldClose = mapCommandWindowNode.processButtonA()
-
-            if shouldClose {
-                headNode.setMovePermitted()
-            }
+            mapCommandWindowNode.processButtonA(adventureLog: adventureLog)
 
             return
         }
 
-        // コマンドウィンドウ表示
         SoundEffectManager.play(.command)
 
+        let headNode = adventureLog.partyCharacterNodes.first!
         headNode.setMoveProhibited()
 
-        mapCommandWindowNode = MapCommandWindowNode()
+        let partyCharacterNodes = adventureLog.partyCharacterNodes
+
+        for node in partyCharacterNodes {
+            node.isPaused = true
+        }
+
+        for node in characterNpcNodes {
+            node.isPaused = true
+        }
+
+        mapCommandWindowNode = MapCommandWindowNode(characterNpcNodes: characterNpcNodes)
         mapCommandWindowNode.addToScene(
-            scene: self.scene,
-            scale: self.scene.scale)
+            scene: scene,
+            scale: scene.scale)
     }
 }

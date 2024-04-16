@@ -23,6 +23,7 @@ extension AliahanTownScene {
                 positionY: AliahanTownMotherStartPositionY,
                 direction: AliahanTownMotherStartDirection,
                 tileMapNode: mainTileMapNode,
+                isTown: true,
                 characterNpcNodes: &characterNpcNodes,
                 scale: scale)
 
@@ -40,6 +41,7 @@ extension AliahanTownScene {
                 positionY: AliahanTownMotherWaitingPositionY,
                 direction: AliahanTownMotherWaitingDirection,
                 tileMapNode: mainTileMapNode,
+                isTown: true,
                 characterNpcNodes: &characterNpcNodes,
                 scale: scale)
         }
@@ -51,6 +53,7 @@ extension AliahanTownScene {
             positionY: AliahanTownLuidaPositionY,
             direction: AliahanTownLuidaDirection,
             tileMapNode: insideTileMapNode,
+            isTown: true,
             characterNpcNodes: &characterNpcNodes,
             scale: scale)
 
@@ -69,6 +72,7 @@ extension AliahanTownScene {
             positionY: AliahanTownLady1PositionY,
             direction: AliahanTownLady1Direction,
             tileMapNode: mainTileMapNode,
+            isTown: true,
             characterNpcNodes: &characterNpcNodes,
             scale: scale)
 
@@ -79,6 +83,7 @@ extension AliahanTownScene {
             positionY: AliahanTownLady2PositionY,
             direction: AliahanTownLady2Direction,
             tileMapNode: mainTileMapNode,
+            isTown: true,
             characterNpcNodes: &characterNpcNodes,
             scale: scale)
 
@@ -89,6 +94,7 @@ extension AliahanTownScene {
             positionY: AliahanTownBoy1PositionY,
             direction: AliahanTownBoy1Direction,
             tileMapNode: mainTileMapNode,
+            isTown: true,
             characterNpcNodes: &characterNpcNodes,
             scale: scale)
 
@@ -99,6 +105,7 @@ extension AliahanTownScene {
             positionY: AliahanTownBoy2PositionY,
             direction: AliahanTownBoy2Direction,
             tileMapNode: mainTileMapNode,
+            isTown: true,
             characterNpcNodes: &characterNpcNodes,
             scale: scale)
 
@@ -109,6 +116,7 @@ extension AliahanTownScene {
             positionY: AliahanTownOldMan1PositionY,
             direction: AliahanTownOldMan1Direction,
             tileMapNode: mainTileMapNode,
+            isTown: true,
             characterNpcNodes: &characterNpcNodes,
             scale: scale)
 
@@ -119,6 +127,7 @@ extension AliahanTownScene {
             positionY: AliahanTownOldMan2PositionY,
             direction: AliahanTownOldMan2Direction,
             tileMapNode: mainTileMapNode,
+            isTown: true,
             characterNpcNodes: &characterNpcNodes,
             scale: scale)
 
@@ -129,6 +138,7 @@ extension AliahanTownScene {
             positionY: AliahanTownWarrior1PositionY,
             direction: AliahanTownWarrior1Direction,
             tileMapNode: insideTileMapNode,
+            isTown: true,
             characterNpcNodes: &characterNpcNodes,
             scale: scale)
 
@@ -139,6 +149,7 @@ extension AliahanTownScene {
             positionY: AliahanTownWarrior2PositionY,
             direction: AliahanTownWarrior2Direction,
             tileMapNode: mainTileMapNode,
+            isTown: true,
             characterNpcNodes: &characterNpcNodes,
             scale: scale)
 
@@ -149,6 +160,7 @@ extension AliahanTownScene {
             positionY: AliahanTownWarrior3PositionY,
             direction: AliahanTownWarrior3Direction,
             tileMapNode: insideTileMapNode,
+            isTown: true,
             characterNpcNodes: &characterNpcNodes,
             scale: scale)
 
@@ -159,6 +171,7 @@ extension AliahanTownScene {
             positionY: AliahanTownDepositoryPositionY,
             direction: AliahanTownDepositoryDirection,
             tileMapNode: insideTileMapNode,
+            isTown: true,
             characterNpcNodes: &characterNpcNodes,
             scale: scale)
 
@@ -177,6 +190,7 @@ extension AliahanTownScene {
             positionY: AliahanTownToolShopPositionY,
             direction: AliahanTownToolShopDirection,
             tileMapNode: mainTileMapNode,
+            isTown: true,
             characterNpcNodes: &characterNpcNodes,
             scale: scale)
 
@@ -195,6 +209,7 @@ extension AliahanTownScene {
             positionY: AliahanTownInnPositionY,
             direction: AliahanTownInnDirection,
             tileMapNode: mainTileMapNode,
+            isTown: true,
             characterNpcNodes: &characterNpcNodes,
             scale: scale)
 
@@ -213,6 +228,7 @@ extension AliahanTownScene {
             positionY: AliahanTownWeaponShopPositionY,
             direction: AliahanTownWeaponShopDirection,
             tileMapNode: mainTileMapNode,
+            isTown: true,
             characterNpcNodes: &characterNpcNodes,
             scale: scale)
 
@@ -231,6 +247,7 @@ extension AliahanTownScene {
             positionY: AliahanTownPriestPositionY,
             direction: AliahanTownPriestDirection,
             tileMapNode: insideTileMapNode,
+            isTown: true,
             characterNpcNodes: &characterNpcNodes,
             scale: scale)
     }

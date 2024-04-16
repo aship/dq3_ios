@@ -9,6 +9,16 @@ import SpriteKit
 
 extension MapCommandWindowNode {
     func moveTriangle(direction: Direction) {
+        if let talkMessageWindow = self.talkMessageWindowAliahanTown {
+            let yesNoWindowNode = talkMessageWindow.aliahanTownTalkMessageYesNoWindowNode
+
+            if yesNoWindowNode.isOpen {
+                yesNoWindowNode.moveTriangle(direction: direction)
+
+                return
+            }
+        }
+
         if self.triangleMoving == true {
             return
         }

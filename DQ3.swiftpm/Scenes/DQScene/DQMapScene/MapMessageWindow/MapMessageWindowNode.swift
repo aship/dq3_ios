@@ -8,17 +8,24 @@
 import SpriteKit
 
 class MapMessageWindowNode: SKTileMapNode {
-    var isOpen = false
+    enum MassageWindowStatus {
+        case prompt
+        case processing
+        case should_close
+    }
 
+    var isOpen = false
     var arrLines: [[SKSpriteNode]] = []
     var nextMark: SKSpriteNode!
+
+    var messageWindowStatus: MassageWindowStatus = .prompt
 
     func close() {
         self.isOpen = false
         self.removeFromParent()
     }
 
-    func addToScene<T: SKNode>(
+    func addToNode<T: SKNode>(
         node: T,
         pointX: Int,
         pointY: Int,

@@ -31,6 +31,7 @@ extension AliahanTownHouseScene {
             positionY: AliahanTownHouseMotherPositionY,
             direction: direction,
             tileMapNode: tileMapNode,
+            isTown: true,
             characterNpcNodes: &characterNpcNodes,
             scale: scale)
 
@@ -41,6 +42,7 @@ extension AliahanTownHouseScene {
             positionY: AliahanTownHouseOldManPositionY,
             direction: AliahanTownHouseOldManDirection,
             tileMapNode: tileMapNode,
+            isTown: true,
             characterNpcNodes: &characterNpcNodes,
             scale: scale)
     }

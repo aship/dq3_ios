@@ -15,6 +15,7 @@ extension DQMapScene {
         positionY: Int,
         direction: Direction,
         tileMapNode: SKTileMapNode,
+        isTown: Bool,
         characterNpcNodes: inout [CharacterNode],
         scale: CGFloat
     ) {
@@ -22,7 +23,7 @@ extension DQMapScene {
 
         node.addToMap(
             tileMapNode: tileMapNode,
-            isTown: true)
+            isTown: isTown)
 
         node.positionX = positionX
         node.positionY = positionY
