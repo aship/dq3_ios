@@ -25,8 +25,8 @@ class UserDefaultsUtil {
         var adventureLog: AdventureLog?
 
         if let data = UserDefaults.standard.object(forKey: "ADVENTURE_LOG_\(number)") as? Data {
-            if let object = try! NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data)
-                as? AdventureLog
+            if let object = try! NSKeyedUnarchiver.unarchivedObject(
+                ofClass: AdventureLog.self, from: data)
             {
                 adventureLog = object
             }
