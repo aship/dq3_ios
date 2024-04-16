@@ -10,8 +10,9 @@ import SpriteKit
 class AdventureLog: NSObject,
     NSCoding
 {
-    var heroName: String = ""
+    var heroName = ""
     var messageSpeed = 4
+    var gold = 0
 
     var partyCharacterNodes: [CharacterNode] = []
     var partyCharacterStatuses: [CharacterStatus] = []

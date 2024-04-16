@@ -19,6 +19,23 @@ class CharacterStatus: NSObject,
     var mp = 100
     var mpMax = 100
     var level = 1
+    var exp = 0
+
+    var power = 0
+    var rapid = 0
+    var tuffness = 0
+    var smart = 0
+    var lack = 0
+
+    var offence = 0
+    var deffence = 0
+
+    // どうぐ
+    var items: [String] = []
+
+    // そうび
+    // ぶき たて よろい　かぶと
+    // じゅもん
 
     override init() {
     }
@@ -41,6 +58,7 @@ class CharacterStatus: NSObject,
         aCoder.encode(self.mp, forKey: "mp")
         aCoder.encode(self.mpMax, forKey: "mpMax")
         aCoder.encode(self.level, forKey: "level")
+        aCoder.encode(self.exp, forKey: "exp")
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -55,5 +73,6 @@ class CharacterStatus: NSObject,
         self.mp = aDecoder.decodeInteger(forKey: "mp")
         self.mpMax = aDecoder.decodeInteger(forKey: "mpMax")
         self.level = aDecoder.decodeInteger(forKey: "level")
+        self.exp = aDecoder.decodeInteger(forKey: "exp")
     }
 }

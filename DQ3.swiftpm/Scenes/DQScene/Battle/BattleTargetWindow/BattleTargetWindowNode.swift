@@ -9,7 +9,6 @@ import SpriteKit
 
 class BattleTargetWindowNode: SKTileMapNode {
     private(set) var battleScene: BattleScene!
-    //  private(set) var monsterGroups: [MonsterGroup] = []
 
     private(set) var selectableMonsterGroups: [MonsterGroup] = []
     var selectedMonsterGroup: MonsterGroup!

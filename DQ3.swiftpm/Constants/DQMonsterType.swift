@@ -12,7 +12,7 @@ enum DQMonsterType {
     case horned_rabbit  //いっかくうさぎ
 }
 
-internal func getDQMonsterTypeNameFrom(dqMonsterType: DQMonsterType) -> String {
+func getDQMonsterTypeNameFrom(dqMonsterType: DQMonsterType) -> String {
     var name: String!
 
     switch dqMonsterType {

@@ -17,6 +17,9 @@ extension BattleScene {
 
         let text = "\(monsterName)\(monsterIndexAlphabet)を たおした!"
 
+        self.exp += monsterNode.exp
+        self.gold += monsterNode.gold
+
         monsterNode.isHidden = true
 
         self.battleMessageWindowNode.showMessage(

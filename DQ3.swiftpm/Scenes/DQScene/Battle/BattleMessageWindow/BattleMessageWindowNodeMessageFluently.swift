@@ -10,9 +10,8 @@ import SpriteKit
 extension BattleMessageWindowNode {
     func showMessageFluently(
         string: String,
-        line: Int,
-        completion: @escaping () -> Void
-    ) {
+        line: Int
+    ) async {
         let BaseX = 8
         let BaseY = -24 - 16 * line
 
@@ -43,10 +42,6 @@ extension BattleMessageWindowNode {
 
         let sequence = SKAction.sequence(actions)
 
-        self.run(
-            sequence,
-            completion: {
-                completion()
-            })
+        await self.run(sequence)
     }
 }

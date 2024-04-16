@@ -8,29 +8,17 @@
 import SpriteKit
 
 extension BattleScene {
-    func winMonster() {
-        self.battleMessageWindowNode.close()
-        self.battleMessageWindowNode = BattleMessageWindowNode()
+    func winMonster() async {
+        await self.battleMessageWindowNode.close()
 
-        let battleMessageWindowNode = self.battleMessageWindowNode
         let scene = self.scene!
-        let scale = self.scene.scale
+        let scale = scene.scale
 
-        battleMessageWindowNode.addToScene(
+        await self.battleMessageWindowNode = BattleMessageWindowNode(battleScene: self)
+        await self.battleMessageWindowNode.addToScene(
             scene: scene,
             scale: scale)
 
-        // ここは、一度に表示ではなく、1文字づつ流れるように表示!!
-        // let text = "スライムを やっつけた!"
-
-        AudioManager.stop()
-        SoundEffectManager.play(.win)
-
-        let text = "まものたちを やっつけた!"
-
-        battleMessageWindowNode.showMessageFluently(
-            string: text,
-            line: 0,
-            completion: {})
+        await battleMessageWindowNode.showWinMessage()
     }
 }

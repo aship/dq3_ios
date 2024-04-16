@@ -8,7 +8,7 @@
 import SpriteKit
 
 extension MapCommandWindowNode {
-    internal func processTalkButtonA(dqSceneType: DQSceneType) {
+    func processTalkButtonA(dqSceneType: DQSceneType) {
         self.commandWindowStatus = .processing
 
         switch dqSceneType {

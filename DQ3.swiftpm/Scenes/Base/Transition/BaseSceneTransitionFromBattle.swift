@@ -8,10 +8,7 @@
 import SpriteKit
 
 extension BaseScene {
-    func transitionFromBattle(
-        dqSceneType: DQSceneType,
-        dqAudio: DQAudio
-    ) {
+    func transitionFromBattle() {
         let actionFadeOut = SKAction.fadeAlpha(
             to: 1.0,
             duration: 0.5)
@@ -19,28 +16,29 @@ extension BaseScene {
         let actionFadeIn = SKAction.fadeAlpha(
             to: 0.0,
             duration: 0.5)
+        Task {
+            await self.blackScreenNode.run(actionFadeOut)
 
-        self.blackScreenNode.run(
-            actionFadeOut,
-            completion: {
-                let battleScene = self.getDQScene(dqSceneType: .battle) as! BattleScene
-                battleScene.battleMessageWindowNode.close()
-                battleScene.battleStatusWindowNode.close()
-                battleScene.battleCommandWindowNode.close()
-                battleScene.battleTargetWindowNode.close()
+            let battleScene = self.getDQScene(dqSceneType: .battle) as! BattleScene
+            battleScene.battleMessageWindowNode.close()
+            battleScene.battleStatusWindowNode.close()
+            battleScene.battleCommandWindowNode.close()
+            battleScene.battleTargetWindowNode.close()
 
-                // モンスターノードもremove
-                for monsterGroup in battleScene.monsterGroups {
-                    for monsterNode in monsterGroup.monsterNodes {
-                        monsterNode.removeFromParent()
-                    }
+            // モンスターノードもremove
+            for monsterGroup in battleScene.monsterGroups {
+                for monsterNode in monsterGroup.monsterNodes {
+                    monsterNode.removeFromParent()
                 }
+            }
 
-                self.setupDQScene(
-                    dqMainState: nil,
-                    dqSceneType: dqSceneType)
+            let dqSceneType = DataManager.dqSceneTypeFromBattle
 
-                self.blackScreenNode.run(actionFadeIn)
-            })
+            self.setupDQScene(
+                dqMainState: nil,
+                dqSceneType: dqSceneType)
+
+            await self.blackScreenNode.run(actionFadeIn)
+        }
     }
 }
