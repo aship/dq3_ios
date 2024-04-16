@@ -11,6 +11,15 @@ import Foundation
 func setDebugAdventureLog() {
     let adventureLog = AdventureLog()
 
+    adventureLog.heroName = "えにくす"
+
+    addNode(
+        adventureLog: adventureLog,
+        name: "あしへー",
+        dqCharacter: .hero,
+        dqVocation: .hero,
+        dqGender: .male)
+
     // adventureLog.dqSceneType = .opening
     // adventureLog.dqSceneType = .aliahan_town_house
     // adventureLog.dqSceneType = .aliahan_town
@@ -22,34 +31,29 @@ func setDebugAdventureLog() {
     // adventureLog.dqStory = .mother_waiting
     adventureLog.dqStory = .go_adventure
 
-    adventureLog.heroName = "えにくす"
     adventureLog.hasShip = true
     adventureLog.hasRamia = true
 
     addNode(
         adventureLog: adventureLog,
-        name: "あしへー",
-        dqCharacter: .hero,
-        dqVocation: .hero,
-        dqGender: .male)
+        name: "あしひー",
+        dqCharacter: .warrior_female,
+        dqVocation: .warrior,
+        dqGender: .female)
 
-    //    addNode(adventureLog: adventureLog,
-    //            name: "あしひー",
-    //            dqCharacter: .warrior_female,
-    //            dqVocation: .warrior,
-    //            dqGender: .female)
-    //
-    //    addNode(adventureLog: adventureLog,
-    //            name: "あしひひ",
-    //            dqCharacter: .priest_female,
-    //            dqVocation: .priest,
-    //            dqGender: .female)
-    //
-    //    addNode(adventureLog: adventureLog,
-    //            name: "あしひん",
-    //            dqCharacter: .mage_female,
-    //            dqVocation: .mage,
-    //            dqGender: .female)
+    addNode(
+        adventureLog: adventureLog,
+        name: "あしひひ",
+        dqCharacter: .priest_female,
+        dqVocation: .priest,
+        dqGender: .female)
+
+    addNode(
+        adventureLog: adventureLog,
+        name: "あしひん",
+        dqCharacter: .mage_female,
+        dqVocation: .mage,
+        dqGender: .female)
 
     if adventureLog.dqSceneType == .field {
         for node in adventureLog.partyCharacterNodes {
@@ -61,7 +65,8 @@ func setDebugAdventureLog() {
         }
 
         // 船/ラーミアの位置決定
-        DataManager.currentZoomArea = .aliahan  // .alltrades_abbey
+        DataManager.currentZoomArea = .aliahan
+        //   DataManager.currentZoomArea = .alltrades_abbey
     } else if adventureLog.dqSceneType == .alltrades_abbey {
         for (index, node) in adventureLog.partyCharacterNodes.enumerated() {
             node.positionX = AlltradesAbbeyGameStartPositionX
@@ -122,8 +127,8 @@ func setSpecialAdventureLog() {
     // adventureLog.dqSceneType = .opening
     // adventureLog.dqSceneType = .aliahan_town_house
     // adventureLog.dqSceneType = .aliahan_town
-    // adventureLog.dqSceneType = .alltrades_abbey
-    adventureLog.dqSceneType = .field
+    adventureLog.dqSceneType = .alltrades_abbey
+    // adventureLog.dqSceneType = .field
     // adventureLog.dqSceneType = .alefgard
 
     adventureLog.dqStory = .opening

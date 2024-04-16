@@ -10,6 +10,8 @@ import SpriteKit
 class DQMapScene: DQScene {
     var enterBattlePoint: Int = 0
 
+    let nightOverlayNode = SKSpriteNode()
+
     var mainTileMapNode: SKTileMapNode!
     var insideTileMapNode: SKTileMapNode!
 

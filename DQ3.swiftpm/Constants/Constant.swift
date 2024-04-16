@@ -36,6 +36,18 @@ enum DQAdventureLogTop {
     case delete  // ぼうけんのしょをけす
 }
 
+// morning から after_nonn が昼扱い
+// night から dawn が夜扱い
+enum DQTimeZone {
+    case morning
+    case before_noon
+    case noon
+    case after_noon
+    case night
+    case mid_night
+    case dawn
+}
+
 enum DQYesNo {
     case yes
     case no
